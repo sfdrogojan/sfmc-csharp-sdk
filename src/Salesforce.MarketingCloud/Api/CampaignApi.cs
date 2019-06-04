@@ -13,6 +13,8 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 using RestSharp;
+using RestSharp.Authenticators;
+using Salesforce.MarketingCloud.Authentication;
 using Salesforce.MarketingCloud.Client;
 using Salesforce.MarketingCloud.Model;
 
@@ -166,11 +168,35 @@ namespace Salesforce.MarketingCloud.Api
         /// Initializes a new instance of the <see cref="CampaignApi"/> class.
         /// </summary>
         /// <returns></returns>
-        public CampaignApi(String basePath)
+        public CampaignApi(String authBasePath, string clientId, string clientSecret, string accountId)
         {
-            this.Configuration = new Salesforce.MarketingCloud.Client.Configuration { BasePath = basePath };
+            this.Configuration = new Salesforce.MarketingCloud.Client.Configuration
+            {
+                AuthenticationInstanceUrl = authBasePath,
+                ClientId = clientId,
+                ClientSecret = clientSecret,
+                AccountId = accountId
+            };
+
+            var defaultDateTimeProvider = new DefaultDateTimeProvider();
+            var cacheService = new CacheService(defaultDateTimeProvider);
+            var apiClient = new ApiClient(authBasePath);
+            var authService = new AuthService(this.Configuration, apiClient, cacheService);
+
+            this.Configuration.ApiClient.RestClient.Authenticator =
+                new Salesforce.MarketingCloud.Authentication.OAuth2Authenticator(authService);
 
             ExceptionFactory = Salesforce.MarketingCloud.Client.Configuration.DefaultExceptionFactory;
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="CampaignApi"/> class.
+        /// </summary>
+        /// <returns></returns>
+        internal CampaignApi(String authBasePath, string clientId, string clientSecret, string accountId, IAuthenticator authenticator)
+            : this(authBasePath, clientId, clientSecret, accountId)
+        {
+            this.Configuration.ApiClient.RestClient.Authenticator = authenticator;
         }
 
         /// <summary>

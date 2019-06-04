@@ -90,35 +90,5 @@ namespace Salesforce.MarketingCloud.Client
         /// <param name="apiKeyIdentifier">API key identifier (authentication scheme).</param>
         /// <returns>API key with prefix.</returns>
         string GetApiKeyWithPrefix(string apiKeyIdentifier);
-
-        /// <summary>
-        /// Gets the client id.
-        /// </summary>
-        string ClientId { get; }
-
-        /// <summary>
-        /// Gets the client secret.
-        /// </summary>
-        string ClientSecret { get; }
-
-        /// <summary>
-        /// Gets the account id.
-        /// </summary>
-        string AccountId { get; }
-
-        /// <summary>
-        /// Gets the base authentication url.
-        /// </summary>
-        string AuthenticationInstanceUrl { get; }
-
-        /// <summary>
-        /// Gets the base REST url.
-        /// </summary>
-        string RestInstanceUrl { get; }
-
-        /// <summary>
-        /// Gets the base SOAP url.
-        /// </summary>
-        string SoapInstanceUrl { get; }
     }
 }

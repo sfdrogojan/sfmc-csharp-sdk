@@ -190,3 +190,5 @@ $RECYCLE.BIN/
 
 # Class containing credentials in the Test project
 src/**/ApiTests.cs
+
+build-artifacts/

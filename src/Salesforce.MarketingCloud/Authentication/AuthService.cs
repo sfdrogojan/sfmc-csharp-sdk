@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using Newtonsoft.Json.Linq;
 using Salesforce.MarketingCloud.Client;
 using Salesforce.MarketingCloud.Model;
 using RestSharp;
@@ -43,9 +44,11 @@ namespace Salesforce.MarketingCloud.Authentication
 
         private AccessTokenResponse GetAccessTokenResponse()
         {
+            var accessTokenRequest = new AccessTokenRequest(configuration.ClientId, configuration.ClientSecret, configuration.AccountId, configuration.Scope);
+            var authRequestBody = GetAuthRequestBody(accessTokenRequest);
+
             var serializedAuthRequestBody =
-                apiClient.Serialize(new AccessTokenRequest(configuration.ClientId,
-                    configuration.ClientSecret, configuration.AccountId));
+                apiClient.Serialize(authRequestBody);
 
             IRestResponse authRequestResponse = (IRestResponse) apiClient.CallApi("/v2/token",
                 Method.POST,
@@ -68,6 +71,23 @@ namespace Salesforce.MarketingCloud.Authentication
                 (AccessTokenResponse) configuration.ApiClient.Deserialize(authRequestResponse,
                     typeof(AccessTokenResponse));
             return response;
+        }
+
+        private JObject GetAuthRequestBody(AccessTokenRequest accessTokenRequest)
+        {
+            JObject authRequestBody = new JObject();
+
+            authRequestBody.Add("client_id", accessTokenRequest.ClientId);
+            authRequestBody.Add("client_secret", accessTokenRequest.ClientSecret);
+            authRequestBody.Add("grant_type", accessTokenRequest.GrantType);
+            authRequestBody.Add("account_id", accessTokenRequest.AccountId);
+
+            if (!string.IsNullOrEmpty(accessTokenRequest.Scope))
+            {
+                authRequestBody.Add("scope", accessTokenRequest.Scope);
+            }
+
+            return authRequestBody;
         }
 
         private void SetConfigParameters(AccessTokenResponse response)

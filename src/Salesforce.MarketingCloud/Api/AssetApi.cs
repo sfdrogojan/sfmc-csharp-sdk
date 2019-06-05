@@ -69,7 +69,7 @@ namespace Salesforce.MarketingCloud.Api
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> DeleteAssetByIdWithHttpInfo (decimal? id);
         /// <summary>
-        /// getAssetById
+        /// getAssetByIdNew
         /// </summary>
         /// <remarks>
         /// Gets an asset by ID.
@@ -80,7 +80,7 @@ namespace Salesforce.MarketingCloud.Api
         Asset GetAssetById (decimal? id);
 
         /// <summary>
-        /// getAssetById
+        /// getAssetByIdNew
         /// </summary>
         /// <remarks>
         /// Gets an asset by ID.
@@ -157,7 +157,7 @@ namespace Salesforce.MarketingCloud.Api
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteAssetByIdAsyncWithHttpInfo (decimal? id);
         /// <summary>
-        /// getAssetById
+        /// getAssetByIdNew
         /// </summary>
         /// <remarks>
         /// Gets an asset by ID.
@@ -168,7 +168,7 @@ namespace Salesforce.MarketingCloud.Api
         System.Threading.Tasks.Task<Asset> GetAssetByIdAsync (decimal? id);
 
         /// <summary>
-        /// getAssetById
+        /// getAssetByIdNew
         /// </summary>
         /// <remarks>
         /// Gets an asset by ID.
@@ -594,7 +594,7 @@ namespace Salesforce.MarketingCloud.Api
         }
 
         /// <summary>
-        /// getAssetById Gets an asset by ID.
+        /// getAssetByIdNew Gets an asset by ID.
         /// </summary>
         /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The ID of the asset</param>
@@ -606,7 +606,7 @@ namespace Salesforce.MarketingCloud.Api
         }
 
         /// <summary>
-        /// getAssetById Gets an asset by ID.
+        /// getAssetByIdNew Gets an asset by ID.
         /// </summary>
         /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The ID of the asset</param>
@@ -659,7 +659,7 @@ namespace Salesforce.MarketingCloud.Api
         }
 
         /// <summary>
-        /// getAssetById Gets an asset by ID.
+        /// getAssetByIdNew Gets an asset by ID.
         /// </summary>
         /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The ID of the asset</param>
@@ -672,7 +672,7 @@ namespace Salesforce.MarketingCloud.Api
         }
 
         /// <summary>
-        /// getAssetById Gets an asset by ID.
+        /// getAssetByIdNew Gets an asset by ID.
         /// </summary>
         /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The ID of the asset</param>

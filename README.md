@@ -70,18 +70,18 @@ namespace Example
         public void main()
         {
 
-            var apiInstance = new AssetApi();
-            var body = new Asset(); // Asset | JSON Parameters (optional) 
+            var apiInstance = new AddressApi();
+            var body = new RequestValidateEmail(); // RequestValidateEmail | JSON parameters (optional) 
 
             try
             {
-                // createAsset
-                Asset result = apiInstance.CreateAsset(body);
+                // validateEmail
+                ResponseValidateEmail200 result = apiInstance.AddressV1ValidateEmailPost(body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling AssetApi.CreateAsset: " + e.Message );
+                Debug.Print("Exception when calling AddressApi.AddressV1ValidateEmailPost: " + e.Message );
             }
 
         }
@@ -96,6 +96,7 @@ All URIs are relative to *https://www.exacttargetapis.com*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
+*AddressApi* | [**AddressV1ValidateEmailPost**](docs/AddressApi.md#addressv1validateemailpost) | **POST** /address/v1/validateEmail | validateEmail
 *AssetApi* | [**CreateAsset**](docs/AssetApi.md#createasset) | **POST** /asset/v1/content/assets | createAsset
 *AssetApi* | [**DeleteAssetById**](docs/AssetApi.md#deleteassetbyid) | **DELETE** /asset/v1/content/assets/{id} | deleteAsset
 *AssetApi* | [**GetAssetById**](docs/AssetApi.md#getassetbyid) | **GET** /asset/v1/content/assets/{id} | getAssetByIdNew
@@ -112,6 +113,9 @@ Class | Method | HTTP request | Description
  - [Model.Asset](docs/Asset.md)
  - [Model.AssetType](docs/AssetType.md)
  - [Model.Campaign](docs/Campaign.md)
+ - [Model.RequestValidateEmail](docs/RequestValidateEmail.md)
+ - [Model.ResponseValidateEmail200](docs/ResponseValidateEmail200.md)
+ - [Model.ResponseValidateEmailDefault](docs/ResponseValidateEmailDefault.md)
 
 
 <a name="documentation-for-authorization"></a>

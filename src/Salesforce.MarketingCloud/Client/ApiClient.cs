@@ -11,6 +11,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Globalization;
 using System.Text.RegularExpressions;
 using System.IO;
@@ -20,6 +21,7 @@ using System.Net;
 using System.Text;
 using Newtonsoft.Json;
 using RestSharp;
+using Salesforce.MarketingCloud.Validation;
 
 namespace Salesforce.MarketingCloud.Client
 {
@@ -471,9 +473,20 @@ namespace Salesforce.MarketingCloud.Client
         /// <returns>JSON string.</returns>
         public String Serialize(object obj)
         {
+            if (obj == null)
+            {
+                return null;
+            }
+
+            var modelValidator = new ModelValidator();
+            if (!modelValidator.TryValidate(obj, out ICollection<ValidationResult> validationResults))
+            {
+                throw new ModelValidationException(obj.GetType().ToString(), validationResults);
+            }
+
             try
             {
-                return obj != null ? JsonConvert.SerializeObject(obj) : null;
+                return JsonConvert.SerializeObject(obj);
             }
             catch (Exception e)
             {

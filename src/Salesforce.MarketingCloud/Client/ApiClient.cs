@@ -185,6 +185,11 @@ namespace Salesforce.MarketingCloud.Client
         partial void InterceptResponse(IRestRequest request, IRestResponse response);
 
         /// <summary>
+        /// The model validator.
+        /// </summary>
+        private readonly ModelValidator modelValidator = new ModelValidator();
+
+        /// <summary>
         /// Initializes a new instance of the <see cref="ApiClient" /> class
         /// with default configuration.
         /// </summary>
@@ -478,10 +483,9 @@ namespace Salesforce.MarketingCloud.Client
                 return null;
             }
 
-            var modelValidator = new ModelValidator();
             if (!modelValidator.TryValidate(obj, out ICollection<ValidationResult> validationResults))
             {
-                throw new ModelValidationException(obj.GetType().ToString(), validationResults);
+                throw new ModelValidationException(obj.GetType().Name, validationResults);
             }
 
             try

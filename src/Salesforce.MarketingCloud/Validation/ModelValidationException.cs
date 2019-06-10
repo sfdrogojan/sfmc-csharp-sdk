@@ -7,7 +7,8 @@ namespace Salesforce.MarketingCloud.Validation
 {
     public class ModelValidationException : Exception
     {
-        public ModelValidationException(string modelType, ICollection<ValidationResult> validationResults)
+        public ModelValidationException(string modelType, ICollection<ValidationResult> validationResults) 
+            : base(GetExceptionMessage(modelType, validationResults))
         {
             this.ModelType = modelType;
             this.ValidationResults = validationResults;
@@ -17,16 +18,16 @@ namespace Salesforce.MarketingCloud.Validation
 
         public ICollection<ValidationResult> ValidationResults { get; private set; }
 
-        //public override string ToString()
-        //{
-        //    var sb = new StringBuilder();
-        //    sb.AppendLine($"{this.ModelType} validation error:");
-        //    foreach (var validationResult in this.ValidationResults)
-        //    {
-        //        sb.AppendLine(validationResult.ErrorMessage);
-        //    }
+        private static string GetExceptionMessage(string modelType, ICollection<ValidationResult> validationResults)
+        {
+            var sb = new StringBuilder();
+            sb.AppendLine($"Invalid {modelType}");
+            foreach (var validationResult in validationResults)
+            {
+                sb.AppendLine(validationResult.ErrorMessage);
+            }
 
-        //    return sb.ToString();
-        //}
+            return sb.ToString();
+        }
     }
 }

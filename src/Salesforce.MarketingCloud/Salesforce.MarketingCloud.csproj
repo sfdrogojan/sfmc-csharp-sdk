@@ -7,7 +7,7 @@
     <OutputType>Library</OutputType>
     <Authors>Salesforce</Authors>
     <Company>Salesforce</Company>
-    <AssemblyTitle>Salesforce MarketingCloud C# SDK</AssemblyTitle>
+    <AssemblyTitle>Salesforce Marketing Cloud C# SDK</AssemblyTitle>
     <Description>The Salesforce Marketing Cloud C# SDK</Description>
     <Copyright>Copyright © Salesforce 2019</Copyright>
     <GenerateRuntimeConfigurationFiles>true</GenerateRuntimeConfigurationFiles>

@@ -1,13 +1,13 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFrameworks>netcoreapp2.0</TargetFrameworks>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
     <AssemblyName>Salesforce.MarketingCloud.Test</AssemblyName>
     <PackageId>Salesforce.MarketingCloud.Test</PackageId>
     <OutputType>Library</OutputType>
     <Authors>Salesforce</Authors>
     <Company>Salesforce</Company>
-    <AssemblyTitle>Salesforce MarketingCloud C# SDK</AssemblyTitle>
+    <AssemblyTitle>Salesforce Marketing Cloud C# SDK</AssemblyTitle>
     <Description>The Salesforce Marketing Cloud C# SDK</Description>
     <Copyright>Copyright © Salesforce 2019</Copyright>
     <GenerateRuntimeConfigurationFiles>true</GenerateRuntimeConfigurationFiles>

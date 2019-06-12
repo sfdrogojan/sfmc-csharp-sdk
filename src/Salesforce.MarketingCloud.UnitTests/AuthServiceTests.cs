@@ -2,12 +2,15 @@
 using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Net;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 using Salesforce.MarketingCloud.Authentication;
 using Salesforce.MarketingCloud.Client;
 using Salesforce.MarketingCloud.Model;
 using NSubstitute;
 using NUnit.Framework;
 using RestSharp;
+using Salesforce.MarketingCloud.Exceptions;
 
 namespace Salesforce.MarketingCloud.UnitTests
 {
@@ -113,7 +116,7 @@ namespace Salesforce.MarketingCloud.UnitTests
             var configurationStub = new Configuration();
             var cacheServiceStub = Substitute.For<ICacheService>();
             var apiClientMock = Substitute.For<IApiClient>();
-            var response = CreateAuthRequestResponse(HttpStatusCode.Unauthorized);
+            var response = CreateUnauthorizedAuthRequestResponse();
 
             apiClientMock.CallApi(
                 Arg.Any<string>(),
@@ -129,7 +132,7 @@ namespace Salesforce.MarketingCloud.UnitTests
 
             var authService = new AuthService(configurationStub, apiClientMock, cacheServiceStub);
 
-            Assert.Throws<ApiException>(() => authService.GetAuthorizationToken());
+            Assert.Throws<AuthenticationFailureException>(() => authService.GetAuthorizationToken());
         }
 
         [Test]
@@ -199,14 +202,14 @@ namespace Salesforce.MarketingCloud.UnitTests
         [Test]
         public void GetAuthorizationToken_WhenAuthenticationFails_ThrowsException()
         {
-            var authRequestResponse = CreateAuthRequestResponse(HttpStatusCode.Unauthorized);
+            var authRequestResponse = CreateUnauthorizedAuthRequestResponse();
             var apiClientStub = CreateApiClient(authRequestResponse);
             var configurationStub = new Configuration();
             var cacheServiceStub = Substitute.For<ICacheService>();
 
             var authService = new AuthService(configurationStub, apiClientStub, cacheServiceStub);
 
-            Assert.Throws<ApiException>(() => authService.GetAuthorizationToken());
+            Assert.Throws<AuthenticationFailureException>(() => authService.GetAuthorizationToken());
         }
 
         [Test]
@@ -259,6 +262,19 @@ namespace Salesforce.MarketingCloud.UnitTests
             }");
 
             authRequestResponse.StatusCode.Returns(httpStatusCode);
+            return authRequestResponse;
+        }
+
+        private IRestResponse CreateUnauthorizedAuthRequestResponse()
+        {
+            IRestResponse authRequestResponse = Substitute.For<IRestResponse>();
+            authRequestResponse.Content.Returns(@"{ 
+                'error': 'invalid client', 
+                'error_description': 'Invalid client ID. Use the client ID in Marketing Cloud Installed Packages.',
+                'error_uri': 'https://developer.salesforce.com/docs'
+            }");
+
+            authRequestResponse.StatusCode.Returns(HttpStatusCode.Unauthorized);
             return authRequestResponse;
         }
 

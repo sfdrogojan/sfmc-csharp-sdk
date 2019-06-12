@@ -62,11 +62,13 @@ namespace Salesforce.MarketingCloud.Model
         /// <param name="allowedBlocks">List of blocks that are allowed in the asset.</param>
         /// <param name="slots">Slots within the asset.</param>
         /// <param name="businessUnitAvailability">A dictionary of member IDs that have been granted access to the asset.</param>
-        /// <param name="sharingProperties">sharingProperties.</param>
+        /// <param name="sharingProperties">Allows you to share content with one or more business units that have Content Builder Sharing enabled. See &lt;a href&#x3D;\&quot;sharing.htm\&quot;&gt;Sharing&lt;/a&gt; for additional information..</param>
+        /// <param name="sharingPropertiesSharedWith">List of MID IDs the asset is shared with.</param>
+        /// <param name="sharingPropertiesSharingType">Indicates the permission that you are granting to the list of MIDs in sharedWith. Possible values are view, edit, or local..</param>
         /// <param name="template">Template the asset follows.</param>
         /// <param name="file">Base64-encoded string of a file associated with an asset.</param>
         /// <param name="generateFrom">Tells the sending compiler what view to use for generating this view&#39;s content.</param>
-        public Asset(decimal? id = default(decimal?), string customerKey = default(string), string contentType = default(string), Object data = default(Object), AssetType assetType = default(AssetType), decimal? version = default(decimal?), bool? locked = default(bool?), Object fileProperties = default(Object), string name = default(string), string description = default(string), Object category = default(Object), List<string> tags = default(List<string>), string content = default(string), string design = default(string), string superContent = default(string), Object customFields = default(Object), Object views = default(Object), Object blocks = default(Object), decimal? minBlocks = default(decimal?), decimal? maxBlocks = default(decimal?), Object channels = default(Object), List<string> allowedBlocks = default(List<string>), Object slots = default(Object), Object businessUnitAvailability = default(Object), SharingProperties sharingProperties = default(SharingProperties), Object template = default(Object), string file = default(string), string generateFrom = default(string))
+        public Asset(decimal? id = default(decimal?), string customerKey = default(string), string contentType = default(string), Object data = default(Object), AssetType assetType = default(AssetType), decimal? version = default(decimal?), bool? locked = default(bool?), Object fileProperties = default(Object), string name = default(string), string description = default(string), Object category = default(Object), List<string> tags = default(List<string>), string content = default(string), string design = default(string), string superContent = default(string), Object customFields = default(Object), Object views = default(Object), Object blocks = default(Object), decimal? minBlocks = default(decimal?), decimal? maxBlocks = default(decimal?), Object channels = default(Object), List<string> allowedBlocks = default(List<string>), Object slots = default(Object), Object businessUnitAvailability = default(Object), Object sharingProperties = default(Object), Object sharingPropertiesSharedWith = default(Object), string sharingPropertiesSharingType = default(string), Object template = default(Object), string file = default(string), string generateFrom = default(string))
         {
             // to ensure "customerKey" is required (not null)
             if (customerKey == null)
@@ -125,6 +127,8 @@ namespace Salesforce.MarketingCloud.Model
             this.Slots = slots;
             this.BusinessUnitAvailability = businessUnitAvailability;
             this.SharingProperties = sharingProperties;
+            this.SharingPropertiesSharedWith = sharingPropertiesSharedWith;
+            this.SharingPropertiesSharingType = sharingPropertiesSharingType;
             this.Template = template;
             this.File = file;
             this.GenerateFrom = generateFrom;
@@ -298,10 +302,25 @@ namespace Salesforce.MarketingCloud.Model
         public Object BusinessUnitAvailability { get; set; }
 
         /// <summary>
-        /// Gets or Sets SharingProperties
+        /// Allows you to share content with one or more business units that have Content Builder Sharing enabled. See &lt;a href&#x3D;\&quot;sharing.htm\&quot;&gt;Sharing&lt;/a&gt; for additional information.
         /// </summary>
+        /// <value>Allows you to share content with one or more business units that have Content Builder Sharing enabled. See &lt;a href&#x3D;\&quot;sharing.htm\&quot;&gt;Sharing&lt;/a&gt; for additional information.</value>
         [DataMember(Name="sharingProperties", EmitDefaultValue=false)]
-        public SharingProperties SharingProperties { get; set; }
+        public Object SharingProperties { get; set; }
+
+        /// <summary>
+        /// List of MID IDs the asset is shared with
+        /// </summary>
+        /// <value>List of MID IDs the asset is shared with</value>
+        [DataMember(Name="sharingProperties.sharedWith", EmitDefaultValue=false)]
+        public Object SharingPropertiesSharedWith { get; set; }
+
+        /// <summary>
+        /// Indicates the permission that you are granting to the list of MIDs in sharedWith. Possible values are view, edit, or local.
+        /// </summary>
+        /// <value>Indicates the permission that you are granting to the list of MIDs in sharedWith. Possible values are view, edit, or local.</value>
+        [DataMember(Name="sharingProperties.sharingType", EmitDefaultValue=false)]
+        public string SharingPropertiesSharingType { get; set; }
 
         /// <summary>
         /// Template the asset follows
@@ -357,6 +376,8 @@ namespace Salesforce.MarketingCloud.Model
             sb.Append("  Slots: ").Append(Slots).Append("\n");
             sb.Append("  BusinessUnitAvailability: ").Append(BusinessUnitAvailability).Append("\n");
             sb.Append("  SharingProperties: ").Append(SharingProperties).Append("\n");
+            sb.Append("  SharingPropertiesSharedWith: ").Append(SharingPropertiesSharedWith).Append("\n");
+            sb.Append("  SharingPropertiesSharingType: ").Append(SharingPropertiesSharingType).Append("\n");
             sb.Append("  Template: ").Append(Template).Append("\n");
             sb.Append("  File: ").Append(File).Append("\n");
             sb.Append("  GenerateFrom: ").Append(GenerateFrom).Append("\n");
@@ -520,6 +541,16 @@ namespace Salesforce.MarketingCloud.Model
                     this.SharingProperties.Equals(input.SharingProperties))
                 ) && 
                 (
+                    this.SharingPropertiesSharedWith == input.SharingPropertiesSharedWith ||
+                    (this.SharingPropertiesSharedWith != null &&
+                    this.SharingPropertiesSharedWith.Equals(input.SharingPropertiesSharedWith))
+                ) && 
+                (
+                    this.SharingPropertiesSharingType == input.SharingPropertiesSharingType ||
+                    (this.SharingPropertiesSharingType != null &&
+                    this.SharingPropertiesSharingType.Equals(input.SharingPropertiesSharingType))
+                ) && 
+                (
                     this.Template == input.Template ||
                     (this.Template != null &&
                     this.Template.Equals(input.Template))
@@ -595,6 +626,10 @@ namespace Salesforce.MarketingCloud.Model
                     hashCode = hashCode * 59 + this.BusinessUnitAvailability.GetHashCode();
                 if (this.SharingProperties != null)
                     hashCode = hashCode * 59 + this.SharingProperties.GetHashCode();
+                if (this.SharingPropertiesSharedWith != null)
+                    hashCode = hashCode * 59 + this.SharingPropertiesSharedWith.GetHashCode();
+                if (this.SharingPropertiesSharingType != null)
+                    hashCode = hashCode * 59 + this.SharingPropertiesSharingType.GetHashCode();
                 if (this.Template != null)
                     hashCode = hashCode * 59 + this.Template.GetHashCode();
                 if (this.File != null)

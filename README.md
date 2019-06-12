@@ -103,6 +103,11 @@ Class | Method | HTTP request | Description
 *CampaignApi* | [**CreateCampaign**](docs/CampaignApi.md#createcampaign) | **POST** /hub/v1/campaigns | createCampaign
 *CampaignApi* | [**DeleteCampaignById**](docs/CampaignApi.md#deletecampaignbyid) | **DELETE** /hub/v1/campaigns/{id} | deleteCampaign
 *CampaignApi* | [**GetCampaignById**](docs/CampaignApi.md#getcampaignbyid) | **GET** /hub/v1/campaigns/{id} | getCampaign
+*EmailDefinitionApi* | [**CreateEmailDefinition**](docs/EmailDefinitionApi.md#createemaildefinition) | **POST** /messaging/v1/email/definitions/ | createEmailDefinition
+*EmailDefinitionApi* | [**DeleteEmailDefinitionByDefinitionKey**](docs/EmailDefinitionApi.md#deleteemaildefinitionbydefinitionkey) | **DELETE** /messaging/v1/email/definitions/{definitionKey} | deleteEmailDefinition
+*EmailDefinitionApi* | [**GetEmailDefinitionByDefinitionKey**](docs/EmailDefinitionApi.md#getemaildefinitionbydefinitionkey) | **GET** /messaging/v1/email/definitions/{definitionKey} | getEmailDefinition
+*EmailDefinitionApi* | [**GetEmailDefinitions**](docs/EmailDefinitionApi.md#getemaildefinitions) | **GET** /messaging/v1/email/definitions/ | getEmailDefinitions
+*EmailDefinitionApi* | [**PartiallyUpdateEmailDefinition**](docs/EmailDefinitionApi.md#partiallyupdateemaildefinition) | **PATCH** /messaging/v1/email/definitions/{definitionKey} | patchEmailDefinition
 
 
 <a name="documentation-for-models"></a>
@@ -112,6 +117,13 @@ Class | Method | HTTP request | Description
  - [Model.Asset](docs/Asset.md)
  - [Model.AssetType](docs/AssetType.md)
  - [Model.Campaign](docs/Campaign.md)
+ - [Model.Content](docs/Content.md)
+ - [Model.EmailDefinition](docs/EmailDefinition.md)
+ - [Model.EmailDefinitionDescription](docs/EmailDefinitionDescription.md)
+ - [Model.EmailDefinitionsResponse](docs/EmailDefinitionsResponse.md)
+ - [Model.Options](docs/Options.md)
+ - [Model.Subscriptions](docs/Subscriptions.md)
+ - [Model.SuccessfulEmailDefinitionDelete](docs/SuccessfulEmailDefinitionDelete.md)
 
 
 <a name="documentation-for-authorization"></a>

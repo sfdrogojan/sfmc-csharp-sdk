@@ -282,6 +282,24 @@ namespace Salesforce.MarketingCloud.Model
         /// <returns>Validation Result</returns>
         IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
+            // Name (string) maxLength
+            if(this.Name != null && this.Name.Length > 128)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for Name, length must be less than 128.", new [] { "Name" });
+            }
+
+            // Description (string) maxLength
+            if(this.Description != null && this.Description.Length > 512)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for Description, length must be less than 512.", new [] { "Description" });
+            }
+
+            // CampaignCode (string) maxLength
+            if(this.CampaignCode != null && this.CampaignCode.Length > 36)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for CampaignCode, length must be less than 36.", new [] { "CampaignCode" });
+            }
+
             yield break;
         }
     }

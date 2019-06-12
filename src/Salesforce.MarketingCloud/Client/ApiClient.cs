@@ -11,6 +11,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Globalization;
 using System.Text.RegularExpressions;
 using System.IO;
@@ -20,6 +21,7 @@ using System.Net;
 using System.Text;
 using Newtonsoft.Json;
 using RestSharp;
+using Salesforce.MarketingCloud.Validation;
 
 namespace Salesforce.MarketingCloud.Client
 {
@@ -181,6 +183,11 @@ namespace Salesforce.MarketingCloud.Client
         /// <param name="request">The RestSharp request object</param>
         /// <param name="response">The RestSharp response object</param>
         partial void InterceptResponse(IRestRequest request, IRestResponse response);
+
+        /// <summary>
+        /// The model validator.
+        /// </summary>
+        private readonly ModelValidator modelValidator = new ModelValidator();
 
         /// <summary>
         /// Initializes a new instance of the <see cref="ApiClient" /> class
@@ -471,9 +478,19 @@ namespace Salesforce.MarketingCloud.Client
         /// <returns>JSON string.</returns>
         public String Serialize(object obj)
         {
+            if (obj == null)
+            {
+                return null;
+            }
+
+            if (!modelValidator.TryValidate(obj, out ICollection<ValidationResult> validationResults))
+            {
+                throw new ModelValidationException(obj.GetType().Name, validationResults);
+            }
+
             try
             {
-                return obj != null ? JsonConvert.SerializeObject(obj) : null;
+                return JsonConvert.SerializeObject(obj);
             }
             catch (Exception e)
             {

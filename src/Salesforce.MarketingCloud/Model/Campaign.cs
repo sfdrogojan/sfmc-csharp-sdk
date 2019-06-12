@@ -44,9 +44,7 @@ namespace Salesforce.MarketingCloud.Model
         /// <param name="color">Hex color value (required).</param>
         /// <param name="favorite">Determines if the campaign will be flagged as a favorite (required).</param>
         /// <param name="id">The id of the campaign.</param>
-        /// <param name="createdDate">The date the campaign was created.</param>
-        /// <param name="modifiedDate">The date the campaign was modified.</param>
-        public Campaign(string name = default(string), string description = default(string), string campaignCode = default(string), string color = default(string), bool? favorite = default(bool?), decimal? id = default(decimal?), DateTime? createdDate = default(DateTime?), DateTime? modifiedDate = default(DateTime?))
+        public Campaign(string name = default(string), string description = default(string), string campaignCode = default(string), string color = default(string), bool? favorite = default(bool?), decimal? id = default(decimal?))
         {
             // to ensure "name" is required (not null)
             if (name == null)
@@ -94,8 +92,6 @@ namespace Salesforce.MarketingCloud.Model
                 this.Favorite = favorite;
             }
             this.Id = id;
-            this.CreatedDate = createdDate;
-            this.ModifiedDate = modifiedDate;
         }
         
         /// <summary>
@@ -141,18 +137,18 @@ namespace Salesforce.MarketingCloud.Model
         public decimal? Id { get; set; }
 
         /// <summary>
-        /// The date the campaign was created
+        /// The date the object was created.
         /// </summary>
-        /// <value>The date the campaign was created</value>
-        [DataMember(Name="CreatedDate", EmitDefaultValue=false)]
-        public DateTime? CreatedDate { get; set; }
+        /// <value>The date the object was created.</value>
+        [DataMember(Name="createdDate", EmitDefaultValue=false)]
+        public DateTime? CreatedDate { get; private set; }
 
         /// <summary>
-        /// The date the campaign was modified
+        /// The date the object was modified.
         /// </summary>
-        /// <value>The date the campaign was modified</value>
-        [DataMember(Name="ModifiedDate", EmitDefaultValue=false)]
-        public DateTime? ModifiedDate { get; set; }
+        /// <value>The date the object was modified.</value>
+        [DataMember(Name="modifiedDate", EmitDefaultValue=false)]
+        public DateTime? ModifiedDate { get; private set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -282,24 +278,6 @@ namespace Salesforce.MarketingCloud.Model
         /// <returns>Validation Result</returns>
         IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
-            // Name (string) maxLength
-            if(this.Name != null && this.Name.Length > 128)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for Name, length must be less than 128.", new [] { "Name" });
-            }
-
-            // Description (string) maxLength
-            if(this.Description != null && this.Description.Length > 512)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for Description, length must be less than 512.", new [] { "Description" });
-            }
-
-            // CampaignCode (string) maxLength
-            if(this.CampaignCode != null && this.CampaignCode.Length > 36)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for CampaignCode, length must be less than 36.", new [] { "CampaignCode" });
-            }
-
             yield break;
         }
     }

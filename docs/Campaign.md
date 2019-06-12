@@ -9,8 +9,8 @@ Name | Type | Description | Notes
 **Color** | **string** | Hex color value | 
 **Favorite** | **bool?** | Determines if the campaign will be flagged as a favorite | 
 **Id** | **decimal?** | The id of the campaign | [optional] 
-**CreatedDate** | **DateTime?** | The date the object was created. | [optional] 
-**ModifiedDate** | **DateTime?** | The date the object was modified. | [optional] 
+**CreatedDate** | **DateTime?** | The date the campaign was created | [optional] 
+**ModifiedDate** | **DateTime?** | The date the campaign was modified | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

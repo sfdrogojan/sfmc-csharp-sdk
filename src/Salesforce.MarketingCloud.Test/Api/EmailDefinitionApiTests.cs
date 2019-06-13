@@ -35,7 +35,8 @@ namespace Salesforce.MarketingCloud.Test
     [TestFixture]
     public class EmailDefinitionApiTests
     {
-        private EmailDefinitionApi instance;
+        private EmailDefinitionApi emailDefinitionApiClient;
+        private AssetApi assetApiClient;
 
         /// <summary>
         /// Setup before each unit test
@@ -43,17 +44,18 @@ namespace Salesforce.MarketingCloud.Test
         [SetUp]
         public void Init()
         {
-            instance = ApiTestSutFactory<EmailDefinitionApi>.Create();
+            emailDefinitionApiClient = ApiTestSutFactory<EmailDefinitionApi>.Create();
+            assetApiClient = ApiTestSutFactory<AssetApi>.Create();
         }
 
         [Test]
         public void GetEmailDefinitionTest()
         {
             var emailDefinition = CreateEmailDefinition();
-            var createEmailDefinitionResult = instance.CreateEmailDefinition(emailDefinition);
+            var createEmailDefinitionResult = emailDefinitionApiClient.CreateEmailDefinition(emailDefinition);
             var emailDefinitionToRetrieveKey = createEmailDefinitionResult.DefinitionKey;
 
-            var getEmailDefinitionResult = instance.GetEmailDefinitionByDefinitionKey(emailDefinitionToRetrieveKey);
+            var getEmailDefinitionResult = emailDefinitionApiClient.GetEmailDefinitionByDefinitionKey(emailDefinitionToRetrieveKey);
 
             try
             {
@@ -64,14 +66,14 @@ namespace Salesforce.MarketingCloud.Test
             }
             finally
             {
-                instance.DeleteEmailDefinitionByDefinitionKey(emailDefinitionToRetrieveKey);
+                emailDefinitionApiClient.DeleteEmailDefinitionByDefinitionKey(emailDefinitionToRetrieveKey);
             }
         }
 
         [Test]
         public void GetEmailDefinitionsTest()
         {
-            var getEmailDefinitionsResponse = instance.GetEmailDefinitions();
+            var getEmailDefinitionsResponse = emailDefinitionApiClient.GetEmailDefinitions();
             var deserializedEmailDefinitionResponse =
                 JsonConvert.DeserializeObject<EmailDefinitionsResponse>(getEmailDefinitionsResponse.ToJson());
 
@@ -86,7 +88,7 @@ namespace Salesforce.MarketingCloud.Test
         public void CreateEmailDefinitionTest()
         {
             var emailDefinition = CreateEmailDefinition();
-            var createEmailDefinitionResult = instance.CreateEmailDefinition(emailDefinition);
+            var createEmailDefinitionResult = emailDefinitionApiClient.CreateEmailDefinition(emailDefinition);
 
             try
             {
@@ -98,7 +100,7 @@ namespace Salesforce.MarketingCloud.Test
             finally
             {
                 var createEmailDefinitionResultKey = createEmailDefinitionResult.DefinitionKey;
-                instance.DeleteEmailDefinitionByDefinitionKey(createEmailDefinitionResultKey);
+                emailDefinitionApiClient.DeleteEmailDefinitionByDefinitionKey(createEmailDefinitionResultKey);
             }
         }
 
@@ -106,10 +108,10 @@ namespace Salesforce.MarketingCloud.Test
         public void DeleteEmailDefinitionTest()
         {
             var emailDefinition = CreateEmailDefinition();
-            var createEmailDefinitionResult = instance.CreateEmailDefinition(emailDefinition);
+            var createEmailDefinitionResult = emailDefinitionApiClient.CreateEmailDefinition(emailDefinition);
 
             var emailDefinitionToDeleteKey = createEmailDefinitionResult.DefinitionKey;
-            var deleteEmailDefinitionResult = instance.DeleteEmailDefinitionByDefinitionKey(emailDefinitionToDeleteKey);
+            var deleteEmailDefinitionResult = emailDefinitionApiClient.DeleteEmailDefinitionByDefinitionKey(emailDefinitionToDeleteKey);
 
             Assert.AreEqual("Success", deleteEmailDefinitionResult.Message);
             Assert.NotNull(deleteEmailDefinitionResult.RequestId);
@@ -121,11 +123,11 @@ namespace Salesforce.MarketingCloud.Test
             var emailDefinition = CreateEmailDefinition();
             emailDefinition.Description = "Definition description";
 
-            var createEmailDefinitionResult = instance.CreateEmailDefinition(emailDefinition);
+            var createEmailDefinitionResult = emailDefinitionApiClient.CreateEmailDefinition(emailDefinition);
             var emailDefinitionToPartiallyUpdateKey = createEmailDefinitionResult.DefinitionKey;
 
             EmailDefinitionDescription updatedDescription = new EmailDefinitionDescription("Updated definition description");
-            var partiallyUpdatedEmailDefinitionResult = instance.PartiallyUpdateEmailDefinition(emailDefinitionToPartiallyUpdateKey, updatedDescription);
+            var partiallyUpdatedEmailDefinitionResult = emailDefinitionApiClient.PartiallyUpdateEmailDefinition(emailDefinitionToPartiallyUpdateKey, updatedDescription);
 
             try
             {
@@ -138,7 +140,7 @@ namespace Salesforce.MarketingCloud.Test
             }
             finally
             {
-                instance.DeleteEmailDefinitionByDefinitionKey(emailDefinitionToPartiallyUpdateKey);
+                emailDefinitionApiClient.DeleteEmailDefinitionByDefinitionKey(emailDefinitionToPartiallyUpdateKey);
             }
         }
 
@@ -146,22 +148,39 @@ namespace Salesforce.MarketingCloud.Test
         {
             var definitionKey = $"{Guid.NewGuid()}";
             var definitionName = $"{Guid.NewGuid()}";
-            
 
-            var customerKey = "81196847-3103-4072-9c08-965666384a78";
-            var content = new Content(customerKey);
+            var emailAsset = CreateAsset();
 
-            var subscribersListKey = "e7942ec9-6585-405e-a3ef-506adfb45b42 - 2093832";
-            var subscriptions = new Subscriptions(subscribersListKey);
+            try
+            {
+                var createAssetResult = assetApiClient.CreateAsset(emailAsset);
+                var customerKey = createAssetResult.CustomerKey;
+                var content = new Content(customerKey);
 
-            var emailDefinition = new EmailDefinition(definitionKey, definitionName, content, subscriptions);
+                var subscribersListKey = "e7942ec9-6585-405e-a3ef-506adfb45b42 - 2093832";
+                var subscriptions = new Subscriptions(subscribersListKey);
 
-            return emailDefinition;
+                var emailDefinition = new EmailDefinition(definitionKey, definitionName, content, subscriptions);
+
+                return emailDefinition;
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                throw;
+            }
         }
 
-        private string CreateShortGuid()
+        private Asset CreateAsset()
         {
-            return Convert.ToBase64String(Guid.NewGuid().ToByteArray());
+            var customerKey = Guid.NewGuid().ToString();
+            var name = $"AssetName {Guid.NewGuid()}"; // Asset names within a category and asset type must be unique
+            var description = "AssetDescription";
+            var assetType = new AssetType(208, "htmlemail", "htmlemail");
+
+            var asset = new Asset(null, customerKey, null, null, assetType, null, null, null, name, description);
+
+            return asset;
         }
     }
 }

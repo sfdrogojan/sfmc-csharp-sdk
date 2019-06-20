@@ -1,4 +1,5 @@
 ﻿using System;
+using Salesforce.MarketingCloud.Api;
 
 namespace Salesforce.MarketingCloud.Test
 {
@@ -55,7 +56,8 @@ namespace Salesforce.MarketingCloud.Test
 
         internal static T Create()
         {
-            return (T)Activator.CreateInstance(typeof(T), authBasePath, clientId, clientSecret, accountId, scope);
+            return new ApiFactory(authBasePath, clientId, clientSecret, accountId, scope).Create<T>();
+            //return (T)Activator.CreateInstance(typeof(T), authBasePath, clientId, clientSecret, accountId, scope);
         }
     }
 }

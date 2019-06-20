@@ -210,6 +210,7 @@ namespace Salesforce.MarketingCloud.Api
     {
         private Salesforce.MarketingCloud.Client.ExceptionFactory _exceptionFactory = (name, response) => null;
 
+        // TODO - make scope optional
         /// <summary>
         /// Initializes a new instance of the <see cref="AssetApi"/> class.
         /// </summary>
@@ -246,6 +247,7 @@ namespace Salesforce.MarketingCloud.Api
             this.Configuration.ApiClient.RestClient.Authenticator = authenticator;
         }
 
+        // TODO - remove this constructor or update its code to perform OAuth2 authentication
         /// <summary>
         /// Initializes a new instance of the <see cref="AssetApi"/> class
         /// using Configuration object

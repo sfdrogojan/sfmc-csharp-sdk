@@ -37,7 +37,7 @@ namespace Salesforce.MarketingCloud.Test
         public void Init()
         {
             //instance = new AssetApi(authBasePath, clientId, clientSecret, accountId);
-            instance = ApiTestSutFactory<AssetApi>.Create();
+            instance = ClientFactory.Create().AssetApi;
         }
 
         [Test]

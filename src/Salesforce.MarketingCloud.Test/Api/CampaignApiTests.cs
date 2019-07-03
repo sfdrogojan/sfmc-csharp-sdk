@@ -43,7 +43,7 @@ namespace Salesforce.MarketingCloud.Test
         public void Init()
         {
             //instance = new CampaignApi(authBasePath, clientId, clientSecret, accountId);
-            instance = ApiTestSutFactory<CampaignApi>.Create();
+            instance = ClientFactory.Create().CampaignApi;
         }
 
         [Test]

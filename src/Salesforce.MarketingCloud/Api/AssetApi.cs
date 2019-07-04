@@ -23,7 +23,7 @@ namespace Salesforce.MarketingCloud.Api
     /// <summary>
     /// Represents a collection of functions to interact with the API endpoints
     /// </summary>
-    public interface IAssetApi : IApiAccessor
+    public interface IAssetApi
     {
         #region Synchronous Operations
         /// <summary>
@@ -214,7 +214,7 @@ namespace Salesforce.MarketingCloud.Api
         /// Initializes a new instance of the <see cref="AssetApi"/> class.
         /// </summary>
         /// <returns></returns>
-        public AssetApi(String authBasePath, string clientId, string clientSecret, string accountId, string scope)
+        internal AssetApi(String authBasePath, string clientId, string clientSecret, string accountId, string scope)
         {
             this.Configuration = new Salesforce.MarketingCloud.Client.Configuration
             {
@@ -252,7 +252,7 @@ namespace Salesforce.MarketingCloud.Api
         /// </summary>
         /// <param name="configuration">An instance of Configuration</param>
         /// <returns></returns>
-        public AssetApi(Salesforce.MarketingCloud.Client.Configuration configuration = null)
+        internal AssetApi(Salesforce.MarketingCloud.Client.Configuration configuration = null)
         {
             if (configuration == null) // use the default one in Configuration
                 this.Configuration = Salesforce.MarketingCloud.Client.Configuration.Default;
@@ -266,31 +266,21 @@ namespace Salesforce.MarketingCloud.Api
         /// Gets the base path of the API client.
         /// </summary>
         /// <value>The base path</value>
-        public String GetBasePath()
+        internal String GetBasePath()
         {
             return this.Configuration.ApiClient.RestClient.BaseUrl.ToString();
-        }
-
-        /// <summary>
-        /// Sets the base path of the API client.
-        /// </summary>
-        /// <value>The base path</value>
-        [Obsolete("SetBasePath is deprecated, please do 'Configuration.ApiClient = new ApiClient(\"http://new-path\")' instead.")]
-        public void SetBasePath(String basePath)
-        {
-            // do nothing
         }
 
         /// <summary>
         /// Gets or sets the configuration object
         /// </summary>
         /// <value>An instance of the Configuration</value>
-        public Salesforce.MarketingCloud.Client.Configuration Configuration {get; set;}
+        internal Salesforce.MarketingCloud.Client.Configuration Configuration {get; set;}
 
         /// <summary>
         /// Provides a factory method hook for the creation of exceptions.
         /// </summary>
-        public Salesforce.MarketingCloud.Client.ExceptionFactory ExceptionFactory
+        internal Salesforce.MarketingCloud.Client.ExceptionFactory ExceptionFactory
         {
             get
             {
@@ -301,28 +291,6 @@ namespace Salesforce.MarketingCloud.Api
                 return _exceptionFactory;
             }
             set { _exceptionFactory = value; }
-        }
-
-        /// <summary>
-        /// Gets the default header.
-        /// </summary>
-        /// <returns>Dictionary of HTTP header</returns>
-        [Obsolete("DefaultHeader is deprecated, please use Configuration.DefaultHeader instead.")]
-        public IDictionary<String, String> DefaultHeader()
-        {
-            return new ReadOnlyDictionary<string, string>(this.Configuration.DefaultHeader);
-        }
-
-        /// <summary>
-        /// Add default header.
-        /// </summary>
-        /// <param name="key">Header field name.</param>
-        /// <param name="value">Header field value.</param>
-        /// <returns></returns>
-        [Obsolete("AddDefaultHeader is deprecated, please use Configuration.AddDefaultHeader instead.")]
-        public void AddDefaultHeader(string key, string value)
-        {
-            this.Configuration.AddDefaultHeader(key, value);
         }
 
         /// <summary>

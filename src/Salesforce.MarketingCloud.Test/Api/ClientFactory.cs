@@ -2,7 +2,7 @@
 
 namespace Salesforce.MarketingCloud.Test
 {
-    public static class ApiTestSutFactory<T>
+    public static class ClientFactory
     {
         private static string authBasePath;
         private static string clientId;
@@ -10,7 +10,7 @@ namespace Salesforce.MarketingCloud.Test
         private static string accountId;
         private static string scope;
 
-        static ApiTestSutFactory()
+        static ClientFactory()
         {
             authBasePath = GetAccountDetailsEnvironmentVariableValue("SFMC_AUTH_BASE_PATH");
             clientId = GetAccountDetailsEnvironmentVariableValue("SFMC_CLIENT_ID");
@@ -53,9 +53,9 @@ namespace Salesforce.MarketingCloud.Test
             return string.Empty;
         }
 
-        internal static T Create()
+        internal static Api.Client Create()
         {
-            return (T)Activator.CreateInstance(typeof(T), authBasePath, clientId, clientSecret, accountId, scope);
+            return new Api.Client(authBasePath, clientId, clientSecret, accountId, scope);
         }
     }
 }

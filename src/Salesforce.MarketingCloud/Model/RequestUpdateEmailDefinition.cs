@@ -25,39 +25,26 @@ using SwaggerDateConverter = Salesforce.MarketingCloud.Client.SwaggerDateConvert
 namespace Salesforce.MarketingCloud.Model
 {
     /// <summary>
-    /// Content
+    /// RequestUpdateEmailDefinition
     /// </summary>
     [DataContract]
-    public partial class Content :  IEquatable<Content>, IValidatableObject
+    public partial class RequestUpdateEmailDefinition :  IEquatable<RequestUpdateEmailDefinition>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="Content" /> class.
+        /// Initializes a new instance of the <see cref="RequestUpdateEmailDefinition" /> class.
         /// </summary>
-        [JsonConstructorAttribute]
-        protected Content() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="Content" /> class.
-        /// </summary>
-        /// <param name="customerKey">Unique identifier of the content asset. (required).</param>
-        public Content(string customerKey = default(string))
+        /// <param name="description">User-provided description of the email definition..</param>
+        public RequestUpdateEmailDefinition(string description = default(string))
         {
-            // to ensure "customerKey" is required (not null)
-            if (customerKey == null)
-            {
-                throw new InvalidDataException("customerKey is a required property for Content and cannot be null");
-            }
-            else
-            {
-                this.CustomerKey = customerKey;
-            }
+            this.Description = description;
         }
         
         /// <summary>
-        /// Unique identifier of the content asset.
+        /// User-provided description of the email definition.
         /// </summary>
-        /// <value>Unique identifier of the content asset.</value>
-        [DataMember(Name="customerKey", EmitDefaultValue=false)]
-        public string CustomerKey { get; set; }
+        /// <value>User-provided description of the email definition.</value>
+        [DataMember(Name="description", EmitDefaultValue=false)]
+        public string Description { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -66,8 +53,8 @@ namespace Salesforce.MarketingCloud.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class Content {\n");
-            sb.Append("  CustomerKey: ").Append(CustomerKey).Append("\n");
+            sb.Append("class RequestUpdateEmailDefinition {\n");
+            sb.Append("  Description: ").Append(Description).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -88,24 +75,24 @@ namespace Salesforce.MarketingCloud.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as Content);
+            return this.Equals(input as RequestUpdateEmailDefinition);
         }
 
         /// <summary>
-        /// Returns true if Content instances are equal
+        /// Returns true if RequestUpdateEmailDefinition instances are equal
         /// </summary>
-        /// <param name="input">Instance of Content to be compared</param>
+        /// <param name="input">Instance of RequestUpdateEmailDefinition to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(Content input)
+        public bool Equals(RequestUpdateEmailDefinition input)
         {
             if (input == null)
                 return false;
 
             return 
                 (
-                    this.CustomerKey == input.CustomerKey ||
-                    (this.CustomerKey != null &&
-                    this.CustomerKey.Equals(input.CustomerKey))
+                    this.Description == input.Description ||
+                    (this.Description != null &&
+                    this.Description.Equals(input.Description))
                 );
         }
 
@@ -118,8 +105,8 @@ namespace Salesforce.MarketingCloud.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                if (this.CustomerKey != null)
-                    hashCode = hashCode * 59 + this.CustomerKey.GetHashCode();
+                if (this.Description != null)
+                    hashCode = hashCode * 59 + this.Description.GetHashCode();
                 return hashCode;
             }
         }

@@ -120,14 +120,14 @@ namespace Salesforce.MarketingCloud.Test
         }
 
         [Test]
-        public void PartiallyUpdateAssetTest()
+        public void PartiallyUpdateAssetByIdTest()
         {
             var asset = CreateAsset();
             var createAssetResult = instance.CreateAsset(asset);
             var assetToPartiallyUpdateId = createAssetResult.Id;
 
             createAssetResult.Description = $"AssetDescription {Guid.NewGuid()}";
-            var partiallyUpdateAssetResult = instance.PartiallyUpdateAsset(assetToPartiallyUpdateId, createAssetResult);
+            var partiallyUpdateAssetResult = instance.PartiallyUpdateAssetById(assetToPartiallyUpdateId, createAssetResult);
 
             try
             {

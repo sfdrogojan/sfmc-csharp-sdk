@@ -25,18 +25,18 @@ using SwaggerDateConverter = Salesforce.MarketingCloud.Client.SwaggerDateConvert
 namespace Salesforce.MarketingCloud.Model
 {
     /// <summary>
-    /// SuccessfulEmailDefinitionDelete
+    /// ResponseDeleteSendDefinition
     /// </summary>
     [DataContract]
-    public partial class SuccessfulEmailDefinitionDelete :  IEquatable<SuccessfulEmailDefinitionDelete>, IValidatableObject
+    public partial class ResponseDeleteSendDefinition :  IEquatable<ResponseDeleteSendDefinition>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="SuccessfulEmailDefinitionDelete" /> class.
+        /// Initializes a new instance of the <see cref="ResponseDeleteSendDefinition" /> class.
         /// </summary>
         /// <param name="message">The response message.</param>
         /// <param name="requestId">The ID of the request.</param>
         /// <param name="deletedDefinitionKey">The key of the deleted definition.</param>
-        public SuccessfulEmailDefinitionDelete(string message = default(string), string requestId = default(string), string deletedDefinitionKey = default(string))
+        public ResponseDeleteSendDefinition(string message = default(string), string requestId = default(string), string deletedDefinitionKey = default(string))
         {
             this.Message = message;
             this.RequestId = requestId;
@@ -71,7 +71,7 @@ namespace Salesforce.MarketingCloud.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class SuccessfulEmailDefinitionDelete {\n");
+            sb.Append("class ResponseDeleteSendDefinition {\n");
             sb.Append("  Message: ").Append(Message).Append("\n");
             sb.Append("  RequestId: ").Append(RequestId).Append("\n");
             sb.Append("  DeletedDefinitionKey: ").Append(DeletedDefinitionKey).Append("\n");
@@ -95,15 +95,15 @@ namespace Salesforce.MarketingCloud.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as SuccessfulEmailDefinitionDelete);
+            return this.Equals(input as ResponseDeleteSendDefinition);
         }
 
         /// <summary>
-        /// Returns true if SuccessfulEmailDefinitionDelete instances are equal
+        /// Returns true if ResponseDeleteSendDefinition instances are equal
         /// </summary>
-        /// <param name="input">Instance of SuccessfulEmailDefinitionDelete to be compared</param>
+        /// <param name="input">Instance of ResponseDeleteSendDefinition to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(SuccessfulEmailDefinitionDelete input)
+        public bool Equals(ResponseDeleteSendDefinition input)
         {
             if (input == null)
                 return false;

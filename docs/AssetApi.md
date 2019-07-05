@@ -5,9 +5,9 @@ All URIs are relative to *https://www.exacttargetapis.com*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**CreateAsset**](AssetApi.md#createasset) | **POST** /asset/v1/content/assets | createAsset
-[**DeleteAssetById**](AssetApi.md#deleteassetbyid) | **DELETE** /asset/v1/content/assets/{id} | deleteAsset
+[**DeleteAssetById**](AssetApi.md#deleteassetbyid) | **DELETE** /asset/v1/content/assets/{id} | deleteAssetById
 [**GetAssetById**](AssetApi.md#getassetbyid) | **GET** /asset/v1/content/assets/{id} | getAssetById
-[**PartiallyUpdateAsset**](AssetApi.md#partiallyupdateasset) | **PATCH** /asset/v1/content/assets/{id} | patchAsset
+[**PartiallyUpdateAssetById**](AssetApi.md#partiallyupdateassetbyid) | **PATCH** /asset/v1/content/assets/{id} | partiallyUpdateAssetById
 
 
 <a name="createasset"></a>
@@ -75,7 +75,7 @@ No authorization required
 # **DeleteAssetById**
 > void DeleteAssetById (decimal? id)
 
-deleteAsset
+deleteAssetById
 
 Deletes an asset.
 
@@ -98,7 +98,7 @@ namespace Example
 
             try
             {
-                // deleteAsset
+                // deleteAssetById
                 apiInstance.DeleteAssetById(id);
             }
             catch (Exception e)
@@ -192,11 +192,11 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="partiallyupdateasset"></a>
-# **PartiallyUpdateAsset**
-> Asset PartiallyUpdateAsset (decimal? id, Asset body = null)
+<a name="partiallyupdateassetbyid"></a>
+# **PartiallyUpdateAssetById**
+> Asset PartiallyUpdateAssetById (decimal? id, Asset body = null)
 
-patchAsset
+partiallyUpdateAssetById
 
 Updates part of an asset.
 
@@ -210,7 +210,7 @@ using Salesforce.MarketingCloud.Model;
 
 namespace Example
 {
-    public class PartiallyUpdateAssetExample
+    public class PartiallyUpdateAssetByIdExample
     {
         public void main()
         {
@@ -220,13 +220,13 @@ namespace Example
 
             try
             {
-                // patchAsset
-                Asset result = apiInstance.PartiallyUpdateAsset(id, body);
+                // partiallyUpdateAssetById
+                Asset result = apiInstance.PartiallyUpdateAssetById(id, body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling AssetApi.PartiallyUpdateAsset: " + e.Message );
+                Debug.Print("Exception when calling AssetApi.PartiallyUpdateAssetById: " + e.Message );
             }
         }
     }

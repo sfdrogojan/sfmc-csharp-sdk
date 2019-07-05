@@ -25,26 +25,22 @@ using SwaggerDateConverter = Salesforce.MarketingCloud.Client.SwaggerDateConvert
 namespace Salesforce.MarketingCloud.Model
 {
     /// <summary>
-    /// EmailDefinitionsResponse
+    /// ResponseSendEmailToSingleRecipient
     /// </summary>
     [DataContract]
-    public partial class EmailDefinitionsResponse :  IEquatable<EmailDefinitionsResponse>, IValidatableObject
+    public partial class ResponseSendEmailToSingleRecipient :  IEquatable<ResponseSendEmailToSingleRecipient>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="EmailDefinitionsResponse" /> class.
+        /// Initializes a new instance of the <see cref="ResponseSendEmailToSingleRecipient" /> class.
         /// </summary>
         /// <param name="requestId">The ID of the request.</param>
-        /// <param name="definitions">definitions.</param>
-        /// <param name="count">Number of pages.</param>
-        /// <param name="page">Page number to return..</param>
-        /// <param name="pageSize">Number of definitions, which are array elements, to return per paged response..</param>
-        public EmailDefinitionsResponse(string requestId = default(string), List<EmailDefinition> definitions = default(List<EmailDefinition>), decimal? count = default(decimal?), decimal? page = default(decimal?), decimal? pageSize = default(decimal?))
+        /// <param name="errorCode">The specific error code.</param>
+        /// <param name="responses">responses.</param>
+        public ResponseSendEmailToSingleRecipient(string requestId = default(string), decimal? errorCode = default(decimal?), List<ResponseSendEmailToMultipleRecipientsInnerResponse> responses = default(List<ResponseSendEmailToMultipleRecipientsInnerResponse>))
         {
             this.RequestId = requestId;
-            this.Definitions = definitions;
-            this.Count = count;
-            this.Page = page;
-            this.PageSize = pageSize;
+            this.ErrorCode = errorCode;
+            this.Responses = responses;
         }
         
         /// <summary>
@@ -55,31 +51,17 @@ namespace Salesforce.MarketingCloud.Model
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Gets or Sets Definitions
+        /// The specific error code
         /// </summary>
-        [DataMember(Name="definitions", EmitDefaultValue=false)]
-        public List<EmailDefinition> Definitions { get; set; }
+        /// <value>The specific error code</value>
+        [DataMember(Name="errorCode", EmitDefaultValue=false)]
+        public decimal? ErrorCode { get; set; }
 
         /// <summary>
-        /// Number of pages
+        /// Gets or Sets Responses
         /// </summary>
-        /// <value>Number of pages</value>
-        [DataMember(Name="count", EmitDefaultValue=false)]
-        public decimal? Count { get; set; }
-
-        /// <summary>
-        /// Page number to return.
-        /// </summary>
-        /// <value>Page number to return.</value>
-        [DataMember(Name="page", EmitDefaultValue=false)]
-        public decimal? Page { get; set; }
-
-        /// <summary>
-        /// Number of definitions, which are array elements, to return per paged response.
-        /// </summary>
-        /// <value>Number of definitions, which are array elements, to return per paged response.</value>
-        [DataMember(Name="pageSize", EmitDefaultValue=false)]
-        public decimal? PageSize { get; set; }
+        [DataMember(Name="responses", EmitDefaultValue=false)]
+        public List<ResponseSendEmailToMultipleRecipientsInnerResponse> Responses { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -88,12 +70,10 @@ namespace Salesforce.MarketingCloud.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class EmailDefinitionsResponse {\n");
+            sb.Append("class ResponseSendEmailToSingleRecipient {\n");
             sb.Append("  RequestId: ").Append(RequestId).Append("\n");
-            sb.Append("  Definitions: ").Append(Definitions).Append("\n");
-            sb.Append("  Count: ").Append(Count).Append("\n");
-            sb.Append("  Page: ").Append(Page).Append("\n");
-            sb.Append("  PageSize: ").Append(PageSize).Append("\n");
+            sb.Append("  ErrorCode: ").Append(ErrorCode).Append("\n");
+            sb.Append("  Responses: ").Append(Responses).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -114,15 +94,15 @@ namespace Salesforce.MarketingCloud.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as EmailDefinitionsResponse);
+            return this.Equals(input as ResponseSendEmailToSingleRecipient);
         }
 
         /// <summary>
-        /// Returns true if EmailDefinitionsResponse instances are equal
+        /// Returns true if ResponseSendEmailToSingleRecipient instances are equal
         /// </summary>
-        /// <param name="input">Instance of EmailDefinitionsResponse to be compared</param>
+        /// <param name="input">Instance of ResponseSendEmailToSingleRecipient to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(EmailDefinitionsResponse input)
+        public bool Equals(ResponseSendEmailToSingleRecipient input)
         {
             if (input == null)
                 return false;
@@ -134,24 +114,14 @@ namespace Salesforce.MarketingCloud.Model
                     this.RequestId.Equals(input.RequestId))
                 ) && 
                 (
-                    this.Definitions == input.Definitions ||
-                    this.Definitions != null &&
-                    this.Definitions.SequenceEqual(input.Definitions)
+                    this.ErrorCode == input.ErrorCode ||
+                    (this.ErrorCode != null &&
+                    this.ErrorCode.Equals(input.ErrorCode))
                 ) && 
                 (
-                    this.Count == input.Count ||
-                    (this.Count != null &&
-                    this.Count.Equals(input.Count))
-                ) && 
-                (
-                    this.Page == input.Page ||
-                    (this.Page != null &&
-                    this.Page.Equals(input.Page))
-                ) && 
-                (
-                    this.PageSize == input.PageSize ||
-                    (this.PageSize != null &&
-                    this.PageSize.Equals(input.PageSize))
+                    this.Responses == input.Responses ||
+                    this.Responses != null &&
+                    this.Responses.SequenceEqual(input.Responses)
                 );
         }
 
@@ -166,14 +136,10 @@ namespace Salesforce.MarketingCloud.Model
                 int hashCode = 41;
                 if (this.RequestId != null)
                     hashCode = hashCode * 59 + this.RequestId.GetHashCode();
-                if (this.Definitions != null)
-                    hashCode = hashCode * 59 + this.Definitions.GetHashCode();
-                if (this.Count != null)
-                    hashCode = hashCode * 59 + this.Count.GetHashCode();
-                if (this.Page != null)
-                    hashCode = hashCode * 59 + this.Page.GetHashCode();
-                if (this.PageSize != null)
-                    hashCode = hashCode * 59 + this.PageSize.GetHashCode();
+                if (this.ErrorCode != null)
+                    hashCode = hashCode * 59 + this.ErrorCode.GetHashCode();
+                if (this.Responses != null)
+                    hashCode = hashCode * 59 + this.Responses.GetHashCode();
                 return hashCode;
             }
         }

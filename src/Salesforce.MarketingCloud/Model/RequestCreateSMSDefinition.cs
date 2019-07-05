@@ -25,33 +25,31 @@ using SwaggerDateConverter = Salesforce.MarketingCloud.Client.SwaggerDateConvert
 namespace Salesforce.MarketingCloud.Model
 {
     /// <summary>
-    /// EmailDefinition
+    /// RequestCreateSMSDefinition
     /// </summary>
     [DataContract]
-    public partial class EmailDefinition :  IEquatable<EmailDefinition>, IValidatableObject
+    public partial class RequestCreateSMSDefinition :  IEquatable<RequestCreateSMSDefinition>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="EmailDefinition" /> class.
+        /// Initializes a new instance of the <see cref="RequestCreateSMSDefinition" /> class.
         /// </summary>
         [JsonConstructorAttribute]
-        protected EmailDefinition() { }
+        protected RequestCreateSMSDefinition() { }
         /// <summary>
-        /// Initializes a new instance of the <see cref="EmailDefinition" /> class.
+        /// Initializes a new instance of the <see cref="RequestCreateSMSDefinition" /> class.
         /// </summary>
         /// <param name="definitionKey">Unique, user-generated key to access the definition object. (required).</param>
         /// <param name="name">Name of the definition. Must be unique. (required).</param>
         /// <param name="content">content (required).</param>
-        /// <param name="subscriptions">subscriptions (required).</param>
         /// <param name="status">Operational state of the definition: active, inactive, or deleted. A message sent to an active definition is processed and delivered. A message sent to an inactive definition isn’t processed or delivered. Instead, the message is queued for later processing for up to three days..</param>
-        /// <param name="description">User-provided description of the send definition..</param>
-        /// <param name="classification">Marketing Cloud external key of a sending classification defined in Email Studio Administration. Only transactional classifications are permitted. Default is default transactional..</param>
-        /// <param name="options">options.</param>
-        public EmailDefinition(string definitionKey = default(string), string name = default(string), Content content = default(Content), Subscriptions subscriptions = default(Subscriptions), string status = default(string), string description = default(string), string classification = default(string), Options options = default(Options))
+        /// <param name="description">User-provided description of the SMS definition..</param>
+        /// <param name="subscriptions">subscriptions (required).</param>
+        public RequestCreateSMSDefinition(string definitionKey = default(string), string name = default(string), RequestCreateSMSDefinitionContent content = default(RequestCreateSMSDefinitionContent), string status = default(string), string description = default(string), RequestCreateSMSDefinitionSubscriptions subscriptions = default(RequestCreateSMSDefinitionSubscriptions))
         {
             // to ensure "definitionKey" is required (not null)
             if (definitionKey == null)
             {
-                throw new InvalidDataException("definitionKey is a required property for EmailDefinition and cannot be null");
+                throw new InvalidDataException("definitionKey is a required property for RequestCreateSMSDefinition and cannot be null");
             }
             else
             {
@@ -60,7 +58,7 @@ namespace Salesforce.MarketingCloud.Model
             // to ensure "name" is required (not null)
             if (name == null)
             {
-                throw new InvalidDataException("name is a required property for EmailDefinition and cannot be null");
+                throw new InvalidDataException("name is a required property for RequestCreateSMSDefinition and cannot be null");
             }
             else
             {
@@ -69,7 +67,7 @@ namespace Salesforce.MarketingCloud.Model
             // to ensure "content" is required (not null)
             if (content == null)
             {
-                throw new InvalidDataException("content is a required property for EmailDefinition and cannot be null");
+                throw new InvalidDataException("content is a required property for RequestCreateSMSDefinition and cannot be null");
             }
             else
             {
@@ -78,7 +76,7 @@ namespace Salesforce.MarketingCloud.Model
             // to ensure "subscriptions" is required (not null)
             if (subscriptions == null)
             {
-                throw new InvalidDataException("subscriptions is a required property for EmailDefinition and cannot be null");
+                throw new InvalidDataException("subscriptions is a required property for RequestCreateSMSDefinition and cannot be null");
             }
             else
             {
@@ -86,17 +84,8 @@ namespace Salesforce.MarketingCloud.Model
             }
             this.Status = status;
             this.Description = description;
-            this.Classification = classification;
-            this.Options = options;
         }
         
-        /// <summary>
-        /// The ID of the request
-        /// </summary>
-        /// <value>The ID of the request</value>
-        [DataMember(Name="requestId", EmitDefaultValue=false)]
-        public string RequestId { get; private set; }
-
         /// <summary>
         /// Unique, user-generated key to access the definition object.
         /// </summary>
@@ -115,13 +104,7 @@ namespace Salesforce.MarketingCloud.Model
         /// Gets or Sets Content
         /// </summary>
         [DataMember(Name="content", EmitDefaultValue=false)]
-        public Content Content { get; set; }
-
-        /// <summary>
-        /// Gets or Sets Subscriptions
-        /// </summary>
-        [DataMember(Name="subscriptions", EmitDefaultValue=false)]
-        public Subscriptions Subscriptions { get; set; }
+        public RequestCreateSMSDefinitionContent Content { get; set; }
 
         /// <summary>
         /// Operational state of the definition: active, inactive, or deleted. A message sent to an active definition is processed and delivered. A message sent to an inactive definition isn’t processed or delivered. Instead, the message is queued for later processing for up to three days.
@@ -129,26 +112,6 @@ namespace Salesforce.MarketingCloud.Model
         /// <value>Operational state of the definition: active, inactive, or deleted. A message sent to an active definition is processed and delivered. A message sent to an inactive definition isn’t processed or delivered. Instead, the message is queued for later processing for up to three days.</value>
         [DataMember(Name="status", EmitDefaultValue=false)]
         public string Status { get; set; }
-
-        /// <summary>
-        /// User-provided description of the send definition.
-        /// </summary>
-        /// <value>User-provided description of the send definition.</value>
-        [DataMember(Name="description", EmitDefaultValue=false)]
-        public string Description { get; set; }
-
-        /// <summary>
-        /// Marketing Cloud external key of a sending classification defined in Email Studio Administration. Only transactional classifications are permitted. Default is default transactional.
-        /// </summary>
-        /// <value>Marketing Cloud external key of a sending classification defined in Email Studio Administration. Only transactional classifications are permitted. Default is default transactional.</value>
-        [DataMember(Name="classification", EmitDefaultValue=false)]
-        public string Classification { get; set; }
-
-        /// <summary>
-        /// Gets or Sets Options
-        /// </summary>
-        [DataMember(Name="options", EmitDefaultValue=false)]
-        public Options Options { get; set; }
 
         /// <summary>
         /// The date the object was created.
@@ -165,24 +128,42 @@ namespace Salesforce.MarketingCloud.Model
         public DateTime? ModifiedDate { get; private set; }
 
         /// <summary>
+        /// User-provided description of the SMS definition.
+        /// </summary>
+        /// <value>User-provided description of the SMS definition.</value>
+        [DataMember(Name="description", EmitDefaultValue=false)]
+        public string Description { get; set; }
+
+        /// <summary>
+        /// Gets or Sets Subscriptions
+        /// </summary>
+        [DataMember(Name="subscriptions", EmitDefaultValue=false)]
+        public RequestCreateSMSDefinitionSubscriptions Subscriptions { get; set; }
+
+        /// <summary>
+        /// The ID of the request
+        /// </summary>
+        /// <value>The ID of the request</value>
+        [DataMember(Name="requestId", EmitDefaultValue=false)]
+        public string RequestId { get; private set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class EmailDefinition {\n");
-            sb.Append("  RequestId: ").Append(RequestId).Append("\n");
+            sb.Append("class RequestCreateSMSDefinition {\n");
             sb.Append("  DefinitionKey: ").Append(DefinitionKey).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  Content: ").Append(Content).Append("\n");
-            sb.Append("  Subscriptions: ").Append(Subscriptions).Append("\n");
             sb.Append("  Status: ").Append(Status).Append("\n");
-            sb.Append("  Description: ").Append(Description).Append("\n");
-            sb.Append("  Classification: ").Append(Classification).Append("\n");
-            sb.Append("  Options: ").Append(Options).Append("\n");
             sb.Append("  CreatedDate: ").Append(CreatedDate).Append("\n");
             sb.Append("  ModifiedDate: ").Append(ModifiedDate).Append("\n");
+            sb.Append("  Description: ").Append(Description).Append("\n");
+            sb.Append("  Subscriptions: ").Append(Subscriptions).Append("\n");
+            sb.Append("  RequestId: ").Append(RequestId).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -203,25 +184,20 @@ namespace Salesforce.MarketingCloud.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as EmailDefinition);
+            return this.Equals(input as RequestCreateSMSDefinition);
         }
 
         /// <summary>
-        /// Returns true if EmailDefinition instances are equal
+        /// Returns true if RequestCreateSMSDefinition instances are equal
         /// </summary>
-        /// <param name="input">Instance of EmailDefinition to be compared</param>
+        /// <param name="input">Instance of RequestCreateSMSDefinition to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(EmailDefinition input)
+        public bool Equals(RequestCreateSMSDefinition input)
         {
             if (input == null)
                 return false;
 
             return 
-                (
-                    this.RequestId == input.RequestId ||
-                    (this.RequestId != null &&
-                    this.RequestId.Equals(input.RequestId))
-                ) && 
                 (
                     this.DefinitionKey == input.DefinitionKey ||
                     (this.DefinitionKey != null &&
@@ -238,29 +214,9 @@ namespace Salesforce.MarketingCloud.Model
                     this.Content.Equals(input.Content))
                 ) && 
                 (
-                    this.Subscriptions == input.Subscriptions ||
-                    (this.Subscriptions != null &&
-                    this.Subscriptions.Equals(input.Subscriptions))
-                ) && 
-                (
                     this.Status == input.Status ||
                     (this.Status != null &&
                     this.Status.Equals(input.Status))
-                ) && 
-                (
-                    this.Description == input.Description ||
-                    (this.Description != null &&
-                    this.Description.Equals(input.Description))
-                ) && 
-                (
-                    this.Classification == input.Classification ||
-                    (this.Classification != null &&
-                    this.Classification.Equals(input.Classification))
-                ) && 
-                (
-                    this.Options == input.Options ||
-                    (this.Options != null &&
-                    this.Options.Equals(input.Options))
                 ) && 
                 (
                     this.CreatedDate == input.CreatedDate ||
@@ -271,6 +227,21 @@ namespace Salesforce.MarketingCloud.Model
                     this.ModifiedDate == input.ModifiedDate ||
                     (this.ModifiedDate != null &&
                     this.ModifiedDate.Equals(input.ModifiedDate))
+                ) && 
+                (
+                    this.Description == input.Description ||
+                    (this.Description != null &&
+                    this.Description.Equals(input.Description))
+                ) && 
+                (
+                    this.Subscriptions == input.Subscriptions ||
+                    (this.Subscriptions != null &&
+                    this.Subscriptions.Equals(input.Subscriptions))
+                ) && 
+                (
+                    this.RequestId == input.RequestId ||
+                    (this.RequestId != null &&
+                    this.RequestId.Equals(input.RequestId))
                 );
         }
 
@@ -283,28 +254,24 @@ namespace Salesforce.MarketingCloud.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                if (this.RequestId != null)
-                    hashCode = hashCode * 59 + this.RequestId.GetHashCode();
                 if (this.DefinitionKey != null)
                     hashCode = hashCode * 59 + this.DefinitionKey.GetHashCode();
                 if (this.Name != null)
                     hashCode = hashCode * 59 + this.Name.GetHashCode();
                 if (this.Content != null)
                     hashCode = hashCode * 59 + this.Content.GetHashCode();
-                if (this.Subscriptions != null)
-                    hashCode = hashCode * 59 + this.Subscriptions.GetHashCode();
                 if (this.Status != null)
                     hashCode = hashCode * 59 + this.Status.GetHashCode();
-                if (this.Description != null)
-                    hashCode = hashCode * 59 + this.Description.GetHashCode();
-                if (this.Classification != null)
-                    hashCode = hashCode * 59 + this.Classification.GetHashCode();
-                if (this.Options != null)
-                    hashCode = hashCode * 59 + this.Options.GetHashCode();
                 if (this.CreatedDate != null)
                     hashCode = hashCode * 59 + this.CreatedDate.GetHashCode();
                 if (this.ModifiedDate != null)
                     hashCode = hashCode * 59 + this.ModifiedDate.GetHashCode();
+                if (this.Description != null)
+                    hashCode = hashCode * 59 + this.Description.GetHashCode();
+                if (this.Subscriptions != null)
+                    hashCode = hashCode * 59 + this.Subscriptions.GetHashCode();
+                if (this.RequestId != null)
+                    hashCode = hashCode * 59 + this.RequestId.GetHashCode();
                 return hashCode;
             }
         }

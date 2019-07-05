@@ -97,17 +97,30 @@ All URIs are relative to *https://www.exacttargetapis.com*
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
 *AssetApi* | [**CreateAsset**](docs/AssetApi.md#createasset) | **POST** /asset/v1/content/assets | createAsset
-*AssetApi* | [**DeleteAssetById**](docs/AssetApi.md#deleteassetbyid) | **DELETE** /asset/v1/content/assets/{id} | deleteAsset
+*AssetApi* | [**DeleteAssetById**](docs/AssetApi.md#deleteassetbyid) | **DELETE** /asset/v1/content/assets/{id} | deleteAssetById
 *AssetApi* | [**GetAssetById**](docs/AssetApi.md#getassetbyid) | **GET** /asset/v1/content/assets/{id} | getAssetById
-*AssetApi* | [**PartiallyUpdateAsset**](docs/AssetApi.md#partiallyupdateasset) | **PATCH** /asset/v1/content/assets/{id} | patchAsset
+*AssetApi* | [**PartiallyUpdateAssetById**](docs/AssetApi.md#partiallyupdateassetbyid) | **PATCH** /asset/v1/content/assets/{id} | partiallyUpdateAssetById
 *CampaignApi* | [**CreateCampaign**](docs/CampaignApi.md#createcampaign) | **POST** /hub/v1/campaigns | createCampaign
-*CampaignApi* | [**DeleteCampaignById**](docs/CampaignApi.md#deletecampaignbyid) | **DELETE** /hub/v1/campaigns/{id} | deleteCampaign
-*CampaignApi* | [**GetCampaignById**](docs/CampaignApi.md#getcampaignbyid) | **GET** /hub/v1/campaigns/{id} | getCampaign
-*EmailDefinitionApi* | [**CreateEmailDefinition**](docs/EmailDefinitionApi.md#createemaildefinition) | **POST** /messaging/v1/email/definitions/ | createEmailDefinition
-*EmailDefinitionApi* | [**DeleteEmailDefinitionByDefinitionKey**](docs/EmailDefinitionApi.md#deleteemaildefinitionbydefinitionkey) | **DELETE** /messaging/v1/email/definitions/{definitionKey} | deleteEmailDefinition
-*EmailDefinitionApi* | [**GetEmailDefinitionByDefinitionKey**](docs/EmailDefinitionApi.md#getemaildefinitionbydefinitionkey) | **GET** /messaging/v1/email/definitions/{definitionKey} | getEmailDefinition
-*EmailDefinitionApi* | [**GetEmailDefinitions**](docs/EmailDefinitionApi.md#getemaildefinitions) | **GET** /messaging/v1/email/definitions/ | getEmailDefinitions
-*EmailDefinitionApi* | [**PartiallyUpdateEmailDefinition**](docs/EmailDefinitionApi.md#partiallyupdateemaildefinition) | **PATCH** /messaging/v1/email/definitions/{definitionKey} | patchEmailDefinition
+*CampaignApi* | [**DeleteCampaignById**](docs/CampaignApi.md#deletecampaignbyid) | **DELETE** /hub/v1/campaigns/{id} | deleteCampaignById
+*CampaignApi* | [**GetCampaignById**](docs/CampaignApi.md#getcampaignbyid) | **GET** /hub/v1/campaigns/{id} | getCampaignById
+*TransactionalMessagingApi* | [**CreateEmailDefinition**](docs/TransactionalMessagingApi.md#createemaildefinition) | **POST** /messaging/v1/email/definitions/ | createEmailDefinition
+*TransactionalMessagingApi* | [**CreateSMSDefinition**](docs/TransactionalMessagingApi.md#createsmsdefinition) | **POST** /messaging/v1/sms/definitions | createSMSDefinition
+*TransactionalMessagingApi* | [**DeleteEmailDefinition**](docs/TransactionalMessagingApi.md#deleteemaildefinition) | **DELETE** /messaging/v1/email/definitions/{definitionKey} | deleteEmailDefinition
+*TransactionalMessagingApi* | [**DeleteQueuedMessagesForEmailDefinition**](docs/TransactionalMessagingApi.md#deletequeuedmessagesforemaildefinition) | **DELETE** /messaging/v1/email/definitions/{definitionKey}/queue | deleteQueuedMessagesForEmailDefinition
+*TransactionalMessagingApi* | [**DeleteQueuedMessagesForSMSDefinition**](docs/TransactionalMessagingApi.md#deletequeuedmessagesforsmsdefinition) | **DELETE** /messaging/v1/sms/definitions/{definitionKey}/queue | deleteQueuedMessagesForSMSDefinition
+*TransactionalMessagingApi* | [**DeleteSMSDefinition**](docs/TransactionalMessagingApi.md#deletesmsdefinition) | **DELETE** /messaging/v1/sms/definitions/{definitionKey} | deleteSMSDefinition
+*TransactionalMessagingApi* | [**GetEmailDefinition**](docs/TransactionalMessagingApi.md#getemaildefinition) | **GET** /messaging/v1/email/definitions/{definitionKey} | getEmailDefinition
+*TransactionalMessagingApi* | [**GetEmailDefinitions**](docs/TransactionalMessagingApi.md#getemaildefinitions) | **GET** /messaging/v1/email/definitions/ | getEmailDefinitions
+*TransactionalMessagingApi* | [**GetEmailSendStatusForRecipient**](docs/TransactionalMessagingApi.md#getemailsendstatusforrecipient) | **GET** /messaging/v1/email/messages/{messageKey} | getEmailSendStatusForRecipient
+*TransactionalMessagingApi* | [**GetEmailsNotSentToRecipients**](docs/TransactionalMessagingApi.md#getemailsnotsenttorecipients) | **GET** /messaging/v1/email/messages/ | getEmailsNotSentToRecipients
+*TransactionalMessagingApi* | [**GetQueueMetricsForEmailDefinition**](docs/TransactionalMessagingApi.md#getqueuemetricsforemaildefinition) | **GET** /messaging/v1/email/definitions/{definitionKey}/queue | getQueueMetricsForEmailDefinition
+*TransactionalMessagingApi* | [**GetQueueMetricsForSMSDefinition**](docs/TransactionalMessagingApi.md#getqueuemetricsforsmsdefinition) | **GET** /messaging/v1/sms/definitions/{definitionKey}/queue | getQueueMetricsForSMSDefinition
+*TransactionalMessagingApi* | [**GetSMSDefinition**](docs/TransactionalMessagingApi.md#getsmsdefinition) | **GET** /messaging/v1/sms/definitions/{definitionKey} | getSMSDefinition
+*TransactionalMessagingApi* | [**GetSMSDefinitions**](docs/TransactionalMessagingApi.md#getsmsdefinitions) | **GET** /messaging/v1/sms/definitions | getSMSDefinitions
+*TransactionalMessagingApi* | [**PartiallyUpdateEmailDefinition**](docs/TransactionalMessagingApi.md#partiallyupdateemaildefinition) | **PATCH** /messaging/v1/email/definitions/{definitionKey} | partiallyUpdateEmailDefinition
+*TransactionalMessagingApi* | [**PartiallyUpdateSMSDefinition**](docs/TransactionalMessagingApi.md#partiallyupdatesmsdefinition) | **PATCH** /messaging/v1/sms/definitions/{definitionKey} | partiallyUpdateSMSDefinition
+*TransactionalMessagingApi* | [**SendEmailToMultipleRecipients**](docs/TransactionalMessagingApi.md#sendemailtomultiplerecipients) | **POST** /messaging/v1/email/messages/ | sendEmailToMultipleRecipients
+*TransactionalMessagingApi* | [**SendEmailToSingleRecipient**](docs/TransactionalMessagingApi.md#sendemailtosinglerecipient) | **POST** /messaging/v1/email/messages/{messageKey} | sendEmailToSingleRecipient
 
 
 <a name="documentation-for-models"></a>
@@ -117,14 +130,31 @@ Class | Method | HTTP request | Description
  - [Model.Asset](docs/Asset.md)
  - [Model.AssetType](docs/AssetType.md)
  - [Model.Campaign](docs/Campaign.md)
- - [Model.Content](docs/Content.md)
- - [Model.EmailDefinition](docs/EmailDefinition.md)
- - [Model.EmailDefinitionDescription](docs/EmailDefinitionDescription.md)
- - [Model.EmailDefinitionsResponse](docs/EmailDefinitionsResponse.md)
- - [Model.Options](docs/Options.md)
+ - [Model.Recipient](docs/Recipient.md)
+ - [Model.RequestCreateEmailDefinition](docs/RequestCreateEmailDefinition.md)
+ - [Model.RequestCreateEmailDefinitionContent](docs/RequestCreateEmailDefinitionContent.md)
+ - [Model.RequestCreateEmailDefinitionOptions](docs/RequestCreateEmailDefinitionOptions.md)
+ - [Model.RequestCreateEmailDefinitionSubscriptions](docs/RequestCreateEmailDefinitionSubscriptions.md)
+ - [Model.RequestCreateSMSDefinition](docs/RequestCreateSMSDefinition.md)
+ - [Model.RequestCreateSMSDefinitionContent](docs/RequestCreateSMSDefinitionContent.md)
+ - [Model.RequestCreateSMSDefinitionSubscriptions](docs/RequestCreateSMSDefinitionSubscriptions.md)
+ - [Model.RequestSendEmailToMultipleRecipients](docs/RequestSendEmailToMultipleRecipients.md)
+ - [Model.RequestSendMessageSingleRecipient](docs/RequestSendMessageSingleRecipient.md)
+ - [Model.RequestUpdateEmailDefinition](docs/RequestUpdateEmailDefinition.md)
+ - [Model.ResponseDeleteQueuedMessagesForSendDefinition](docs/ResponseDeleteQueuedMessagesForSendDefinition.md)
+ - [Model.ResponseDeleteSendDefinition](docs/ResponseDeleteSendDefinition.md)
+ - [Model.ResponseGetEmailDefinitions](docs/ResponseGetEmailDefinitions.md)
+ - [Model.ResponseGetEmailSendStatusForRecipient](docs/ResponseGetEmailSendStatusForRecipient.md)
+ - [Model.ResponseGetEmailSendStatusForRecipientInfo](docs/ResponseGetEmailSendStatusForRecipientInfo.md)
+ - [Model.ResponseGetEmailsNotSentToRecipients](docs/ResponseGetEmailsNotSentToRecipients.md)
+ - [Model.ResponseGetEmailsNotSentToRecipientsMessage](docs/ResponseGetEmailsNotSentToRecipientsMessage.md)
+ - [Model.ResponseGetEmailsNotSentToRecipientsMessageInfo](docs/ResponseGetEmailsNotSentToRecipientsMessageInfo.md)
+ - [Model.ResponseGetQueueMetricsForSendDefinition](docs/ResponseGetQueueMetricsForSendDefinition.md)
+ - [Model.ResponseGetSMSDefinitions](docs/ResponseGetSMSDefinitions.md)
+ - [Model.ResponseSendEmailToMultipleRecipients](docs/ResponseSendEmailToMultipleRecipients.md)
+ - [Model.ResponseSendEmailToMultipleRecipientsInnerResponse](docs/ResponseSendEmailToMultipleRecipientsInnerResponse.md)
+ - [Model.ResponseSendEmailToSingleRecipient](docs/ResponseSendEmailToSingleRecipient.md)
  - [Model.SharingProperties](docs/SharingProperties.md)
- - [Model.Subscriptions](docs/Subscriptions.md)
- - [Model.SuccessfulEmailDefinitionDelete](docs/SuccessfulEmailDefinitionDelete.md)
 
 
 <a name="documentation-for-authorization"></a>

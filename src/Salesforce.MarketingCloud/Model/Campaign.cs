@@ -43,8 +43,7 @@ namespace Salesforce.MarketingCloud.Model
         /// <param name="campaignCode">Unique identifier for the campaign with a maximum length of 36 characters (required).</param>
         /// <param name="color">Hex color value (required).</param>
         /// <param name="favorite">Determines if the campaign will be flagged as a favorite (required).</param>
-        /// <param name="id">The id of the campaign.</param>
-        public Campaign(string name = default(string), string description = default(string), string campaignCode = default(string), string color = default(string), bool? favorite = default(bool?), decimal? id = default(decimal?))
+        public Campaign(string name = default(string), string description = default(string), string campaignCode = default(string), string color = default(string), bool? favorite = default(bool?))
         {
             // to ensure "name" is required (not null)
             if (name == null)
@@ -91,50 +90,49 @@ namespace Salesforce.MarketingCloud.Model
             {
                 this.Favorite = favorite;
             }
-            this.Id = id;
         }
         
         /// <summary>
         /// Name of the campaign with a maximum length of 128 characters
         /// </summary>
         /// <value>Name of the campaign with a maximum length of 128 characters</value>
-        [DataMember(Name="Name", EmitDefaultValue=false)]
+        [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
 
         /// <summary>
         /// Description of the campaign with a maximum length of 512 characters
         /// </summary>
         /// <value>Description of the campaign with a maximum length of 512 characters</value>
-        [DataMember(Name="Description", EmitDefaultValue=false)]
+        [DataMember(Name="description", EmitDefaultValue=false)]
         public string Description { get; set; }
 
         /// <summary>
         /// Unique identifier for the campaign with a maximum length of 36 characters
         /// </summary>
         /// <value>Unique identifier for the campaign with a maximum length of 36 characters</value>
-        [DataMember(Name="CampaignCode", EmitDefaultValue=false)]
+        [DataMember(Name="campaignCode", EmitDefaultValue=false)]
         public string CampaignCode { get; set; }
 
         /// <summary>
         /// Hex color value
         /// </summary>
         /// <value>Hex color value</value>
-        [DataMember(Name="Color", EmitDefaultValue=false)]
+        [DataMember(Name="color", EmitDefaultValue=false)]
         public string Color { get; set; }
 
         /// <summary>
         /// Determines if the campaign will be flagged as a favorite
         /// </summary>
         /// <value>Determines if the campaign will be flagged as a favorite</value>
-        [DataMember(Name="Favorite", EmitDefaultValue=false)]
+        [DataMember(Name="favorite", EmitDefaultValue=false)]
         public bool? Favorite { get; set; }
 
         /// <summary>
         /// The id of the campaign
         /// </summary>
         /// <value>The id of the campaign</value>
-        [DataMember(Name="Id", EmitDefaultValue=false)]
-        public decimal? Id { get; set; }
+        [DataMember(Name="id", EmitDefaultValue=false)]
+        public string Id { get; private set; }
 
         /// <summary>
         /// The date the object was created.

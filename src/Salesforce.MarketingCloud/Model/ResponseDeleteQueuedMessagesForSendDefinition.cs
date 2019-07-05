@@ -25,26 +25,26 @@ using SwaggerDateConverter = Salesforce.MarketingCloud.Client.SwaggerDateConvert
 namespace Salesforce.MarketingCloud.Model
 {
     /// <summary>
-    /// EmailDefinitionDescription
+    /// ResponseDeleteQueuedMessagesForSendDefinition
     /// </summary>
     [DataContract]
-    public partial class EmailDefinitionDescription :  IEquatable<EmailDefinitionDescription>, IValidatableObject
+    public partial class ResponseDeleteQueuedMessagesForSendDefinition :  IEquatable<ResponseDeleteQueuedMessagesForSendDefinition>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="EmailDefinitionDescription" /> class.
+        /// Initializes a new instance of the <see cref="ResponseDeleteQueuedMessagesForSendDefinition" /> class.
         /// </summary>
-        /// <param name="description">The email definition description.</param>
-        public EmailDefinitionDescription(string description = default(string))
+        /// <param name="requestId">The ID of the request.</param>
+        public ResponseDeleteQueuedMessagesForSendDefinition(string requestId = default(string))
         {
-            this.Description = description;
+            this.RequestId = requestId;
         }
         
         /// <summary>
-        /// The email definition description
+        /// The ID of the request
         /// </summary>
-        /// <value>The email definition description</value>
-        [DataMember(Name="description", EmitDefaultValue=false)]
-        public string Description { get; set; }
+        /// <value>The ID of the request</value>
+        [DataMember(Name="requestId", EmitDefaultValue=false)]
+        public string RequestId { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -53,8 +53,8 @@ namespace Salesforce.MarketingCloud.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class EmailDefinitionDescription {\n");
-            sb.Append("  Description: ").Append(Description).Append("\n");
+            sb.Append("class ResponseDeleteQueuedMessagesForSendDefinition {\n");
+            sb.Append("  RequestId: ").Append(RequestId).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -75,24 +75,24 @@ namespace Salesforce.MarketingCloud.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as EmailDefinitionDescription);
+            return this.Equals(input as ResponseDeleteQueuedMessagesForSendDefinition);
         }
 
         /// <summary>
-        /// Returns true if EmailDefinitionDescription instances are equal
+        /// Returns true if ResponseDeleteQueuedMessagesForSendDefinition instances are equal
         /// </summary>
-        /// <param name="input">Instance of EmailDefinitionDescription to be compared</param>
+        /// <param name="input">Instance of ResponseDeleteQueuedMessagesForSendDefinition to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(EmailDefinitionDescription input)
+        public bool Equals(ResponseDeleteQueuedMessagesForSendDefinition input)
         {
             if (input == null)
                 return false;
 
             return 
                 (
-                    this.Description == input.Description ||
-                    (this.Description != null &&
-                    this.Description.Equals(input.Description))
+                    this.RequestId == input.RequestId ||
+                    (this.RequestId != null &&
+                    this.RequestId.Equals(input.RequestId))
                 );
         }
 
@@ -105,8 +105,8 @@ namespace Salesforce.MarketingCloud.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                if (this.Description != null)
-                    hashCode = hashCode * 59 + this.Description.GetHashCode();
+                if (this.RequestId != null)
+                    hashCode = hashCode * 59 + this.RequestId.GetHashCode();
                 return hashCode;
             }
         }

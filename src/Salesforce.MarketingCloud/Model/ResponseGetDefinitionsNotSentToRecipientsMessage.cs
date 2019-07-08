@@ -25,13 +25,13 @@ using SwaggerDateConverter = Salesforce.MarketingCloud.Client.SwaggerDateConvert
 namespace Salesforce.MarketingCloud.Model
 {
     /// <summary>
-    /// ResponseGetEmailsNotSentToRecipientsMessage
+    /// ResponseGetDefinitionsNotSentToRecipientsMessage
     /// </summary>
     [DataContract]
-    public partial class ResponseGetEmailsNotSentToRecipientsMessage :  IEquatable<ResponseGetEmailsNotSentToRecipientsMessage>, IValidatableObject
+    public partial class ResponseGetDefinitionsNotSentToRecipientsMessage :  IEquatable<ResponseGetDefinitionsNotSentToRecipientsMessage>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="ResponseGetEmailsNotSentToRecipientsMessage" /> class.
+        /// Initializes a new instance of the <see cref="ResponseGetDefinitionsNotSentToRecipientsMessage" /> class.
         /// </summary>
         /// <param name="statusCode">The specific status code.</param>
         /// <param name="statusMessage">The specific status message.</param>
@@ -40,7 +40,7 @@ namespace Salesforce.MarketingCloud.Model
         /// <param name="definitionKey">Unique, user-generated key to access the definition object..</param>
         /// <param name="eventID">eventID.</param>
         /// <param name="info">info.</param>
-        public ResponseGetEmailsNotSentToRecipientsMessage(int? statusCode = default(int?), string statusMessage = default(string), string eventCategoryType = default(string), DateTime? timestamp = default(DateTime?), string definitionKey = default(string), decimal? eventID = default(decimal?), ResponseGetEmailsNotSentToRecipientsMessageInfo info = default(ResponseGetEmailsNotSentToRecipientsMessageInfo))
+        public ResponseGetDefinitionsNotSentToRecipientsMessage(int? statusCode = default(int?), string statusMessage = default(string), string eventCategoryType = default(string), DateTime? timestamp = default(DateTime?), string definitionKey = default(string), decimal? eventID = default(decimal?), ResponseGetDefinitionsNotSentToRecipientsMessageInfo info = default(ResponseGetDefinitionsNotSentToRecipientsMessageInfo))
         {
             this.StatusCode = statusCode;
             this.StatusMessage = statusMessage;
@@ -96,7 +96,7 @@ namespace Salesforce.MarketingCloud.Model
         /// Gets or Sets Info
         /// </summary>
         [DataMember(Name="info", EmitDefaultValue=false)]
-        public ResponseGetEmailsNotSentToRecipientsMessageInfo Info { get; set; }
+        public ResponseGetDefinitionsNotSentToRecipientsMessageInfo Info { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -105,7 +105,7 @@ namespace Salesforce.MarketingCloud.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class ResponseGetEmailsNotSentToRecipientsMessage {\n");
+            sb.Append("class ResponseGetDefinitionsNotSentToRecipientsMessage {\n");
             sb.Append("  StatusCode: ").Append(StatusCode).Append("\n");
             sb.Append("  StatusMessage: ").Append(StatusMessage).Append("\n");
             sb.Append("  EventCategoryType: ").Append(EventCategoryType).Append("\n");
@@ -133,15 +133,15 @@ namespace Salesforce.MarketingCloud.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as ResponseGetEmailsNotSentToRecipientsMessage);
+            return this.Equals(input as ResponseGetDefinitionsNotSentToRecipientsMessage);
         }
 
         /// <summary>
-        /// Returns true if ResponseGetEmailsNotSentToRecipientsMessage instances are equal
+        /// Returns true if ResponseGetDefinitionsNotSentToRecipientsMessage instances are equal
         /// </summary>
-        /// <param name="input">Instance of ResponseGetEmailsNotSentToRecipientsMessage to be compared</param>
+        /// <param name="input">Instance of ResponseGetDefinitionsNotSentToRecipientsMessage to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(ResponseGetEmailsNotSentToRecipientsMessage input)
+        public bool Equals(ResponseGetDefinitionsNotSentToRecipientsMessage input)
         {
             if (input == null)
                 return false;

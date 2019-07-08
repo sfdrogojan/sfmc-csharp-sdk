@@ -25,64 +25,55 @@ using SwaggerDateConverter = Salesforce.MarketingCloud.Client.SwaggerDateConvert
 namespace Salesforce.MarketingCloud.Model
 {
     /// <summary>
-    /// RequestSendEmailToMultipleRecipients
+    /// RequestSendEmailToSingleRecipient
     /// </summary>
     [DataContract]
-    public partial class RequestSendEmailToMultipleRecipients :  IEquatable<RequestSendEmailToMultipleRecipients>, IValidatableObject
+    public partial class RequestSendEmailToSingleRecipient :  IEquatable<RequestSendEmailToSingleRecipient>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="RequestSendEmailToMultipleRecipients" /> class.
+        /// Initializes a new instance of the <see cref="RequestSendEmailToSingleRecipient" /> class.
         /// </summary>
         [JsonConstructorAttribute]
-        protected RequestSendEmailToMultipleRecipients() { }
+        protected RequestSendEmailToSingleRecipient() { }
         /// <summary>
-        /// Initializes a new instance of the <see cref="RequestSendEmailToMultipleRecipients" /> class.
+        /// Initializes a new instance of the <see cref="RequestSendEmailToSingleRecipient" /> class.
         /// </summary>
-        /// <param name="definitionKey">Unique, user-generated key to access the definition object. (required).</param>
-        /// <param name="recipients">Array of recipient objects that contain parameters and metadata for the recipients, such as send tracking and personalization attributes. Use this parameter to send to multiple recipients in one request. Use either the recipient or recipients parameter, but not both. (required).</param>
-        /// <param name="attributes">attributes.</param>
-        public RequestSendEmailToMultipleRecipients(string definitionKey = default(string), List<Recipient> recipients = default(List<Recipient>), Attributes attributes = default(Attributes))
+        /// <param name="definitionKey">Unique identifier of the definition. (required).</param>
+        /// <param name="recipient">recipient (required).</param>
+        public RequestSendEmailToSingleRecipient(string definitionKey = default(string), Recipient recipient = default(Recipient))
         {
             // to ensure "definitionKey" is required (not null)
             if (definitionKey == null)
             {
-                throw new InvalidDataException("definitionKey is a required property for RequestSendEmailToMultipleRecipients and cannot be null");
+                throw new InvalidDataException("definitionKey is a required property for RequestSendEmailToSingleRecipient and cannot be null");
             }
             else
             {
                 this.DefinitionKey = definitionKey;
             }
-            // to ensure "recipients" is required (not null)
-            if (recipients == null)
+            // to ensure "recipient" is required (not null)
+            if (recipient == null)
             {
-                throw new InvalidDataException("recipients is a required property for RequestSendEmailToMultipleRecipients and cannot be null");
+                throw new InvalidDataException("recipient is a required property for RequestSendEmailToSingleRecipient and cannot be null");
             }
             else
             {
-                this.Recipients = recipients;
+                this.Recipient = recipient;
             }
-            this.Attributes = attributes;
         }
         
         /// <summary>
-        /// Unique, user-generated key to access the definition object.
+        /// Unique identifier of the definition.
         /// </summary>
-        /// <value>Unique, user-generated key to access the definition object.</value>
+        /// <value>Unique identifier of the definition.</value>
         [DataMember(Name="definitionKey", EmitDefaultValue=false)]
         public string DefinitionKey { get; set; }
 
         /// <summary>
-        /// Array of recipient objects that contain parameters and metadata for the recipients, such as send tracking and personalization attributes. Use this parameter to send to multiple recipients in one request. Use either the recipient or recipients parameter, but not both.
+        /// Gets or Sets Recipient
         /// </summary>
-        /// <value>Array of recipient objects that contain parameters and metadata for the recipients, such as send tracking and personalization attributes. Use this parameter to send to multiple recipients in one request. Use either the recipient or recipients parameter, but not both.</value>
-        [DataMember(Name="recipients", EmitDefaultValue=false)]
-        public List<Recipient> Recipients { get; set; }
-
-        /// <summary>
-        /// Gets or Sets Attributes
-        /// </summary>
-        [DataMember(Name="attributes", EmitDefaultValue=false)]
-        public Attributes Attributes { get; set; }
+        [DataMember(Name="recipient", EmitDefaultValue=false)]
+        public Recipient Recipient { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -91,10 +82,9 @@ namespace Salesforce.MarketingCloud.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class RequestSendEmailToMultipleRecipients {\n");
+            sb.Append("class RequestSendEmailToSingleRecipient {\n");
             sb.Append("  DefinitionKey: ").Append(DefinitionKey).Append("\n");
-            sb.Append("  Recipients: ").Append(Recipients).Append("\n");
-            sb.Append("  Attributes: ").Append(Attributes).Append("\n");
+            sb.Append("  Recipient: ").Append(Recipient).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -115,15 +105,15 @@ namespace Salesforce.MarketingCloud.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as RequestSendEmailToMultipleRecipients);
+            return this.Equals(input as RequestSendEmailToSingleRecipient);
         }
 
         /// <summary>
-        /// Returns true if RequestSendEmailToMultipleRecipients instances are equal
+        /// Returns true if RequestSendEmailToSingleRecipient instances are equal
         /// </summary>
-        /// <param name="input">Instance of RequestSendEmailToMultipleRecipients to be compared</param>
+        /// <param name="input">Instance of RequestSendEmailToSingleRecipient to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(RequestSendEmailToMultipleRecipients input)
+        public bool Equals(RequestSendEmailToSingleRecipient input)
         {
             if (input == null)
                 return false;
@@ -135,14 +125,9 @@ namespace Salesforce.MarketingCloud.Model
                     this.DefinitionKey.Equals(input.DefinitionKey))
                 ) && 
                 (
-                    this.Recipients == input.Recipients ||
-                    this.Recipients != null &&
-                    this.Recipients.SequenceEqual(input.Recipients)
-                ) && 
-                (
-                    this.Attributes == input.Attributes ||
-                    (this.Attributes != null &&
-                    this.Attributes.Equals(input.Attributes))
+                    this.Recipient == input.Recipient ||
+                    (this.Recipient != null &&
+                    this.Recipient.Equals(input.Recipient))
                 );
         }
 
@@ -157,10 +142,8 @@ namespace Salesforce.MarketingCloud.Model
                 int hashCode = 41;
                 if (this.DefinitionKey != null)
                     hashCode = hashCode * 59 + this.DefinitionKey.GetHashCode();
-                if (this.Recipients != null)
-                    hashCode = hashCode * 59 + this.Recipients.GetHashCode();
-                if (this.Attributes != null)
-                    hashCode = hashCode * 59 + this.Attributes.GetHashCode();
+                if (this.Recipient != null)
+                    hashCode = hashCode * 59 + this.Recipient.GetHashCode();
                 return hashCode;
             }
         }

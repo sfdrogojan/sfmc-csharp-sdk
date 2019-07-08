@@ -25,19 +25,19 @@ using SwaggerDateConverter = Salesforce.MarketingCloud.Client.SwaggerDateConvert
 namespace Salesforce.MarketingCloud.Model
 {
     /// <summary>
-    /// ResponseGetEmailsNotSentToRecipients
+    /// ResponseGetDefinitionsNotSentToRecipients
     /// </summary>
     [DataContract]
-    public partial class ResponseGetEmailsNotSentToRecipients :  IEquatable<ResponseGetEmailsNotSentToRecipients>, IValidatableObject
+    public partial class ResponseGetDefinitionsNotSentToRecipients :  IEquatable<ResponseGetDefinitionsNotSentToRecipients>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="ResponseGetEmailsNotSentToRecipients" /> class.
+        /// Initializes a new instance of the <see cref="ResponseGetDefinitionsNotSentToRecipients" /> class.
         /// </summary>
         /// <param name="lastEventID">Event ID from which you want the response to start. To obtain the initial event ID, submit a request without a lastEventId. The events in the response are listed top to bottom from oldest to newest.</param>
         /// <param name="messages">messages.</param>
         /// <param name="count">Number of pages.</param>
         /// <param name="pageSize">Number of definitions, which are array elements, to return per paged response..</param>
-        public ResponseGetEmailsNotSentToRecipients(int? lastEventID = default(int?), List<ResponseGetEmailsNotSentToRecipientsMessage> messages = default(List<ResponseGetEmailsNotSentToRecipientsMessage>), int? count = default(int?), int? pageSize = default(int?))
+        public ResponseGetDefinitionsNotSentToRecipients(int? lastEventID = default(int?), List<ResponseGetDefinitionsNotSentToRecipientsMessage> messages = default(List<ResponseGetDefinitionsNotSentToRecipientsMessage>), int? count = default(int?), int? pageSize = default(int?))
         {
             this.LastEventID = lastEventID;
             this.Messages = messages;
@@ -56,7 +56,7 @@ namespace Salesforce.MarketingCloud.Model
         /// Gets or Sets Messages
         /// </summary>
         [DataMember(Name="messages", EmitDefaultValue=false)]
-        public List<ResponseGetEmailsNotSentToRecipientsMessage> Messages { get; set; }
+        public List<ResponseGetDefinitionsNotSentToRecipientsMessage> Messages { get; set; }
 
         /// <summary>
         /// Number of pages
@@ -86,7 +86,7 @@ namespace Salesforce.MarketingCloud.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class ResponseGetEmailsNotSentToRecipients {\n");
+            sb.Append("class ResponseGetDefinitionsNotSentToRecipients {\n");
             sb.Append("  LastEventID: ").Append(LastEventID).Append("\n");
             sb.Append("  Messages: ").Append(Messages).Append("\n");
             sb.Append("  Count: ").Append(Count).Append("\n");
@@ -112,15 +112,15 @@ namespace Salesforce.MarketingCloud.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as ResponseGetEmailsNotSentToRecipients);
+            return this.Equals(input as ResponseGetDefinitionsNotSentToRecipients);
         }
 
         /// <summary>
-        /// Returns true if ResponseGetEmailsNotSentToRecipients instances are equal
+        /// Returns true if ResponseGetDefinitionsNotSentToRecipients instances are equal
         /// </summary>
-        /// <param name="input">Instance of ResponseGetEmailsNotSentToRecipients to be compared</param>
+        /// <param name="input">Instance of ResponseGetDefinitionsNotSentToRecipients to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(ResponseGetEmailsNotSentToRecipients input)
+        public bool Equals(ResponseGetDefinitionsNotSentToRecipients input)
         {
             if (input == null)
                 return false;

@@ -221,7 +221,7 @@ namespace Salesforce.MarketingCloud.Test
             var recipient = new Recipient("johnDoe@gmail.com");
             var messageKey = Guid.NewGuid().ToString();
 
-            var messageRequestBody = new RequestSendMessageSingleRecipient(emailToSendToRecipientKey, recipient);
+            var messageRequestBody = new RequestSendEmailToSingleRecipient(emailToSendToRecipientKey, recipient);
             var sendEmailToSingleRecipientResult =
                 transactionalMessagingApiClient.SendEmailToSingleRecipient(messageKey, messageRequestBody);
 
@@ -247,7 +247,7 @@ namespace Salesforce.MarketingCloud.Test
             var recipient = new Recipient("jonDoe@gmail.com");
             var messageKey = Guid.NewGuid().ToString();
 
-            var messageRequestBody = new RequestSendMessageSingleRecipient(emailToSendToRecipientKey, recipient);
+            var messageRequestBody = new RequestSendEmailToSingleRecipient(emailToSendToRecipientKey, recipient);
             transactionalMessagingApiClient.SendEmailToSingleRecipient(messageKey, messageRequestBody);
 
             var getEmailSendStatusForRecipientResult =

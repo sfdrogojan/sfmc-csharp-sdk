@@ -25,51 +25,26 @@ using SwaggerDateConverter = Salesforce.MarketingCloud.Client.SwaggerDateConvert
 namespace Salesforce.MarketingCloud.Model
 {
     /// <summary>
-    /// ResponseSendEmailToMultipleRecipients
+    /// RequestSendSMSContent
     /// </summary>
     [DataContract]
-    public partial class ResponseSendEmailToMultipleRecipients :  IEquatable<ResponseSendEmailToMultipleRecipients>, IValidatableObject
+    public partial class RequestSendSMSContent :  IEquatable<RequestSendSMSContent>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="ResponseSendEmailToMultipleRecipients" /> class.
+        /// Initializes a new instance of the <see cref="RequestSendSMSContent" /> class.
         /// </summary>
-        /// <param name="requestId">The ID of the request.</param>
-        /// <param name="errorCode">The specific error code.</param>
-        /// <param name="message">message.</param>
-        /// <param name="responses">responses.</param>
-        public ResponseSendEmailToMultipleRecipients(string requestId = default(string), decimal? errorCode = default(decimal?), string message = default(string), List<ResponseSendEmailToMultipleRecipientsInnerResponse> responses = default(List<ResponseSendEmailToMultipleRecipientsInnerResponse>))
+        /// <param name="message">Override for message content in the definition that you want sent with each message. Use substitution strings to personalize the content..</param>
+        public RequestSendSMSContent(string message = default(string))
         {
-            this.RequestId = requestId;
-            this.ErrorCode = errorCode;
             this.Message = message;
-            this.Responses = responses;
         }
         
         /// <summary>
-        /// The ID of the request
+        /// Override for message content in the definition that you want sent with each message. Use substitution strings to personalize the content.
         /// </summary>
-        /// <value>The ID of the request</value>
-        [DataMember(Name="requestId", EmitDefaultValue=false)]
-        public string RequestId { get; set; }
-
-        /// <summary>
-        /// The specific error code
-        /// </summary>
-        /// <value>The specific error code</value>
-        [DataMember(Name="errorCode", EmitDefaultValue=false)]
-        public decimal? ErrorCode { get; set; }
-
-        /// <summary>
-        /// Gets or Sets Message
-        /// </summary>
+        /// <value>Override for message content in the definition that you want sent with each message. Use substitution strings to personalize the content.</value>
         [DataMember(Name="message", EmitDefaultValue=false)]
         public string Message { get; set; }
-
-        /// <summary>
-        /// Gets or Sets Responses
-        /// </summary>
-        [DataMember(Name="responses", EmitDefaultValue=false)]
-        public List<ResponseSendEmailToMultipleRecipientsInnerResponse> Responses { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -78,11 +53,8 @@ namespace Salesforce.MarketingCloud.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class ResponseSendEmailToMultipleRecipients {\n");
-            sb.Append("  RequestId: ").Append(RequestId).Append("\n");
-            sb.Append("  ErrorCode: ").Append(ErrorCode).Append("\n");
+            sb.Append("class RequestSendSMSContent {\n");
             sb.Append("  Message: ").Append(Message).Append("\n");
-            sb.Append("  Responses: ").Append(Responses).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -103,39 +75,24 @@ namespace Salesforce.MarketingCloud.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as ResponseSendEmailToMultipleRecipients);
+            return this.Equals(input as RequestSendSMSContent);
         }
 
         /// <summary>
-        /// Returns true if ResponseSendEmailToMultipleRecipients instances are equal
+        /// Returns true if RequestSendSMSContent instances are equal
         /// </summary>
-        /// <param name="input">Instance of ResponseSendEmailToMultipleRecipients to be compared</param>
+        /// <param name="input">Instance of RequestSendSMSContent to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(ResponseSendEmailToMultipleRecipients input)
+        public bool Equals(RequestSendSMSContent input)
         {
             if (input == null)
                 return false;
 
             return 
                 (
-                    this.RequestId == input.RequestId ||
-                    (this.RequestId != null &&
-                    this.RequestId.Equals(input.RequestId))
-                ) && 
-                (
-                    this.ErrorCode == input.ErrorCode ||
-                    (this.ErrorCode != null &&
-                    this.ErrorCode.Equals(input.ErrorCode))
-                ) && 
-                (
                     this.Message == input.Message ||
                     (this.Message != null &&
                     this.Message.Equals(input.Message))
-                ) && 
-                (
-                    this.Responses == input.Responses ||
-                    this.Responses != null &&
-                    this.Responses.SequenceEqual(input.Responses)
                 );
         }
 
@@ -148,14 +105,8 @@ namespace Salesforce.MarketingCloud.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                if (this.RequestId != null)
-                    hashCode = hashCode * 59 + this.RequestId.GetHashCode();
-                if (this.ErrorCode != null)
-                    hashCode = hashCode * 59 + this.ErrorCode.GetHashCode();
                 if (this.Message != null)
                     hashCode = hashCode * 59 + this.Message.GetHashCode();
-                if (this.Responses != null)
-                    hashCode = hashCode * 59 + this.Responses.GetHashCode();
                 return hashCode;
             }
         }

@@ -25,26 +25,22 @@ using SwaggerDateConverter = Salesforce.MarketingCloud.Client.SwaggerDateConvert
 namespace Salesforce.MarketingCloud.Model
 {
     /// <summary>
-    /// ResponseGetEmailSendStatusForRecipientInfo
+    /// ResponseGetDefinitionsNotSentToRecipientsMessageInfo
     /// </summary>
     [DataContract]
-    public partial class ResponseGetEmailSendStatusForRecipientInfo :  IEquatable<ResponseGetEmailSendStatusForRecipientInfo>, IValidatableObject
+    public partial class ResponseGetDefinitionsNotSentToRecipientsMessageInfo :  IEquatable<ResponseGetDefinitionsNotSentToRecipientsMessageInfo>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="ResponseGetEmailSendStatusForRecipientInfo" /> class.
+        /// Initializes a new instance of the <see cref="ResponseGetDefinitionsNotSentToRecipientsMessageInfo" /> class.
         /// </summary>
         /// <param name="messageKey">Unique identifier used to track message status..</param>
         /// <param name="contactKey">Unique identifier for a subscriber in Marketing Cloud. Each request must include a contactKey. You can use an existing subscriber key or create one at send time by using the recipient’s email address..</param>
         /// <param name="to">Channel address of the recipient. For email, it’s the recipient&#39;s email address..</param>
-        /// <param name="statusCode">The specific status code.</param>
-        /// <param name="statusMessage">The specific status message.</param>
-        public ResponseGetEmailSendStatusForRecipientInfo(string messageKey = default(string), string contactKey = default(string), string to = default(string), decimal? statusCode = default(decimal?), string statusMessage = default(string))
+        public ResponseGetDefinitionsNotSentToRecipientsMessageInfo(string messageKey = default(string), string contactKey = default(string), string to = default(string))
         {
             this.MessageKey = messageKey;
             this.ContactKey = contactKey;
             this.To = to;
-            this.StatusCode = statusCode;
-            this.StatusMessage = statusMessage;
         }
         
         /// <summary>
@@ -69,32 +65,16 @@ namespace Salesforce.MarketingCloud.Model
         public string To { get; set; }
 
         /// <summary>
-        /// The specific status code
-        /// </summary>
-        /// <value>The specific status code</value>
-        [DataMember(Name="statusCode", EmitDefaultValue=false)]
-        public decimal? StatusCode { get; set; }
-
-        /// <summary>
-        /// The specific status message
-        /// </summary>
-        /// <value>The specific status message</value>
-        [DataMember(Name="statusMessage", EmitDefaultValue=false)]
-        public string StatusMessage { get; set; }
-
-        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class ResponseGetEmailSendStatusForRecipientInfo {\n");
+            sb.Append("class ResponseGetDefinitionsNotSentToRecipientsMessageInfo {\n");
             sb.Append("  MessageKey: ").Append(MessageKey).Append("\n");
             sb.Append("  ContactKey: ").Append(ContactKey).Append("\n");
             sb.Append("  To: ").Append(To).Append("\n");
-            sb.Append("  StatusCode: ").Append(StatusCode).Append("\n");
-            sb.Append("  StatusMessage: ").Append(StatusMessage).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -115,15 +95,15 @@ namespace Salesforce.MarketingCloud.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as ResponseGetEmailSendStatusForRecipientInfo);
+            return this.Equals(input as ResponseGetDefinitionsNotSentToRecipientsMessageInfo);
         }
 
         /// <summary>
-        /// Returns true if ResponseGetEmailSendStatusForRecipientInfo instances are equal
+        /// Returns true if ResponseGetDefinitionsNotSentToRecipientsMessageInfo instances are equal
         /// </summary>
-        /// <param name="input">Instance of ResponseGetEmailSendStatusForRecipientInfo to be compared</param>
+        /// <param name="input">Instance of ResponseGetDefinitionsNotSentToRecipientsMessageInfo to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(ResponseGetEmailSendStatusForRecipientInfo input)
+        public bool Equals(ResponseGetDefinitionsNotSentToRecipientsMessageInfo input)
         {
             if (input == null)
                 return false;
@@ -143,16 +123,6 @@ namespace Salesforce.MarketingCloud.Model
                     this.To == input.To ||
                     (this.To != null &&
                     this.To.Equals(input.To))
-                ) && 
-                (
-                    this.StatusCode == input.StatusCode ||
-                    (this.StatusCode != null &&
-                    this.StatusCode.Equals(input.StatusCode))
-                ) && 
-                (
-                    this.StatusMessage == input.StatusMessage ||
-                    (this.StatusMessage != null &&
-                    this.StatusMessage.Equals(input.StatusMessage))
                 );
         }
 
@@ -171,10 +141,6 @@ namespace Salesforce.MarketingCloud.Model
                     hashCode = hashCode * 59 + this.ContactKey.GetHashCode();
                 if (this.To != null)
                     hashCode = hashCode * 59 + this.To.GetHashCode();
-                if (this.StatusCode != null)
-                    hashCode = hashCode * 59 + this.StatusCode.GetHashCode();
-                if (this.StatusMessage != null)
-                    hashCode = hashCode * 59 + this.StatusMessage.GetHashCode();
                 return hashCode;
             }
         }

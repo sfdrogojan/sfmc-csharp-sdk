@@ -25,20 +25,20 @@ using SwaggerDateConverter = Salesforce.MarketingCloud.Client.SwaggerDateConvert
 namespace Salesforce.MarketingCloud.Model
 {
     /// <summary>
-    /// ResponseGetEmailSendStatusForRecipient
+    /// ResponseGetDefinitionSendStatusForRecipient
     /// </summary>
     [DataContract]
-    public partial class ResponseGetEmailSendStatusForRecipient :  IEquatable<ResponseGetEmailSendStatusForRecipient>, IValidatableObject
+    public partial class ResponseGetDefinitionSendStatusForRecipient :  IEquatable<ResponseGetDefinitionSendStatusForRecipient>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="ResponseGetEmailSendStatusForRecipient" /> class.
+        /// Initializes a new instance of the <see cref="ResponseGetDefinitionSendStatusForRecipient" /> class.
         /// </summary>
         /// <param name="requestId">The ID of the request.</param>
         /// <param name="eventCategoryType">The status of the message.</param>
         /// <param name="timestamp">The date the ....</param>
         /// <param name="compositeId">The Id of ....</param>
         /// <param name="info">info.</param>
-        public ResponseGetEmailSendStatusForRecipient(string requestId = default(string), string eventCategoryType = default(string), DateTime? timestamp = default(DateTime?), string compositeId = default(string), ResponseGetEmailSendStatusForRecipientInfo info = default(ResponseGetEmailSendStatusForRecipientInfo))
+        public ResponseGetDefinitionSendStatusForRecipient(string requestId = default(string), string eventCategoryType = default(string), DateTime? timestamp = default(DateTime?), string compositeId = default(string), ResponseGetDefinitionSendStatusForRecipientInfo info = default(ResponseGetDefinitionSendStatusForRecipientInfo))
         {
             this.RequestId = requestId;
             this.EventCategoryType = eventCategoryType;
@@ -79,7 +79,7 @@ namespace Salesforce.MarketingCloud.Model
         /// Gets or Sets Info
         /// </summary>
         [DataMember(Name="info", EmitDefaultValue=false)]
-        public ResponseGetEmailSendStatusForRecipientInfo Info { get; set; }
+        public ResponseGetDefinitionSendStatusForRecipientInfo Info { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -88,7 +88,7 @@ namespace Salesforce.MarketingCloud.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class ResponseGetEmailSendStatusForRecipient {\n");
+            sb.Append("class ResponseGetDefinitionSendStatusForRecipient {\n");
             sb.Append("  RequestId: ").Append(RequestId).Append("\n");
             sb.Append("  EventCategoryType: ").Append(EventCategoryType).Append("\n");
             sb.Append("  Timestamp: ").Append(Timestamp).Append("\n");
@@ -114,15 +114,15 @@ namespace Salesforce.MarketingCloud.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as ResponseGetEmailSendStatusForRecipient);
+            return this.Equals(input as ResponseGetDefinitionSendStatusForRecipient);
         }
 
         /// <summary>
-        /// Returns true if ResponseGetEmailSendStatusForRecipient instances are equal
+        /// Returns true if ResponseGetDefinitionSendStatusForRecipient instances are equal
         /// </summary>
-        /// <param name="input">Instance of ResponseGetEmailSendStatusForRecipient to be compared</param>
+        /// <param name="input">Instance of ResponseGetDefinitionSendStatusForRecipient to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(ResponseGetEmailSendStatusForRecipient input)
+        public bool Equals(ResponseGetDefinitionSendStatusForRecipient input)
         {
             if (input == null)
                 return false;

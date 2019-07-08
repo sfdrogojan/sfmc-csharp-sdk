@@ -25,28 +25,30 @@ using SwaggerDateConverter = Salesforce.MarketingCloud.Client.SwaggerDateConvert
 namespace Salesforce.MarketingCloud.Model
 {
     /// <summary>
-    /// RequestSendEmailToMultipleRecipients
+    /// RequestSendSMSToMultipleRecipients
     /// </summary>
     [DataContract]
-    public partial class RequestSendEmailToMultipleRecipients :  IEquatable<RequestSendEmailToMultipleRecipients>, IValidatableObject
+    public partial class RequestSendSMSToMultipleRecipients :  IEquatable<RequestSendSMSToMultipleRecipients>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="RequestSendEmailToMultipleRecipients" /> class.
+        /// Initializes a new instance of the <see cref="RequestSendSMSToMultipleRecipients" /> class.
         /// </summary>
         [JsonConstructorAttribute]
-        protected RequestSendEmailToMultipleRecipients() { }
+        protected RequestSendSMSToMultipleRecipients() { }
         /// <summary>
-        /// Initializes a new instance of the <see cref="RequestSendEmailToMultipleRecipients" /> class.
+        /// Initializes a new instance of the <see cref="RequestSendSMSToMultipleRecipients" /> class.
         /// </summary>
         /// <param name="definitionKey">Unique, user-generated key to access the definition object. (required).</param>
         /// <param name="recipients">Array of recipient objects that contain parameters and metadata for the recipients, such as send tracking and personalization attributes. Use this parameter to send to multiple recipients in one request. Use either the recipient or recipients parameter, but not both. (required).</param>
+        /// <param name="subscriptions">subscriptions.</param>
+        /// <param name="content">content.</param>
         /// <param name="attributes">attributes.</param>
-        public RequestSendEmailToMultipleRecipients(string definitionKey = default(string), List<Recipient> recipients = default(List<Recipient>), Attributes attributes = default(Attributes))
+        public RequestSendSMSToMultipleRecipients(string definitionKey = default(string), List<Recipient> recipients = default(List<Recipient>), RequestSendSMSToMultipleRecipientsSubscriptions subscriptions = default(RequestSendSMSToMultipleRecipientsSubscriptions), RequestSendSMSContent content = default(RequestSendSMSContent), Attributes attributes = default(Attributes))
         {
             // to ensure "definitionKey" is required (not null)
             if (definitionKey == null)
             {
-                throw new InvalidDataException("definitionKey is a required property for RequestSendEmailToMultipleRecipients and cannot be null");
+                throw new InvalidDataException("definitionKey is a required property for RequestSendSMSToMultipleRecipients and cannot be null");
             }
             else
             {
@@ -55,12 +57,14 @@ namespace Salesforce.MarketingCloud.Model
             // to ensure "recipients" is required (not null)
             if (recipients == null)
             {
-                throw new InvalidDataException("recipients is a required property for RequestSendEmailToMultipleRecipients and cannot be null");
+                throw new InvalidDataException("recipients is a required property for RequestSendSMSToMultipleRecipients and cannot be null");
             }
             else
             {
                 this.Recipients = recipients;
             }
+            this.Subscriptions = subscriptions;
+            this.Content = content;
             this.Attributes = attributes;
         }
         
@@ -79,6 +83,18 @@ namespace Salesforce.MarketingCloud.Model
         public List<Recipient> Recipients { get; set; }
 
         /// <summary>
+        /// Gets or Sets Subscriptions
+        /// </summary>
+        [DataMember(Name="subscriptions", EmitDefaultValue=false)]
+        public RequestSendSMSToMultipleRecipientsSubscriptions Subscriptions { get; set; }
+
+        /// <summary>
+        /// Gets or Sets Content
+        /// </summary>
+        [DataMember(Name="content", EmitDefaultValue=false)]
+        public RequestSendSMSContent Content { get; set; }
+
+        /// <summary>
         /// Gets or Sets Attributes
         /// </summary>
         [DataMember(Name="attributes", EmitDefaultValue=false)]
@@ -91,9 +107,11 @@ namespace Salesforce.MarketingCloud.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class RequestSendEmailToMultipleRecipients {\n");
+            sb.Append("class RequestSendSMSToMultipleRecipients {\n");
             sb.Append("  DefinitionKey: ").Append(DefinitionKey).Append("\n");
             sb.Append("  Recipients: ").Append(Recipients).Append("\n");
+            sb.Append("  Subscriptions: ").Append(Subscriptions).Append("\n");
+            sb.Append("  Content: ").Append(Content).Append("\n");
             sb.Append("  Attributes: ").Append(Attributes).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -115,15 +133,15 @@ namespace Salesforce.MarketingCloud.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as RequestSendEmailToMultipleRecipients);
+            return this.Equals(input as RequestSendSMSToMultipleRecipients);
         }
 
         /// <summary>
-        /// Returns true if RequestSendEmailToMultipleRecipients instances are equal
+        /// Returns true if RequestSendSMSToMultipleRecipients instances are equal
         /// </summary>
-        /// <param name="input">Instance of RequestSendEmailToMultipleRecipients to be compared</param>
+        /// <param name="input">Instance of RequestSendSMSToMultipleRecipients to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(RequestSendEmailToMultipleRecipients input)
+        public bool Equals(RequestSendSMSToMultipleRecipients input)
         {
             if (input == null)
                 return false;
@@ -138,6 +156,16 @@ namespace Salesforce.MarketingCloud.Model
                     this.Recipients == input.Recipients ||
                     this.Recipients != null &&
                     this.Recipients.SequenceEqual(input.Recipients)
+                ) && 
+                (
+                    this.Subscriptions == input.Subscriptions ||
+                    (this.Subscriptions != null &&
+                    this.Subscriptions.Equals(input.Subscriptions))
+                ) && 
+                (
+                    this.Content == input.Content ||
+                    (this.Content != null &&
+                    this.Content.Equals(input.Content))
                 ) && 
                 (
                     this.Attributes == input.Attributes ||
@@ -159,6 +187,10 @@ namespace Salesforce.MarketingCloud.Model
                     hashCode = hashCode * 59 + this.DefinitionKey.GetHashCode();
                 if (this.Recipients != null)
                     hashCode = hashCode * 59 + this.Recipients.GetHashCode();
+                if (this.Subscriptions != null)
+                    hashCode = hashCode * 59 + this.Subscriptions.GetHashCode();
+                if (this.Content != null)
+                    hashCode = hashCode * 59 + this.Content.GetHashCode();
                 if (this.Attributes != null)
                     hashCode = hashCode * 59 + this.Attributes.GetHashCode();
                 return hashCode;

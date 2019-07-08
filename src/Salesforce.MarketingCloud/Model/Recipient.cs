@@ -39,10 +39,10 @@ namespace Salesforce.MarketingCloud.Model
         /// Initializes a new instance of the <see cref="Recipient" /> class.
         /// </summary>
         /// <param name="contactKey">Unique identifier for a subscriber in Marketing Cloud. Each request must include a contactKey. You can use an existing subscriber key or create one at send time by using the recipient’s email address. (required).</param>
-        /// <param name="to">Channel address of the recipient. For email, it’s the recipient&#39;s email address..</param>
+        /// <param name="to">Channel address of the recipient. For email, it’s the recipient&#39;s email address. For SMS, it’s the recipient&#39;s E.164-based mobile number..</param>
         /// <param name="messageKey">Unique identifier used to track message status. Can be automatically created when you create a message or provided as part of the request. Each recipient in a request must have a unique messageKey. If you use a duplicate messageKey in the same send request, the message is rejected..</param>
         /// <param name="attributes">attributes.</param>
-        public Recipient(string contactKey = default(string), string to = default(string), string messageKey = default(string), Object attributes = default(Object))
+        public Recipient(string contactKey = default(string), string to = default(string), string messageKey = default(string), Attributes attributes = default(Attributes))
         {
             // to ensure "contactKey" is required (not null)
             if (contactKey == null)
@@ -66,9 +66,9 @@ namespace Salesforce.MarketingCloud.Model
         public string ContactKey { get; set; }
 
         /// <summary>
-        /// Channel address of the recipient. For email, it’s the recipient&#39;s email address.
+        /// Channel address of the recipient. For email, it’s the recipient&#39;s email address. For SMS, it’s the recipient&#39;s E.164-based mobile number.
         /// </summary>
-        /// <value>Channel address of the recipient. For email, it’s the recipient&#39;s email address.</value>
+        /// <value>Channel address of the recipient. For email, it’s the recipient&#39;s email address. For SMS, it’s the recipient&#39;s E.164-based mobile number.</value>
         [DataMember(Name="to", EmitDefaultValue=false)]
         public string To { get; set; }
 
@@ -83,7 +83,7 @@ namespace Salesforce.MarketingCloud.Model
         /// Gets or Sets Attributes
         /// </summary>
         [DataMember(Name="attributes", EmitDefaultValue=false)]
-        public Object Attributes { get; set; }
+        public Attributes Attributes { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object

@@ -25,30 +25,30 @@ using SwaggerDateConverter = Salesforce.MarketingCloud.Client.SwaggerDateConvert
 namespace Salesforce.MarketingCloud.Model
 {
     /// <summary>
-    /// ResponseSendEmailToSingleRecipient
+    /// ResponseSendDefinitionInnerResponse
     /// </summary>
     [DataContract]
-    public partial class ResponseSendEmailToSingleRecipient :  IEquatable<ResponseSendEmailToSingleRecipient>, IValidatableObject
+    public partial class ResponseSendDefinitionInnerResponse :  IEquatable<ResponseSendDefinitionInnerResponse>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="ResponseSendEmailToSingleRecipient" /> class.
+        /// Initializes a new instance of the <see cref="ResponseSendDefinitionInnerResponse" /> class.
         /// </summary>
-        /// <param name="requestId">The ID of the request.</param>
+        /// <param name="messageKey">Unique identifier used to track message status..</param>
         /// <param name="errorCode">The specific error code.</param>
-        /// <param name="responses">responses.</param>
-        public ResponseSendEmailToSingleRecipient(string requestId = default(string), decimal? errorCode = default(decimal?), List<ResponseSendEmailToMultipleRecipientsInnerResponse> responses = default(List<ResponseSendEmailToMultipleRecipientsInnerResponse>))
+        /// <param name="message">The error message.</param>
+        public ResponseSendDefinitionInnerResponse(string messageKey = default(string), decimal? errorCode = default(decimal?), string message = default(string))
         {
-            this.RequestId = requestId;
+            this.MessageKey = messageKey;
             this.ErrorCode = errorCode;
-            this.Responses = responses;
+            this.Message = message;
         }
         
         /// <summary>
-        /// The ID of the request
+        /// Unique identifier used to track message status.
         /// </summary>
-        /// <value>The ID of the request</value>
-        [DataMember(Name="requestId", EmitDefaultValue=false)]
-        public string RequestId { get; set; }
+        /// <value>Unique identifier used to track message status.</value>
+        [DataMember(Name="messageKey", EmitDefaultValue=false)]
+        public string MessageKey { get; set; }
 
         /// <summary>
         /// The specific error code
@@ -58,10 +58,11 @@ namespace Salesforce.MarketingCloud.Model
         public decimal? ErrorCode { get; set; }
 
         /// <summary>
-        /// Gets or Sets Responses
+        /// The error message
         /// </summary>
-        [DataMember(Name="responses", EmitDefaultValue=false)]
-        public List<ResponseSendEmailToMultipleRecipientsInnerResponse> Responses { get; set; }
+        /// <value>The error message</value>
+        [DataMember(Name="message", EmitDefaultValue=false)]
+        public string Message { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -70,10 +71,10 @@ namespace Salesforce.MarketingCloud.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class ResponseSendEmailToSingleRecipient {\n");
-            sb.Append("  RequestId: ").Append(RequestId).Append("\n");
+            sb.Append("class ResponseSendDefinitionInnerResponse {\n");
+            sb.Append("  MessageKey: ").Append(MessageKey).Append("\n");
             sb.Append("  ErrorCode: ").Append(ErrorCode).Append("\n");
-            sb.Append("  Responses: ").Append(Responses).Append("\n");
+            sb.Append("  Message: ").Append(Message).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -94,24 +95,24 @@ namespace Salesforce.MarketingCloud.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as ResponseSendEmailToSingleRecipient);
+            return this.Equals(input as ResponseSendDefinitionInnerResponse);
         }
 
         /// <summary>
-        /// Returns true if ResponseSendEmailToSingleRecipient instances are equal
+        /// Returns true if ResponseSendDefinitionInnerResponse instances are equal
         /// </summary>
-        /// <param name="input">Instance of ResponseSendEmailToSingleRecipient to be compared</param>
+        /// <param name="input">Instance of ResponseSendDefinitionInnerResponse to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(ResponseSendEmailToSingleRecipient input)
+        public bool Equals(ResponseSendDefinitionInnerResponse input)
         {
             if (input == null)
                 return false;
 
             return 
                 (
-                    this.RequestId == input.RequestId ||
-                    (this.RequestId != null &&
-                    this.RequestId.Equals(input.RequestId))
+                    this.MessageKey == input.MessageKey ||
+                    (this.MessageKey != null &&
+                    this.MessageKey.Equals(input.MessageKey))
                 ) && 
                 (
                     this.ErrorCode == input.ErrorCode ||
@@ -119,9 +120,9 @@ namespace Salesforce.MarketingCloud.Model
                     this.ErrorCode.Equals(input.ErrorCode))
                 ) && 
                 (
-                    this.Responses == input.Responses ||
-                    this.Responses != null &&
-                    this.Responses.SequenceEqual(input.Responses)
+                    this.Message == input.Message ||
+                    (this.Message != null &&
+                    this.Message.Equals(input.Message))
                 );
         }
 
@@ -134,12 +135,12 @@ namespace Salesforce.MarketingCloud.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                if (this.RequestId != null)
-                    hashCode = hashCode * 59 + this.RequestId.GetHashCode();
+                if (this.MessageKey != null)
+                    hashCode = hashCode * 59 + this.MessageKey.GetHashCode();
                 if (this.ErrorCode != null)
                     hashCode = hashCode * 59 + this.ErrorCode.GetHashCode();
-                if (this.Responses != null)
-                    hashCode = hashCode * 59 + this.Responses.GetHashCode();
+                if (this.Message != null)
+                    hashCode = hashCode * 59 + this.Message.GetHashCode();
                 return hashCode;
             }
         }

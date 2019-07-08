@@ -18,10 +18,14 @@ Method | HTTP request | Description
 [**GetQueueMetricsForSMSDefinition**](TransactionalMessagingApi.md#getqueuemetricsforsmsdefinition) | **GET** /messaging/v1/sms/definitions/{definitionKey}/queue | getQueueMetricsForSMSDefinition
 [**GetSMSDefinition**](TransactionalMessagingApi.md#getsmsdefinition) | **GET** /messaging/v1/sms/definitions/{definitionKey} | getSMSDefinition
 [**GetSMSDefinitions**](TransactionalMessagingApi.md#getsmsdefinitions) | **GET** /messaging/v1/sms/definitions | getSMSDefinitions
+[**GetSMSSendStatusForRecipient**](TransactionalMessagingApi.md#getsmssendstatusforrecipient) | **GET** /messaging/v1/sms/messages/{messageKey} | getSMSSendStatusForRecipient
+[**GetSMSsNotSentToRecipients**](TransactionalMessagingApi.md#getsmssnotsenttorecipients) | **GET** /messaging/v1/sms/messages/ | getSMSsNotSentToRecipients
 [**PartiallyUpdateEmailDefinition**](TransactionalMessagingApi.md#partiallyupdateemaildefinition) | **PATCH** /messaging/v1/email/definitions/{definitionKey} | partiallyUpdateEmailDefinition
 [**PartiallyUpdateSMSDefinition**](TransactionalMessagingApi.md#partiallyupdatesmsdefinition) | **PATCH** /messaging/v1/sms/definitions/{definitionKey} | partiallyUpdateSMSDefinition
 [**SendEmailToMultipleRecipients**](TransactionalMessagingApi.md#sendemailtomultiplerecipients) | **POST** /messaging/v1/email/messages/ | sendEmailToMultipleRecipients
 [**SendEmailToSingleRecipient**](TransactionalMessagingApi.md#sendemailtosinglerecipient) | **POST** /messaging/v1/email/messages/{messageKey} | sendEmailToSingleRecipient
+[**SendSMSToMultipleRecipients**](TransactionalMessagingApi.md#sendsmstomultiplerecipients) | **POST** /messaging/v1/sms/messages/ | sendSMSToMultipleRecipients
+[**SendSMSToSingleRecipient**](TransactionalMessagingApi.md#sendsmstosinglerecipient) | **POST** /messaging/v1/sms/messages/{messageKey} | sendSMSToSingleRecipient
 
 
 <a name="createemaildefinition"></a>
@@ -520,7 +524,7 @@ No authorization required
 
 <a name="getemailsendstatusforrecipient"></a>
 # **GetEmailSendStatusForRecipient**
-> ResponseGetEmailSendStatusForRecipient GetEmailSendStatusForRecipient (string messageKey)
+> ResponseGetDefinitionSendStatusForRecipient GetEmailSendStatusForRecipient (string messageKey)
 
 getEmailSendStatusForRecipient
 
@@ -546,7 +550,7 @@ namespace Example
             try
             {
                 // getEmailSendStatusForRecipient
-                ResponseGetEmailSendStatusForRecipient result = apiInstance.GetEmailSendStatusForRecipient(messageKey);
+                ResponseGetDefinitionSendStatusForRecipient result = apiInstance.GetEmailSendStatusForRecipient(messageKey);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -566,7 +570,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ResponseGetEmailSendStatusForRecipient**](ResponseGetEmailSendStatusForRecipient.md)
+[**ResponseGetDefinitionSendStatusForRecipient**](ResponseGetDefinitionSendStatusForRecipient.md)
 
 ### Authorization
 
@@ -581,7 +585,7 @@ No authorization required
 
 <a name="getemailsnotsenttorecipients"></a>
 # **GetEmailsNotSentToRecipients**
-> ResponseGetEmailsNotSentToRecipients GetEmailsNotSentToRecipients (string type, int? pageSize = null, int? lastEventId = null)
+> ResponseGetDefinitionsNotSentToRecipients GetEmailsNotSentToRecipients (string type, int? pageSize = null, int? lastEventId = null)
 
 getEmailsNotSentToRecipients
 
@@ -609,7 +613,7 @@ namespace Example
             try
             {
                 // getEmailsNotSentToRecipients
-                ResponseGetEmailsNotSentToRecipients result = apiInstance.GetEmailsNotSentToRecipients(type, pageSize, lastEventId);
+                ResponseGetDefinitionsNotSentToRecipients result = apiInstance.GetEmailsNotSentToRecipients(type, pageSize, lastEventId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -631,7 +635,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ResponseGetEmailsNotSentToRecipients**](ResponseGetEmailsNotSentToRecipients.md)
+[**ResponseGetDefinitionsNotSentToRecipients**](ResponseGetDefinitionsNotSentToRecipients.md)
 
 ### Authorization
 
@@ -894,6 +898,132 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+<a name="getsmssendstatusforrecipient"></a>
+# **GetSMSSendStatusForRecipient**
+> ResponseGetDefinitionSendStatusForRecipient GetSMSSendStatusForRecipient (string messageKey)
+
+getSMSSendStatusForRecipient
+
+Gets the send status for a message. Because this route is rate-limited, use it for infrequent verification of a messageKey. To collect send status at scale, subscribe to transactional send events using the Event Notification Service.
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Salesforce.MarketingCloud.Api;
+using Salesforce.MarketingCloud.Client;
+using Salesforce.MarketingCloud.Model;
+
+namespace Example
+{
+    public class GetSMSSendStatusForRecipientExample
+    {
+        public void main()
+        {
+            var apiInstance = new TransactionalMessagingApi();
+            var messageKey = messageKey_example;  // string | Unique identifier to track message send status. You must provide it in singleton requests using the recipient attribute. To provide message key in batch requests, use the recipients array attribute. If you don’t provide the message key for recipients, it’s generated in the response.
+
+            try
+            {
+                // getSMSSendStatusForRecipient
+                ResponseGetDefinitionSendStatusForRecipient result = apiInstance.GetSMSSendStatusForRecipient(messageKey);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling TransactionalMessagingApi.GetSMSSendStatusForRecipient: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **messageKey** | **string**| Unique identifier to track message send status. You must provide it in singleton requests using the recipient attribute. To provide message key in batch requests, use the recipients array attribute. If you don’t provide the message key for recipients, it’s generated in the response. | 
+
+### Return type
+
+[**ResponseGetDefinitionSendStatusForRecipient**](ResponseGetDefinitionSendStatusForRecipient.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="getsmssnotsenttorecipients"></a>
+# **GetSMSsNotSentToRecipients**
+> ResponseGetDefinitionsNotSentToRecipients GetSMSsNotSentToRecipients (string type, int? pageSize = null, int? lastEventId = null)
+
+getSMSsNotSentToRecipients
+
+Gets a paginated list of messages that were not sent, ordered from oldest to newest.
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Salesforce.MarketingCloud.Api;
+using Salesforce.MarketingCloud.Client;
+using Salesforce.MarketingCloud.Model;
+
+namespace Example
+{
+    public class GetSMSsNotSentToRecipientsExample
+    {
+        public void main()
+        {
+            var apiInstance = new TransactionalMessagingApi();
+            var type = type_example;  // string | Only notSent is supported.
+            var pageSize = 56;  // int? | Number of messageKeys (array elements) to return per response page. (optional) 
+            var lastEventId = 56;  // int? | Event ID from which you want the response to start. To obtain the initial event ID, submit a request without a lastEventId. The events in the response are listed top to bottom from oldest to newest. (optional) 
+
+            try
+            {
+                // getSMSsNotSentToRecipients
+                ResponseGetDefinitionsNotSentToRecipients result = apiInstance.GetSMSsNotSentToRecipients(type, pageSize, lastEventId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling TransactionalMessagingApi.GetSMSsNotSentToRecipients: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **type** | **string**| Only notSent is supported. | 
+ **pageSize** | **int?**| Number of messageKeys (array elements) to return per response page. | [optional] 
+ **lastEventId** | **int?**| Event ID from which you want the response to start. To obtain the initial event ID, submit a request without a lastEventId. The events in the response are listed top to bottom from oldest to newest. | [optional] 
+
+### Return type
+
+[**ResponseGetDefinitionsNotSentToRecipients**](ResponseGetDefinitionsNotSentToRecipients.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 <a name="partiallyupdateemaildefinition"></a>
 # **PartiallyUpdateEmailDefinition**
 > RequestCreateEmailDefinition PartiallyUpdateEmailDefinition (string definitionKey, RequestUpdateEmailDefinition body = null)
@@ -1022,7 +1152,7 @@ No authorization required
 
 <a name="sendemailtomultiplerecipients"></a>
 # **SendEmailToMultipleRecipients**
-> ResponseSendEmailToMultipleRecipients SendEmailToMultipleRecipients (RequestSendEmailToMultipleRecipients body = null)
+> ResponseSendDefinitionToMultipleRecipients SendEmailToMultipleRecipients (RequestSendEmailToMultipleRecipients body = null)
 
 sendEmailToMultipleRecipients
 
@@ -1048,7 +1178,7 @@ namespace Example
             try
             {
                 // sendEmailToMultipleRecipients
-                ResponseSendEmailToMultipleRecipients result = apiInstance.SendEmailToMultipleRecipients(body);
+                ResponseSendDefinitionToMultipleRecipients result = apiInstance.SendEmailToMultipleRecipients(body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -1068,7 +1198,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ResponseSendEmailToMultipleRecipients**](ResponseSendEmailToMultipleRecipients.md)
+[**ResponseSendDefinitionToMultipleRecipients**](ResponseSendDefinitionToMultipleRecipients.md)
 
 ### Authorization
 
@@ -1083,7 +1213,7 @@ No authorization required
 
 <a name="sendemailtosinglerecipient"></a>
 # **SendEmailToSingleRecipient**
-> ResponseSendEmailToSingleRecipient SendEmailToSingleRecipient (string messageKey, RequestSendMessageSingleRecipient body = null)
+> ResponseSendDefinitionToSingleRecipient SendEmailToSingleRecipient (string messageKey, RequestSendEmailToSingleRecipient body = null)
 
 sendEmailToSingleRecipient
 
@@ -1105,12 +1235,12 @@ namespace Example
         {
             var apiInstance = new TransactionalMessagingApi();
             var messageKey = messageKey_example;  // string | Unique identifier used to track message status. Can be automatically created when you create a message or provided as part of the request. Each recipient in a request must have a unique messageKey. If you use a duplicate messageKey in the same send request, the message is rejected.
-            var body = new RequestSendMessageSingleRecipient(); // RequestSendMessageSingleRecipient | JSON Parameters (optional) 
+            var body = new RequestSendEmailToSingleRecipient(); // RequestSendEmailToSingleRecipient | JSON Parameters (optional) 
 
             try
             {
                 // sendEmailToSingleRecipient
-                ResponseSendEmailToSingleRecipient result = apiInstance.SendEmailToSingleRecipient(messageKey, body);
+                ResponseSendDefinitionToSingleRecipient result = apiInstance.SendEmailToSingleRecipient(messageKey, body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -1127,11 +1257,135 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **messageKey** | **string**| Unique identifier used to track message status. Can be automatically created when you create a message or provided as part of the request. Each recipient in a request must have a unique messageKey. If you use a duplicate messageKey in the same send request, the message is rejected. | 
- **body** | [**RequestSendMessageSingleRecipient**](RequestSendMessageSingleRecipient.md)| JSON Parameters | [optional] 
+ **body** | [**RequestSendEmailToSingleRecipient**](RequestSendEmailToSingleRecipient.md)| JSON Parameters | [optional] 
 
 ### Return type
 
-[**ResponseSendEmailToSingleRecipient**](ResponseSendEmailToSingleRecipient.md)
+[**ResponseSendDefinitionToSingleRecipient**](ResponseSendDefinitionToSingleRecipient.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="sendsmstomultiplerecipients"></a>
+# **SendSMSToMultipleRecipients**
+> ResponseSendDefinitionToMultipleRecipients SendSMSToMultipleRecipients (RequestSendSMSToMultipleRecipients body = null)
+
+sendSMSToMultipleRecipients
+
+Sends a message to multiple recipients using an email definition. You can provide a messageKey in the request; otherwise, the messageKey is automatically generated in the response.
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Salesforce.MarketingCloud.Api;
+using Salesforce.MarketingCloud.Client;
+using Salesforce.MarketingCloud.Model;
+
+namespace Example
+{
+    public class SendSMSToMultipleRecipientsExample
+    {
+        public void main()
+        {
+            var apiInstance = new TransactionalMessagingApi();
+            var body = new RequestSendSMSToMultipleRecipients(); // RequestSendSMSToMultipleRecipients | JSON Parameters (optional) 
+
+            try
+            {
+                // sendSMSToMultipleRecipients
+                ResponseSendDefinitionToMultipleRecipients result = apiInstance.SendSMSToMultipleRecipients(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling TransactionalMessagingApi.SendSMSToMultipleRecipients: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | [**RequestSendSMSToMultipleRecipients**](RequestSendSMSToMultipleRecipients.md)| JSON Parameters | [optional] 
+
+### Return type
+
+[**ResponseSendDefinitionToMultipleRecipients**](ResponseSendDefinitionToMultipleRecipients.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="sendsmstosinglerecipient"></a>
+# **SendSMSToSingleRecipient**
+> ResponseSendDefinitionToSingleRecipient SendSMSToSingleRecipient (string messageKey, RequestSendSMSToSingleRecipient body = null)
+
+sendSMSToSingleRecipient
+
+Sends a message to a single recipient via a SMS definition using a messageKey path parameter.
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Salesforce.MarketingCloud.Api;
+using Salesforce.MarketingCloud.Client;
+using Salesforce.MarketingCloud.Model;
+
+namespace Example
+{
+    public class SendSMSToSingleRecipientExample
+    {
+        public void main()
+        {
+            var apiInstance = new TransactionalMessagingApi();
+            var messageKey = messageKey_example;  // string | Unique identifier of the definition used to track message status. The messageKey can be created automatically when you create a message, or you can provide it as part of the request. Each recipient in a request must have a unique messageKey. If you use a duplicate messageKey in the same send request, the message is rejected.
+            var body = new RequestSendSMSToSingleRecipient(); // RequestSendSMSToSingleRecipient | JSON Parameters (optional) 
+
+            try
+            {
+                // sendSMSToSingleRecipient
+                ResponseSendDefinitionToSingleRecipient result = apiInstance.SendSMSToSingleRecipient(messageKey, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling TransactionalMessagingApi.SendSMSToSingleRecipient: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **messageKey** | **string**| Unique identifier of the definition used to track message status. The messageKey can be created automatically when you create a message, or you can provide it as part of the request. Each recipient in a request must have a unique messageKey. If you use a duplicate messageKey in the same send request, the message is rejected. | 
+ **body** | [**RequestSendSMSToSingleRecipient**](RequestSendSMSToSingleRecipient.md)| JSON Parameters | [optional] 
+
+### Return type
+
+[**ResponseSendDefinitionToSingleRecipient**](ResponseSendDefinitionToSingleRecipient.md)
 
 ### Authorization
 

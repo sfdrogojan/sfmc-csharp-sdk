@@ -117,10 +117,14 @@ Class | Method | HTTP request | Description
 *TransactionalMessagingApi* | [**GetQueueMetricsForSMSDefinition**](docs/TransactionalMessagingApi.md#getqueuemetricsforsmsdefinition) | **GET** /messaging/v1/sms/definitions/{definitionKey}/queue | getQueueMetricsForSMSDefinition
 *TransactionalMessagingApi* | [**GetSMSDefinition**](docs/TransactionalMessagingApi.md#getsmsdefinition) | **GET** /messaging/v1/sms/definitions/{definitionKey} | getSMSDefinition
 *TransactionalMessagingApi* | [**GetSMSDefinitions**](docs/TransactionalMessagingApi.md#getsmsdefinitions) | **GET** /messaging/v1/sms/definitions | getSMSDefinitions
+*TransactionalMessagingApi* | [**GetSMSSendStatusForRecipient**](docs/TransactionalMessagingApi.md#getsmssendstatusforrecipient) | **GET** /messaging/v1/sms/messages/{messageKey} | getSMSSendStatusForRecipient
+*TransactionalMessagingApi* | [**GetSMSsNotSentToRecipients**](docs/TransactionalMessagingApi.md#getsmssnotsenttorecipients) | **GET** /messaging/v1/sms/messages/ | getSMSsNotSentToRecipients
 *TransactionalMessagingApi* | [**PartiallyUpdateEmailDefinition**](docs/TransactionalMessagingApi.md#partiallyupdateemaildefinition) | **PATCH** /messaging/v1/email/definitions/{definitionKey} | partiallyUpdateEmailDefinition
 *TransactionalMessagingApi* | [**PartiallyUpdateSMSDefinition**](docs/TransactionalMessagingApi.md#partiallyupdatesmsdefinition) | **PATCH** /messaging/v1/sms/definitions/{definitionKey} | partiallyUpdateSMSDefinition
 *TransactionalMessagingApi* | [**SendEmailToMultipleRecipients**](docs/TransactionalMessagingApi.md#sendemailtomultiplerecipients) | **POST** /messaging/v1/email/messages/ | sendEmailToMultipleRecipients
 *TransactionalMessagingApi* | [**SendEmailToSingleRecipient**](docs/TransactionalMessagingApi.md#sendemailtosinglerecipient) | **POST** /messaging/v1/email/messages/{messageKey} | sendEmailToSingleRecipient
+*TransactionalMessagingApi* | [**SendSMSToMultipleRecipients**](docs/TransactionalMessagingApi.md#sendsmstomultiplerecipients) | **POST** /messaging/v1/sms/messages/ | sendSMSToMultipleRecipients
+*TransactionalMessagingApi* | [**SendSMSToSingleRecipient**](docs/TransactionalMessagingApi.md#sendsmstosinglerecipient) | **POST** /messaging/v1/sms/messages/{messageKey} | sendSMSToSingleRecipient
 
 
 <a name="documentation-for-models"></a>
@@ -129,6 +133,7 @@ Class | Method | HTTP request | Description
  - [Model.ApiError](docs/ApiError.md)
  - [Model.Asset](docs/Asset.md)
  - [Model.AssetType](docs/AssetType.md)
+ - [Model.Attributes](docs/Attributes.md)
  - [Model.Campaign](docs/Campaign.md)
  - [Model.Recipient](docs/Recipient.md)
  - [Model.RequestCreateEmailDefinition](docs/RequestCreateEmailDefinition.md)
@@ -139,21 +144,25 @@ Class | Method | HTTP request | Description
  - [Model.RequestCreateSMSDefinitionContent](docs/RequestCreateSMSDefinitionContent.md)
  - [Model.RequestCreateSMSDefinitionSubscriptions](docs/RequestCreateSMSDefinitionSubscriptions.md)
  - [Model.RequestSendEmailToMultipleRecipients](docs/RequestSendEmailToMultipleRecipients.md)
- - [Model.RequestSendMessageSingleRecipient](docs/RequestSendMessageSingleRecipient.md)
+ - [Model.RequestSendEmailToSingleRecipient](docs/RequestSendEmailToSingleRecipient.md)
+ - [Model.RequestSendSMSContent](docs/RequestSendSMSContent.md)
+ - [Model.RequestSendSMSToMultipleRecipients](docs/RequestSendSMSToMultipleRecipients.md)
+ - [Model.RequestSendSMSToMultipleRecipientsSubscriptions](docs/RequestSendSMSToMultipleRecipientsSubscriptions.md)
+ - [Model.RequestSendSMSToSingleRecipient](docs/RequestSendSMSToSingleRecipient.md)
  - [Model.RequestUpdateEmailDefinition](docs/RequestUpdateEmailDefinition.md)
  - [Model.ResponseDeleteQueuedMessagesForSendDefinition](docs/ResponseDeleteQueuedMessagesForSendDefinition.md)
  - [Model.ResponseDeleteSendDefinition](docs/ResponseDeleteSendDefinition.md)
+ - [Model.ResponseGetDefinitionSendStatusForRecipient](docs/ResponseGetDefinitionSendStatusForRecipient.md)
+ - [Model.ResponseGetDefinitionSendStatusForRecipientInfo](docs/ResponseGetDefinitionSendStatusForRecipientInfo.md)
+ - [Model.ResponseGetDefinitionsNotSentToRecipients](docs/ResponseGetDefinitionsNotSentToRecipients.md)
+ - [Model.ResponseGetDefinitionsNotSentToRecipientsMessage](docs/ResponseGetDefinitionsNotSentToRecipientsMessage.md)
+ - [Model.ResponseGetDefinitionsNotSentToRecipientsMessageInfo](docs/ResponseGetDefinitionsNotSentToRecipientsMessageInfo.md)
  - [Model.ResponseGetEmailDefinitions](docs/ResponseGetEmailDefinitions.md)
- - [Model.ResponseGetEmailSendStatusForRecipient](docs/ResponseGetEmailSendStatusForRecipient.md)
- - [Model.ResponseGetEmailSendStatusForRecipientInfo](docs/ResponseGetEmailSendStatusForRecipientInfo.md)
- - [Model.ResponseGetEmailsNotSentToRecipients](docs/ResponseGetEmailsNotSentToRecipients.md)
- - [Model.ResponseGetEmailsNotSentToRecipientsMessage](docs/ResponseGetEmailsNotSentToRecipientsMessage.md)
- - [Model.ResponseGetEmailsNotSentToRecipientsMessageInfo](docs/ResponseGetEmailsNotSentToRecipientsMessageInfo.md)
  - [Model.ResponseGetQueueMetricsForSendDefinition](docs/ResponseGetQueueMetricsForSendDefinition.md)
  - [Model.ResponseGetSMSDefinitions](docs/ResponseGetSMSDefinitions.md)
- - [Model.ResponseSendEmailToMultipleRecipients](docs/ResponseSendEmailToMultipleRecipients.md)
- - [Model.ResponseSendEmailToMultipleRecipientsInnerResponse](docs/ResponseSendEmailToMultipleRecipientsInnerResponse.md)
- - [Model.ResponseSendEmailToSingleRecipient](docs/ResponseSendEmailToSingleRecipient.md)
+ - [Model.ResponseSendDefinitionInnerResponse](docs/ResponseSendDefinitionInnerResponse.md)
+ - [Model.ResponseSendDefinitionToMultipleRecipients](docs/ResponseSendDefinitionToMultipleRecipients.md)
+ - [Model.ResponseSendDefinitionToSingleRecipient](docs/ResponseSendDefinitionToSingleRecipient.md)
  - [Model.SharingProperties](docs/SharingProperties.md)
 
 

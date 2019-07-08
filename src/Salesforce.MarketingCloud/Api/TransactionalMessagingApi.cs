@@ -208,8 +208,8 @@ namespace Salesforce.MarketingCloud.Api
         /// </remarks>
         /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="messageKey">Unique identifier to track message send status. You must provide it in singleton requests using the recipient attribute. To provide it in batch requests, use the recipients array attribute. If you don’t provide the message key for recipients, it’s generated in the response.</param>
-        /// <returns>ResponseGetEmailSendStatusForRecipient</returns>
-        ResponseGetEmailSendStatusForRecipient GetEmailSendStatusForRecipient (string messageKey);
+        /// <returns>ResponseGetDefinitionSendStatusForRecipient</returns>
+        ResponseGetDefinitionSendStatusForRecipient GetEmailSendStatusForRecipient (string messageKey);
 
         /// <summary>
         /// getEmailSendStatusForRecipient
@@ -219,8 +219,8 @@ namespace Salesforce.MarketingCloud.Api
         /// </remarks>
         /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="messageKey">Unique identifier to track message send status. You must provide it in singleton requests using the recipient attribute. To provide it in batch requests, use the recipients array attribute. If you don’t provide the message key for recipients, it’s generated in the response.</param>
-        /// <returns>ApiResponse of ResponseGetEmailSendStatusForRecipient</returns>
-        ApiResponse<ResponseGetEmailSendStatusForRecipient> GetEmailSendStatusForRecipientWithHttpInfo (string messageKey);
+        /// <returns>ApiResponse of ResponseGetDefinitionSendStatusForRecipient</returns>
+        ApiResponse<ResponseGetDefinitionSendStatusForRecipient> GetEmailSendStatusForRecipientWithHttpInfo (string messageKey);
         /// <summary>
         /// getEmailsNotSentToRecipients
         /// </summary>
@@ -231,8 +231,8 @@ namespace Salesforce.MarketingCloud.Api
         /// <param name="type">Only notSent is supported.</param>
         /// <param name="pageSize">Number of messageKeys (array elements) to return per response page. (optional)</param>
         /// <param name="lastEventId">Event ID from which you want the response to start. To obtain the initial event ID, submit a request without a lastEventId. The events in the response are listed top to bottom from oldest to newest. (optional)</param>
-        /// <returns>ResponseGetEmailsNotSentToRecipients</returns>
-        ResponseGetEmailsNotSentToRecipients GetEmailsNotSentToRecipients (string type, int? pageSize = null, int? lastEventId = null);
+        /// <returns>ResponseGetDefinitionsNotSentToRecipients</returns>
+        ResponseGetDefinitionsNotSentToRecipients GetEmailsNotSentToRecipients (string type, int? pageSize = null, int? lastEventId = null);
 
         /// <summary>
         /// getEmailsNotSentToRecipients
@@ -244,8 +244,8 @@ namespace Salesforce.MarketingCloud.Api
         /// <param name="type">Only notSent is supported.</param>
         /// <param name="pageSize">Number of messageKeys (array elements) to return per response page. (optional)</param>
         /// <param name="lastEventId">Event ID from which you want the response to start. To obtain the initial event ID, submit a request without a lastEventId. The events in the response are listed top to bottom from oldest to newest. (optional)</param>
-        /// <returns>ApiResponse of ResponseGetEmailsNotSentToRecipients</returns>
-        ApiResponse<ResponseGetEmailsNotSentToRecipients> GetEmailsNotSentToRecipientsWithHttpInfo (string type, int? pageSize = null, int? lastEventId = null);
+        /// <returns>ApiResponse of ResponseGetDefinitionsNotSentToRecipients</returns>
+        ApiResponse<ResponseGetDefinitionsNotSentToRecipients> GetEmailsNotSentToRecipientsWithHttpInfo (string type, int? pageSize = null, int? lastEventId = null);
         /// <summary>
         /// getQueueMetricsForEmailDefinition
         /// </summary>
@@ -337,6 +337,52 @@ namespace Salesforce.MarketingCloud.Api
         /// <returns>ApiResponse of ResponseGetSMSDefinitions</returns>
         ApiResponse<ResponseGetSMSDefinitions> GetSMSDefinitionsWithHttpInfo (string status = null, decimal? pageSize = null, decimal? page = null, string orderBy = null);
         /// <summary>
+        /// getSMSSendStatusForRecipient
+        /// </summary>
+        /// <remarks>
+        /// Gets the send status for a message. Because this route is rate-limited, use it for infrequent verification of a messageKey. To collect send status at scale, subscribe to transactional send events using the Event Notification Service.
+        /// </remarks>
+        /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="messageKey">Unique identifier to track message send status. You must provide it in singleton requests using the recipient attribute. To provide message key in batch requests, use the recipients array attribute. If you don’t provide the message key for recipients, it’s generated in the response.</param>
+        /// <returns>ResponseGetDefinitionSendStatusForRecipient</returns>
+        ResponseGetDefinitionSendStatusForRecipient GetSMSSendStatusForRecipient (string messageKey);
+
+        /// <summary>
+        /// getSMSSendStatusForRecipient
+        /// </summary>
+        /// <remarks>
+        /// Gets the send status for a message. Because this route is rate-limited, use it for infrequent verification of a messageKey. To collect send status at scale, subscribe to transactional send events using the Event Notification Service.
+        /// </remarks>
+        /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="messageKey">Unique identifier to track message send status. You must provide it in singleton requests using the recipient attribute. To provide message key in batch requests, use the recipients array attribute. If you don’t provide the message key for recipients, it’s generated in the response.</param>
+        /// <returns>ApiResponse of ResponseGetDefinitionSendStatusForRecipient</returns>
+        ApiResponse<ResponseGetDefinitionSendStatusForRecipient> GetSMSSendStatusForRecipientWithHttpInfo (string messageKey);
+        /// <summary>
+        /// getSMSsNotSentToRecipients
+        /// </summary>
+        /// <remarks>
+        /// Gets a paginated list of messages that were not sent, ordered from oldest to newest.
+        /// </remarks>
+        /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="type">Only notSent is supported.</param>
+        /// <param name="pageSize">Number of messageKeys (array elements) to return per response page. (optional)</param>
+        /// <param name="lastEventId">Event ID from which you want the response to start. To obtain the initial event ID, submit a request without a lastEventId. The events in the response are listed top to bottom from oldest to newest. (optional)</param>
+        /// <returns>ResponseGetDefinitionsNotSentToRecipients</returns>
+        ResponseGetDefinitionsNotSentToRecipients GetSMSsNotSentToRecipients (string type, int? pageSize = null, int? lastEventId = null);
+
+        /// <summary>
+        /// getSMSsNotSentToRecipients
+        /// </summary>
+        /// <remarks>
+        /// Gets a paginated list of messages that were not sent, ordered from oldest to newest.
+        /// </remarks>
+        /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="type">Only notSent is supported.</param>
+        /// <param name="pageSize">Number of messageKeys (array elements) to return per response page. (optional)</param>
+        /// <param name="lastEventId">Event ID from which you want the response to start. To obtain the initial event ID, submit a request without a lastEventId. The events in the response are listed top to bottom from oldest to newest. (optional)</param>
+        /// <returns>ApiResponse of ResponseGetDefinitionsNotSentToRecipients</returns>
+        ApiResponse<ResponseGetDefinitionsNotSentToRecipients> GetSMSsNotSentToRecipientsWithHttpInfo (string type, int? pageSize = null, int? lastEventId = null);
+        /// <summary>
         /// partiallyUpdateEmailDefinition
         /// </summary>
         /// <remarks>
@@ -390,8 +436,8 @@ namespace Salesforce.MarketingCloud.Api
         /// </remarks>
         /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">JSON Parameters (optional)</param>
-        /// <returns>ResponseSendEmailToMultipleRecipients</returns>
-        ResponseSendEmailToMultipleRecipients SendEmailToMultipleRecipients (RequestSendEmailToMultipleRecipients body = null);
+        /// <returns>ResponseSendDefinitionToMultipleRecipients</returns>
+        ResponseSendDefinitionToMultipleRecipients SendEmailToMultipleRecipients (RequestSendEmailToMultipleRecipients body = null);
 
         /// <summary>
         /// sendEmailToMultipleRecipients
@@ -401,8 +447,8 @@ namespace Salesforce.MarketingCloud.Api
         /// </remarks>
         /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">JSON Parameters (optional)</param>
-        /// <returns>ApiResponse of ResponseSendEmailToMultipleRecipients</returns>
-        ApiResponse<ResponseSendEmailToMultipleRecipients> SendEmailToMultipleRecipientsWithHttpInfo (RequestSendEmailToMultipleRecipients body = null);
+        /// <returns>ApiResponse of ResponseSendDefinitionToMultipleRecipients</returns>
+        ApiResponse<ResponseSendDefinitionToMultipleRecipients> SendEmailToMultipleRecipientsWithHttpInfo (RequestSendEmailToMultipleRecipients body = null);
         /// <summary>
         /// sendEmailToSingleRecipient
         /// </summary>
@@ -412,8 +458,8 @@ namespace Salesforce.MarketingCloud.Api
         /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="messageKey">Unique identifier used to track message status. Can be automatically created when you create a message or provided as part of the request. Each recipient in a request must have a unique messageKey. If you use a duplicate messageKey in the same send request, the message is rejected.</param>
         /// <param name="body">JSON Parameters (optional)</param>
-        /// <returns>ResponseSendEmailToSingleRecipient</returns>
-        ResponseSendEmailToSingleRecipient SendEmailToSingleRecipient (string messageKey, RequestSendMessageSingleRecipient body = null);
+        /// <returns>ResponseSendDefinitionToSingleRecipient</returns>
+        ResponseSendDefinitionToSingleRecipient SendEmailToSingleRecipient (string messageKey, RequestSendEmailToSingleRecipient body = null);
 
         /// <summary>
         /// sendEmailToSingleRecipient
@@ -424,8 +470,52 @@ namespace Salesforce.MarketingCloud.Api
         /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="messageKey">Unique identifier used to track message status. Can be automatically created when you create a message or provided as part of the request. Each recipient in a request must have a unique messageKey. If you use a duplicate messageKey in the same send request, the message is rejected.</param>
         /// <param name="body">JSON Parameters (optional)</param>
-        /// <returns>ApiResponse of ResponseSendEmailToSingleRecipient</returns>
-        ApiResponse<ResponseSendEmailToSingleRecipient> SendEmailToSingleRecipientWithHttpInfo (string messageKey, RequestSendMessageSingleRecipient body = null);
+        /// <returns>ApiResponse of ResponseSendDefinitionToSingleRecipient</returns>
+        ApiResponse<ResponseSendDefinitionToSingleRecipient> SendEmailToSingleRecipientWithHttpInfo (string messageKey, RequestSendEmailToSingleRecipient body = null);
+        /// <summary>
+        /// sendSMSToMultipleRecipients
+        /// </summary>
+        /// <remarks>
+        /// Sends a message to multiple recipients using an email definition. You can provide a messageKey in the request; otherwise, the messageKey is automatically generated in the response.
+        /// </remarks>
+        /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">JSON Parameters (optional)</param>
+        /// <returns>ResponseSendDefinitionToMultipleRecipients</returns>
+        ResponseSendDefinitionToMultipleRecipients SendSMSToMultipleRecipients (RequestSendSMSToMultipleRecipients body = null);
+
+        /// <summary>
+        /// sendSMSToMultipleRecipients
+        /// </summary>
+        /// <remarks>
+        /// Sends a message to multiple recipients using an email definition. You can provide a messageKey in the request; otherwise, the messageKey is automatically generated in the response.
+        /// </remarks>
+        /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">JSON Parameters (optional)</param>
+        /// <returns>ApiResponse of ResponseSendDefinitionToMultipleRecipients</returns>
+        ApiResponse<ResponseSendDefinitionToMultipleRecipients> SendSMSToMultipleRecipientsWithHttpInfo (RequestSendSMSToMultipleRecipients body = null);
+        /// <summary>
+        /// sendSMSToSingleRecipient
+        /// </summary>
+        /// <remarks>
+        /// Sends a message to a single recipient via a SMS definition using a messageKey path parameter.
+        /// </remarks>
+        /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="messageKey">Unique identifier of the definition used to track message status. The messageKey can be created automatically when you create a message, or you can provide it as part of the request. Each recipient in a request must have a unique messageKey. If you use a duplicate messageKey in the same send request, the message is rejected.</param>
+        /// <param name="body">JSON Parameters (optional)</param>
+        /// <returns>ResponseSendDefinitionToSingleRecipient</returns>
+        ResponseSendDefinitionToSingleRecipient SendSMSToSingleRecipient (string messageKey, RequestSendSMSToSingleRecipient body = null);
+
+        /// <summary>
+        /// sendSMSToSingleRecipient
+        /// </summary>
+        /// <remarks>
+        /// Sends a message to a single recipient via a SMS definition using a messageKey path parameter.
+        /// </remarks>
+        /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="messageKey">Unique identifier of the definition used to track message status. The messageKey can be created automatically when you create a message, or you can provide it as part of the request. Each recipient in a request must have a unique messageKey. If you use a duplicate messageKey in the same send request, the message is rejected.</param>
+        /// <param name="body">JSON Parameters (optional)</param>
+        /// <returns>ApiResponse of ResponseSendDefinitionToSingleRecipient</returns>
+        ApiResponse<ResponseSendDefinitionToSingleRecipient> SendSMSToSingleRecipientWithHttpInfo (string messageKey, RequestSendSMSToSingleRecipient body = null);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -610,8 +700,8 @@ namespace Salesforce.MarketingCloud.Api
         /// </remarks>
         /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="messageKey">Unique identifier to track message send status. You must provide it in singleton requests using the recipient attribute. To provide it in batch requests, use the recipients array attribute. If you don’t provide the message key for recipients, it’s generated in the response.</param>
-        /// <returns>Task of ResponseGetEmailSendStatusForRecipient</returns>
-        System.Threading.Tasks.Task<ResponseGetEmailSendStatusForRecipient> GetEmailSendStatusForRecipientAsync (string messageKey);
+        /// <returns>Task of ResponseGetDefinitionSendStatusForRecipient</returns>
+        System.Threading.Tasks.Task<ResponseGetDefinitionSendStatusForRecipient> GetEmailSendStatusForRecipientAsync (string messageKey);
 
         /// <summary>
         /// getEmailSendStatusForRecipient
@@ -621,8 +711,8 @@ namespace Salesforce.MarketingCloud.Api
         /// </remarks>
         /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="messageKey">Unique identifier to track message send status. You must provide it in singleton requests using the recipient attribute. To provide it in batch requests, use the recipients array attribute. If you don’t provide the message key for recipients, it’s generated in the response.</param>
-        /// <returns>Task of ApiResponse (ResponseGetEmailSendStatusForRecipient)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ResponseGetEmailSendStatusForRecipient>> GetEmailSendStatusForRecipientAsyncWithHttpInfo (string messageKey);
+        /// <returns>Task of ApiResponse (ResponseGetDefinitionSendStatusForRecipient)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ResponseGetDefinitionSendStatusForRecipient>> GetEmailSendStatusForRecipientAsyncWithHttpInfo (string messageKey);
         /// <summary>
         /// getEmailsNotSentToRecipients
         /// </summary>
@@ -633,8 +723,8 @@ namespace Salesforce.MarketingCloud.Api
         /// <param name="type">Only notSent is supported.</param>
         /// <param name="pageSize">Number of messageKeys (array elements) to return per response page. (optional)</param>
         /// <param name="lastEventId">Event ID from which you want the response to start. To obtain the initial event ID, submit a request without a lastEventId. The events in the response are listed top to bottom from oldest to newest. (optional)</param>
-        /// <returns>Task of ResponseGetEmailsNotSentToRecipients</returns>
-        System.Threading.Tasks.Task<ResponseGetEmailsNotSentToRecipients> GetEmailsNotSentToRecipientsAsync (string type, int? pageSize = null, int? lastEventId = null);
+        /// <returns>Task of ResponseGetDefinitionsNotSentToRecipients</returns>
+        System.Threading.Tasks.Task<ResponseGetDefinitionsNotSentToRecipients> GetEmailsNotSentToRecipientsAsync (string type, int? pageSize = null, int? lastEventId = null);
 
         /// <summary>
         /// getEmailsNotSentToRecipients
@@ -646,8 +736,8 @@ namespace Salesforce.MarketingCloud.Api
         /// <param name="type">Only notSent is supported.</param>
         /// <param name="pageSize">Number of messageKeys (array elements) to return per response page. (optional)</param>
         /// <param name="lastEventId">Event ID from which you want the response to start. To obtain the initial event ID, submit a request without a lastEventId. The events in the response are listed top to bottom from oldest to newest. (optional)</param>
-        /// <returns>Task of ApiResponse (ResponseGetEmailsNotSentToRecipients)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ResponseGetEmailsNotSentToRecipients>> GetEmailsNotSentToRecipientsAsyncWithHttpInfo (string type, int? pageSize = null, int? lastEventId = null);
+        /// <returns>Task of ApiResponse (ResponseGetDefinitionsNotSentToRecipients)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ResponseGetDefinitionsNotSentToRecipients>> GetEmailsNotSentToRecipientsAsyncWithHttpInfo (string type, int? pageSize = null, int? lastEventId = null);
         /// <summary>
         /// getQueueMetricsForEmailDefinition
         /// </summary>
@@ -739,6 +829,52 @@ namespace Salesforce.MarketingCloud.Api
         /// <returns>Task of ApiResponse (ResponseGetSMSDefinitions)</returns>
         System.Threading.Tasks.Task<ApiResponse<ResponseGetSMSDefinitions>> GetSMSDefinitionsAsyncWithHttpInfo (string status = null, decimal? pageSize = null, decimal? page = null, string orderBy = null);
         /// <summary>
+        /// getSMSSendStatusForRecipient
+        /// </summary>
+        /// <remarks>
+        /// Gets the send status for a message. Because this route is rate-limited, use it for infrequent verification of a messageKey. To collect send status at scale, subscribe to transactional send events using the Event Notification Service.
+        /// </remarks>
+        /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="messageKey">Unique identifier to track message send status. You must provide it in singleton requests using the recipient attribute. To provide message key in batch requests, use the recipients array attribute. If you don’t provide the message key for recipients, it’s generated in the response.</param>
+        /// <returns>Task of ResponseGetDefinitionSendStatusForRecipient</returns>
+        System.Threading.Tasks.Task<ResponseGetDefinitionSendStatusForRecipient> GetSMSSendStatusForRecipientAsync (string messageKey);
+
+        /// <summary>
+        /// getSMSSendStatusForRecipient
+        /// </summary>
+        /// <remarks>
+        /// Gets the send status for a message. Because this route is rate-limited, use it for infrequent verification of a messageKey. To collect send status at scale, subscribe to transactional send events using the Event Notification Service.
+        /// </remarks>
+        /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="messageKey">Unique identifier to track message send status. You must provide it in singleton requests using the recipient attribute. To provide message key in batch requests, use the recipients array attribute. If you don’t provide the message key for recipients, it’s generated in the response.</param>
+        /// <returns>Task of ApiResponse (ResponseGetDefinitionSendStatusForRecipient)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ResponseGetDefinitionSendStatusForRecipient>> GetSMSSendStatusForRecipientAsyncWithHttpInfo (string messageKey);
+        /// <summary>
+        /// getSMSsNotSentToRecipients
+        /// </summary>
+        /// <remarks>
+        /// Gets a paginated list of messages that were not sent, ordered from oldest to newest.
+        /// </remarks>
+        /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="type">Only notSent is supported.</param>
+        /// <param name="pageSize">Number of messageKeys (array elements) to return per response page. (optional)</param>
+        /// <param name="lastEventId">Event ID from which you want the response to start. To obtain the initial event ID, submit a request without a lastEventId. The events in the response are listed top to bottom from oldest to newest. (optional)</param>
+        /// <returns>Task of ResponseGetDefinitionsNotSentToRecipients</returns>
+        System.Threading.Tasks.Task<ResponseGetDefinitionsNotSentToRecipients> GetSMSsNotSentToRecipientsAsync (string type, int? pageSize = null, int? lastEventId = null);
+
+        /// <summary>
+        /// getSMSsNotSentToRecipients
+        /// </summary>
+        /// <remarks>
+        /// Gets a paginated list of messages that were not sent, ordered from oldest to newest.
+        /// </remarks>
+        /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="type">Only notSent is supported.</param>
+        /// <param name="pageSize">Number of messageKeys (array elements) to return per response page. (optional)</param>
+        /// <param name="lastEventId">Event ID from which you want the response to start. To obtain the initial event ID, submit a request without a lastEventId. The events in the response are listed top to bottom from oldest to newest. (optional)</param>
+        /// <returns>Task of ApiResponse (ResponseGetDefinitionsNotSentToRecipients)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ResponseGetDefinitionsNotSentToRecipients>> GetSMSsNotSentToRecipientsAsyncWithHttpInfo (string type, int? pageSize = null, int? lastEventId = null);
+        /// <summary>
         /// partiallyUpdateEmailDefinition
         /// </summary>
         /// <remarks>
@@ -792,8 +928,8 @@ namespace Salesforce.MarketingCloud.Api
         /// </remarks>
         /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">JSON Parameters (optional)</param>
-        /// <returns>Task of ResponseSendEmailToMultipleRecipients</returns>
-        System.Threading.Tasks.Task<ResponseSendEmailToMultipleRecipients> SendEmailToMultipleRecipientsAsync (RequestSendEmailToMultipleRecipients body = null);
+        /// <returns>Task of ResponseSendDefinitionToMultipleRecipients</returns>
+        System.Threading.Tasks.Task<ResponseSendDefinitionToMultipleRecipients> SendEmailToMultipleRecipientsAsync (RequestSendEmailToMultipleRecipients body = null);
 
         /// <summary>
         /// sendEmailToMultipleRecipients
@@ -803,8 +939,8 @@ namespace Salesforce.MarketingCloud.Api
         /// </remarks>
         /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">JSON Parameters (optional)</param>
-        /// <returns>Task of ApiResponse (ResponseSendEmailToMultipleRecipients)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ResponseSendEmailToMultipleRecipients>> SendEmailToMultipleRecipientsAsyncWithHttpInfo (RequestSendEmailToMultipleRecipients body = null);
+        /// <returns>Task of ApiResponse (ResponseSendDefinitionToMultipleRecipients)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ResponseSendDefinitionToMultipleRecipients>> SendEmailToMultipleRecipientsAsyncWithHttpInfo (RequestSendEmailToMultipleRecipients body = null);
         /// <summary>
         /// sendEmailToSingleRecipient
         /// </summary>
@@ -814,8 +950,8 @@ namespace Salesforce.MarketingCloud.Api
         /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="messageKey">Unique identifier used to track message status. Can be automatically created when you create a message or provided as part of the request. Each recipient in a request must have a unique messageKey. If you use a duplicate messageKey in the same send request, the message is rejected.</param>
         /// <param name="body">JSON Parameters (optional)</param>
-        /// <returns>Task of ResponseSendEmailToSingleRecipient</returns>
-        System.Threading.Tasks.Task<ResponseSendEmailToSingleRecipient> SendEmailToSingleRecipientAsync (string messageKey, RequestSendMessageSingleRecipient body = null);
+        /// <returns>Task of ResponseSendDefinitionToSingleRecipient</returns>
+        System.Threading.Tasks.Task<ResponseSendDefinitionToSingleRecipient> SendEmailToSingleRecipientAsync (string messageKey, RequestSendEmailToSingleRecipient body = null);
 
         /// <summary>
         /// sendEmailToSingleRecipient
@@ -826,8 +962,52 @@ namespace Salesforce.MarketingCloud.Api
         /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="messageKey">Unique identifier used to track message status. Can be automatically created when you create a message or provided as part of the request. Each recipient in a request must have a unique messageKey. If you use a duplicate messageKey in the same send request, the message is rejected.</param>
         /// <param name="body">JSON Parameters (optional)</param>
-        /// <returns>Task of ApiResponse (ResponseSendEmailToSingleRecipient)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ResponseSendEmailToSingleRecipient>> SendEmailToSingleRecipientAsyncWithHttpInfo (string messageKey, RequestSendMessageSingleRecipient body = null);
+        /// <returns>Task of ApiResponse (ResponseSendDefinitionToSingleRecipient)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ResponseSendDefinitionToSingleRecipient>> SendEmailToSingleRecipientAsyncWithHttpInfo (string messageKey, RequestSendEmailToSingleRecipient body = null);
+        /// <summary>
+        /// sendSMSToMultipleRecipients
+        /// </summary>
+        /// <remarks>
+        /// Sends a message to multiple recipients using an email definition. You can provide a messageKey in the request; otherwise, the messageKey is automatically generated in the response.
+        /// </remarks>
+        /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">JSON Parameters (optional)</param>
+        /// <returns>Task of ResponseSendDefinitionToMultipleRecipients</returns>
+        System.Threading.Tasks.Task<ResponseSendDefinitionToMultipleRecipients> SendSMSToMultipleRecipientsAsync (RequestSendSMSToMultipleRecipients body = null);
+
+        /// <summary>
+        /// sendSMSToMultipleRecipients
+        /// </summary>
+        /// <remarks>
+        /// Sends a message to multiple recipients using an email definition. You can provide a messageKey in the request; otherwise, the messageKey is automatically generated in the response.
+        /// </remarks>
+        /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">JSON Parameters (optional)</param>
+        /// <returns>Task of ApiResponse (ResponseSendDefinitionToMultipleRecipients)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ResponseSendDefinitionToMultipleRecipients>> SendSMSToMultipleRecipientsAsyncWithHttpInfo (RequestSendSMSToMultipleRecipients body = null);
+        /// <summary>
+        /// sendSMSToSingleRecipient
+        /// </summary>
+        /// <remarks>
+        /// Sends a message to a single recipient via a SMS definition using a messageKey path parameter.
+        /// </remarks>
+        /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="messageKey">Unique identifier of the definition used to track message status. The messageKey can be created automatically when you create a message, or you can provide it as part of the request. Each recipient in a request must have a unique messageKey. If you use a duplicate messageKey in the same send request, the message is rejected.</param>
+        /// <param name="body">JSON Parameters (optional)</param>
+        /// <returns>Task of ResponseSendDefinitionToSingleRecipient</returns>
+        System.Threading.Tasks.Task<ResponseSendDefinitionToSingleRecipient> SendSMSToSingleRecipientAsync (string messageKey, RequestSendSMSToSingleRecipient body = null);
+
+        /// <summary>
+        /// sendSMSToSingleRecipient
+        /// </summary>
+        /// <remarks>
+        /// Sends a message to a single recipient via a SMS definition using a messageKey path parameter.
+        /// </remarks>
+        /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="messageKey">Unique identifier of the definition used to track message status. The messageKey can be created automatically when you create a message, or you can provide it as part of the request. Each recipient in a request must have a unique messageKey. If you use a duplicate messageKey in the same send request, the message is rejected.</param>
+        /// <param name="body">JSON Parameters (optional)</param>
+        /// <returns>Task of ApiResponse (ResponseSendDefinitionToSingleRecipient)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ResponseSendDefinitionToSingleRecipient>> SendSMSToSingleRecipientAsyncWithHttpInfo (string messageKey, RequestSendSMSToSingleRecipient body = null);
         #endregion Asynchronous Operations
     }
 
@@ -2034,10 +2214,10 @@ namespace Salesforce.MarketingCloud.Api
         /// </summary>
         /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="messageKey">Unique identifier to track message send status. You must provide it in singleton requests using the recipient attribute. To provide it in batch requests, use the recipients array attribute. If you don’t provide the message key for recipients, it’s generated in the response.</param>
-        /// <returns>ResponseGetEmailSendStatusForRecipient</returns>
-        public ResponseGetEmailSendStatusForRecipient GetEmailSendStatusForRecipient (string messageKey)
+        /// <returns>ResponseGetDefinitionSendStatusForRecipient</returns>
+        public ResponseGetDefinitionSendStatusForRecipient GetEmailSendStatusForRecipient (string messageKey)
         {
-             ApiResponse<ResponseGetEmailSendStatusForRecipient> localVarResponse = GetEmailSendStatusForRecipientWithHttpInfo(messageKey);
+             ApiResponse<ResponseGetDefinitionSendStatusForRecipient> localVarResponse = GetEmailSendStatusForRecipientWithHttpInfo(messageKey);
              return localVarResponse.Data;
         }
 
@@ -2046,8 +2226,8 @@ namespace Salesforce.MarketingCloud.Api
         /// </summary>
         /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="messageKey">Unique identifier to track message send status. You must provide it in singleton requests using the recipient attribute. To provide it in batch requests, use the recipients array attribute. If you don’t provide the message key for recipients, it’s generated in the response.</param>
-        /// <returns>ApiResponse of ResponseGetEmailSendStatusForRecipient</returns>
-        public ApiResponse< ResponseGetEmailSendStatusForRecipient > GetEmailSendStatusForRecipientWithHttpInfo (string messageKey)
+        /// <returns>ApiResponse of ResponseGetDefinitionSendStatusForRecipient</returns>
+        public ApiResponse< ResponseGetDefinitionSendStatusForRecipient > GetEmailSendStatusForRecipientWithHttpInfo (string messageKey)
         {
             // verify the required parameter 'messageKey' is set
             if (messageKey == null)
@@ -2089,9 +2269,9 @@ namespace Salesforce.MarketingCloud.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<ResponseGetEmailSendStatusForRecipient>(localVarStatusCode,
+            return new ApiResponse<ResponseGetDefinitionSendStatusForRecipient>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (ResponseGetEmailSendStatusForRecipient) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ResponseGetEmailSendStatusForRecipient)));
+                (ResponseGetDefinitionSendStatusForRecipient) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ResponseGetDefinitionSendStatusForRecipient)));
         }
 
         /// <summary>
@@ -2099,10 +2279,10 @@ namespace Salesforce.MarketingCloud.Api
         /// </summary>
         /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="messageKey">Unique identifier to track message send status. You must provide it in singleton requests using the recipient attribute. To provide it in batch requests, use the recipients array attribute. If you don’t provide the message key for recipients, it’s generated in the response.</param>
-        /// <returns>Task of ResponseGetEmailSendStatusForRecipient</returns>
-        public async System.Threading.Tasks.Task<ResponseGetEmailSendStatusForRecipient> GetEmailSendStatusForRecipientAsync (string messageKey)
+        /// <returns>Task of ResponseGetDefinitionSendStatusForRecipient</returns>
+        public async System.Threading.Tasks.Task<ResponseGetDefinitionSendStatusForRecipient> GetEmailSendStatusForRecipientAsync (string messageKey)
         {
-             ApiResponse<ResponseGetEmailSendStatusForRecipient> localVarResponse = await GetEmailSendStatusForRecipientAsyncWithHttpInfo(messageKey);
+             ApiResponse<ResponseGetDefinitionSendStatusForRecipient> localVarResponse = await GetEmailSendStatusForRecipientAsyncWithHttpInfo(messageKey);
              return localVarResponse.Data;
 
         }
@@ -2112,8 +2292,8 @@ namespace Salesforce.MarketingCloud.Api
         /// </summary>
         /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="messageKey">Unique identifier to track message send status. You must provide it in singleton requests using the recipient attribute. To provide it in batch requests, use the recipients array attribute. If you don’t provide the message key for recipients, it’s generated in the response.</param>
-        /// <returns>Task of ApiResponse (ResponseGetEmailSendStatusForRecipient)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ResponseGetEmailSendStatusForRecipient>> GetEmailSendStatusForRecipientAsyncWithHttpInfo (string messageKey)
+        /// <returns>Task of ApiResponse (ResponseGetDefinitionSendStatusForRecipient)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ResponseGetDefinitionSendStatusForRecipient>> GetEmailSendStatusForRecipientAsyncWithHttpInfo (string messageKey)
         {
             // verify the required parameter 'messageKey' is set
             if (messageKey == null)
@@ -2155,9 +2335,9 @@ namespace Salesforce.MarketingCloud.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<ResponseGetEmailSendStatusForRecipient>(localVarStatusCode,
+            return new ApiResponse<ResponseGetDefinitionSendStatusForRecipient>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (ResponseGetEmailSendStatusForRecipient) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ResponseGetEmailSendStatusForRecipient)));
+                (ResponseGetDefinitionSendStatusForRecipient) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ResponseGetDefinitionSendStatusForRecipient)));
         }
 
         /// <summary>
@@ -2167,10 +2347,10 @@ namespace Salesforce.MarketingCloud.Api
         /// <param name="type">Only notSent is supported.</param>
         /// <param name="pageSize">Number of messageKeys (array elements) to return per response page. (optional)</param>
         /// <param name="lastEventId">Event ID from which you want the response to start. To obtain the initial event ID, submit a request without a lastEventId. The events in the response are listed top to bottom from oldest to newest. (optional)</param>
-        /// <returns>ResponseGetEmailsNotSentToRecipients</returns>
-        public ResponseGetEmailsNotSentToRecipients GetEmailsNotSentToRecipients (string type, int? pageSize = null, int? lastEventId = null)
+        /// <returns>ResponseGetDefinitionsNotSentToRecipients</returns>
+        public ResponseGetDefinitionsNotSentToRecipients GetEmailsNotSentToRecipients (string type, int? pageSize = null, int? lastEventId = null)
         {
-             ApiResponse<ResponseGetEmailsNotSentToRecipients> localVarResponse = GetEmailsNotSentToRecipientsWithHttpInfo(type, pageSize, lastEventId);
+             ApiResponse<ResponseGetDefinitionsNotSentToRecipients> localVarResponse = GetEmailsNotSentToRecipientsWithHttpInfo(type, pageSize, lastEventId);
              return localVarResponse.Data;
         }
 
@@ -2181,8 +2361,8 @@ namespace Salesforce.MarketingCloud.Api
         /// <param name="type">Only notSent is supported.</param>
         /// <param name="pageSize">Number of messageKeys (array elements) to return per response page. (optional)</param>
         /// <param name="lastEventId">Event ID from which you want the response to start. To obtain the initial event ID, submit a request without a lastEventId. The events in the response are listed top to bottom from oldest to newest. (optional)</param>
-        /// <returns>ApiResponse of ResponseGetEmailsNotSentToRecipients</returns>
-        public ApiResponse< ResponseGetEmailsNotSentToRecipients > GetEmailsNotSentToRecipientsWithHttpInfo (string type, int? pageSize = null, int? lastEventId = null)
+        /// <returns>ApiResponse of ResponseGetDefinitionsNotSentToRecipients</returns>
+        public ApiResponse< ResponseGetDefinitionsNotSentToRecipients > GetEmailsNotSentToRecipientsWithHttpInfo (string type, int? pageSize = null, int? lastEventId = null)
         {
             // verify the required parameter 'type' is set
             if (type == null)
@@ -2226,9 +2406,9 @@ namespace Salesforce.MarketingCloud.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<ResponseGetEmailsNotSentToRecipients>(localVarStatusCode,
+            return new ApiResponse<ResponseGetDefinitionsNotSentToRecipients>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (ResponseGetEmailsNotSentToRecipients) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ResponseGetEmailsNotSentToRecipients)));
+                (ResponseGetDefinitionsNotSentToRecipients) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ResponseGetDefinitionsNotSentToRecipients)));
         }
 
         /// <summary>
@@ -2238,10 +2418,10 @@ namespace Salesforce.MarketingCloud.Api
         /// <param name="type">Only notSent is supported.</param>
         /// <param name="pageSize">Number of messageKeys (array elements) to return per response page. (optional)</param>
         /// <param name="lastEventId">Event ID from which you want the response to start. To obtain the initial event ID, submit a request without a lastEventId. The events in the response are listed top to bottom from oldest to newest. (optional)</param>
-        /// <returns>Task of ResponseGetEmailsNotSentToRecipients</returns>
-        public async System.Threading.Tasks.Task<ResponseGetEmailsNotSentToRecipients> GetEmailsNotSentToRecipientsAsync (string type, int? pageSize = null, int? lastEventId = null)
+        /// <returns>Task of ResponseGetDefinitionsNotSentToRecipients</returns>
+        public async System.Threading.Tasks.Task<ResponseGetDefinitionsNotSentToRecipients> GetEmailsNotSentToRecipientsAsync (string type, int? pageSize = null, int? lastEventId = null)
         {
-             ApiResponse<ResponseGetEmailsNotSentToRecipients> localVarResponse = await GetEmailsNotSentToRecipientsAsyncWithHttpInfo(type, pageSize, lastEventId);
+             ApiResponse<ResponseGetDefinitionsNotSentToRecipients> localVarResponse = await GetEmailsNotSentToRecipientsAsyncWithHttpInfo(type, pageSize, lastEventId);
              return localVarResponse.Data;
 
         }
@@ -2253,8 +2433,8 @@ namespace Salesforce.MarketingCloud.Api
         /// <param name="type">Only notSent is supported.</param>
         /// <param name="pageSize">Number of messageKeys (array elements) to return per response page. (optional)</param>
         /// <param name="lastEventId">Event ID from which you want the response to start. To obtain the initial event ID, submit a request without a lastEventId. The events in the response are listed top to bottom from oldest to newest. (optional)</param>
-        /// <returns>Task of ApiResponse (ResponseGetEmailsNotSentToRecipients)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ResponseGetEmailsNotSentToRecipients>> GetEmailsNotSentToRecipientsAsyncWithHttpInfo (string type, int? pageSize = null, int? lastEventId = null)
+        /// <returns>Task of ApiResponse (ResponseGetDefinitionsNotSentToRecipients)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ResponseGetDefinitionsNotSentToRecipients>> GetEmailsNotSentToRecipientsAsyncWithHttpInfo (string type, int? pageSize = null, int? lastEventId = null)
         {
             // verify the required parameter 'type' is set
             if (type == null)
@@ -2298,9 +2478,9 @@ namespace Salesforce.MarketingCloud.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<ResponseGetEmailsNotSentToRecipients>(localVarStatusCode,
+            return new ApiResponse<ResponseGetDefinitionsNotSentToRecipients>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (ResponseGetEmailsNotSentToRecipients) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ResponseGetEmailsNotSentToRecipients)));
+                (ResponseGetDefinitionsNotSentToRecipients) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ResponseGetDefinitionsNotSentToRecipients)));
         }
 
         /// <summary>
@@ -2840,6 +3020,280 @@ namespace Salesforce.MarketingCloud.Api
         }
 
         /// <summary>
+        /// getSMSSendStatusForRecipient Gets the send status for a message. Because this route is rate-limited, use it for infrequent verification of a messageKey. To collect send status at scale, subscribe to transactional send events using the Event Notification Service.
+        /// </summary>
+        /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="messageKey">Unique identifier to track message send status. You must provide it in singleton requests using the recipient attribute. To provide message key in batch requests, use the recipients array attribute. If you don’t provide the message key for recipients, it’s generated in the response.</param>
+        /// <returns>ResponseGetDefinitionSendStatusForRecipient</returns>
+        public ResponseGetDefinitionSendStatusForRecipient GetSMSSendStatusForRecipient (string messageKey)
+        {
+             ApiResponse<ResponseGetDefinitionSendStatusForRecipient> localVarResponse = GetSMSSendStatusForRecipientWithHttpInfo(messageKey);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// getSMSSendStatusForRecipient Gets the send status for a message. Because this route is rate-limited, use it for infrequent verification of a messageKey. To collect send status at scale, subscribe to transactional send events using the Event Notification Service.
+        /// </summary>
+        /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="messageKey">Unique identifier to track message send status. You must provide it in singleton requests using the recipient attribute. To provide message key in batch requests, use the recipients array attribute. If you don’t provide the message key for recipients, it’s generated in the response.</param>
+        /// <returns>ApiResponse of ResponseGetDefinitionSendStatusForRecipient</returns>
+        public ApiResponse< ResponseGetDefinitionSendStatusForRecipient > GetSMSSendStatusForRecipientWithHttpInfo (string messageKey)
+        {
+            // verify the required parameter 'messageKey' is set
+            if (messageKey == null)
+                throw new ApiException(400, "Missing required parameter 'messageKey' when calling TransactionalMessagingApi->GetSMSSendStatusForRecipient");
+
+            var localVarPath = "/messaging/v1/sms/messages/{messageKey}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (messageKey != null) localVarPathParams.Add("messageKey", this.Configuration.ApiClient.ParameterToString(messageKey)); // path parameter
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetSMSSendStatusForRecipient", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ResponseGetDefinitionSendStatusForRecipient>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ResponseGetDefinitionSendStatusForRecipient) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ResponseGetDefinitionSendStatusForRecipient)));
+        }
+
+        /// <summary>
+        /// getSMSSendStatusForRecipient Gets the send status for a message. Because this route is rate-limited, use it for infrequent verification of a messageKey. To collect send status at scale, subscribe to transactional send events using the Event Notification Service.
+        /// </summary>
+        /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="messageKey">Unique identifier to track message send status. You must provide it in singleton requests using the recipient attribute. To provide message key in batch requests, use the recipients array attribute. If you don’t provide the message key for recipients, it’s generated in the response.</param>
+        /// <returns>Task of ResponseGetDefinitionSendStatusForRecipient</returns>
+        public async System.Threading.Tasks.Task<ResponseGetDefinitionSendStatusForRecipient> GetSMSSendStatusForRecipientAsync (string messageKey)
+        {
+             ApiResponse<ResponseGetDefinitionSendStatusForRecipient> localVarResponse = await GetSMSSendStatusForRecipientAsyncWithHttpInfo(messageKey);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// getSMSSendStatusForRecipient Gets the send status for a message. Because this route is rate-limited, use it for infrequent verification of a messageKey. To collect send status at scale, subscribe to transactional send events using the Event Notification Service.
+        /// </summary>
+        /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="messageKey">Unique identifier to track message send status. You must provide it in singleton requests using the recipient attribute. To provide message key in batch requests, use the recipients array attribute. If you don’t provide the message key for recipients, it’s generated in the response.</param>
+        /// <returns>Task of ApiResponse (ResponseGetDefinitionSendStatusForRecipient)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ResponseGetDefinitionSendStatusForRecipient>> GetSMSSendStatusForRecipientAsyncWithHttpInfo (string messageKey)
+        {
+            // verify the required parameter 'messageKey' is set
+            if (messageKey == null)
+                throw new ApiException(400, "Missing required parameter 'messageKey' when calling TransactionalMessagingApi->GetSMSSendStatusForRecipient");
+
+            var localVarPath = "/messaging/v1/sms/messages/{messageKey}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (messageKey != null) localVarPathParams.Add("messageKey", this.Configuration.ApiClient.ParameterToString(messageKey)); // path parameter
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetSMSSendStatusForRecipient", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ResponseGetDefinitionSendStatusForRecipient>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ResponseGetDefinitionSendStatusForRecipient) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ResponseGetDefinitionSendStatusForRecipient)));
+        }
+
+        /// <summary>
+        /// getSMSsNotSentToRecipients Gets a paginated list of messages that were not sent, ordered from oldest to newest.
+        /// </summary>
+        /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="type">Only notSent is supported.</param>
+        /// <param name="pageSize">Number of messageKeys (array elements) to return per response page. (optional)</param>
+        /// <param name="lastEventId">Event ID from which you want the response to start. To obtain the initial event ID, submit a request without a lastEventId. The events in the response are listed top to bottom from oldest to newest. (optional)</param>
+        /// <returns>ResponseGetDefinitionsNotSentToRecipients</returns>
+        public ResponseGetDefinitionsNotSentToRecipients GetSMSsNotSentToRecipients (string type, int? pageSize = null, int? lastEventId = null)
+        {
+             ApiResponse<ResponseGetDefinitionsNotSentToRecipients> localVarResponse = GetSMSsNotSentToRecipientsWithHttpInfo(type, pageSize, lastEventId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// getSMSsNotSentToRecipients Gets a paginated list of messages that were not sent, ordered from oldest to newest.
+        /// </summary>
+        /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="type">Only notSent is supported.</param>
+        /// <param name="pageSize">Number of messageKeys (array elements) to return per response page. (optional)</param>
+        /// <param name="lastEventId">Event ID from which you want the response to start. To obtain the initial event ID, submit a request without a lastEventId. The events in the response are listed top to bottom from oldest to newest. (optional)</param>
+        /// <returns>ApiResponse of ResponseGetDefinitionsNotSentToRecipients</returns>
+        public ApiResponse< ResponseGetDefinitionsNotSentToRecipients > GetSMSsNotSentToRecipientsWithHttpInfo (string type, int? pageSize = null, int? lastEventId = null)
+        {
+            // verify the required parameter 'type' is set
+            if (type == null)
+                throw new ApiException(400, "Missing required parameter 'type' when calling TransactionalMessagingApi->GetSMSsNotSentToRecipients");
+
+            var localVarPath = "/messaging/v1/sms/messages/";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (type != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "type", type)); // query parameter
+            if (pageSize != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "$pageSize", pageSize)); // query parameter
+            if (lastEventId != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "lastEventId", lastEventId)); // query parameter
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetSMSsNotSentToRecipients", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ResponseGetDefinitionsNotSentToRecipients>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ResponseGetDefinitionsNotSentToRecipients) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ResponseGetDefinitionsNotSentToRecipients)));
+        }
+
+        /// <summary>
+        /// getSMSsNotSentToRecipients Gets a paginated list of messages that were not sent, ordered from oldest to newest.
+        /// </summary>
+        /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="type">Only notSent is supported.</param>
+        /// <param name="pageSize">Number of messageKeys (array elements) to return per response page. (optional)</param>
+        /// <param name="lastEventId">Event ID from which you want the response to start. To obtain the initial event ID, submit a request without a lastEventId. The events in the response are listed top to bottom from oldest to newest. (optional)</param>
+        /// <returns>Task of ResponseGetDefinitionsNotSentToRecipients</returns>
+        public async System.Threading.Tasks.Task<ResponseGetDefinitionsNotSentToRecipients> GetSMSsNotSentToRecipientsAsync (string type, int? pageSize = null, int? lastEventId = null)
+        {
+             ApiResponse<ResponseGetDefinitionsNotSentToRecipients> localVarResponse = await GetSMSsNotSentToRecipientsAsyncWithHttpInfo(type, pageSize, lastEventId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// getSMSsNotSentToRecipients Gets a paginated list of messages that were not sent, ordered from oldest to newest.
+        /// </summary>
+        /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="type">Only notSent is supported.</param>
+        /// <param name="pageSize">Number of messageKeys (array elements) to return per response page. (optional)</param>
+        /// <param name="lastEventId">Event ID from which you want the response to start. To obtain the initial event ID, submit a request without a lastEventId. The events in the response are listed top to bottom from oldest to newest. (optional)</param>
+        /// <returns>Task of ApiResponse (ResponseGetDefinitionsNotSentToRecipients)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ResponseGetDefinitionsNotSentToRecipients>> GetSMSsNotSentToRecipientsAsyncWithHttpInfo (string type, int? pageSize = null, int? lastEventId = null)
+        {
+            // verify the required parameter 'type' is set
+            if (type == null)
+                throw new ApiException(400, "Missing required parameter 'type' when calling TransactionalMessagingApi->GetSMSsNotSentToRecipients");
+
+            var localVarPath = "/messaging/v1/sms/messages/";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (type != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "type", type)); // query parameter
+            if (pageSize != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "$pageSize", pageSize)); // query parameter
+            if (lastEventId != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "lastEventId", lastEventId)); // query parameter
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetSMSsNotSentToRecipients", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ResponseGetDefinitionsNotSentToRecipients>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ResponseGetDefinitionsNotSentToRecipients) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ResponseGetDefinitionsNotSentToRecipients)));
+        }
+
+        /// <summary>
         /// partiallyUpdateEmailDefinition Updates a specific email definition.
         /// </summary>
         /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
@@ -3146,10 +3600,10 @@ namespace Salesforce.MarketingCloud.Api
         /// </summary>
         /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">JSON Parameters (optional)</param>
-        /// <returns>ResponseSendEmailToMultipleRecipients</returns>
-        public ResponseSendEmailToMultipleRecipients SendEmailToMultipleRecipients (RequestSendEmailToMultipleRecipients body = null)
+        /// <returns>ResponseSendDefinitionToMultipleRecipients</returns>
+        public ResponseSendDefinitionToMultipleRecipients SendEmailToMultipleRecipients (RequestSendEmailToMultipleRecipients body = null)
         {
-             ApiResponse<ResponseSendEmailToMultipleRecipients> localVarResponse = SendEmailToMultipleRecipientsWithHttpInfo(body);
+             ApiResponse<ResponseSendDefinitionToMultipleRecipients> localVarResponse = SendEmailToMultipleRecipientsWithHttpInfo(body);
              return localVarResponse.Data;
         }
 
@@ -3158,8 +3612,8 @@ namespace Salesforce.MarketingCloud.Api
         /// </summary>
         /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">JSON Parameters (optional)</param>
-        /// <returns>ApiResponse of ResponseSendEmailToMultipleRecipients</returns>
-        public ApiResponse< ResponseSendEmailToMultipleRecipients > SendEmailToMultipleRecipientsWithHttpInfo (RequestSendEmailToMultipleRecipients body = null)
+        /// <returns>ApiResponse of ResponseSendDefinitionToMultipleRecipients</returns>
+        public ApiResponse< ResponseSendDefinitionToMultipleRecipients > SendEmailToMultipleRecipientsWithHttpInfo (RequestSendEmailToMultipleRecipients body = null)
         {
 
             var localVarPath = "/messaging/v1/email/messages/";
@@ -3205,9 +3659,9 @@ namespace Salesforce.MarketingCloud.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<ResponseSendEmailToMultipleRecipients>(localVarStatusCode,
+            return new ApiResponse<ResponseSendDefinitionToMultipleRecipients>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (ResponseSendEmailToMultipleRecipients) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ResponseSendEmailToMultipleRecipients)));
+                (ResponseSendDefinitionToMultipleRecipients) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ResponseSendDefinitionToMultipleRecipients)));
         }
 
         /// <summary>
@@ -3215,10 +3669,10 @@ namespace Salesforce.MarketingCloud.Api
         /// </summary>
         /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">JSON Parameters (optional)</param>
-        /// <returns>Task of ResponseSendEmailToMultipleRecipients</returns>
-        public async System.Threading.Tasks.Task<ResponseSendEmailToMultipleRecipients> SendEmailToMultipleRecipientsAsync (RequestSendEmailToMultipleRecipients body = null)
+        /// <returns>Task of ResponseSendDefinitionToMultipleRecipients</returns>
+        public async System.Threading.Tasks.Task<ResponseSendDefinitionToMultipleRecipients> SendEmailToMultipleRecipientsAsync (RequestSendEmailToMultipleRecipients body = null)
         {
-             ApiResponse<ResponseSendEmailToMultipleRecipients> localVarResponse = await SendEmailToMultipleRecipientsAsyncWithHttpInfo(body);
+             ApiResponse<ResponseSendDefinitionToMultipleRecipients> localVarResponse = await SendEmailToMultipleRecipientsAsyncWithHttpInfo(body);
              return localVarResponse.Data;
 
         }
@@ -3228,8 +3682,8 @@ namespace Salesforce.MarketingCloud.Api
         /// </summary>
         /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">JSON Parameters (optional)</param>
-        /// <returns>Task of ApiResponse (ResponseSendEmailToMultipleRecipients)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ResponseSendEmailToMultipleRecipients>> SendEmailToMultipleRecipientsAsyncWithHttpInfo (RequestSendEmailToMultipleRecipients body = null)
+        /// <returns>Task of ApiResponse (ResponseSendDefinitionToMultipleRecipients)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ResponseSendDefinitionToMultipleRecipients>> SendEmailToMultipleRecipientsAsyncWithHttpInfo (RequestSendEmailToMultipleRecipients body = null)
         {
 
             var localVarPath = "/messaging/v1/email/messages/";
@@ -3275,9 +3729,9 @@ namespace Salesforce.MarketingCloud.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<ResponseSendEmailToMultipleRecipients>(localVarStatusCode,
+            return new ApiResponse<ResponseSendDefinitionToMultipleRecipients>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (ResponseSendEmailToMultipleRecipients) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ResponseSendEmailToMultipleRecipients)));
+                (ResponseSendDefinitionToMultipleRecipients) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ResponseSendDefinitionToMultipleRecipients)));
         }
 
         /// <summary>
@@ -3286,10 +3740,10 @@ namespace Salesforce.MarketingCloud.Api
         /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="messageKey">Unique identifier used to track message status. Can be automatically created when you create a message or provided as part of the request. Each recipient in a request must have a unique messageKey. If you use a duplicate messageKey in the same send request, the message is rejected.</param>
         /// <param name="body">JSON Parameters (optional)</param>
-        /// <returns>ResponseSendEmailToSingleRecipient</returns>
-        public ResponseSendEmailToSingleRecipient SendEmailToSingleRecipient (string messageKey, RequestSendMessageSingleRecipient body = null)
+        /// <returns>ResponseSendDefinitionToSingleRecipient</returns>
+        public ResponseSendDefinitionToSingleRecipient SendEmailToSingleRecipient (string messageKey, RequestSendEmailToSingleRecipient body = null)
         {
-             ApiResponse<ResponseSendEmailToSingleRecipient> localVarResponse = SendEmailToSingleRecipientWithHttpInfo(messageKey, body);
+             ApiResponse<ResponseSendDefinitionToSingleRecipient> localVarResponse = SendEmailToSingleRecipientWithHttpInfo(messageKey, body);
              return localVarResponse.Data;
         }
 
@@ -3299,8 +3753,8 @@ namespace Salesforce.MarketingCloud.Api
         /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="messageKey">Unique identifier used to track message status. Can be automatically created when you create a message or provided as part of the request. Each recipient in a request must have a unique messageKey. If you use a duplicate messageKey in the same send request, the message is rejected.</param>
         /// <param name="body">JSON Parameters (optional)</param>
-        /// <returns>ApiResponse of ResponseSendEmailToSingleRecipient</returns>
-        public ApiResponse< ResponseSendEmailToSingleRecipient > SendEmailToSingleRecipientWithHttpInfo (string messageKey, RequestSendMessageSingleRecipient body = null)
+        /// <returns>ApiResponse of ResponseSendDefinitionToSingleRecipient</returns>
+        public ApiResponse< ResponseSendDefinitionToSingleRecipient > SendEmailToSingleRecipientWithHttpInfo (string messageKey, RequestSendEmailToSingleRecipient body = null)
         {
             // verify the required parameter 'messageKey' is set
             if (messageKey == null)
@@ -3350,9 +3804,9 @@ namespace Salesforce.MarketingCloud.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<ResponseSendEmailToSingleRecipient>(localVarStatusCode,
+            return new ApiResponse<ResponseSendDefinitionToSingleRecipient>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (ResponseSendEmailToSingleRecipient) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ResponseSendEmailToSingleRecipient)));
+                (ResponseSendDefinitionToSingleRecipient) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ResponseSendDefinitionToSingleRecipient)));
         }
 
         /// <summary>
@@ -3361,10 +3815,10 @@ namespace Salesforce.MarketingCloud.Api
         /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="messageKey">Unique identifier used to track message status. Can be automatically created when you create a message or provided as part of the request. Each recipient in a request must have a unique messageKey. If you use a duplicate messageKey in the same send request, the message is rejected.</param>
         /// <param name="body">JSON Parameters (optional)</param>
-        /// <returns>Task of ResponseSendEmailToSingleRecipient</returns>
-        public async System.Threading.Tasks.Task<ResponseSendEmailToSingleRecipient> SendEmailToSingleRecipientAsync (string messageKey, RequestSendMessageSingleRecipient body = null)
+        /// <returns>Task of ResponseSendDefinitionToSingleRecipient</returns>
+        public async System.Threading.Tasks.Task<ResponseSendDefinitionToSingleRecipient> SendEmailToSingleRecipientAsync (string messageKey, RequestSendEmailToSingleRecipient body = null)
         {
-             ApiResponse<ResponseSendEmailToSingleRecipient> localVarResponse = await SendEmailToSingleRecipientAsyncWithHttpInfo(messageKey, body);
+             ApiResponse<ResponseSendDefinitionToSingleRecipient> localVarResponse = await SendEmailToSingleRecipientAsyncWithHttpInfo(messageKey, body);
              return localVarResponse.Data;
 
         }
@@ -3375,8 +3829,8 @@ namespace Salesforce.MarketingCloud.Api
         /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="messageKey">Unique identifier used to track message status. Can be automatically created when you create a message or provided as part of the request. Each recipient in a request must have a unique messageKey. If you use a duplicate messageKey in the same send request, the message is rejected.</param>
         /// <param name="body">JSON Parameters (optional)</param>
-        /// <returns>Task of ApiResponse (ResponseSendEmailToSingleRecipient)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ResponseSendEmailToSingleRecipient>> SendEmailToSingleRecipientAsyncWithHttpInfo (string messageKey, RequestSendMessageSingleRecipient body = null)
+        /// <returns>Task of ApiResponse (ResponseSendDefinitionToSingleRecipient)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ResponseSendDefinitionToSingleRecipient>> SendEmailToSingleRecipientAsyncWithHttpInfo (string messageKey, RequestSendEmailToSingleRecipient body = null)
         {
             // verify the required parameter 'messageKey' is set
             if (messageKey == null)
@@ -3426,9 +3880,299 @@ namespace Salesforce.MarketingCloud.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<ResponseSendEmailToSingleRecipient>(localVarStatusCode,
+            return new ApiResponse<ResponseSendDefinitionToSingleRecipient>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (ResponseSendEmailToSingleRecipient) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ResponseSendEmailToSingleRecipient)));
+                (ResponseSendDefinitionToSingleRecipient) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ResponseSendDefinitionToSingleRecipient)));
+        }
+
+        /// <summary>
+        /// sendSMSToMultipleRecipients Sends a message to multiple recipients using an email definition. You can provide a messageKey in the request; otherwise, the messageKey is automatically generated in the response.
+        /// </summary>
+        /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">JSON Parameters (optional)</param>
+        /// <returns>ResponseSendDefinitionToMultipleRecipients</returns>
+        public ResponseSendDefinitionToMultipleRecipients SendSMSToMultipleRecipients (RequestSendSMSToMultipleRecipients body = null)
+        {
+             ApiResponse<ResponseSendDefinitionToMultipleRecipients> localVarResponse = SendSMSToMultipleRecipientsWithHttpInfo(body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// sendSMSToMultipleRecipients Sends a message to multiple recipients using an email definition. You can provide a messageKey in the request; otherwise, the messageKey is automatically generated in the response.
+        /// </summary>
+        /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">JSON Parameters (optional)</param>
+        /// <returns>ApiResponse of ResponseSendDefinitionToMultipleRecipients</returns>
+        public ApiResponse< ResponseSendDefinitionToMultipleRecipients > SendSMSToMultipleRecipientsWithHttpInfo (RequestSendSMSToMultipleRecipients body = null)
+        {
+
+            var localVarPath = "/messaging/v1/sms/messages/";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (body != null && body.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = body; // byte array
+            }
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("SendSMSToMultipleRecipients", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ResponseSendDefinitionToMultipleRecipients>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ResponseSendDefinitionToMultipleRecipients) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ResponseSendDefinitionToMultipleRecipients)));
+        }
+
+        /// <summary>
+        /// sendSMSToMultipleRecipients Sends a message to multiple recipients using an email definition. You can provide a messageKey in the request; otherwise, the messageKey is automatically generated in the response.
+        /// </summary>
+        /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">JSON Parameters (optional)</param>
+        /// <returns>Task of ResponseSendDefinitionToMultipleRecipients</returns>
+        public async System.Threading.Tasks.Task<ResponseSendDefinitionToMultipleRecipients> SendSMSToMultipleRecipientsAsync (RequestSendSMSToMultipleRecipients body = null)
+        {
+             ApiResponse<ResponseSendDefinitionToMultipleRecipients> localVarResponse = await SendSMSToMultipleRecipientsAsyncWithHttpInfo(body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// sendSMSToMultipleRecipients Sends a message to multiple recipients using an email definition. You can provide a messageKey in the request; otherwise, the messageKey is automatically generated in the response.
+        /// </summary>
+        /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">JSON Parameters (optional)</param>
+        /// <returns>Task of ApiResponse (ResponseSendDefinitionToMultipleRecipients)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ResponseSendDefinitionToMultipleRecipients>> SendSMSToMultipleRecipientsAsyncWithHttpInfo (RequestSendSMSToMultipleRecipients body = null)
+        {
+
+            var localVarPath = "/messaging/v1/sms/messages/";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (body != null && body.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = body; // byte array
+            }
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("SendSMSToMultipleRecipients", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ResponseSendDefinitionToMultipleRecipients>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ResponseSendDefinitionToMultipleRecipients) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ResponseSendDefinitionToMultipleRecipients)));
+        }
+
+        /// <summary>
+        /// sendSMSToSingleRecipient Sends a message to a single recipient via a SMS definition using a messageKey path parameter.
+        /// </summary>
+        /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="messageKey">Unique identifier of the definition used to track message status. The messageKey can be created automatically when you create a message, or you can provide it as part of the request. Each recipient in a request must have a unique messageKey. If you use a duplicate messageKey in the same send request, the message is rejected.</param>
+        /// <param name="body">JSON Parameters (optional)</param>
+        /// <returns>ResponseSendDefinitionToSingleRecipient</returns>
+        public ResponseSendDefinitionToSingleRecipient SendSMSToSingleRecipient (string messageKey, RequestSendSMSToSingleRecipient body = null)
+        {
+             ApiResponse<ResponseSendDefinitionToSingleRecipient> localVarResponse = SendSMSToSingleRecipientWithHttpInfo(messageKey, body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// sendSMSToSingleRecipient Sends a message to a single recipient via a SMS definition using a messageKey path parameter.
+        /// </summary>
+        /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="messageKey">Unique identifier of the definition used to track message status. The messageKey can be created automatically when you create a message, or you can provide it as part of the request. Each recipient in a request must have a unique messageKey. If you use a duplicate messageKey in the same send request, the message is rejected.</param>
+        /// <param name="body">JSON Parameters (optional)</param>
+        /// <returns>ApiResponse of ResponseSendDefinitionToSingleRecipient</returns>
+        public ApiResponse< ResponseSendDefinitionToSingleRecipient > SendSMSToSingleRecipientWithHttpInfo (string messageKey, RequestSendSMSToSingleRecipient body = null)
+        {
+            // verify the required parameter 'messageKey' is set
+            if (messageKey == null)
+                throw new ApiException(400, "Missing required parameter 'messageKey' when calling TransactionalMessagingApi->SendSMSToSingleRecipient");
+
+            var localVarPath = "/messaging/v1/sms/messages/{messageKey}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (messageKey != null) localVarPathParams.Add("messageKey", this.Configuration.ApiClient.ParameterToString(messageKey)); // path parameter
+            if (body != null && body.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = body; // byte array
+            }
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("SendSMSToSingleRecipient", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ResponseSendDefinitionToSingleRecipient>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ResponseSendDefinitionToSingleRecipient) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ResponseSendDefinitionToSingleRecipient)));
+        }
+
+        /// <summary>
+        /// sendSMSToSingleRecipient Sends a message to a single recipient via a SMS definition using a messageKey path parameter.
+        /// </summary>
+        /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="messageKey">Unique identifier of the definition used to track message status. The messageKey can be created automatically when you create a message, or you can provide it as part of the request. Each recipient in a request must have a unique messageKey. If you use a duplicate messageKey in the same send request, the message is rejected.</param>
+        /// <param name="body">JSON Parameters (optional)</param>
+        /// <returns>Task of ResponseSendDefinitionToSingleRecipient</returns>
+        public async System.Threading.Tasks.Task<ResponseSendDefinitionToSingleRecipient> SendSMSToSingleRecipientAsync (string messageKey, RequestSendSMSToSingleRecipient body = null)
+        {
+             ApiResponse<ResponseSendDefinitionToSingleRecipient> localVarResponse = await SendSMSToSingleRecipientAsyncWithHttpInfo(messageKey, body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// sendSMSToSingleRecipient Sends a message to a single recipient via a SMS definition using a messageKey path parameter.
+        /// </summary>
+        /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="messageKey">Unique identifier of the definition used to track message status. The messageKey can be created automatically when you create a message, or you can provide it as part of the request. Each recipient in a request must have a unique messageKey. If you use a duplicate messageKey in the same send request, the message is rejected.</param>
+        /// <param name="body">JSON Parameters (optional)</param>
+        /// <returns>Task of ApiResponse (ResponseSendDefinitionToSingleRecipient)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ResponseSendDefinitionToSingleRecipient>> SendSMSToSingleRecipientAsyncWithHttpInfo (string messageKey, RequestSendSMSToSingleRecipient body = null)
+        {
+            // verify the required parameter 'messageKey' is set
+            if (messageKey == null)
+                throw new ApiException(400, "Missing required parameter 'messageKey' when calling TransactionalMessagingApi->SendSMSToSingleRecipient");
+
+            var localVarPath = "/messaging/v1/sms/messages/{messageKey}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (messageKey != null) localVarPathParams.Add("messageKey", this.Configuration.ApiClient.ParameterToString(messageKey)); // path parameter
+            if (body != null && body.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = body; // byte array
+            }
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("SendSMSToSingleRecipient", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ResponseSendDefinitionToSingleRecipient>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ResponseSendDefinitionToSingleRecipient) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ResponseSendDefinitionToSingleRecipient)));
         }
 
     }

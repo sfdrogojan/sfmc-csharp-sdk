@@ -46,8 +46,9 @@ namespace Salesforce.MarketingCloud.Test
         [SetUp]
         public void Init()
         {
-            transactionalMessagingApiClient = ApiTestSutFactory<TransactionalMessagingApi>.Create();
-            assetApiClient = ApiTestSutFactory<AssetApi>.Create();
+            transactionalMessagingApiClient = ClientFactory.Create().TransactionalMessagingApi;
+            assetApiClient = ClientFactory.Create().AssetApi;
+
             configProvider = new ConfigProvider();
         }
 

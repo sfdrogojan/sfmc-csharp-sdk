@@ -2,7 +2,7 @@
 
 namespace Salesforce.MarketingCloud.Test
 {
-    public static class ApiTestSutFactory<T>
+    public static class ClientFactory
     {
         private static ConfigProvider configProvider;
         private static string authBasePath;
@@ -11,8 +11,7 @@ namespace Salesforce.MarketingCloud.Test
         private static string accountId;
         private static string scope;
 
-
-        static ApiTestSutFactory()
+        static ClientFactory()
         {
             configProvider = new ConfigProvider();
 
@@ -23,9 +22,9 @@ namespace Salesforce.MarketingCloud.Test
             scope = configProvider.Scope;
         }
 
-        internal static T Create()
+        internal static Api.Client Create()
         {
-            return (T)Activator.CreateInstance(typeof(T), authBasePath, clientId, clientSecret, accountId, scope);
+            return new Api.Client(authBasePath, clientId, clientSecret, accountId, scope);
         }
     }
 }

@@ -5,8 +5,8 @@ All URIs are relative to *https://www.exacttargetapis.com*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**CreateCampaign**](CampaignApi.md#createcampaign) | **POST** /hub/v1/campaigns | createCampaign
-[**DeleteCampaignById**](CampaignApi.md#deletecampaignbyid) | **DELETE** /hub/v1/campaigns/{id} | deleteCampaign
-[**GetCampaignById**](CampaignApi.md#getcampaignbyid) | **GET** /hub/v1/campaigns/{id} | getCampaign
+[**DeleteCampaignById**](CampaignApi.md#deletecampaignbyid) | **DELETE** /hub/v1/campaigns/{id} | deleteCampaignById
+[**GetCampaignById**](CampaignApi.md#getcampaignbyid) | **GET** /hub/v1/campaigns/{id} | getCampaignById
 
 
 <a name="createcampaign"></a>
@@ -72,9 +72,9 @@ No authorization required
 
 <a name="deletecampaignbyid"></a>
 # **DeleteCampaignById**
-> void DeleteCampaignById (decimal? id)
+> void DeleteCampaignById (string id)
 
-deleteCampaign
+deleteCampaignById
 
 Deletes a campaign.
 
@@ -93,11 +93,11 @@ namespace Example
         public void main()
         {
             var apiInstance = new CampaignApi();
-            var id = 8.14;  // decimal? | The ID of the campaign to delete
+            var id = id_example;  // string | The ID of the campaign to delete
 
             try
             {
-                // deleteCampaign
+                // deleteCampaignById
                 apiInstance.DeleteCampaignById(id);
             }
             catch (Exception e)
@@ -113,7 +113,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **decimal?**| The ID of the campaign to delete | 
+ **id** | **string**| The ID of the campaign to delete | 
 
 ### Return type
 
@@ -132,9 +132,9 @@ No authorization required
 
 <a name="getcampaignbyid"></a>
 # **GetCampaignById**
-> Campaign GetCampaignById (decimal? id)
+> Campaign GetCampaignById (string id)
 
-getCampaign
+getCampaignById
 
 Retrieves a campaign.
 
@@ -153,11 +153,11 @@ namespace Example
         public void main()
         {
             var apiInstance = new CampaignApi();
-            var id = 8.14;  // decimal? | Campaign ID
+            var id = id_example;  // string | Campaign ID
 
             try
             {
-                // getCampaign
+                // getCampaignById
                 Campaign result = apiInstance.GetCampaignById(id);
                 Debug.WriteLine(result);
             }
@@ -174,7 +174,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **decimal?**| Campaign ID | 
+ **id** | **string**| Campaign ID | 
 
 ### Return type
 

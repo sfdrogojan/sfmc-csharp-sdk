@@ -25,44 +25,44 @@ using SwaggerDateConverter = Salesforce.MarketingCloud.Client.SwaggerDateConvert
 namespace Salesforce.MarketingCloud.Model
 {
     /// <summary>
-    /// ApiError
+    /// ResponseGetQueueMetricsForSendDefinition
     /// </summary>
     [DataContract]
-    public partial class ApiError :  IEquatable<ApiError>, IValidatableObject
+    public partial class ResponseGetQueueMetricsForSendDefinition :  IEquatable<ResponseGetQueueMetricsForSendDefinition>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="ApiError" /> class.
+        /// Initializes a new instance of the <see cref="ResponseGetQueueMetricsForSendDefinition" /> class.
         /// </summary>
-        /// <param name="message">The error message.</param>
-        /// <param name="errorCode">The specific error code.</param>
-        /// <param name="documentation">Any specific documentation for the error.</param>
-        public ApiError(string message = default(string), decimal? errorCode = default(decimal?), string documentation = default(string))
+        /// <param name="requestId">The ID of the request.</param>
+        /// <param name="count">Number of pages.</param>
+        /// <param name="ageSeconds">Number of seconds.</param>
+        public ResponseGetQueueMetricsForSendDefinition(string requestId = default(string), decimal? count = default(decimal?), decimal? ageSeconds = default(decimal?))
         {
-            this.Message = message;
-            this.ErrorCode = errorCode;
-            this.Documentation = documentation;
+            this.RequestId = requestId;
+            this.Count = count;
+            this.AgeSeconds = ageSeconds;
         }
         
         /// <summary>
-        /// The error message
+        /// The ID of the request
         /// </summary>
-        /// <value>The error message</value>
-        [DataMember(Name="message", EmitDefaultValue=false)]
-        public string Message { get; set; }
+        /// <value>The ID of the request</value>
+        [DataMember(Name="requestId", EmitDefaultValue=false)]
+        public string RequestId { get; set; }
 
         /// <summary>
-        /// The specific error code
+        /// Number of pages
         /// </summary>
-        /// <value>The specific error code</value>
-        [DataMember(Name="errorCode", EmitDefaultValue=false)]
-        public decimal? ErrorCode { get; set; }
+        /// <value>Number of pages</value>
+        [DataMember(Name="count", EmitDefaultValue=false)]
+        public decimal? Count { get; set; }
 
         /// <summary>
-        /// Any specific documentation for the error
+        /// Number of seconds
         /// </summary>
-        /// <value>Any specific documentation for the error</value>
-        [DataMember(Name="documentation", EmitDefaultValue=false)]
-        public string Documentation { get; set; }
+        /// <value>Number of seconds</value>
+        [DataMember(Name="ageSeconds", EmitDefaultValue=false)]
+        public decimal? AgeSeconds { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -71,10 +71,10 @@ namespace Salesforce.MarketingCloud.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class ApiError {\n");
-            sb.Append("  Message: ").Append(Message).Append("\n");
-            sb.Append("  ErrorCode: ").Append(ErrorCode).Append("\n");
-            sb.Append("  Documentation: ").Append(Documentation).Append("\n");
+            sb.Append("class ResponseGetQueueMetricsForSendDefinition {\n");
+            sb.Append("  RequestId: ").Append(RequestId).Append("\n");
+            sb.Append("  Count: ").Append(Count).Append("\n");
+            sb.Append("  AgeSeconds: ").Append(AgeSeconds).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -95,34 +95,34 @@ namespace Salesforce.MarketingCloud.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as ApiError);
+            return this.Equals(input as ResponseGetQueueMetricsForSendDefinition);
         }
 
         /// <summary>
-        /// Returns true if ApiError instances are equal
+        /// Returns true if ResponseGetQueueMetricsForSendDefinition instances are equal
         /// </summary>
-        /// <param name="input">Instance of ApiError to be compared</param>
+        /// <param name="input">Instance of ResponseGetQueueMetricsForSendDefinition to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(ApiError input)
+        public bool Equals(ResponseGetQueueMetricsForSendDefinition input)
         {
             if (input == null)
                 return false;
 
             return 
                 (
-                    this.Message == input.Message ||
-                    (this.Message != null &&
-                    this.Message.Equals(input.Message))
+                    this.RequestId == input.RequestId ||
+                    (this.RequestId != null &&
+                    this.RequestId.Equals(input.RequestId))
                 ) && 
                 (
-                    this.ErrorCode == input.ErrorCode ||
-                    (this.ErrorCode != null &&
-                    this.ErrorCode.Equals(input.ErrorCode))
+                    this.Count == input.Count ||
+                    (this.Count != null &&
+                    this.Count.Equals(input.Count))
                 ) && 
                 (
-                    this.Documentation == input.Documentation ||
-                    (this.Documentation != null &&
-                    this.Documentation.Equals(input.Documentation))
+                    this.AgeSeconds == input.AgeSeconds ||
+                    (this.AgeSeconds != null &&
+                    this.AgeSeconds.Equals(input.AgeSeconds))
                 );
         }
 
@@ -135,12 +135,12 @@ namespace Salesforce.MarketingCloud.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                if (this.Message != null)
-                    hashCode = hashCode * 59 + this.Message.GetHashCode();
-                if (this.ErrorCode != null)
-                    hashCode = hashCode * 59 + this.ErrorCode.GetHashCode();
-                if (this.Documentation != null)
-                    hashCode = hashCode * 59 + this.Documentation.GetHashCode();
+                if (this.RequestId != null)
+                    hashCode = hashCode * 59 + this.RequestId.GetHashCode();
+                if (this.Count != null)
+                    hashCode = hashCode * 59 + this.Count.GetHashCode();
+                if (this.AgeSeconds != null)
+                    hashCode = hashCode * 59 + this.AgeSeconds.GetHashCode();
                 return hashCode;
             }
         }

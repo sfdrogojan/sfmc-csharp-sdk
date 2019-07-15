@@ -25,44 +25,26 @@ using SwaggerDateConverter = Salesforce.MarketingCloud.Client.SwaggerDateConvert
 namespace Salesforce.MarketingCloud.Model
 {
     /// <summary>
-    /// ApiError
+    /// RequestSendSmsToMultipleRecipientsSubscriptions
     /// </summary>
     [DataContract]
-    public partial class ApiError :  IEquatable<ApiError>, IValidatableObject
+    public partial class RequestSendSmsToMultipleRecipientsSubscriptions :  IEquatable<RequestSendSmsToMultipleRecipientsSubscriptions>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="ApiError" /> class.
+        /// Initializes a new instance of the <see cref="RequestSendSmsToMultipleRecipientsSubscriptions" /> class.
         /// </summary>
-        /// <param name="message">The error message.</param>
-        /// <param name="errorCode">The specific error code.</param>
-        /// <param name="documentation">Any specific documentation for the error.</param>
-        public ApiError(string message = default(string), decimal? errorCode = default(decimal?), string documentation = default(string))
+        /// <param name="resubscribe">Forces the message send request to subscribe the mobile number back into a short code if a user may have requested STOP. Often used to ensure that critical transactional messages are delivered irrespective of a mobile number subscriber status..</param>
+        public RequestSendSmsToMultipleRecipientsSubscriptions(bool? resubscribe = default(bool?))
         {
-            this.Message = message;
-            this.ErrorCode = errorCode;
-            this.Documentation = documentation;
+            this.Resubscribe = resubscribe;
         }
         
         /// <summary>
-        /// The error message
+        /// Forces the message send request to subscribe the mobile number back into a short code if a user may have requested STOP. Often used to ensure that critical transactional messages are delivered irrespective of a mobile number subscriber status.
         /// </summary>
-        /// <value>The error message</value>
-        [DataMember(Name="message", EmitDefaultValue=false)]
-        public string Message { get; set; }
-
-        /// <summary>
-        /// The specific error code
-        /// </summary>
-        /// <value>The specific error code</value>
-        [DataMember(Name="errorCode", EmitDefaultValue=false)]
-        public decimal? ErrorCode { get; set; }
-
-        /// <summary>
-        /// Any specific documentation for the error
-        /// </summary>
-        /// <value>Any specific documentation for the error</value>
-        [DataMember(Name="documentation", EmitDefaultValue=false)]
-        public string Documentation { get; set; }
+        /// <value>Forces the message send request to subscribe the mobile number back into a short code if a user may have requested STOP. Often used to ensure that critical transactional messages are delivered irrespective of a mobile number subscriber status.</value>
+        [DataMember(Name="resubscribe", EmitDefaultValue=false)]
+        public bool? Resubscribe { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -71,10 +53,8 @@ namespace Salesforce.MarketingCloud.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class ApiError {\n");
-            sb.Append("  Message: ").Append(Message).Append("\n");
-            sb.Append("  ErrorCode: ").Append(ErrorCode).Append("\n");
-            sb.Append("  Documentation: ").Append(Documentation).Append("\n");
+            sb.Append("class RequestSendSmsToMultipleRecipientsSubscriptions {\n");
+            sb.Append("  Resubscribe: ").Append(Resubscribe).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -95,34 +75,24 @@ namespace Salesforce.MarketingCloud.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as ApiError);
+            return this.Equals(input as RequestSendSmsToMultipleRecipientsSubscriptions);
         }
 
         /// <summary>
-        /// Returns true if ApiError instances are equal
+        /// Returns true if RequestSendSmsToMultipleRecipientsSubscriptions instances are equal
         /// </summary>
-        /// <param name="input">Instance of ApiError to be compared</param>
+        /// <param name="input">Instance of RequestSendSmsToMultipleRecipientsSubscriptions to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(ApiError input)
+        public bool Equals(RequestSendSmsToMultipleRecipientsSubscriptions input)
         {
             if (input == null)
                 return false;
 
             return 
                 (
-                    this.Message == input.Message ||
-                    (this.Message != null &&
-                    this.Message.Equals(input.Message))
-                ) && 
-                (
-                    this.ErrorCode == input.ErrorCode ||
-                    (this.ErrorCode != null &&
-                    this.ErrorCode.Equals(input.ErrorCode))
-                ) && 
-                (
-                    this.Documentation == input.Documentation ||
-                    (this.Documentation != null &&
-                    this.Documentation.Equals(input.Documentation))
+                    this.Resubscribe == input.Resubscribe ||
+                    (this.Resubscribe != null &&
+                    this.Resubscribe.Equals(input.Resubscribe))
                 );
         }
 
@@ -135,12 +105,8 @@ namespace Salesforce.MarketingCloud.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                if (this.Message != null)
-                    hashCode = hashCode * 59 + this.Message.GetHashCode();
-                if (this.ErrorCode != null)
-                    hashCode = hashCode * 59 + this.ErrorCode.GetHashCode();
-                if (this.Documentation != null)
-                    hashCode = hashCode * 59 + this.Documentation.GetHashCode();
+                if (this.Resubscribe != null)
+                    hashCode = hashCode * 59 + this.Resubscribe.GetHashCode();
                 return hashCode;
             }
         }

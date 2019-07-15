@@ -25,44 +25,26 @@ using SwaggerDateConverter = Salesforce.MarketingCloud.Client.SwaggerDateConvert
 namespace Salesforce.MarketingCloud.Model
 {
     /// <summary>
-    /// ApiError
+    /// RequestCreateEmailDefinitionOptions
     /// </summary>
     [DataContract]
-    public partial class ApiError :  IEquatable<ApiError>, IValidatableObject
+    public partial class RequestCreateEmailDefinitionOptions :  IEquatable<RequestCreateEmailDefinitionOptions>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="ApiError" /> class.
+        /// Initializes a new instance of the <see cref="RequestCreateEmailDefinitionOptions" /> class.
         /// </summary>
-        /// <param name="message">The error message.</param>
-        /// <param name="errorCode">The specific error code.</param>
-        /// <param name="documentation">Any specific documentation for the error.</param>
-        public ApiError(string message = default(string), decimal? errorCode = default(decimal?), string documentation = default(string))
+        /// <param name="trackLinks">Wraps links for tracking and reporting. Default is true..</param>
+        public RequestCreateEmailDefinitionOptions(bool? trackLinks = default(bool?))
         {
-            this.Message = message;
-            this.ErrorCode = errorCode;
-            this.Documentation = documentation;
+            this.TrackLinks = trackLinks;
         }
         
         /// <summary>
-        /// The error message
+        /// Wraps links for tracking and reporting. Default is true.
         /// </summary>
-        /// <value>The error message</value>
-        [DataMember(Name="message", EmitDefaultValue=false)]
-        public string Message { get; set; }
-
-        /// <summary>
-        /// The specific error code
-        /// </summary>
-        /// <value>The specific error code</value>
-        [DataMember(Name="errorCode", EmitDefaultValue=false)]
-        public decimal? ErrorCode { get; set; }
-
-        /// <summary>
-        /// Any specific documentation for the error
-        /// </summary>
-        /// <value>Any specific documentation for the error</value>
-        [DataMember(Name="documentation", EmitDefaultValue=false)]
-        public string Documentation { get; set; }
+        /// <value>Wraps links for tracking and reporting. Default is true.</value>
+        [DataMember(Name="trackLinks", EmitDefaultValue=false)]
+        public bool? TrackLinks { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -71,10 +53,8 @@ namespace Salesforce.MarketingCloud.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class ApiError {\n");
-            sb.Append("  Message: ").Append(Message).Append("\n");
-            sb.Append("  ErrorCode: ").Append(ErrorCode).Append("\n");
-            sb.Append("  Documentation: ").Append(Documentation).Append("\n");
+            sb.Append("class RequestCreateEmailDefinitionOptions {\n");
+            sb.Append("  TrackLinks: ").Append(TrackLinks).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -95,34 +75,24 @@ namespace Salesforce.MarketingCloud.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as ApiError);
+            return this.Equals(input as RequestCreateEmailDefinitionOptions);
         }
 
         /// <summary>
-        /// Returns true if ApiError instances are equal
+        /// Returns true if RequestCreateEmailDefinitionOptions instances are equal
         /// </summary>
-        /// <param name="input">Instance of ApiError to be compared</param>
+        /// <param name="input">Instance of RequestCreateEmailDefinitionOptions to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(ApiError input)
+        public bool Equals(RequestCreateEmailDefinitionOptions input)
         {
             if (input == null)
                 return false;
 
             return 
                 (
-                    this.Message == input.Message ||
-                    (this.Message != null &&
-                    this.Message.Equals(input.Message))
-                ) && 
-                (
-                    this.ErrorCode == input.ErrorCode ||
-                    (this.ErrorCode != null &&
-                    this.ErrorCode.Equals(input.ErrorCode))
-                ) && 
-                (
-                    this.Documentation == input.Documentation ||
-                    (this.Documentation != null &&
-                    this.Documentation.Equals(input.Documentation))
+                    this.TrackLinks == input.TrackLinks ||
+                    (this.TrackLinks != null &&
+                    this.TrackLinks.Equals(input.TrackLinks))
                 );
         }
 
@@ -135,12 +105,8 @@ namespace Salesforce.MarketingCloud.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                if (this.Message != null)
-                    hashCode = hashCode * 59 + this.Message.GetHashCode();
-                if (this.ErrorCode != null)
-                    hashCode = hashCode * 59 + this.ErrorCode.GetHashCode();
-                if (this.Documentation != null)
-                    hashCode = hashCode * 59 + this.Documentation.GetHashCode();
+                if (this.TrackLinks != null)
+                    hashCode = hashCode * 59 + this.TrackLinks.GetHashCode();
                 return hashCode;
             }
         }

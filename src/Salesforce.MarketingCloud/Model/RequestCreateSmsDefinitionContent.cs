@@ -25,44 +25,39 @@ using SwaggerDateConverter = Salesforce.MarketingCloud.Client.SwaggerDateConvert
 namespace Salesforce.MarketingCloud.Model
 {
     /// <summary>
-    /// ApiError
+    /// RequestCreateSmsDefinitionContent
     /// </summary>
     [DataContract]
-    public partial class ApiError :  IEquatable<ApiError>, IValidatableObject
+    public partial class RequestCreateSmsDefinitionContent :  IEquatable<RequestCreateSmsDefinitionContent>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="ApiError" /> class.
+        /// Initializes a new instance of the <see cref="RequestCreateSmsDefinitionContent" /> class.
         /// </summary>
-        /// <param name="message">The error message.</param>
-        /// <param name="errorCode">The specific error code.</param>
-        /// <param name="documentation">Any specific documentation for the error.</param>
-        public ApiError(string message = default(string), decimal? errorCode = default(decimal?), string documentation = default(string))
+        [JsonConstructorAttribute]
+        protected RequestCreateSmsDefinitionContent() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="RequestCreateSmsDefinitionContent" /> class.
+        /// </summary>
+        /// <param name="message">The message content that you want sent with each message. Use substitution strings and AMPscript to personalize the message. (required).</param>
+        public RequestCreateSmsDefinitionContent(string message = default(string))
         {
-            this.Message = message;
-            this.ErrorCode = errorCode;
-            this.Documentation = documentation;
+            // to ensure "message" is required (not null)
+            if (message == null)
+            {
+                throw new InvalidDataException("message is a required property for RequestCreateSmsDefinitionContent and cannot be null");
+            }
+            else
+            {
+                this.Message = message;
+            }
         }
         
         /// <summary>
-        /// The error message
+        /// The message content that you want sent with each message. Use substitution strings and AMPscript to personalize the message.
         /// </summary>
-        /// <value>The error message</value>
+        /// <value>The message content that you want sent with each message. Use substitution strings and AMPscript to personalize the message.</value>
         [DataMember(Name="message", EmitDefaultValue=false)]
         public string Message { get; set; }
-
-        /// <summary>
-        /// The specific error code
-        /// </summary>
-        /// <value>The specific error code</value>
-        [DataMember(Name="errorCode", EmitDefaultValue=false)]
-        public decimal? ErrorCode { get; set; }
-
-        /// <summary>
-        /// Any specific documentation for the error
-        /// </summary>
-        /// <value>Any specific documentation for the error</value>
-        [DataMember(Name="documentation", EmitDefaultValue=false)]
-        public string Documentation { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -71,10 +66,8 @@ namespace Salesforce.MarketingCloud.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class ApiError {\n");
+            sb.Append("class RequestCreateSmsDefinitionContent {\n");
             sb.Append("  Message: ").Append(Message).Append("\n");
-            sb.Append("  ErrorCode: ").Append(ErrorCode).Append("\n");
-            sb.Append("  Documentation: ").Append(Documentation).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -95,15 +88,15 @@ namespace Salesforce.MarketingCloud.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as ApiError);
+            return this.Equals(input as RequestCreateSmsDefinitionContent);
         }
 
         /// <summary>
-        /// Returns true if ApiError instances are equal
+        /// Returns true if RequestCreateSmsDefinitionContent instances are equal
         /// </summary>
-        /// <param name="input">Instance of ApiError to be compared</param>
+        /// <param name="input">Instance of RequestCreateSmsDefinitionContent to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(ApiError input)
+        public bool Equals(RequestCreateSmsDefinitionContent input)
         {
             if (input == null)
                 return false;
@@ -113,16 +106,6 @@ namespace Salesforce.MarketingCloud.Model
                     this.Message == input.Message ||
                     (this.Message != null &&
                     this.Message.Equals(input.Message))
-                ) && 
-                (
-                    this.ErrorCode == input.ErrorCode ||
-                    (this.ErrorCode != null &&
-                    this.ErrorCode.Equals(input.ErrorCode))
-                ) && 
-                (
-                    this.Documentation == input.Documentation ||
-                    (this.Documentation != null &&
-                    this.Documentation.Equals(input.Documentation))
                 );
         }
 
@@ -137,10 +120,6 @@ namespace Salesforce.MarketingCloud.Model
                 int hashCode = 41;
                 if (this.Message != null)
                     hashCode = hashCode * 59 + this.Message.GetHashCode();
-                if (this.ErrorCode != null)
-                    hashCode = hashCode * 59 + this.ErrorCode.GetHashCode();
-                if (this.Documentation != null)
-                    hashCode = hashCode * 59 + this.Documentation.GetHashCode();
                 return hashCode;
             }
         }

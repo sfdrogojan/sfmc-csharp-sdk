@@ -48,7 +48,7 @@ namespace Salesforce.MarketingCloud.Api
         /// <returns>ApiResponse of Asset</returns>
         ApiResponse<Asset> CreateAssetWithHttpInfo (Asset body = null);
         /// <summary>
-        /// deleteAsset
+        /// deleteAssetById
         /// </summary>
         /// <remarks>
         /// Deletes an asset.
@@ -59,7 +59,7 @@ namespace Salesforce.MarketingCloud.Api
         void DeleteAssetById (decimal? id);
 
         /// <summary>
-        /// deleteAsset
+        /// deleteAssetById
         /// </summary>
         /// <remarks>
         /// Deletes an asset.
@@ -90,7 +90,7 @@ namespace Salesforce.MarketingCloud.Api
         /// <returns>ApiResponse of Asset</returns>
         ApiResponse<Asset> GetAssetByIdWithHttpInfo (decimal? id);
         /// <summary>
-        /// patchAsset
+        /// partiallyUpdateAssetById
         /// </summary>
         /// <remarks>
         /// Updates part of an asset.
@@ -99,10 +99,10 @@ namespace Salesforce.MarketingCloud.Api
         /// <param name="id">The ID of the asset to update</param>
         /// <param name="body">JSON Parameters (optional)</param>
         /// <returns>Asset</returns>
-        Asset PartiallyUpdateAsset (decimal? id, Asset body = null);
+        Asset PartiallyUpdateAssetById (decimal? id, Asset body = null);
 
         /// <summary>
-        /// patchAsset
+        /// partiallyUpdateAssetById
         /// </summary>
         /// <remarks>
         /// Updates part of an asset.
@@ -111,7 +111,7 @@ namespace Salesforce.MarketingCloud.Api
         /// <param name="id">The ID of the asset to update</param>
         /// <param name="body">JSON Parameters (optional)</param>
         /// <returns>ApiResponse of Asset</returns>
-        ApiResponse<Asset> PartiallyUpdateAssetWithHttpInfo (decimal? id, Asset body = null);
+        ApiResponse<Asset> PartiallyUpdateAssetByIdWithHttpInfo (decimal? id, Asset body = null);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -136,7 +136,7 @@ namespace Salesforce.MarketingCloud.Api
         /// <returns>Task of ApiResponse (Asset)</returns>
         System.Threading.Tasks.Task<ApiResponse<Asset>> CreateAssetAsyncWithHttpInfo (Asset body = null);
         /// <summary>
-        /// deleteAsset
+        /// deleteAssetById
         /// </summary>
         /// <remarks>
         /// Deletes an asset.
@@ -147,7 +147,7 @@ namespace Salesforce.MarketingCloud.Api
         System.Threading.Tasks.Task DeleteAssetByIdAsync (decimal? id);
 
         /// <summary>
-        /// deleteAsset
+        /// deleteAssetById
         /// </summary>
         /// <remarks>
         /// Deletes an asset.
@@ -178,7 +178,7 @@ namespace Salesforce.MarketingCloud.Api
         /// <returns>Task of ApiResponse (Asset)</returns>
         System.Threading.Tasks.Task<ApiResponse<Asset>> GetAssetByIdAsyncWithHttpInfo (decimal? id);
         /// <summary>
-        /// patchAsset
+        /// partiallyUpdateAssetById
         /// </summary>
         /// <remarks>
         /// Updates part of an asset.
@@ -187,10 +187,10 @@ namespace Salesforce.MarketingCloud.Api
         /// <param name="id">The ID of the asset to update</param>
         /// <param name="body">JSON Parameters (optional)</param>
         /// <returns>Task of Asset</returns>
-        System.Threading.Tasks.Task<Asset> PartiallyUpdateAssetAsync (decimal? id, Asset body = null);
+        System.Threading.Tasks.Task<Asset> PartiallyUpdateAssetByIdAsync (decimal? id, Asset body = null);
 
         /// <summary>
-        /// patchAsset
+        /// partiallyUpdateAssetById
         /// </summary>
         /// <remarks>
         /// Updates part of an asset.
@@ -199,7 +199,7 @@ namespace Salesforce.MarketingCloud.Api
         /// <param name="id">The ID of the asset to update</param>
         /// <param name="body">JSON Parameters (optional)</param>
         /// <returns>Task of ApiResponse (Asset)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Asset>> PartiallyUpdateAssetAsyncWithHttpInfo (decimal? id, Asset body = null);
+        System.Threading.Tasks.Task<ApiResponse<Asset>> PartiallyUpdateAssetByIdAsyncWithHttpInfo (decimal? id, Asset body = null);
         #endregion Asynchronous Operations
     }
 
@@ -433,7 +433,7 @@ namespace Salesforce.MarketingCloud.Api
         }
 
         /// <summary>
-        /// deleteAsset Deletes an asset.
+        /// deleteAssetById Deletes an asset.
         /// </summary>
         /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The ID of the asset to delete</param>
@@ -444,7 +444,7 @@ namespace Salesforce.MarketingCloud.Api
         }
 
         /// <summary>
-        /// deleteAsset Deletes an asset.
+        /// deleteAssetById Deletes an asset.
         /// </summary>
         /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The ID of the asset to delete</param>
@@ -497,7 +497,7 @@ namespace Salesforce.MarketingCloud.Api
         }
 
         /// <summary>
-        /// deleteAsset Deletes an asset.
+        /// deleteAssetById Deletes an asset.
         /// </summary>
         /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The ID of the asset to delete</param>
@@ -509,7 +509,7 @@ namespace Salesforce.MarketingCloud.Api
         }
 
         /// <summary>
-        /// deleteAsset Deletes an asset.
+        /// deleteAssetById Deletes an asset.
         /// </summary>
         /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The ID of the asset to delete</param>
@@ -693,30 +693,30 @@ namespace Salesforce.MarketingCloud.Api
         }
 
         /// <summary>
-        /// patchAsset Updates part of an asset.
+        /// partiallyUpdateAssetById Updates part of an asset.
         /// </summary>
         /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The ID of the asset to update</param>
         /// <param name="body">JSON Parameters (optional)</param>
         /// <returns>Asset</returns>
-        public Asset PartiallyUpdateAsset (decimal? id, Asset body = null)
+        public Asset PartiallyUpdateAssetById (decimal? id, Asset body = null)
         {
-             ApiResponse<Asset> localVarResponse = PartiallyUpdateAssetWithHttpInfo(id, body);
+             ApiResponse<Asset> localVarResponse = PartiallyUpdateAssetByIdWithHttpInfo(id, body);
              return localVarResponse.Data;
         }
 
         /// <summary>
-        /// patchAsset Updates part of an asset.
+        /// partiallyUpdateAssetById Updates part of an asset.
         /// </summary>
         /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The ID of the asset to update</param>
         /// <param name="body">JSON Parameters (optional)</param>
         /// <returns>ApiResponse of Asset</returns>
-        public ApiResponse< Asset > PartiallyUpdateAssetWithHttpInfo (decimal? id, Asset body = null)
+        public ApiResponse< Asset > PartiallyUpdateAssetByIdWithHttpInfo (decimal? id, Asset body = null)
         {
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling AssetApi->PartiallyUpdateAsset");
+                throw new ApiException(400, "Missing required parameter 'id' when calling AssetApi->PartiallyUpdateAssetById");
 
             var localVarPath = "/asset/v1/content/assets/{id}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -758,7 +758,7 @@ namespace Salesforce.MarketingCloud.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("PartiallyUpdateAsset", localVarResponse);
+                Exception exception = ExceptionFactory("PartiallyUpdateAssetById", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -768,31 +768,31 @@ namespace Salesforce.MarketingCloud.Api
         }
 
         /// <summary>
-        /// patchAsset Updates part of an asset.
+        /// partiallyUpdateAssetById Updates part of an asset.
         /// </summary>
         /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The ID of the asset to update</param>
         /// <param name="body">JSON Parameters (optional)</param>
         /// <returns>Task of Asset</returns>
-        public async System.Threading.Tasks.Task<Asset> PartiallyUpdateAssetAsync (decimal? id, Asset body = null)
+        public async System.Threading.Tasks.Task<Asset> PartiallyUpdateAssetByIdAsync (decimal? id, Asset body = null)
         {
-             ApiResponse<Asset> localVarResponse = await PartiallyUpdateAssetAsyncWithHttpInfo(id, body);
+             ApiResponse<Asset> localVarResponse = await PartiallyUpdateAssetByIdAsyncWithHttpInfo(id, body);
              return localVarResponse.Data;
 
         }
 
         /// <summary>
-        /// patchAsset Updates part of an asset.
+        /// partiallyUpdateAssetById Updates part of an asset.
         /// </summary>
         /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The ID of the asset to update</param>
         /// <param name="body">JSON Parameters (optional)</param>
         /// <returns>Task of ApiResponse (Asset)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Asset>> PartiallyUpdateAssetAsyncWithHttpInfo (decimal? id, Asset body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<Asset>> PartiallyUpdateAssetByIdAsyncWithHttpInfo (decimal? id, Asset body = null)
         {
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling AssetApi->PartiallyUpdateAsset");
+                throw new ApiException(400, "Missing required parameter 'id' when calling AssetApi->PartiallyUpdateAssetById");
 
             var localVarPath = "/asset/v1/content/assets/{id}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -834,7 +834,7 @@ namespace Salesforce.MarketingCloud.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("PartiallyUpdateAsset", localVarResponse);
+                Exception exception = ExceptionFactory("PartiallyUpdateAssetById", localVarResponse);
                 if (exception != null) throw exception;
             }
 

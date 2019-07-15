@@ -25,65 +25,55 @@ using SwaggerDateConverter = Salesforce.MarketingCloud.Client.SwaggerDateConvert
 namespace Salesforce.MarketingCloud.Model
 {
     /// <summary>
-    /// The asset type
+    /// RequestSendEmailToSingleRecipient
     /// </summary>
     [DataContract]
-    public partial class AssetType :  IEquatable<AssetType>, IValidatableObject
+    public partial class RequestSendEmailToSingleRecipient :  IEquatable<RequestSendEmailToSingleRecipient>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="AssetType" /> class.
+        /// Initializes a new instance of the <see cref="RequestSendEmailToSingleRecipient" /> class.
         /// </summary>
         [JsonConstructorAttribute]
-        protected AssetType() { }
+        protected RequestSendEmailToSingleRecipient() { }
         /// <summary>
-        /// Initializes a new instance of the <see cref="AssetType" /> class.
+        /// Initializes a new instance of the <see cref="RequestSendEmailToSingleRecipient" /> class.
         /// </summary>
-        /// <param name="id">The id of the asset type (required).</param>
-        /// <param name="name">The name of the asset type (required).</param>
-        /// <param name="displayName">The description of the asset type.</param>
-        public AssetType(decimal? id = default(decimal?), string name = default(string), string displayName = default(string))
+        /// <param name="definitionKey">Unique identifier of the definition. (required).</param>
+        /// <param name="recipient">recipient (required).</param>
+        public RequestSendEmailToSingleRecipient(string definitionKey = default(string), Recipient recipient = default(Recipient))
         {
-            // to ensure "id" is required (not null)
-            if (id == null)
+            // to ensure "definitionKey" is required (not null)
+            if (definitionKey == null)
             {
-                throw new InvalidDataException("id is a required property for AssetType and cannot be null");
+                throw new InvalidDataException("definitionKey is a required property for RequestSendEmailToSingleRecipient and cannot be null");
             }
             else
             {
-                this.Id = id;
+                this.DefinitionKey = definitionKey;
             }
-            // to ensure "name" is required (not null)
-            if (name == null)
+            // to ensure "recipient" is required (not null)
+            if (recipient == null)
             {
-                throw new InvalidDataException("name is a required property for AssetType and cannot be null");
+                throw new InvalidDataException("recipient is a required property for RequestSendEmailToSingleRecipient and cannot be null");
             }
             else
             {
-                this.Name = name;
+                this.Recipient = recipient;
             }
-            this.DisplayName = displayName;
         }
         
         /// <summary>
-        /// The id of the asset type
+        /// Unique identifier of the definition.
         /// </summary>
-        /// <value>The id of the asset type</value>
-        [DataMember(Name="id", EmitDefaultValue=false)]
-        public decimal? Id { get; set; }
+        /// <value>Unique identifier of the definition.</value>
+        [DataMember(Name="definitionKey", EmitDefaultValue=false)]
+        public string DefinitionKey { get; set; }
 
         /// <summary>
-        /// The name of the asset type
+        /// Gets or Sets Recipient
         /// </summary>
-        /// <value>The name of the asset type</value>
-        [DataMember(Name="name", EmitDefaultValue=false)]
-        public string Name { get; set; }
-
-        /// <summary>
-        /// The description of the asset type
-        /// </summary>
-        /// <value>The description of the asset type</value>
-        [DataMember(Name="displayName", EmitDefaultValue=false)]
-        public string DisplayName { get; set; }
+        [DataMember(Name="recipient", EmitDefaultValue=false)]
+        public Recipient Recipient { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -92,10 +82,9 @@ namespace Salesforce.MarketingCloud.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class AssetType {\n");
-            sb.Append("  Id: ").Append(Id).Append("\n");
-            sb.Append("  Name: ").Append(Name).Append("\n");
-            sb.Append("  DisplayName: ").Append(DisplayName).Append("\n");
+            sb.Append("class RequestSendEmailToSingleRecipient {\n");
+            sb.Append("  DefinitionKey: ").Append(DefinitionKey).Append("\n");
+            sb.Append("  Recipient: ").Append(Recipient).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -116,34 +105,29 @@ namespace Salesforce.MarketingCloud.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as AssetType);
+            return this.Equals(input as RequestSendEmailToSingleRecipient);
         }
 
         /// <summary>
-        /// Returns true if AssetType instances are equal
+        /// Returns true if RequestSendEmailToSingleRecipient instances are equal
         /// </summary>
-        /// <param name="input">Instance of AssetType to be compared</param>
+        /// <param name="input">Instance of RequestSendEmailToSingleRecipient to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(AssetType input)
+        public bool Equals(RequestSendEmailToSingleRecipient input)
         {
             if (input == null)
                 return false;
 
             return 
                 (
-                    this.Id == input.Id ||
-                    (this.Id != null &&
-                    this.Id.Equals(input.Id))
+                    this.DefinitionKey == input.DefinitionKey ||
+                    (this.DefinitionKey != null &&
+                    this.DefinitionKey.Equals(input.DefinitionKey))
                 ) && 
                 (
-                    this.Name == input.Name ||
-                    (this.Name != null &&
-                    this.Name.Equals(input.Name))
-                ) && 
-                (
-                    this.DisplayName == input.DisplayName ||
-                    (this.DisplayName != null &&
-                    this.DisplayName.Equals(input.DisplayName))
+                    this.Recipient == input.Recipient ||
+                    (this.Recipient != null &&
+                    this.Recipient.Equals(input.Recipient))
                 );
         }
 
@@ -156,12 +140,10 @@ namespace Salesforce.MarketingCloud.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                if (this.Id != null)
-                    hashCode = hashCode * 59 + this.Id.GetHashCode();
-                if (this.Name != null)
-                    hashCode = hashCode * 59 + this.Name.GetHashCode();
-                if (this.DisplayName != null)
-                    hashCode = hashCode * 59 + this.DisplayName.GetHashCode();
+                if (this.DefinitionKey != null)
+                    hashCode = hashCode * 59 + this.DefinitionKey.GetHashCode();
+                if (this.Recipient != null)
+                    hashCode = hashCode * 59 + this.Recipient.GetHashCode();
                 return hashCode;
             }
         }

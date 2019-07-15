@@ -43,5 +43,11 @@ namespace Salesforce.MarketingCloud.Api
             get => this.emailDefinitionApi ?? (this.emailDefinitionApi = new EmailDefinitionApi(this.authBasePath, this.clientId, this.clientSecret, this.accountId, this.scope));
             internal set => this.emailDefinitionApi = value;
         }
+        private TransactionalMessagingApi transactionalMessagingApi;
+        public TransactionalMessagingApi TransactionalMessagingApi
+        {
+            get => this.transactionalMessagingApi ?? (this.transactionalMessagingApi = new TransactionalMessagingApi(this.authBasePath, this.clientId, this.clientSecret, this.accountId, this.scope));
+            internal set => this.transactionalMessagingApi = value;
+        }
     }
 }

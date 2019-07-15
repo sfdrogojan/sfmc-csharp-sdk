@@ -34,8 +34,8 @@ namespace Salesforce.MarketingCloud.Api
         /// </remarks>
         /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">JSON Parameters (optional)</param>
-        /// <returns>RequestCreateEmailDefinition</returns>
-        RequestCreateEmailDefinition CreateEmailDefinition (RequestCreateEmailDefinition body = null);
+        /// <returns>CreateEmailDefinitionRequest</returns>
+        CreateEmailDefinitionRequest CreateEmailDefinition (CreateEmailDefinitionRequest body = null);
 
         /// <summary>
         /// createEmailDefinition
@@ -45,8 +45,8 @@ namespace Salesforce.MarketingCloud.Api
         /// </remarks>
         /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">JSON Parameters (optional)</param>
-        /// <returns>ApiResponse of RequestCreateEmailDefinition</returns>
-        ApiResponse<RequestCreateEmailDefinition> CreateEmailDefinitionWithHttpInfo (RequestCreateEmailDefinition body = null);
+        /// <returns>ApiResponse of CreateEmailDefinitionRequest</returns>
+        ApiResponse<CreateEmailDefinitionRequest> CreateEmailDefinitionWithHttpInfo (CreateEmailDefinitionRequest body = null);
         /// <summary>
         /// createSmsDefinition
         /// </summary>
@@ -55,8 +55,8 @@ namespace Salesforce.MarketingCloud.Api
         /// </remarks>
         /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">JSON Parameters (optional)</param>
-        /// <returns>RequestCreateSmsDefinition</returns>
-        RequestCreateSmsDefinition CreateSmsDefinition (RequestCreateSmsDefinition body = null);
+        /// <returns>CreateSmsDefinitionRequest</returns>
+        CreateSmsDefinitionRequest CreateSmsDefinition (CreateSmsDefinitionRequest body = null);
 
         /// <summary>
         /// createSmsDefinition
@@ -66,8 +66,8 @@ namespace Salesforce.MarketingCloud.Api
         /// </remarks>
         /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">JSON Parameters (optional)</param>
-        /// <returns>ApiResponse of RequestCreateSmsDefinition</returns>
-        ApiResponse<RequestCreateSmsDefinition> CreateSmsDefinitionWithHttpInfo (RequestCreateSmsDefinition body = null);
+        /// <returns>ApiResponse of CreateSmsDefinitionRequest</returns>
+        ApiResponse<CreateSmsDefinitionRequest> CreateSmsDefinitionWithHttpInfo (CreateSmsDefinitionRequest body = null);
         /// <summary>
         /// deleteEmailDefinition
         /// </summary>
@@ -76,8 +76,8 @@ namespace Salesforce.MarketingCloud.Api
         /// </remarks>
         /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="definitionKey">Unique identifier of the definition to delete</param>
-        /// <returns>ResponseDeleteSendDefinition</returns>
-        ResponseDeleteSendDefinition DeleteEmailDefinition (string definitionKey);
+        /// <returns>DeleteSendDefinitionResponse</returns>
+        DeleteSendDefinitionResponse DeleteEmailDefinition (string definitionKey);
 
         /// <summary>
         /// deleteEmailDefinition
@@ -87,8 +87,8 @@ namespace Salesforce.MarketingCloud.Api
         /// </remarks>
         /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="definitionKey">Unique identifier of the definition to delete</param>
-        /// <returns>ApiResponse of ResponseDeleteSendDefinition</returns>
-        ApiResponse<ResponseDeleteSendDefinition> DeleteEmailDefinitionWithHttpInfo (string definitionKey);
+        /// <returns>ApiResponse of DeleteSendDefinitionResponse</returns>
+        ApiResponse<DeleteSendDefinitionResponse> DeleteEmailDefinitionWithHttpInfo (string definitionKey);
         /// <summary>
         /// deleteQueuedMessagesForEmailDefinition
         /// </summary>
@@ -97,8 +97,8 @@ namespace Salesforce.MarketingCloud.Api
         /// </remarks>
         /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="definitionKey">Unique identifier of the email definition</param>
-        /// <returns>ResponseDeleteQueuedMessagesForSendDefinition</returns>
-        ResponseDeleteQueuedMessagesForSendDefinition DeleteQueuedMessagesForEmailDefinition (string definitionKey);
+        /// <returns>DeleteQueuedMessagesForSendDefinitionResponse</returns>
+        DeleteQueuedMessagesForSendDefinitionResponse DeleteQueuedMessagesForEmailDefinition (string definitionKey);
 
         /// <summary>
         /// deleteQueuedMessagesForEmailDefinition
@@ -108,8 +108,8 @@ namespace Salesforce.MarketingCloud.Api
         /// </remarks>
         /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="definitionKey">Unique identifier of the email definition</param>
-        /// <returns>ApiResponse of ResponseDeleteQueuedMessagesForSendDefinition</returns>
-        ApiResponse<ResponseDeleteQueuedMessagesForSendDefinition> DeleteQueuedMessagesForEmailDefinitionWithHttpInfo (string definitionKey);
+        /// <returns>ApiResponse of DeleteQueuedMessagesForSendDefinitionResponse</returns>
+        ApiResponse<DeleteQueuedMessagesForSendDefinitionResponse> DeleteQueuedMessagesForEmailDefinitionWithHttpInfo (string definitionKey);
         /// <summary>
         /// deleteQueuedMessagesForSmsDefinition
         /// </summary>
@@ -118,8 +118,8 @@ namespace Salesforce.MarketingCloud.Api
         /// </remarks>
         /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="definitionKey">Unique identifier of the SMS definition</param>
-        /// <returns>ResponseDeleteQueuedMessagesForSendDefinition</returns>
-        ResponseDeleteQueuedMessagesForSendDefinition DeleteQueuedMessagesForSmsDefinition (string definitionKey);
+        /// <returns>DeleteQueuedMessagesForSendDefinitionResponse</returns>
+        DeleteQueuedMessagesForSendDefinitionResponse DeleteQueuedMessagesForSmsDefinition (string definitionKey);
 
         /// <summary>
         /// deleteQueuedMessagesForSmsDefinition
@@ -129,8 +129,8 @@ namespace Salesforce.MarketingCloud.Api
         /// </remarks>
         /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="definitionKey">Unique identifier of the SMS definition</param>
-        /// <returns>ApiResponse of ResponseDeleteQueuedMessagesForSendDefinition</returns>
-        ApiResponse<ResponseDeleteQueuedMessagesForSendDefinition> DeleteQueuedMessagesForSmsDefinitionWithHttpInfo (string definitionKey);
+        /// <returns>ApiResponse of DeleteQueuedMessagesForSendDefinitionResponse</returns>
+        ApiResponse<DeleteQueuedMessagesForSendDefinitionResponse> DeleteQueuedMessagesForSmsDefinitionWithHttpInfo (string definitionKey);
         /// <summary>
         /// deleteSmsDefinition
         /// </summary>
@@ -139,8 +139,8 @@ namespace Salesforce.MarketingCloud.Api
         /// </remarks>
         /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="definitionKey">Unique identifier of the definition to delete</param>
-        /// <returns>ResponseDeleteSendDefinition</returns>
-        ResponseDeleteSendDefinition DeleteSmsDefinition (string definitionKey);
+        /// <returns>DeleteSendDefinitionResponse</returns>
+        DeleteSendDefinitionResponse DeleteSmsDefinition (string definitionKey);
 
         /// <summary>
         /// deleteSmsDefinition
@@ -150,8 +150,8 @@ namespace Salesforce.MarketingCloud.Api
         /// </remarks>
         /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="definitionKey">Unique identifier of the definition to delete</param>
-        /// <returns>ApiResponse of ResponseDeleteSendDefinition</returns>
-        ApiResponse<ResponseDeleteSendDefinition> DeleteSmsDefinitionWithHttpInfo (string definitionKey);
+        /// <returns>ApiResponse of DeleteSendDefinitionResponse</returns>
+        ApiResponse<DeleteSendDefinitionResponse> DeleteSmsDefinitionWithHttpInfo (string definitionKey);
         /// <summary>
         /// getEmailDefinition
         /// </summary>
@@ -160,8 +160,8 @@ namespace Salesforce.MarketingCloud.Api
         /// </remarks>
         /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="definitionKey">Unique identifier of the definition to get</param>
-        /// <returns>RequestCreateEmailDefinition</returns>
-        RequestCreateEmailDefinition GetEmailDefinition (string definitionKey);
+        /// <returns>CreateEmailDefinitionRequest</returns>
+        CreateEmailDefinitionRequest GetEmailDefinition (string definitionKey);
 
         /// <summary>
         /// getEmailDefinition
@@ -171,8 +171,8 @@ namespace Salesforce.MarketingCloud.Api
         /// </remarks>
         /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="definitionKey">Unique identifier of the definition to get</param>
-        /// <returns>ApiResponse of RequestCreateEmailDefinition</returns>
-        ApiResponse<RequestCreateEmailDefinition> GetEmailDefinitionWithHttpInfo (string definitionKey);
+        /// <returns>ApiResponse of CreateEmailDefinitionRequest</returns>
+        ApiResponse<CreateEmailDefinitionRequest> GetEmailDefinitionWithHttpInfo (string definitionKey);
         /// <summary>
         /// getEmailDefinitions
         /// </summary>
@@ -184,8 +184,8 @@ namespace Salesforce.MarketingCloud.Api
         /// <param name="pageSize">Number of definitions, which are array elements, to return per paged response. (optional)</param>
         /// <param name="page">Page number to return. (optional)</param>
         /// <param name="orderBy">Sort by a dimension. You can sort by only one dimension. Accepted values are definitionKey, name, createdDate, modifiedDate, and status. (optional)</param>
-        /// <returns>ResponseGetEmailDefinitions</returns>
-        ResponseGetEmailDefinitions GetEmailDefinitions (string status = null, decimal? pageSize = null, decimal? page = null, string orderBy = null);
+        /// <returns>GetEmailDefinitionsResponse</returns>
+        GetEmailDefinitionsResponse GetEmailDefinitions (string status = null, decimal? pageSize = null, decimal? page = null, string orderBy = null);
 
         /// <summary>
         /// getEmailDefinitions
@@ -198,8 +198,8 @@ namespace Salesforce.MarketingCloud.Api
         /// <param name="pageSize">Number of definitions, which are array elements, to return per paged response. (optional)</param>
         /// <param name="page">Page number to return. (optional)</param>
         /// <param name="orderBy">Sort by a dimension. You can sort by only one dimension. Accepted values are definitionKey, name, createdDate, modifiedDate, and status. (optional)</param>
-        /// <returns>ApiResponse of ResponseGetEmailDefinitions</returns>
-        ApiResponse<ResponseGetEmailDefinitions> GetEmailDefinitionsWithHttpInfo (string status = null, decimal? pageSize = null, decimal? page = null, string orderBy = null);
+        /// <returns>ApiResponse of GetEmailDefinitionsResponse</returns>
+        ApiResponse<GetEmailDefinitionsResponse> GetEmailDefinitionsWithHttpInfo (string status = null, decimal? pageSize = null, decimal? page = null, string orderBy = null);
         /// <summary>
         /// getEmailSendStatusForRecipient
         /// </summary>
@@ -208,8 +208,8 @@ namespace Salesforce.MarketingCloud.Api
         /// </remarks>
         /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="messageKey">Unique identifier to track message send status. You must provide it in singleton requests using the recipient attribute. To provide it in batch requests, use the recipients array attribute. If you don’t provide the message key for recipients, it’s generated in the response.</param>
-        /// <returns>ResponseGetDefinitionSendStatusForRecipient</returns>
-        ResponseGetDefinitionSendStatusForRecipient GetEmailSendStatusForRecipient (string messageKey);
+        /// <returns>GetDefinitionSendStatusForRecipientResponse</returns>
+        GetDefinitionSendStatusForRecipientResponse GetEmailSendStatusForRecipient (string messageKey);
 
         /// <summary>
         /// getEmailSendStatusForRecipient
@@ -219,8 +219,8 @@ namespace Salesforce.MarketingCloud.Api
         /// </remarks>
         /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="messageKey">Unique identifier to track message send status. You must provide it in singleton requests using the recipient attribute. To provide it in batch requests, use the recipients array attribute. If you don’t provide the message key for recipients, it’s generated in the response.</param>
-        /// <returns>ApiResponse of ResponseGetDefinitionSendStatusForRecipient</returns>
-        ApiResponse<ResponseGetDefinitionSendStatusForRecipient> GetEmailSendStatusForRecipientWithHttpInfo (string messageKey);
+        /// <returns>ApiResponse of GetDefinitionSendStatusForRecipientResponse</returns>
+        ApiResponse<GetDefinitionSendStatusForRecipientResponse> GetEmailSendStatusForRecipientWithHttpInfo (string messageKey);
         /// <summary>
         /// getEmailsNotSentToRecipients
         /// </summary>
@@ -231,8 +231,8 @@ namespace Salesforce.MarketingCloud.Api
         /// <param name="type">Only notSent is supported.</param>
         /// <param name="pageSize">Number of messageKeys (array elements) to return per response page. (optional)</param>
         /// <param name="lastEventId">Event ID from which you want the response to start. To obtain the initial event ID, submit a request without a lastEventId. The events in the response are listed top to bottom from oldest to newest. (optional)</param>
-        /// <returns>ResponseGetDefinitionsNotSentToRecipients</returns>
-        ResponseGetDefinitionsNotSentToRecipients GetEmailsNotSentToRecipients (string type, int? pageSize = null, int? lastEventId = null);
+        /// <returns>GetDefinitionsNotSentToRecipientsResponse</returns>
+        GetDefinitionsNotSentToRecipientsResponse GetEmailsNotSentToRecipients (string type, int? pageSize = null, int? lastEventId = null);
 
         /// <summary>
         /// getEmailsNotSentToRecipients
@@ -244,8 +244,8 @@ namespace Salesforce.MarketingCloud.Api
         /// <param name="type">Only notSent is supported.</param>
         /// <param name="pageSize">Number of messageKeys (array elements) to return per response page. (optional)</param>
         /// <param name="lastEventId">Event ID from which you want the response to start. To obtain the initial event ID, submit a request without a lastEventId. The events in the response are listed top to bottom from oldest to newest. (optional)</param>
-        /// <returns>ApiResponse of ResponseGetDefinitionsNotSentToRecipients</returns>
-        ApiResponse<ResponseGetDefinitionsNotSentToRecipients> GetEmailsNotSentToRecipientsWithHttpInfo (string type, int? pageSize = null, int? lastEventId = null);
+        /// <returns>ApiResponse of GetDefinitionsNotSentToRecipientsResponse</returns>
+        ApiResponse<GetDefinitionsNotSentToRecipientsResponse> GetEmailsNotSentToRecipientsWithHttpInfo (string type, int? pageSize = null, int? lastEventId = null);
         /// <summary>
         /// getQueueMetricsForEmailDefinition
         /// </summary>
@@ -254,8 +254,8 @@ namespace Salesforce.MarketingCloud.Api
         /// </remarks>
         /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="definitionKey">Unique identifier of the email definition</param>
-        /// <returns>ResponseGetQueueMetricsForSendDefinition</returns>
-        ResponseGetQueueMetricsForSendDefinition GetQueueMetricsForEmailDefinition (string definitionKey);
+        /// <returns>GetQueueMetricsForSendDefinitionResponse</returns>
+        GetQueueMetricsForSendDefinitionResponse GetQueueMetricsForEmailDefinition (string definitionKey);
 
         /// <summary>
         /// getQueueMetricsForEmailDefinition
@@ -265,8 +265,8 @@ namespace Salesforce.MarketingCloud.Api
         /// </remarks>
         /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="definitionKey">Unique identifier of the email definition</param>
-        /// <returns>ApiResponse of ResponseGetQueueMetricsForSendDefinition</returns>
-        ApiResponse<ResponseGetQueueMetricsForSendDefinition> GetQueueMetricsForEmailDefinitionWithHttpInfo (string definitionKey);
+        /// <returns>ApiResponse of GetQueueMetricsForSendDefinitionResponse</returns>
+        ApiResponse<GetQueueMetricsForSendDefinitionResponse> GetQueueMetricsForEmailDefinitionWithHttpInfo (string definitionKey);
         /// <summary>
         /// getQueueMetricsForSmsDefinition
         /// </summary>
@@ -275,8 +275,8 @@ namespace Salesforce.MarketingCloud.Api
         /// </remarks>
         /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="definitionKey">Unique identifier of the SMS definition</param>
-        /// <returns>ResponseGetQueueMetricsForSendDefinition</returns>
-        ResponseGetQueueMetricsForSendDefinition GetQueueMetricsForSmsDefinition (string definitionKey);
+        /// <returns>GetQueueMetricsForSendDefinitionResponse</returns>
+        GetQueueMetricsForSendDefinitionResponse GetQueueMetricsForSmsDefinition (string definitionKey);
 
         /// <summary>
         /// getQueueMetricsForSmsDefinition
@@ -286,8 +286,8 @@ namespace Salesforce.MarketingCloud.Api
         /// </remarks>
         /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="definitionKey">Unique identifier of the SMS definition</param>
-        /// <returns>ApiResponse of ResponseGetQueueMetricsForSendDefinition</returns>
-        ApiResponse<ResponseGetQueueMetricsForSendDefinition> GetQueueMetricsForSmsDefinitionWithHttpInfo (string definitionKey);
+        /// <returns>ApiResponse of GetQueueMetricsForSendDefinitionResponse</returns>
+        ApiResponse<GetQueueMetricsForSendDefinitionResponse> GetQueueMetricsForSmsDefinitionWithHttpInfo (string definitionKey);
         /// <summary>
         /// getSMSsNotSentToRecipients
         /// </summary>
@@ -298,8 +298,8 @@ namespace Salesforce.MarketingCloud.Api
         /// <param name="type">Only notSent is supported.</param>
         /// <param name="pageSize">Number of messageKeys (array elements) to return per response page. (optional)</param>
         /// <param name="lastEventId">Event ID from which you want the response to start. To obtain the initial event ID, submit a request without a lastEventId. The events in the response are listed top to bottom from oldest to newest. (optional)</param>
-        /// <returns>ResponseGetDefinitionsNotSentToRecipients</returns>
-        ResponseGetDefinitionsNotSentToRecipients GetSMSsNotSentToRecipients (string type, int? pageSize = null, int? lastEventId = null);
+        /// <returns>GetDefinitionsNotSentToRecipientsResponse</returns>
+        GetDefinitionsNotSentToRecipientsResponse GetSMSsNotSentToRecipients (string type, int? pageSize = null, int? lastEventId = null);
 
         /// <summary>
         /// getSMSsNotSentToRecipients
@@ -311,8 +311,8 @@ namespace Salesforce.MarketingCloud.Api
         /// <param name="type">Only notSent is supported.</param>
         /// <param name="pageSize">Number of messageKeys (array elements) to return per response page. (optional)</param>
         /// <param name="lastEventId">Event ID from which you want the response to start. To obtain the initial event ID, submit a request without a lastEventId. The events in the response are listed top to bottom from oldest to newest. (optional)</param>
-        /// <returns>ApiResponse of ResponseGetDefinitionsNotSentToRecipients</returns>
-        ApiResponse<ResponseGetDefinitionsNotSentToRecipients> GetSMSsNotSentToRecipientsWithHttpInfo (string type, int? pageSize = null, int? lastEventId = null);
+        /// <returns>ApiResponse of GetDefinitionsNotSentToRecipientsResponse</returns>
+        ApiResponse<GetDefinitionsNotSentToRecipientsResponse> GetSMSsNotSentToRecipientsWithHttpInfo (string type, int? pageSize = null, int? lastEventId = null);
         /// <summary>
         /// getSmsDefinition
         /// </summary>
@@ -321,8 +321,8 @@ namespace Salesforce.MarketingCloud.Api
         /// </remarks>
         /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="definitionKey">Unique identifier of the definition to get</param>
-        /// <returns>RequestCreateSmsDefinition</returns>
-        RequestCreateSmsDefinition GetSmsDefinition (string definitionKey);
+        /// <returns>CreateSmsDefinitionRequest</returns>
+        CreateSmsDefinitionRequest GetSmsDefinition (string definitionKey);
 
         /// <summary>
         /// getSmsDefinition
@@ -332,8 +332,8 @@ namespace Salesforce.MarketingCloud.Api
         /// </remarks>
         /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="definitionKey">Unique identifier of the definition to get</param>
-        /// <returns>ApiResponse of RequestCreateSmsDefinition</returns>
-        ApiResponse<RequestCreateSmsDefinition> GetSmsDefinitionWithHttpInfo (string definitionKey);
+        /// <returns>ApiResponse of CreateSmsDefinitionRequest</returns>
+        ApiResponse<CreateSmsDefinitionRequest> GetSmsDefinitionWithHttpInfo (string definitionKey);
         /// <summary>
         /// getSmsDefinitions
         /// </summary>
@@ -345,8 +345,8 @@ namespace Salesforce.MarketingCloud.Api
         /// <param name="pageSize">Number of definitions, which are array elements, to return per paged response. (optional)</param>
         /// <param name="page">Page number to return. (optional)</param>
         /// <param name="orderBy">Sort by a dimension. You can sort by only one dimension. Accepted values are definitionKey, name, createdDate, modifiedDate, and status. (optional)</param>
-        /// <returns>ResponseGetSmsDefinitions</returns>
-        ResponseGetSmsDefinitions GetSmsDefinitions (string status = null, decimal? pageSize = null, decimal? page = null, string orderBy = null);
+        /// <returns>GetSmsDefinitionsResponse</returns>
+        GetSmsDefinitionsResponse GetSmsDefinitions (string status = null, decimal? pageSize = null, decimal? page = null, string orderBy = null);
 
         /// <summary>
         /// getSmsDefinitions
@@ -359,8 +359,8 @@ namespace Salesforce.MarketingCloud.Api
         /// <param name="pageSize">Number of definitions, which are array elements, to return per paged response. (optional)</param>
         /// <param name="page">Page number to return. (optional)</param>
         /// <param name="orderBy">Sort by a dimension. You can sort by only one dimension. Accepted values are definitionKey, name, createdDate, modifiedDate, and status. (optional)</param>
-        /// <returns>ApiResponse of ResponseGetSmsDefinitions</returns>
-        ApiResponse<ResponseGetSmsDefinitions> GetSmsDefinitionsWithHttpInfo (string status = null, decimal? pageSize = null, decimal? page = null, string orderBy = null);
+        /// <returns>ApiResponse of GetSmsDefinitionsResponse</returns>
+        ApiResponse<GetSmsDefinitionsResponse> GetSmsDefinitionsWithHttpInfo (string status = null, decimal? pageSize = null, decimal? page = null, string orderBy = null);
         /// <summary>
         /// getSmsSendStatusForRecipient
         /// </summary>
@@ -369,8 +369,8 @@ namespace Salesforce.MarketingCloud.Api
         /// </remarks>
         /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="messageKey">Unique identifier to track message send status. You must provide it in singleton requests using the recipient attribute. To provide message key in batch requests, use the recipients array attribute. If you don’t provide the message key for recipients, it’s generated in the response.</param>
-        /// <returns>ResponseGetDefinitionSendStatusForRecipient</returns>
-        ResponseGetDefinitionSendStatusForRecipient GetSmsSendStatusForRecipient (string messageKey);
+        /// <returns>GetDefinitionSendStatusForRecipientResponse</returns>
+        GetDefinitionSendStatusForRecipientResponse GetSmsSendStatusForRecipient (string messageKey);
 
         /// <summary>
         /// getSmsSendStatusForRecipient
@@ -380,8 +380,8 @@ namespace Salesforce.MarketingCloud.Api
         /// </remarks>
         /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="messageKey">Unique identifier to track message send status. You must provide it in singleton requests using the recipient attribute. To provide message key in batch requests, use the recipients array attribute. If you don’t provide the message key for recipients, it’s generated in the response.</param>
-        /// <returns>ApiResponse of ResponseGetDefinitionSendStatusForRecipient</returns>
-        ApiResponse<ResponseGetDefinitionSendStatusForRecipient> GetSmsSendStatusForRecipientWithHttpInfo (string messageKey);
+        /// <returns>ApiResponse of GetDefinitionSendStatusForRecipientResponse</returns>
+        ApiResponse<GetDefinitionSendStatusForRecipientResponse> GetSmsSendStatusForRecipientWithHttpInfo (string messageKey);
         /// <summary>
         /// partiallyUpdateEmailDefinition
         /// </summary>
@@ -391,8 +391,8 @@ namespace Salesforce.MarketingCloud.Api
         /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="definitionKey">Unique identifier of the definition.</param>
         /// <param name="body">JSON Parameters (optional)</param>
-        /// <returns>RequestCreateEmailDefinition</returns>
-        RequestCreateEmailDefinition PartiallyUpdateEmailDefinition (string definitionKey, RequestUpdateEmailDefinition body = null);
+        /// <returns>CreateEmailDefinitionRequest</returns>
+        CreateEmailDefinitionRequest PartiallyUpdateEmailDefinition (string definitionKey, UpdateEmailDefinitionRequest body = null);
 
         /// <summary>
         /// partiallyUpdateEmailDefinition
@@ -403,8 +403,8 @@ namespace Salesforce.MarketingCloud.Api
         /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="definitionKey">Unique identifier of the definition.</param>
         /// <param name="body">JSON Parameters (optional)</param>
-        /// <returns>ApiResponse of RequestCreateEmailDefinition</returns>
-        ApiResponse<RequestCreateEmailDefinition> PartiallyUpdateEmailDefinitionWithHttpInfo (string definitionKey, RequestUpdateEmailDefinition body = null);
+        /// <returns>ApiResponse of CreateEmailDefinitionRequest</returns>
+        ApiResponse<CreateEmailDefinitionRequest> PartiallyUpdateEmailDefinitionWithHttpInfo (string definitionKey, UpdateEmailDefinitionRequest body = null);
         /// <summary>
         /// partiallyUpdateSmsDefinition
         /// </summary>
@@ -414,8 +414,8 @@ namespace Salesforce.MarketingCloud.Api
         /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="definitionKey">Unique identifier of the definition.</param>
         /// <param name="body">JSON Parameters (optional)</param>
-        /// <returns>RequestCreateSmsDefinition</returns>
-        RequestCreateSmsDefinition PartiallyUpdateSmsDefinition (string definitionKey, RequestUpdateSmsDefinition body = null);
+        /// <returns>CreateSmsDefinitionRequest</returns>
+        CreateSmsDefinitionRequest PartiallyUpdateSmsDefinition (string definitionKey, UpdateSmsDefinitionRequest body = null);
 
         /// <summary>
         /// partiallyUpdateSmsDefinition
@@ -426,8 +426,8 @@ namespace Salesforce.MarketingCloud.Api
         /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="definitionKey">Unique identifier of the definition.</param>
         /// <param name="body">JSON Parameters (optional)</param>
-        /// <returns>ApiResponse of RequestCreateSmsDefinition</returns>
-        ApiResponse<RequestCreateSmsDefinition> PartiallyUpdateSmsDefinitionWithHttpInfo (string definitionKey, RequestUpdateSmsDefinition body = null);
+        /// <returns>ApiResponse of CreateSmsDefinitionRequest</returns>
+        ApiResponse<CreateSmsDefinitionRequest> PartiallyUpdateSmsDefinitionWithHttpInfo (string definitionKey, UpdateSmsDefinitionRequest body = null);
         /// <summary>
         /// sendEmailToMultipleRecipients
         /// </summary>
@@ -436,8 +436,8 @@ namespace Salesforce.MarketingCloud.Api
         /// </remarks>
         /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">JSON Parameters (optional)</param>
-        /// <returns>ResponseSendDefinitionToMultipleRecipients</returns>
-        ResponseSendDefinitionToMultipleRecipients SendEmailToMultipleRecipients (RequestSendEmailToMultipleRecipients body = null);
+        /// <returns>SendDefinitionToMultipleRecipientsResponse</returns>
+        SendDefinitionToMultipleRecipientsResponse SendEmailToMultipleRecipients (SendEmailToMultipleRecipientsRequest body = null);
 
         /// <summary>
         /// sendEmailToMultipleRecipients
@@ -447,8 +447,8 @@ namespace Salesforce.MarketingCloud.Api
         /// </remarks>
         /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">JSON Parameters (optional)</param>
-        /// <returns>ApiResponse of ResponseSendDefinitionToMultipleRecipients</returns>
-        ApiResponse<ResponseSendDefinitionToMultipleRecipients> SendEmailToMultipleRecipientsWithHttpInfo (RequestSendEmailToMultipleRecipients body = null);
+        /// <returns>ApiResponse of SendDefinitionToMultipleRecipientsResponse</returns>
+        ApiResponse<SendDefinitionToMultipleRecipientsResponse> SendEmailToMultipleRecipientsWithHttpInfo (SendEmailToMultipleRecipientsRequest body = null);
         /// <summary>
         /// sendEmailToSingleRecipient
         /// </summary>
@@ -458,8 +458,8 @@ namespace Salesforce.MarketingCloud.Api
         /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="messageKey">Unique identifier used to track message status. Can be automatically created when you create a message or provided as part of the request. Each recipient in a request must have a unique messageKey. If you use a duplicate messageKey in the same send request, the message is rejected.</param>
         /// <param name="body">JSON Parameters (optional)</param>
-        /// <returns>ResponseSendDefinitionToSingleRecipient</returns>
-        ResponseSendDefinitionToSingleRecipient SendEmailToSingleRecipient (string messageKey, RequestSendEmailToSingleRecipient body = null);
+        /// <returns>SendDefinitionToSingleRecipientResponse</returns>
+        SendDefinitionToSingleRecipientResponse SendEmailToSingleRecipient (string messageKey, SendEmailToSingleRecipientRequest body = null);
 
         /// <summary>
         /// sendEmailToSingleRecipient
@@ -470,8 +470,8 @@ namespace Salesforce.MarketingCloud.Api
         /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="messageKey">Unique identifier used to track message status. Can be automatically created when you create a message or provided as part of the request. Each recipient in a request must have a unique messageKey. If you use a duplicate messageKey in the same send request, the message is rejected.</param>
         /// <param name="body">JSON Parameters (optional)</param>
-        /// <returns>ApiResponse of ResponseSendDefinitionToSingleRecipient</returns>
-        ApiResponse<ResponseSendDefinitionToSingleRecipient> SendEmailToSingleRecipientWithHttpInfo (string messageKey, RequestSendEmailToSingleRecipient body = null);
+        /// <returns>ApiResponse of SendDefinitionToSingleRecipientResponse</returns>
+        ApiResponse<SendDefinitionToSingleRecipientResponse> SendEmailToSingleRecipientWithHttpInfo (string messageKey, SendEmailToSingleRecipientRequest body = null);
         /// <summary>
         /// sendSmsToMultipleRecipients
         /// </summary>
@@ -480,8 +480,8 @@ namespace Salesforce.MarketingCloud.Api
         /// </remarks>
         /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">JSON Parameters (optional)</param>
-        /// <returns>ResponseSendDefinitionToMultipleRecipients</returns>
-        ResponseSendDefinitionToMultipleRecipients SendSmsToMultipleRecipients (RequestSendSmsToMultipleRecipients body = null);
+        /// <returns>SendDefinitionToMultipleRecipientsResponse</returns>
+        SendDefinitionToMultipleRecipientsResponse SendSmsToMultipleRecipients (SendSmsToMultipleRecipientsRequest body = null);
 
         /// <summary>
         /// sendSmsToMultipleRecipients
@@ -491,8 +491,8 @@ namespace Salesforce.MarketingCloud.Api
         /// </remarks>
         /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">JSON Parameters (optional)</param>
-        /// <returns>ApiResponse of ResponseSendDefinitionToMultipleRecipients</returns>
-        ApiResponse<ResponseSendDefinitionToMultipleRecipients> SendSmsToMultipleRecipientsWithHttpInfo (RequestSendSmsToMultipleRecipients body = null);
+        /// <returns>ApiResponse of SendDefinitionToMultipleRecipientsResponse</returns>
+        ApiResponse<SendDefinitionToMultipleRecipientsResponse> SendSmsToMultipleRecipientsWithHttpInfo (SendSmsToMultipleRecipientsRequest body = null);
         /// <summary>
         /// sendSmsToSingleRecipient
         /// </summary>
@@ -502,8 +502,8 @@ namespace Salesforce.MarketingCloud.Api
         /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="messageKey">Unique identifier of the definition used to track message status. The messageKey can be created automatically when you create a message, or you can provide it as part of the request. Each recipient in a request must have a unique messageKey. If you use a duplicate messageKey in the same send request, the message is rejected.</param>
         /// <param name="body">JSON Parameters (optional)</param>
-        /// <returns>ResponseSendDefinitionToSingleRecipient</returns>
-        ResponseSendDefinitionToSingleRecipient SendSmsToSingleRecipient (string messageKey, RequestSendSmsToSingleRecipient body = null);
+        /// <returns>SendDefinitionToSingleRecipientResponse</returns>
+        SendDefinitionToSingleRecipientResponse SendSmsToSingleRecipient (string messageKey, SendSmsToSingleRecipientRequest body = null);
 
         /// <summary>
         /// sendSmsToSingleRecipient
@@ -514,8 +514,8 @@ namespace Salesforce.MarketingCloud.Api
         /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="messageKey">Unique identifier of the definition used to track message status. The messageKey can be created automatically when you create a message, or you can provide it as part of the request. Each recipient in a request must have a unique messageKey. If you use a duplicate messageKey in the same send request, the message is rejected.</param>
         /// <param name="body">JSON Parameters (optional)</param>
-        /// <returns>ApiResponse of ResponseSendDefinitionToSingleRecipient</returns>
-        ApiResponse<ResponseSendDefinitionToSingleRecipient> SendSmsToSingleRecipientWithHttpInfo (string messageKey, RequestSendSmsToSingleRecipient body = null);
+        /// <returns>ApiResponse of SendDefinitionToSingleRecipientResponse</returns>
+        ApiResponse<SendDefinitionToSingleRecipientResponse> SendSmsToSingleRecipientWithHttpInfo (string messageKey, SendSmsToSingleRecipientRequest body = null);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -526,8 +526,8 @@ namespace Salesforce.MarketingCloud.Api
         /// </remarks>
         /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">JSON Parameters (optional)</param>
-        /// <returns>Task of RequestCreateEmailDefinition</returns>
-        System.Threading.Tasks.Task<RequestCreateEmailDefinition> CreateEmailDefinitionAsync (RequestCreateEmailDefinition body = null);
+        /// <returns>Task of CreateEmailDefinitionRequest</returns>
+        System.Threading.Tasks.Task<CreateEmailDefinitionRequest> CreateEmailDefinitionAsync (CreateEmailDefinitionRequest body = null);
 
         /// <summary>
         /// createEmailDefinition
@@ -537,8 +537,8 @@ namespace Salesforce.MarketingCloud.Api
         /// </remarks>
         /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">JSON Parameters (optional)</param>
-        /// <returns>Task of ApiResponse (RequestCreateEmailDefinition)</returns>
-        System.Threading.Tasks.Task<ApiResponse<RequestCreateEmailDefinition>> CreateEmailDefinitionAsyncWithHttpInfo (RequestCreateEmailDefinition body = null);
+        /// <returns>Task of ApiResponse (CreateEmailDefinitionRequest)</returns>
+        System.Threading.Tasks.Task<ApiResponse<CreateEmailDefinitionRequest>> CreateEmailDefinitionAsyncWithHttpInfo (CreateEmailDefinitionRequest body = null);
         /// <summary>
         /// createSmsDefinition
         /// </summary>
@@ -547,8 +547,8 @@ namespace Salesforce.MarketingCloud.Api
         /// </remarks>
         /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">JSON Parameters (optional)</param>
-        /// <returns>Task of RequestCreateSmsDefinition</returns>
-        System.Threading.Tasks.Task<RequestCreateSmsDefinition> CreateSmsDefinitionAsync (RequestCreateSmsDefinition body = null);
+        /// <returns>Task of CreateSmsDefinitionRequest</returns>
+        System.Threading.Tasks.Task<CreateSmsDefinitionRequest> CreateSmsDefinitionAsync (CreateSmsDefinitionRequest body = null);
 
         /// <summary>
         /// createSmsDefinition
@@ -558,8 +558,8 @@ namespace Salesforce.MarketingCloud.Api
         /// </remarks>
         /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">JSON Parameters (optional)</param>
-        /// <returns>Task of ApiResponse (RequestCreateSmsDefinition)</returns>
-        System.Threading.Tasks.Task<ApiResponse<RequestCreateSmsDefinition>> CreateSmsDefinitionAsyncWithHttpInfo (RequestCreateSmsDefinition body = null);
+        /// <returns>Task of ApiResponse (CreateSmsDefinitionRequest)</returns>
+        System.Threading.Tasks.Task<ApiResponse<CreateSmsDefinitionRequest>> CreateSmsDefinitionAsyncWithHttpInfo (CreateSmsDefinitionRequest body = null);
         /// <summary>
         /// deleteEmailDefinition
         /// </summary>
@@ -568,8 +568,8 @@ namespace Salesforce.MarketingCloud.Api
         /// </remarks>
         /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="definitionKey">Unique identifier of the definition to delete</param>
-        /// <returns>Task of ResponseDeleteSendDefinition</returns>
-        System.Threading.Tasks.Task<ResponseDeleteSendDefinition> DeleteEmailDefinitionAsync (string definitionKey);
+        /// <returns>Task of DeleteSendDefinitionResponse</returns>
+        System.Threading.Tasks.Task<DeleteSendDefinitionResponse> DeleteEmailDefinitionAsync (string definitionKey);
 
         /// <summary>
         /// deleteEmailDefinition
@@ -579,8 +579,8 @@ namespace Salesforce.MarketingCloud.Api
         /// </remarks>
         /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="definitionKey">Unique identifier of the definition to delete</param>
-        /// <returns>Task of ApiResponse (ResponseDeleteSendDefinition)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ResponseDeleteSendDefinition>> DeleteEmailDefinitionAsyncWithHttpInfo (string definitionKey);
+        /// <returns>Task of ApiResponse (DeleteSendDefinitionResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<DeleteSendDefinitionResponse>> DeleteEmailDefinitionAsyncWithHttpInfo (string definitionKey);
         /// <summary>
         /// deleteQueuedMessagesForEmailDefinition
         /// </summary>
@@ -589,8 +589,8 @@ namespace Salesforce.MarketingCloud.Api
         /// </remarks>
         /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="definitionKey">Unique identifier of the email definition</param>
-        /// <returns>Task of ResponseDeleteQueuedMessagesForSendDefinition</returns>
-        System.Threading.Tasks.Task<ResponseDeleteQueuedMessagesForSendDefinition> DeleteQueuedMessagesForEmailDefinitionAsync (string definitionKey);
+        /// <returns>Task of DeleteQueuedMessagesForSendDefinitionResponse</returns>
+        System.Threading.Tasks.Task<DeleteQueuedMessagesForSendDefinitionResponse> DeleteQueuedMessagesForEmailDefinitionAsync (string definitionKey);
 
         /// <summary>
         /// deleteQueuedMessagesForEmailDefinition
@@ -600,8 +600,8 @@ namespace Salesforce.MarketingCloud.Api
         /// </remarks>
         /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="definitionKey">Unique identifier of the email definition</param>
-        /// <returns>Task of ApiResponse (ResponseDeleteQueuedMessagesForSendDefinition)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ResponseDeleteQueuedMessagesForSendDefinition>> DeleteQueuedMessagesForEmailDefinitionAsyncWithHttpInfo (string definitionKey);
+        /// <returns>Task of ApiResponse (DeleteQueuedMessagesForSendDefinitionResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<DeleteQueuedMessagesForSendDefinitionResponse>> DeleteQueuedMessagesForEmailDefinitionAsyncWithHttpInfo (string definitionKey);
         /// <summary>
         /// deleteQueuedMessagesForSmsDefinition
         /// </summary>
@@ -610,8 +610,8 @@ namespace Salesforce.MarketingCloud.Api
         /// </remarks>
         /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="definitionKey">Unique identifier of the SMS definition</param>
-        /// <returns>Task of ResponseDeleteQueuedMessagesForSendDefinition</returns>
-        System.Threading.Tasks.Task<ResponseDeleteQueuedMessagesForSendDefinition> DeleteQueuedMessagesForSmsDefinitionAsync (string definitionKey);
+        /// <returns>Task of DeleteQueuedMessagesForSendDefinitionResponse</returns>
+        System.Threading.Tasks.Task<DeleteQueuedMessagesForSendDefinitionResponse> DeleteQueuedMessagesForSmsDefinitionAsync (string definitionKey);
 
         /// <summary>
         /// deleteQueuedMessagesForSmsDefinition
@@ -621,8 +621,8 @@ namespace Salesforce.MarketingCloud.Api
         /// </remarks>
         /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="definitionKey">Unique identifier of the SMS definition</param>
-        /// <returns>Task of ApiResponse (ResponseDeleteQueuedMessagesForSendDefinition)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ResponseDeleteQueuedMessagesForSendDefinition>> DeleteQueuedMessagesForSmsDefinitionAsyncWithHttpInfo (string definitionKey);
+        /// <returns>Task of ApiResponse (DeleteQueuedMessagesForSendDefinitionResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<DeleteQueuedMessagesForSendDefinitionResponse>> DeleteQueuedMessagesForSmsDefinitionAsyncWithHttpInfo (string definitionKey);
         /// <summary>
         /// deleteSmsDefinition
         /// </summary>
@@ -631,8 +631,8 @@ namespace Salesforce.MarketingCloud.Api
         /// </remarks>
         /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="definitionKey">Unique identifier of the definition to delete</param>
-        /// <returns>Task of ResponseDeleteSendDefinition</returns>
-        System.Threading.Tasks.Task<ResponseDeleteSendDefinition> DeleteSmsDefinitionAsync (string definitionKey);
+        /// <returns>Task of DeleteSendDefinitionResponse</returns>
+        System.Threading.Tasks.Task<DeleteSendDefinitionResponse> DeleteSmsDefinitionAsync (string definitionKey);
 
         /// <summary>
         /// deleteSmsDefinition
@@ -642,8 +642,8 @@ namespace Salesforce.MarketingCloud.Api
         /// </remarks>
         /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="definitionKey">Unique identifier of the definition to delete</param>
-        /// <returns>Task of ApiResponse (ResponseDeleteSendDefinition)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ResponseDeleteSendDefinition>> DeleteSmsDefinitionAsyncWithHttpInfo (string definitionKey);
+        /// <returns>Task of ApiResponse (DeleteSendDefinitionResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<DeleteSendDefinitionResponse>> DeleteSmsDefinitionAsyncWithHttpInfo (string definitionKey);
         /// <summary>
         /// getEmailDefinition
         /// </summary>
@@ -652,8 +652,8 @@ namespace Salesforce.MarketingCloud.Api
         /// </remarks>
         /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="definitionKey">Unique identifier of the definition to get</param>
-        /// <returns>Task of RequestCreateEmailDefinition</returns>
-        System.Threading.Tasks.Task<RequestCreateEmailDefinition> GetEmailDefinitionAsync (string definitionKey);
+        /// <returns>Task of CreateEmailDefinitionRequest</returns>
+        System.Threading.Tasks.Task<CreateEmailDefinitionRequest> GetEmailDefinitionAsync (string definitionKey);
 
         /// <summary>
         /// getEmailDefinition
@@ -663,8 +663,8 @@ namespace Salesforce.MarketingCloud.Api
         /// </remarks>
         /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="definitionKey">Unique identifier of the definition to get</param>
-        /// <returns>Task of ApiResponse (RequestCreateEmailDefinition)</returns>
-        System.Threading.Tasks.Task<ApiResponse<RequestCreateEmailDefinition>> GetEmailDefinitionAsyncWithHttpInfo (string definitionKey);
+        /// <returns>Task of ApiResponse (CreateEmailDefinitionRequest)</returns>
+        System.Threading.Tasks.Task<ApiResponse<CreateEmailDefinitionRequest>> GetEmailDefinitionAsyncWithHttpInfo (string definitionKey);
         /// <summary>
         /// getEmailDefinitions
         /// </summary>
@@ -676,8 +676,8 @@ namespace Salesforce.MarketingCloud.Api
         /// <param name="pageSize">Number of definitions, which are array elements, to return per paged response. (optional)</param>
         /// <param name="page">Page number to return. (optional)</param>
         /// <param name="orderBy">Sort by a dimension. You can sort by only one dimension. Accepted values are definitionKey, name, createdDate, modifiedDate, and status. (optional)</param>
-        /// <returns>Task of ResponseGetEmailDefinitions</returns>
-        System.Threading.Tasks.Task<ResponseGetEmailDefinitions> GetEmailDefinitionsAsync (string status = null, decimal? pageSize = null, decimal? page = null, string orderBy = null);
+        /// <returns>Task of GetEmailDefinitionsResponse</returns>
+        System.Threading.Tasks.Task<GetEmailDefinitionsResponse> GetEmailDefinitionsAsync (string status = null, decimal? pageSize = null, decimal? page = null, string orderBy = null);
 
         /// <summary>
         /// getEmailDefinitions
@@ -690,8 +690,8 @@ namespace Salesforce.MarketingCloud.Api
         /// <param name="pageSize">Number of definitions, which are array elements, to return per paged response. (optional)</param>
         /// <param name="page">Page number to return. (optional)</param>
         /// <param name="orderBy">Sort by a dimension. You can sort by only one dimension. Accepted values are definitionKey, name, createdDate, modifiedDate, and status. (optional)</param>
-        /// <returns>Task of ApiResponse (ResponseGetEmailDefinitions)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ResponseGetEmailDefinitions>> GetEmailDefinitionsAsyncWithHttpInfo (string status = null, decimal? pageSize = null, decimal? page = null, string orderBy = null);
+        /// <returns>Task of ApiResponse (GetEmailDefinitionsResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<GetEmailDefinitionsResponse>> GetEmailDefinitionsAsyncWithHttpInfo (string status = null, decimal? pageSize = null, decimal? page = null, string orderBy = null);
         /// <summary>
         /// getEmailSendStatusForRecipient
         /// </summary>
@@ -700,8 +700,8 @@ namespace Salesforce.MarketingCloud.Api
         /// </remarks>
         /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="messageKey">Unique identifier to track message send status. You must provide it in singleton requests using the recipient attribute. To provide it in batch requests, use the recipients array attribute. If you don’t provide the message key for recipients, it’s generated in the response.</param>
-        /// <returns>Task of ResponseGetDefinitionSendStatusForRecipient</returns>
-        System.Threading.Tasks.Task<ResponseGetDefinitionSendStatusForRecipient> GetEmailSendStatusForRecipientAsync (string messageKey);
+        /// <returns>Task of GetDefinitionSendStatusForRecipientResponse</returns>
+        System.Threading.Tasks.Task<GetDefinitionSendStatusForRecipientResponse> GetEmailSendStatusForRecipientAsync (string messageKey);
 
         /// <summary>
         /// getEmailSendStatusForRecipient
@@ -711,8 +711,8 @@ namespace Salesforce.MarketingCloud.Api
         /// </remarks>
         /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="messageKey">Unique identifier to track message send status. You must provide it in singleton requests using the recipient attribute. To provide it in batch requests, use the recipients array attribute. If you don’t provide the message key for recipients, it’s generated in the response.</param>
-        /// <returns>Task of ApiResponse (ResponseGetDefinitionSendStatusForRecipient)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ResponseGetDefinitionSendStatusForRecipient>> GetEmailSendStatusForRecipientAsyncWithHttpInfo (string messageKey);
+        /// <returns>Task of ApiResponse (GetDefinitionSendStatusForRecipientResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<GetDefinitionSendStatusForRecipientResponse>> GetEmailSendStatusForRecipientAsyncWithHttpInfo (string messageKey);
         /// <summary>
         /// getEmailsNotSentToRecipients
         /// </summary>
@@ -723,8 +723,8 @@ namespace Salesforce.MarketingCloud.Api
         /// <param name="type">Only notSent is supported.</param>
         /// <param name="pageSize">Number of messageKeys (array elements) to return per response page. (optional)</param>
         /// <param name="lastEventId">Event ID from which you want the response to start. To obtain the initial event ID, submit a request without a lastEventId. The events in the response are listed top to bottom from oldest to newest. (optional)</param>
-        /// <returns>Task of ResponseGetDefinitionsNotSentToRecipients</returns>
-        System.Threading.Tasks.Task<ResponseGetDefinitionsNotSentToRecipients> GetEmailsNotSentToRecipientsAsync (string type, int? pageSize = null, int? lastEventId = null);
+        /// <returns>Task of GetDefinitionsNotSentToRecipientsResponse</returns>
+        System.Threading.Tasks.Task<GetDefinitionsNotSentToRecipientsResponse> GetEmailsNotSentToRecipientsAsync (string type, int? pageSize = null, int? lastEventId = null);
 
         /// <summary>
         /// getEmailsNotSentToRecipients
@@ -736,8 +736,8 @@ namespace Salesforce.MarketingCloud.Api
         /// <param name="type">Only notSent is supported.</param>
         /// <param name="pageSize">Number of messageKeys (array elements) to return per response page. (optional)</param>
         /// <param name="lastEventId">Event ID from which you want the response to start. To obtain the initial event ID, submit a request without a lastEventId. The events in the response are listed top to bottom from oldest to newest. (optional)</param>
-        /// <returns>Task of ApiResponse (ResponseGetDefinitionsNotSentToRecipients)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ResponseGetDefinitionsNotSentToRecipients>> GetEmailsNotSentToRecipientsAsyncWithHttpInfo (string type, int? pageSize = null, int? lastEventId = null);
+        /// <returns>Task of ApiResponse (GetDefinitionsNotSentToRecipientsResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<GetDefinitionsNotSentToRecipientsResponse>> GetEmailsNotSentToRecipientsAsyncWithHttpInfo (string type, int? pageSize = null, int? lastEventId = null);
         /// <summary>
         /// getQueueMetricsForEmailDefinition
         /// </summary>
@@ -746,8 +746,8 @@ namespace Salesforce.MarketingCloud.Api
         /// </remarks>
         /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="definitionKey">Unique identifier of the email definition</param>
-        /// <returns>Task of ResponseGetQueueMetricsForSendDefinition</returns>
-        System.Threading.Tasks.Task<ResponseGetQueueMetricsForSendDefinition> GetQueueMetricsForEmailDefinitionAsync (string definitionKey);
+        /// <returns>Task of GetQueueMetricsForSendDefinitionResponse</returns>
+        System.Threading.Tasks.Task<GetQueueMetricsForSendDefinitionResponse> GetQueueMetricsForEmailDefinitionAsync (string definitionKey);
 
         /// <summary>
         /// getQueueMetricsForEmailDefinition
@@ -757,8 +757,8 @@ namespace Salesforce.MarketingCloud.Api
         /// </remarks>
         /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="definitionKey">Unique identifier of the email definition</param>
-        /// <returns>Task of ApiResponse (ResponseGetQueueMetricsForSendDefinition)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ResponseGetQueueMetricsForSendDefinition>> GetQueueMetricsForEmailDefinitionAsyncWithHttpInfo (string definitionKey);
+        /// <returns>Task of ApiResponse (GetQueueMetricsForSendDefinitionResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<GetQueueMetricsForSendDefinitionResponse>> GetQueueMetricsForEmailDefinitionAsyncWithHttpInfo (string definitionKey);
         /// <summary>
         /// getQueueMetricsForSmsDefinition
         /// </summary>
@@ -767,8 +767,8 @@ namespace Salesforce.MarketingCloud.Api
         /// </remarks>
         /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="definitionKey">Unique identifier of the SMS definition</param>
-        /// <returns>Task of ResponseGetQueueMetricsForSendDefinition</returns>
-        System.Threading.Tasks.Task<ResponseGetQueueMetricsForSendDefinition> GetQueueMetricsForSmsDefinitionAsync (string definitionKey);
+        /// <returns>Task of GetQueueMetricsForSendDefinitionResponse</returns>
+        System.Threading.Tasks.Task<GetQueueMetricsForSendDefinitionResponse> GetQueueMetricsForSmsDefinitionAsync (string definitionKey);
 
         /// <summary>
         /// getQueueMetricsForSmsDefinition
@@ -778,8 +778,8 @@ namespace Salesforce.MarketingCloud.Api
         /// </remarks>
         /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="definitionKey">Unique identifier of the SMS definition</param>
-        /// <returns>Task of ApiResponse (ResponseGetQueueMetricsForSendDefinition)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ResponseGetQueueMetricsForSendDefinition>> GetQueueMetricsForSmsDefinitionAsyncWithHttpInfo (string definitionKey);
+        /// <returns>Task of ApiResponse (GetQueueMetricsForSendDefinitionResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<GetQueueMetricsForSendDefinitionResponse>> GetQueueMetricsForSmsDefinitionAsyncWithHttpInfo (string definitionKey);
         /// <summary>
         /// getSMSsNotSentToRecipients
         /// </summary>
@@ -790,8 +790,8 @@ namespace Salesforce.MarketingCloud.Api
         /// <param name="type">Only notSent is supported.</param>
         /// <param name="pageSize">Number of messageKeys (array elements) to return per response page. (optional)</param>
         /// <param name="lastEventId">Event ID from which you want the response to start. To obtain the initial event ID, submit a request without a lastEventId. The events in the response are listed top to bottom from oldest to newest. (optional)</param>
-        /// <returns>Task of ResponseGetDefinitionsNotSentToRecipients</returns>
-        System.Threading.Tasks.Task<ResponseGetDefinitionsNotSentToRecipients> GetSMSsNotSentToRecipientsAsync (string type, int? pageSize = null, int? lastEventId = null);
+        /// <returns>Task of GetDefinitionsNotSentToRecipientsResponse</returns>
+        System.Threading.Tasks.Task<GetDefinitionsNotSentToRecipientsResponse> GetSMSsNotSentToRecipientsAsync (string type, int? pageSize = null, int? lastEventId = null);
 
         /// <summary>
         /// getSMSsNotSentToRecipients
@@ -803,8 +803,8 @@ namespace Salesforce.MarketingCloud.Api
         /// <param name="type">Only notSent is supported.</param>
         /// <param name="pageSize">Number of messageKeys (array elements) to return per response page. (optional)</param>
         /// <param name="lastEventId">Event ID from which you want the response to start. To obtain the initial event ID, submit a request without a lastEventId. The events in the response are listed top to bottom from oldest to newest. (optional)</param>
-        /// <returns>Task of ApiResponse (ResponseGetDefinitionsNotSentToRecipients)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ResponseGetDefinitionsNotSentToRecipients>> GetSMSsNotSentToRecipientsAsyncWithHttpInfo (string type, int? pageSize = null, int? lastEventId = null);
+        /// <returns>Task of ApiResponse (GetDefinitionsNotSentToRecipientsResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<GetDefinitionsNotSentToRecipientsResponse>> GetSMSsNotSentToRecipientsAsyncWithHttpInfo (string type, int? pageSize = null, int? lastEventId = null);
         /// <summary>
         /// getSmsDefinition
         /// </summary>
@@ -813,8 +813,8 @@ namespace Salesforce.MarketingCloud.Api
         /// </remarks>
         /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="definitionKey">Unique identifier of the definition to get</param>
-        /// <returns>Task of RequestCreateSmsDefinition</returns>
-        System.Threading.Tasks.Task<RequestCreateSmsDefinition> GetSmsDefinitionAsync (string definitionKey);
+        /// <returns>Task of CreateSmsDefinitionRequest</returns>
+        System.Threading.Tasks.Task<CreateSmsDefinitionRequest> GetSmsDefinitionAsync (string definitionKey);
 
         /// <summary>
         /// getSmsDefinition
@@ -824,8 +824,8 @@ namespace Salesforce.MarketingCloud.Api
         /// </remarks>
         /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="definitionKey">Unique identifier of the definition to get</param>
-        /// <returns>Task of ApiResponse (RequestCreateSmsDefinition)</returns>
-        System.Threading.Tasks.Task<ApiResponse<RequestCreateSmsDefinition>> GetSmsDefinitionAsyncWithHttpInfo (string definitionKey);
+        /// <returns>Task of ApiResponse (CreateSmsDefinitionRequest)</returns>
+        System.Threading.Tasks.Task<ApiResponse<CreateSmsDefinitionRequest>> GetSmsDefinitionAsyncWithHttpInfo (string definitionKey);
         /// <summary>
         /// getSmsDefinitions
         /// </summary>
@@ -837,8 +837,8 @@ namespace Salesforce.MarketingCloud.Api
         /// <param name="pageSize">Number of definitions, which are array elements, to return per paged response. (optional)</param>
         /// <param name="page">Page number to return. (optional)</param>
         /// <param name="orderBy">Sort by a dimension. You can sort by only one dimension. Accepted values are definitionKey, name, createdDate, modifiedDate, and status. (optional)</param>
-        /// <returns>Task of ResponseGetSmsDefinitions</returns>
-        System.Threading.Tasks.Task<ResponseGetSmsDefinitions> GetSmsDefinitionsAsync (string status = null, decimal? pageSize = null, decimal? page = null, string orderBy = null);
+        /// <returns>Task of GetSmsDefinitionsResponse</returns>
+        System.Threading.Tasks.Task<GetSmsDefinitionsResponse> GetSmsDefinitionsAsync (string status = null, decimal? pageSize = null, decimal? page = null, string orderBy = null);
 
         /// <summary>
         /// getSmsDefinitions
@@ -851,8 +851,8 @@ namespace Salesforce.MarketingCloud.Api
         /// <param name="pageSize">Number of definitions, which are array elements, to return per paged response. (optional)</param>
         /// <param name="page">Page number to return. (optional)</param>
         /// <param name="orderBy">Sort by a dimension. You can sort by only one dimension. Accepted values are definitionKey, name, createdDate, modifiedDate, and status. (optional)</param>
-        /// <returns>Task of ApiResponse (ResponseGetSmsDefinitions)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ResponseGetSmsDefinitions>> GetSmsDefinitionsAsyncWithHttpInfo (string status = null, decimal? pageSize = null, decimal? page = null, string orderBy = null);
+        /// <returns>Task of ApiResponse (GetSmsDefinitionsResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<GetSmsDefinitionsResponse>> GetSmsDefinitionsAsyncWithHttpInfo (string status = null, decimal? pageSize = null, decimal? page = null, string orderBy = null);
         /// <summary>
         /// getSmsSendStatusForRecipient
         /// </summary>
@@ -861,8 +861,8 @@ namespace Salesforce.MarketingCloud.Api
         /// </remarks>
         /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="messageKey">Unique identifier to track message send status. You must provide it in singleton requests using the recipient attribute. To provide message key in batch requests, use the recipients array attribute. If you don’t provide the message key for recipients, it’s generated in the response.</param>
-        /// <returns>Task of ResponseGetDefinitionSendStatusForRecipient</returns>
-        System.Threading.Tasks.Task<ResponseGetDefinitionSendStatusForRecipient> GetSmsSendStatusForRecipientAsync (string messageKey);
+        /// <returns>Task of GetDefinitionSendStatusForRecipientResponse</returns>
+        System.Threading.Tasks.Task<GetDefinitionSendStatusForRecipientResponse> GetSmsSendStatusForRecipientAsync (string messageKey);
 
         /// <summary>
         /// getSmsSendStatusForRecipient
@@ -872,8 +872,8 @@ namespace Salesforce.MarketingCloud.Api
         /// </remarks>
         /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="messageKey">Unique identifier to track message send status. You must provide it in singleton requests using the recipient attribute. To provide message key in batch requests, use the recipients array attribute. If you don’t provide the message key for recipients, it’s generated in the response.</param>
-        /// <returns>Task of ApiResponse (ResponseGetDefinitionSendStatusForRecipient)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ResponseGetDefinitionSendStatusForRecipient>> GetSmsSendStatusForRecipientAsyncWithHttpInfo (string messageKey);
+        /// <returns>Task of ApiResponse (GetDefinitionSendStatusForRecipientResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<GetDefinitionSendStatusForRecipientResponse>> GetSmsSendStatusForRecipientAsyncWithHttpInfo (string messageKey);
         /// <summary>
         /// partiallyUpdateEmailDefinition
         /// </summary>
@@ -883,8 +883,8 @@ namespace Salesforce.MarketingCloud.Api
         /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="definitionKey">Unique identifier of the definition.</param>
         /// <param name="body">JSON Parameters (optional)</param>
-        /// <returns>Task of RequestCreateEmailDefinition</returns>
-        System.Threading.Tasks.Task<RequestCreateEmailDefinition> PartiallyUpdateEmailDefinitionAsync (string definitionKey, RequestUpdateEmailDefinition body = null);
+        /// <returns>Task of CreateEmailDefinitionRequest</returns>
+        System.Threading.Tasks.Task<CreateEmailDefinitionRequest> PartiallyUpdateEmailDefinitionAsync (string definitionKey, UpdateEmailDefinitionRequest body = null);
 
         /// <summary>
         /// partiallyUpdateEmailDefinition
@@ -895,8 +895,8 @@ namespace Salesforce.MarketingCloud.Api
         /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="definitionKey">Unique identifier of the definition.</param>
         /// <param name="body">JSON Parameters (optional)</param>
-        /// <returns>Task of ApiResponse (RequestCreateEmailDefinition)</returns>
-        System.Threading.Tasks.Task<ApiResponse<RequestCreateEmailDefinition>> PartiallyUpdateEmailDefinitionAsyncWithHttpInfo (string definitionKey, RequestUpdateEmailDefinition body = null);
+        /// <returns>Task of ApiResponse (CreateEmailDefinitionRequest)</returns>
+        System.Threading.Tasks.Task<ApiResponse<CreateEmailDefinitionRequest>> PartiallyUpdateEmailDefinitionAsyncWithHttpInfo (string definitionKey, UpdateEmailDefinitionRequest body = null);
         /// <summary>
         /// partiallyUpdateSmsDefinition
         /// </summary>
@@ -906,8 +906,8 @@ namespace Salesforce.MarketingCloud.Api
         /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="definitionKey">Unique identifier of the definition.</param>
         /// <param name="body">JSON Parameters (optional)</param>
-        /// <returns>Task of RequestCreateSmsDefinition</returns>
-        System.Threading.Tasks.Task<RequestCreateSmsDefinition> PartiallyUpdateSmsDefinitionAsync (string definitionKey, RequestUpdateSmsDefinition body = null);
+        /// <returns>Task of CreateSmsDefinitionRequest</returns>
+        System.Threading.Tasks.Task<CreateSmsDefinitionRequest> PartiallyUpdateSmsDefinitionAsync (string definitionKey, UpdateSmsDefinitionRequest body = null);
 
         /// <summary>
         /// partiallyUpdateSmsDefinition
@@ -918,8 +918,8 @@ namespace Salesforce.MarketingCloud.Api
         /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="definitionKey">Unique identifier of the definition.</param>
         /// <param name="body">JSON Parameters (optional)</param>
-        /// <returns>Task of ApiResponse (RequestCreateSmsDefinition)</returns>
-        System.Threading.Tasks.Task<ApiResponse<RequestCreateSmsDefinition>> PartiallyUpdateSmsDefinitionAsyncWithHttpInfo (string definitionKey, RequestUpdateSmsDefinition body = null);
+        /// <returns>Task of ApiResponse (CreateSmsDefinitionRequest)</returns>
+        System.Threading.Tasks.Task<ApiResponse<CreateSmsDefinitionRequest>> PartiallyUpdateSmsDefinitionAsyncWithHttpInfo (string definitionKey, UpdateSmsDefinitionRequest body = null);
         /// <summary>
         /// sendEmailToMultipleRecipients
         /// </summary>
@@ -928,8 +928,8 @@ namespace Salesforce.MarketingCloud.Api
         /// </remarks>
         /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">JSON Parameters (optional)</param>
-        /// <returns>Task of ResponseSendDefinitionToMultipleRecipients</returns>
-        System.Threading.Tasks.Task<ResponseSendDefinitionToMultipleRecipients> SendEmailToMultipleRecipientsAsync (RequestSendEmailToMultipleRecipients body = null);
+        /// <returns>Task of SendDefinitionToMultipleRecipientsResponse</returns>
+        System.Threading.Tasks.Task<SendDefinitionToMultipleRecipientsResponse> SendEmailToMultipleRecipientsAsync (SendEmailToMultipleRecipientsRequest body = null);
 
         /// <summary>
         /// sendEmailToMultipleRecipients
@@ -939,8 +939,8 @@ namespace Salesforce.MarketingCloud.Api
         /// </remarks>
         /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">JSON Parameters (optional)</param>
-        /// <returns>Task of ApiResponse (ResponseSendDefinitionToMultipleRecipients)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ResponseSendDefinitionToMultipleRecipients>> SendEmailToMultipleRecipientsAsyncWithHttpInfo (RequestSendEmailToMultipleRecipients body = null);
+        /// <returns>Task of ApiResponse (SendDefinitionToMultipleRecipientsResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<SendDefinitionToMultipleRecipientsResponse>> SendEmailToMultipleRecipientsAsyncWithHttpInfo (SendEmailToMultipleRecipientsRequest body = null);
         /// <summary>
         /// sendEmailToSingleRecipient
         /// </summary>
@@ -950,8 +950,8 @@ namespace Salesforce.MarketingCloud.Api
         /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="messageKey">Unique identifier used to track message status. Can be automatically created when you create a message or provided as part of the request. Each recipient in a request must have a unique messageKey. If you use a duplicate messageKey in the same send request, the message is rejected.</param>
         /// <param name="body">JSON Parameters (optional)</param>
-        /// <returns>Task of ResponseSendDefinitionToSingleRecipient</returns>
-        System.Threading.Tasks.Task<ResponseSendDefinitionToSingleRecipient> SendEmailToSingleRecipientAsync (string messageKey, RequestSendEmailToSingleRecipient body = null);
+        /// <returns>Task of SendDefinitionToSingleRecipientResponse</returns>
+        System.Threading.Tasks.Task<SendDefinitionToSingleRecipientResponse> SendEmailToSingleRecipientAsync (string messageKey, SendEmailToSingleRecipientRequest body = null);
 
         /// <summary>
         /// sendEmailToSingleRecipient
@@ -962,8 +962,8 @@ namespace Salesforce.MarketingCloud.Api
         /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="messageKey">Unique identifier used to track message status. Can be automatically created when you create a message or provided as part of the request. Each recipient in a request must have a unique messageKey. If you use a duplicate messageKey in the same send request, the message is rejected.</param>
         /// <param name="body">JSON Parameters (optional)</param>
-        /// <returns>Task of ApiResponse (ResponseSendDefinitionToSingleRecipient)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ResponseSendDefinitionToSingleRecipient>> SendEmailToSingleRecipientAsyncWithHttpInfo (string messageKey, RequestSendEmailToSingleRecipient body = null);
+        /// <returns>Task of ApiResponse (SendDefinitionToSingleRecipientResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<SendDefinitionToSingleRecipientResponse>> SendEmailToSingleRecipientAsyncWithHttpInfo (string messageKey, SendEmailToSingleRecipientRequest body = null);
         /// <summary>
         /// sendSmsToMultipleRecipients
         /// </summary>
@@ -972,8 +972,8 @@ namespace Salesforce.MarketingCloud.Api
         /// </remarks>
         /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">JSON Parameters (optional)</param>
-        /// <returns>Task of ResponseSendDefinitionToMultipleRecipients</returns>
-        System.Threading.Tasks.Task<ResponseSendDefinitionToMultipleRecipients> SendSmsToMultipleRecipientsAsync (RequestSendSmsToMultipleRecipients body = null);
+        /// <returns>Task of SendDefinitionToMultipleRecipientsResponse</returns>
+        System.Threading.Tasks.Task<SendDefinitionToMultipleRecipientsResponse> SendSmsToMultipleRecipientsAsync (SendSmsToMultipleRecipientsRequest body = null);
 
         /// <summary>
         /// sendSmsToMultipleRecipients
@@ -983,8 +983,8 @@ namespace Salesforce.MarketingCloud.Api
         /// </remarks>
         /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">JSON Parameters (optional)</param>
-        /// <returns>Task of ApiResponse (ResponseSendDefinitionToMultipleRecipients)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ResponseSendDefinitionToMultipleRecipients>> SendSmsToMultipleRecipientsAsyncWithHttpInfo (RequestSendSmsToMultipleRecipients body = null);
+        /// <returns>Task of ApiResponse (SendDefinitionToMultipleRecipientsResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<SendDefinitionToMultipleRecipientsResponse>> SendSmsToMultipleRecipientsAsyncWithHttpInfo (SendSmsToMultipleRecipientsRequest body = null);
         /// <summary>
         /// sendSmsToSingleRecipient
         /// </summary>
@@ -994,8 +994,8 @@ namespace Salesforce.MarketingCloud.Api
         /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="messageKey">Unique identifier of the definition used to track message status. The messageKey can be created automatically when you create a message, or you can provide it as part of the request. Each recipient in a request must have a unique messageKey. If you use a duplicate messageKey in the same send request, the message is rejected.</param>
         /// <param name="body">JSON Parameters (optional)</param>
-        /// <returns>Task of ResponseSendDefinitionToSingleRecipient</returns>
-        System.Threading.Tasks.Task<ResponseSendDefinitionToSingleRecipient> SendSmsToSingleRecipientAsync (string messageKey, RequestSendSmsToSingleRecipient body = null);
+        /// <returns>Task of SendDefinitionToSingleRecipientResponse</returns>
+        System.Threading.Tasks.Task<SendDefinitionToSingleRecipientResponse> SendSmsToSingleRecipientAsync (string messageKey, SendSmsToSingleRecipientRequest body = null);
 
         /// <summary>
         /// sendSmsToSingleRecipient
@@ -1006,8 +1006,8 @@ namespace Salesforce.MarketingCloud.Api
         /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="messageKey">Unique identifier of the definition used to track message status. The messageKey can be created automatically when you create a message, or you can provide it as part of the request. Each recipient in a request must have a unique messageKey. If you use a duplicate messageKey in the same send request, the message is rejected.</param>
         /// <param name="body">JSON Parameters (optional)</param>
-        /// <returns>Task of ApiResponse (ResponseSendDefinitionToSingleRecipient)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ResponseSendDefinitionToSingleRecipient>> SendSmsToSingleRecipientAsyncWithHttpInfo (string messageKey, RequestSendSmsToSingleRecipient body = null);
+        /// <returns>Task of ApiResponse (SendDefinitionToSingleRecipientResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<SendDefinitionToSingleRecipientResponse>> SendSmsToSingleRecipientAsyncWithHttpInfo (string messageKey, SendSmsToSingleRecipientRequest body = null);
         #endregion Asynchronous Operations
     }
 
@@ -1138,10 +1138,10 @@ namespace Salesforce.MarketingCloud.Api
         /// </summary>
         /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">JSON Parameters (optional)</param>
-        /// <returns>RequestCreateEmailDefinition</returns>
-        public RequestCreateEmailDefinition CreateEmailDefinition (RequestCreateEmailDefinition body = null)
+        /// <returns>CreateEmailDefinitionRequest</returns>
+        public CreateEmailDefinitionRequest CreateEmailDefinition (CreateEmailDefinitionRequest body = null)
         {
-             ApiResponse<RequestCreateEmailDefinition> localVarResponse = CreateEmailDefinitionWithHttpInfo(body);
+             ApiResponse<CreateEmailDefinitionRequest> localVarResponse = CreateEmailDefinitionWithHttpInfo(body);
              return localVarResponse.Data;
         }
 
@@ -1150,8 +1150,8 @@ namespace Salesforce.MarketingCloud.Api
         /// </summary>
         /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">JSON Parameters (optional)</param>
-        /// <returns>ApiResponse of RequestCreateEmailDefinition</returns>
-        public ApiResponse< RequestCreateEmailDefinition > CreateEmailDefinitionWithHttpInfo (RequestCreateEmailDefinition body = null)
+        /// <returns>ApiResponse of CreateEmailDefinitionRequest</returns>
+        public ApiResponse< CreateEmailDefinitionRequest > CreateEmailDefinitionWithHttpInfo (CreateEmailDefinitionRequest body = null)
         {
 
             var localVarPath = "/messaging/v1/email/definitions/";
@@ -1197,9 +1197,9 @@ namespace Salesforce.MarketingCloud.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<RequestCreateEmailDefinition>(localVarStatusCode,
+            return new ApiResponse<CreateEmailDefinitionRequest>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (RequestCreateEmailDefinition) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RequestCreateEmailDefinition)));
+                (CreateEmailDefinitionRequest) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(CreateEmailDefinitionRequest)));
         }
 
         /// <summary>
@@ -1207,10 +1207,10 @@ namespace Salesforce.MarketingCloud.Api
         /// </summary>
         /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">JSON Parameters (optional)</param>
-        /// <returns>Task of RequestCreateEmailDefinition</returns>
-        public async System.Threading.Tasks.Task<RequestCreateEmailDefinition> CreateEmailDefinitionAsync (RequestCreateEmailDefinition body = null)
+        /// <returns>Task of CreateEmailDefinitionRequest</returns>
+        public async System.Threading.Tasks.Task<CreateEmailDefinitionRequest> CreateEmailDefinitionAsync (CreateEmailDefinitionRequest body = null)
         {
-             ApiResponse<RequestCreateEmailDefinition> localVarResponse = await CreateEmailDefinitionAsyncWithHttpInfo(body);
+             ApiResponse<CreateEmailDefinitionRequest> localVarResponse = await CreateEmailDefinitionAsyncWithHttpInfo(body);
              return localVarResponse.Data;
 
         }
@@ -1220,8 +1220,8 @@ namespace Salesforce.MarketingCloud.Api
         /// </summary>
         /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">JSON Parameters (optional)</param>
-        /// <returns>Task of ApiResponse (RequestCreateEmailDefinition)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<RequestCreateEmailDefinition>> CreateEmailDefinitionAsyncWithHttpInfo (RequestCreateEmailDefinition body = null)
+        /// <returns>Task of ApiResponse (CreateEmailDefinitionRequest)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<CreateEmailDefinitionRequest>> CreateEmailDefinitionAsyncWithHttpInfo (CreateEmailDefinitionRequest body = null)
         {
 
             var localVarPath = "/messaging/v1/email/definitions/";
@@ -1267,9 +1267,9 @@ namespace Salesforce.MarketingCloud.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<RequestCreateEmailDefinition>(localVarStatusCode,
+            return new ApiResponse<CreateEmailDefinitionRequest>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (RequestCreateEmailDefinition) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RequestCreateEmailDefinition)));
+                (CreateEmailDefinitionRequest) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(CreateEmailDefinitionRequest)));
         }
 
         /// <summary>
@@ -1277,10 +1277,10 @@ namespace Salesforce.MarketingCloud.Api
         /// </summary>
         /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">JSON Parameters (optional)</param>
-        /// <returns>RequestCreateSmsDefinition</returns>
-        public RequestCreateSmsDefinition CreateSmsDefinition (RequestCreateSmsDefinition body = null)
+        /// <returns>CreateSmsDefinitionRequest</returns>
+        public CreateSmsDefinitionRequest CreateSmsDefinition (CreateSmsDefinitionRequest body = null)
         {
-             ApiResponse<RequestCreateSmsDefinition> localVarResponse = CreateSmsDefinitionWithHttpInfo(body);
+             ApiResponse<CreateSmsDefinitionRequest> localVarResponse = CreateSmsDefinitionWithHttpInfo(body);
              return localVarResponse.Data;
         }
 
@@ -1289,8 +1289,8 @@ namespace Salesforce.MarketingCloud.Api
         /// </summary>
         /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">JSON Parameters (optional)</param>
-        /// <returns>ApiResponse of RequestCreateSmsDefinition</returns>
-        public ApiResponse< RequestCreateSmsDefinition > CreateSmsDefinitionWithHttpInfo (RequestCreateSmsDefinition body = null)
+        /// <returns>ApiResponse of CreateSmsDefinitionRequest</returns>
+        public ApiResponse< CreateSmsDefinitionRequest > CreateSmsDefinitionWithHttpInfo (CreateSmsDefinitionRequest body = null)
         {
 
             var localVarPath = "/messaging/v1/sms/definitions";
@@ -1336,9 +1336,9 @@ namespace Salesforce.MarketingCloud.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<RequestCreateSmsDefinition>(localVarStatusCode,
+            return new ApiResponse<CreateSmsDefinitionRequest>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (RequestCreateSmsDefinition) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RequestCreateSmsDefinition)));
+                (CreateSmsDefinitionRequest) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(CreateSmsDefinitionRequest)));
         }
 
         /// <summary>
@@ -1346,10 +1346,10 @@ namespace Salesforce.MarketingCloud.Api
         /// </summary>
         /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">JSON Parameters (optional)</param>
-        /// <returns>Task of RequestCreateSmsDefinition</returns>
-        public async System.Threading.Tasks.Task<RequestCreateSmsDefinition> CreateSmsDefinitionAsync (RequestCreateSmsDefinition body = null)
+        /// <returns>Task of CreateSmsDefinitionRequest</returns>
+        public async System.Threading.Tasks.Task<CreateSmsDefinitionRequest> CreateSmsDefinitionAsync (CreateSmsDefinitionRequest body = null)
         {
-             ApiResponse<RequestCreateSmsDefinition> localVarResponse = await CreateSmsDefinitionAsyncWithHttpInfo(body);
+             ApiResponse<CreateSmsDefinitionRequest> localVarResponse = await CreateSmsDefinitionAsyncWithHttpInfo(body);
              return localVarResponse.Data;
 
         }
@@ -1359,8 +1359,8 @@ namespace Salesforce.MarketingCloud.Api
         /// </summary>
         /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">JSON Parameters (optional)</param>
-        /// <returns>Task of ApiResponse (RequestCreateSmsDefinition)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<RequestCreateSmsDefinition>> CreateSmsDefinitionAsyncWithHttpInfo (RequestCreateSmsDefinition body = null)
+        /// <returns>Task of ApiResponse (CreateSmsDefinitionRequest)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<CreateSmsDefinitionRequest>> CreateSmsDefinitionAsyncWithHttpInfo (CreateSmsDefinitionRequest body = null)
         {
 
             var localVarPath = "/messaging/v1/sms/definitions";
@@ -1406,9 +1406,9 @@ namespace Salesforce.MarketingCloud.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<RequestCreateSmsDefinition>(localVarStatusCode,
+            return new ApiResponse<CreateSmsDefinitionRequest>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (RequestCreateSmsDefinition) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RequestCreateSmsDefinition)));
+                (CreateSmsDefinitionRequest) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(CreateSmsDefinitionRequest)));
         }
 
         /// <summary>
@@ -1416,10 +1416,10 @@ namespace Salesforce.MarketingCloud.Api
         /// </summary>
         /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="definitionKey">Unique identifier of the definition to delete</param>
-        /// <returns>ResponseDeleteSendDefinition</returns>
-        public ResponseDeleteSendDefinition DeleteEmailDefinition (string definitionKey)
+        /// <returns>DeleteSendDefinitionResponse</returns>
+        public DeleteSendDefinitionResponse DeleteEmailDefinition (string definitionKey)
         {
-             ApiResponse<ResponseDeleteSendDefinition> localVarResponse = DeleteEmailDefinitionWithHttpInfo(definitionKey);
+             ApiResponse<DeleteSendDefinitionResponse> localVarResponse = DeleteEmailDefinitionWithHttpInfo(definitionKey);
              return localVarResponse.Data;
         }
 
@@ -1428,8 +1428,8 @@ namespace Salesforce.MarketingCloud.Api
         /// </summary>
         /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="definitionKey">Unique identifier of the definition to delete</param>
-        /// <returns>ApiResponse of ResponseDeleteSendDefinition</returns>
-        public ApiResponse< ResponseDeleteSendDefinition > DeleteEmailDefinitionWithHttpInfo (string definitionKey)
+        /// <returns>ApiResponse of DeleteSendDefinitionResponse</returns>
+        public ApiResponse< DeleteSendDefinitionResponse > DeleteEmailDefinitionWithHttpInfo (string definitionKey)
         {
             // verify the required parameter 'definitionKey' is set
             if (definitionKey == null)
@@ -1471,9 +1471,9 @@ namespace Salesforce.MarketingCloud.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<ResponseDeleteSendDefinition>(localVarStatusCode,
+            return new ApiResponse<DeleteSendDefinitionResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (ResponseDeleteSendDefinition) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ResponseDeleteSendDefinition)));
+                (DeleteSendDefinitionResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DeleteSendDefinitionResponse)));
         }
 
         /// <summary>
@@ -1481,10 +1481,10 @@ namespace Salesforce.MarketingCloud.Api
         /// </summary>
         /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="definitionKey">Unique identifier of the definition to delete</param>
-        /// <returns>Task of ResponseDeleteSendDefinition</returns>
-        public async System.Threading.Tasks.Task<ResponseDeleteSendDefinition> DeleteEmailDefinitionAsync (string definitionKey)
+        /// <returns>Task of DeleteSendDefinitionResponse</returns>
+        public async System.Threading.Tasks.Task<DeleteSendDefinitionResponse> DeleteEmailDefinitionAsync (string definitionKey)
         {
-             ApiResponse<ResponseDeleteSendDefinition> localVarResponse = await DeleteEmailDefinitionAsyncWithHttpInfo(definitionKey);
+             ApiResponse<DeleteSendDefinitionResponse> localVarResponse = await DeleteEmailDefinitionAsyncWithHttpInfo(definitionKey);
              return localVarResponse.Data;
 
         }
@@ -1494,8 +1494,8 @@ namespace Salesforce.MarketingCloud.Api
         /// </summary>
         /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="definitionKey">Unique identifier of the definition to delete</param>
-        /// <returns>Task of ApiResponse (ResponseDeleteSendDefinition)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ResponseDeleteSendDefinition>> DeleteEmailDefinitionAsyncWithHttpInfo (string definitionKey)
+        /// <returns>Task of ApiResponse (DeleteSendDefinitionResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<DeleteSendDefinitionResponse>> DeleteEmailDefinitionAsyncWithHttpInfo (string definitionKey)
         {
             // verify the required parameter 'definitionKey' is set
             if (definitionKey == null)
@@ -1537,9 +1537,9 @@ namespace Salesforce.MarketingCloud.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<ResponseDeleteSendDefinition>(localVarStatusCode,
+            return new ApiResponse<DeleteSendDefinitionResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (ResponseDeleteSendDefinition) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ResponseDeleteSendDefinition)));
+                (DeleteSendDefinitionResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DeleteSendDefinitionResponse)));
         }
 
         /// <summary>
@@ -1547,10 +1547,10 @@ namespace Salesforce.MarketingCloud.Api
         /// </summary>
         /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="definitionKey">Unique identifier of the email definition</param>
-        /// <returns>ResponseDeleteQueuedMessagesForSendDefinition</returns>
-        public ResponseDeleteQueuedMessagesForSendDefinition DeleteQueuedMessagesForEmailDefinition (string definitionKey)
+        /// <returns>DeleteQueuedMessagesForSendDefinitionResponse</returns>
+        public DeleteQueuedMessagesForSendDefinitionResponse DeleteQueuedMessagesForEmailDefinition (string definitionKey)
         {
-             ApiResponse<ResponseDeleteQueuedMessagesForSendDefinition> localVarResponse = DeleteQueuedMessagesForEmailDefinitionWithHttpInfo(definitionKey);
+             ApiResponse<DeleteQueuedMessagesForSendDefinitionResponse> localVarResponse = DeleteQueuedMessagesForEmailDefinitionWithHttpInfo(definitionKey);
              return localVarResponse.Data;
         }
 
@@ -1559,8 +1559,8 @@ namespace Salesforce.MarketingCloud.Api
         /// </summary>
         /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="definitionKey">Unique identifier of the email definition</param>
-        /// <returns>ApiResponse of ResponseDeleteQueuedMessagesForSendDefinition</returns>
-        public ApiResponse< ResponseDeleteQueuedMessagesForSendDefinition > DeleteQueuedMessagesForEmailDefinitionWithHttpInfo (string definitionKey)
+        /// <returns>ApiResponse of DeleteQueuedMessagesForSendDefinitionResponse</returns>
+        public ApiResponse< DeleteQueuedMessagesForSendDefinitionResponse > DeleteQueuedMessagesForEmailDefinitionWithHttpInfo (string definitionKey)
         {
             // verify the required parameter 'definitionKey' is set
             if (definitionKey == null)
@@ -1602,9 +1602,9 @@ namespace Salesforce.MarketingCloud.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<ResponseDeleteQueuedMessagesForSendDefinition>(localVarStatusCode,
+            return new ApiResponse<DeleteQueuedMessagesForSendDefinitionResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (ResponseDeleteQueuedMessagesForSendDefinition) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ResponseDeleteQueuedMessagesForSendDefinition)));
+                (DeleteQueuedMessagesForSendDefinitionResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DeleteQueuedMessagesForSendDefinitionResponse)));
         }
 
         /// <summary>
@@ -1612,10 +1612,10 @@ namespace Salesforce.MarketingCloud.Api
         /// </summary>
         /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="definitionKey">Unique identifier of the email definition</param>
-        /// <returns>Task of ResponseDeleteQueuedMessagesForSendDefinition</returns>
-        public async System.Threading.Tasks.Task<ResponseDeleteQueuedMessagesForSendDefinition> DeleteQueuedMessagesForEmailDefinitionAsync (string definitionKey)
+        /// <returns>Task of DeleteQueuedMessagesForSendDefinitionResponse</returns>
+        public async System.Threading.Tasks.Task<DeleteQueuedMessagesForSendDefinitionResponse> DeleteQueuedMessagesForEmailDefinitionAsync (string definitionKey)
         {
-             ApiResponse<ResponseDeleteQueuedMessagesForSendDefinition> localVarResponse = await DeleteQueuedMessagesForEmailDefinitionAsyncWithHttpInfo(definitionKey);
+             ApiResponse<DeleteQueuedMessagesForSendDefinitionResponse> localVarResponse = await DeleteQueuedMessagesForEmailDefinitionAsyncWithHttpInfo(definitionKey);
              return localVarResponse.Data;
 
         }
@@ -1625,8 +1625,8 @@ namespace Salesforce.MarketingCloud.Api
         /// </summary>
         /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="definitionKey">Unique identifier of the email definition</param>
-        /// <returns>Task of ApiResponse (ResponseDeleteQueuedMessagesForSendDefinition)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ResponseDeleteQueuedMessagesForSendDefinition>> DeleteQueuedMessagesForEmailDefinitionAsyncWithHttpInfo (string definitionKey)
+        /// <returns>Task of ApiResponse (DeleteQueuedMessagesForSendDefinitionResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<DeleteQueuedMessagesForSendDefinitionResponse>> DeleteQueuedMessagesForEmailDefinitionAsyncWithHttpInfo (string definitionKey)
         {
             // verify the required parameter 'definitionKey' is set
             if (definitionKey == null)
@@ -1668,9 +1668,9 @@ namespace Salesforce.MarketingCloud.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<ResponseDeleteQueuedMessagesForSendDefinition>(localVarStatusCode,
+            return new ApiResponse<DeleteQueuedMessagesForSendDefinitionResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (ResponseDeleteQueuedMessagesForSendDefinition) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ResponseDeleteQueuedMessagesForSendDefinition)));
+                (DeleteQueuedMessagesForSendDefinitionResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DeleteQueuedMessagesForSendDefinitionResponse)));
         }
 
         /// <summary>
@@ -1678,10 +1678,10 @@ namespace Salesforce.MarketingCloud.Api
         /// </summary>
         /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="definitionKey">Unique identifier of the SMS definition</param>
-        /// <returns>ResponseDeleteQueuedMessagesForSendDefinition</returns>
-        public ResponseDeleteQueuedMessagesForSendDefinition DeleteQueuedMessagesForSmsDefinition (string definitionKey)
+        /// <returns>DeleteQueuedMessagesForSendDefinitionResponse</returns>
+        public DeleteQueuedMessagesForSendDefinitionResponse DeleteQueuedMessagesForSmsDefinition (string definitionKey)
         {
-             ApiResponse<ResponseDeleteQueuedMessagesForSendDefinition> localVarResponse = DeleteQueuedMessagesForSmsDefinitionWithHttpInfo(definitionKey);
+             ApiResponse<DeleteQueuedMessagesForSendDefinitionResponse> localVarResponse = DeleteQueuedMessagesForSmsDefinitionWithHttpInfo(definitionKey);
              return localVarResponse.Data;
         }
 
@@ -1690,8 +1690,8 @@ namespace Salesforce.MarketingCloud.Api
         /// </summary>
         /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="definitionKey">Unique identifier of the SMS definition</param>
-        /// <returns>ApiResponse of ResponseDeleteQueuedMessagesForSendDefinition</returns>
-        public ApiResponse< ResponseDeleteQueuedMessagesForSendDefinition > DeleteQueuedMessagesForSmsDefinitionWithHttpInfo (string definitionKey)
+        /// <returns>ApiResponse of DeleteQueuedMessagesForSendDefinitionResponse</returns>
+        public ApiResponse< DeleteQueuedMessagesForSendDefinitionResponse > DeleteQueuedMessagesForSmsDefinitionWithHttpInfo (string definitionKey)
         {
             // verify the required parameter 'definitionKey' is set
             if (definitionKey == null)
@@ -1733,9 +1733,9 @@ namespace Salesforce.MarketingCloud.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<ResponseDeleteQueuedMessagesForSendDefinition>(localVarStatusCode,
+            return new ApiResponse<DeleteQueuedMessagesForSendDefinitionResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (ResponseDeleteQueuedMessagesForSendDefinition) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ResponseDeleteQueuedMessagesForSendDefinition)));
+                (DeleteQueuedMessagesForSendDefinitionResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DeleteQueuedMessagesForSendDefinitionResponse)));
         }
 
         /// <summary>
@@ -1743,10 +1743,10 @@ namespace Salesforce.MarketingCloud.Api
         /// </summary>
         /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="definitionKey">Unique identifier of the SMS definition</param>
-        /// <returns>Task of ResponseDeleteQueuedMessagesForSendDefinition</returns>
-        public async System.Threading.Tasks.Task<ResponseDeleteQueuedMessagesForSendDefinition> DeleteQueuedMessagesForSmsDefinitionAsync (string definitionKey)
+        /// <returns>Task of DeleteQueuedMessagesForSendDefinitionResponse</returns>
+        public async System.Threading.Tasks.Task<DeleteQueuedMessagesForSendDefinitionResponse> DeleteQueuedMessagesForSmsDefinitionAsync (string definitionKey)
         {
-             ApiResponse<ResponseDeleteQueuedMessagesForSendDefinition> localVarResponse = await DeleteQueuedMessagesForSmsDefinitionAsyncWithHttpInfo(definitionKey);
+             ApiResponse<DeleteQueuedMessagesForSendDefinitionResponse> localVarResponse = await DeleteQueuedMessagesForSmsDefinitionAsyncWithHttpInfo(definitionKey);
              return localVarResponse.Data;
 
         }
@@ -1756,8 +1756,8 @@ namespace Salesforce.MarketingCloud.Api
         /// </summary>
         /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="definitionKey">Unique identifier of the SMS definition</param>
-        /// <returns>Task of ApiResponse (ResponseDeleteQueuedMessagesForSendDefinition)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ResponseDeleteQueuedMessagesForSendDefinition>> DeleteQueuedMessagesForSmsDefinitionAsyncWithHttpInfo (string definitionKey)
+        /// <returns>Task of ApiResponse (DeleteQueuedMessagesForSendDefinitionResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<DeleteQueuedMessagesForSendDefinitionResponse>> DeleteQueuedMessagesForSmsDefinitionAsyncWithHttpInfo (string definitionKey)
         {
             // verify the required parameter 'definitionKey' is set
             if (definitionKey == null)
@@ -1799,9 +1799,9 @@ namespace Salesforce.MarketingCloud.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<ResponseDeleteQueuedMessagesForSendDefinition>(localVarStatusCode,
+            return new ApiResponse<DeleteQueuedMessagesForSendDefinitionResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (ResponseDeleteQueuedMessagesForSendDefinition) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ResponseDeleteQueuedMessagesForSendDefinition)));
+                (DeleteQueuedMessagesForSendDefinitionResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DeleteQueuedMessagesForSendDefinitionResponse)));
         }
 
         /// <summary>
@@ -1809,10 +1809,10 @@ namespace Salesforce.MarketingCloud.Api
         /// </summary>
         /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="definitionKey">Unique identifier of the definition to delete</param>
-        /// <returns>ResponseDeleteSendDefinition</returns>
-        public ResponseDeleteSendDefinition DeleteSmsDefinition (string definitionKey)
+        /// <returns>DeleteSendDefinitionResponse</returns>
+        public DeleteSendDefinitionResponse DeleteSmsDefinition (string definitionKey)
         {
-             ApiResponse<ResponseDeleteSendDefinition> localVarResponse = DeleteSmsDefinitionWithHttpInfo(definitionKey);
+             ApiResponse<DeleteSendDefinitionResponse> localVarResponse = DeleteSmsDefinitionWithHttpInfo(definitionKey);
              return localVarResponse.Data;
         }
 
@@ -1821,8 +1821,8 @@ namespace Salesforce.MarketingCloud.Api
         /// </summary>
         /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="definitionKey">Unique identifier of the definition to delete</param>
-        /// <returns>ApiResponse of ResponseDeleteSendDefinition</returns>
-        public ApiResponse< ResponseDeleteSendDefinition > DeleteSmsDefinitionWithHttpInfo (string definitionKey)
+        /// <returns>ApiResponse of DeleteSendDefinitionResponse</returns>
+        public ApiResponse< DeleteSendDefinitionResponse > DeleteSmsDefinitionWithHttpInfo (string definitionKey)
         {
             // verify the required parameter 'definitionKey' is set
             if (definitionKey == null)
@@ -1864,9 +1864,9 @@ namespace Salesforce.MarketingCloud.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<ResponseDeleteSendDefinition>(localVarStatusCode,
+            return new ApiResponse<DeleteSendDefinitionResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (ResponseDeleteSendDefinition) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ResponseDeleteSendDefinition)));
+                (DeleteSendDefinitionResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DeleteSendDefinitionResponse)));
         }
 
         /// <summary>
@@ -1874,10 +1874,10 @@ namespace Salesforce.MarketingCloud.Api
         /// </summary>
         /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="definitionKey">Unique identifier of the definition to delete</param>
-        /// <returns>Task of ResponseDeleteSendDefinition</returns>
-        public async System.Threading.Tasks.Task<ResponseDeleteSendDefinition> DeleteSmsDefinitionAsync (string definitionKey)
+        /// <returns>Task of DeleteSendDefinitionResponse</returns>
+        public async System.Threading.Tasks.Task<DeleteSendDefinitionResponse> DeleteSmsDefinitionAsync (string definitionKey)
         {
-             ApiResponse<ResponseDeleteSendDefinition> localVarResponse = await DeleteSmsDefinitionAsyncWithHttpInfo(definitionKey);
+             ApiResponse<DeleteSendDefinitionResponse> localVarResponse = await DeleteSmsDefinitionAsyncWithHttpInfo(definitionKey);
              return localVarResponse.Data;
 
         }
@@ -1887,8 +1887,8 @@ namespace Salesforce.MarketingCloud.Api
         /// </summary>
         /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="definitionKey">Unique identifier of the definition to delete</param>
-        /// <returns>Task of ApiResponse (ResponseDeleteSendDefinition)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ResponseDeleteSendDefinition>> DeleteSmsDefinitionAsyncWithHttpInfo (string definitionKey)
+        /// <returns>Task of ApiResponse (DeleteSendDefinitionResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<DeleteSendDefinitionResponse>> DeleteSmsDefinitionAsyncWithHttpInfo (string definitionKey)
         {
             // verify the required parameter 'definitionKey' is set
             if (definitionKey == null)
@@ -1930,9 +1930,9 @@ namespace Salesforce.MarketingCloud.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<ResponseDeleteSendDefinition>(localVarStatusCode,
+            return new ApiResponse<DeleteSendDefinitionResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (ResponseDeleteSendDefinition) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ResponseDeleteSendDefinition)));
+                (DeleteSendDefinitionResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DeleteSendDefinitionResponse)));
         }
 
         /// <summary>
@@ -1940,10 +1940,10 @@ namespace Salesforce.MarketingCloud.Api
         /// </summary>
         /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="definitionKey">Unique identifier of the definition to get</param>
-        /// <returns>RequestCreateEmailDefinition</returns>
-        public RequestCreateEmailDefinition GetEmailDefinition (string definitionKey)
+        /// <returns>CreateEmailDefinitionRequest</returns>
+        public CreateEmailDefinitionRequest GetEmailDefinition (string definitionKey)
         {
-             ApiResponse<RequestCreateEmailDefinition> localVarResponse = GetEmailDefinitionWithHttpInfo(definitionKey);
+             ApiResponse<CreateEmailDefinitionRequest> localVarResponse = GetEmailDefinitionWithHttpInfo(definitionKey);
              return localVarResponse.Data;
         }
 
@@ -1952,8 +1952,8 @@ namespace Salesforce.MarketingCloud.Api
         /// </summary>
         /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="definitionKey">Unique identifier of the definition to get</param>
-        /// <returns>ApiResponse of RequestCreateEmailDefinition</returns>
-        public ApiResponse< RequestCreateEmailDefinition > GetEmailDefinitionWithHttpInfo (string definitionKey)
+        /// <returns>ApiResponse of CreateEmailDefinitionRequest</returns>
+        public ApiResponse< CreateEmailDefinitionRequest > GetEmailDefinitionWithHttpInfo (string definitionKey)
         {
             // verify the required parameter 'definitionKey' is set
             if (definitionKey == null)
@@ -1995,9 +1995,9 @@ namespace Salesforce.MarketingCloud.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<RequestCreateEmailDefinition>(localVarStatusCode,
+            return new ApiResponse<CreateEmailDefinitionRequest>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (RequestCreateEmailDefinition) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RequestCreateEmailDefinition)));
+                (CreateEmailDefinitionRequest) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(CreateEmailDefinitionRequest)));
         }
 
         /// <summary>
@@ -2005,10 +2005,10 @@ namespace Salesforce.MarketingCloud.Api
         /// </summary>
         /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="definitionKey">Unique identifier of the definition to get</param>
-        /// <returns>Task of RequestCreateEmailDefinition</returns>
-        public async System.Threading.Tasks.Task<RequestCreateEmailDefinition> GetEmailDefinitionAsync (string definitionKey)
+        /// <returns>Task of CreateEmailDefinitionRequest</returns>
+        public async System.Threading.Tasks.Task<CreateEmailDefinitionRequest> GetEmailDefinitionAsync (string definitionKey)
         {
-             ApiResponse<RequestCreateEmailDefinition> localVarResponse = await GetEmailDefinitionAsyncWithHttpInfo(definitionKey);
+             ApiResponse<CreateEmailDefinitionRequest> localVarResponse = await GetEmailDefinitionAsyncWithHttpInfo(definitionKey);
              return localVarResponse.Data;
 
         }
@@ -2018,8 +2018,8 @@ namespace Salesforce.MarketingCloud.Api
         /// </summary>
         /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="definitionKey">Unique identifier of the definition to get</param>
-        /// <returns>Task of ApiResponse (RequestCreateEmailDefinition)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<RequestCreateEmailDefinition>> GetEmailDefinitionAsyncWithHttpInfo (string definitionKey)
+        /// <returns>Task of ApiResponse (CreateEmailDefinitionRequest)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<CreateEmailDefinitionRequest>> GetEmailDefinitionAsyncWithHttpInfo (string definitionKey)
         {
             // verify the required parameter 'definitionKey' is set
             if (definitionKey == null)
@@ -2061,9 +2061,9 @@ namespace Salesforce.MarketingCloud.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<RequestCreateEmailDefinition>(localVarStatusCode,
+            return new ApiResponse<CreateEmailDefinitionRequest>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (RequestCreateEmailDefinition) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RequestCreateEmailDefinition)));
+                (CreateEmailDefinitionRequest) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(CreateEmailDefinitionRequest)));
         }
 
         /// <summary>
@@ -2074,10 +2074,10 @@ namespace Salesforce.MarketingCloud.Api
         /// <param name="pageSize">Number of definitions, which are array elements, to return per paged response. (optional)</param>
         /// <param name="page">Page number to return. (optional)</param>
         /// <param name="orderBy">Sort by a dimension. You can sort by only one dimension. Accepted values are definitionKey, name, createdDate, modifiedDate, and status. (optional)</param>
-        /// <returns>ResponseGetEmailDefinitions</returns>
-        public ResponseGetEmailDefinitions GetEmailDefinitions (string status = null, decimal? pageSize = null, decimal? page = null, string orderBy = null)
+        /// <returns>GetEmailDefinitionsResponse</returns>
+        public GetEmailDefinitionsResponse GetEmailDefinitions (string status = null, decimal? pageSize = null, decimal? page = null, string orderBy = null)
         {
-             ApiResponse<ResponseGetEmailDefinitions> localVarResponse = GetEmailDefinitionsWithHttpInfo(status, pageSize, page, orderBy);
+             ApiResponse<GetEmailDefinitionsResponse> localVarResponse = GetEmailDefinitionsWithHttpInfo(status, pageSize, page, orderBy);
              return localVarResponse.Data;
         }
 
@@ -2089,8 +2089,8 @@ namespace Salesforce.MarketingCloud.Api
         /// <param name="pageSize">Number of definitions, which are array elements, to return per paged response. (optional)</param>
         /// <param name="page">Page number to return. (optional)</param>
         /// <param name="orderBy">Sort by a dimension. You can sort by only one dimension. Accepted values are definitionKey, name, createdDate, modifiedDate, and status. (optional)</param>
-        /// <returns>ApiResponse of ResponseGetEmailDefinitions</returns>
-        public ApiResponse< ResponseGetEmailDefinitions > GetEmailDefinitionsWithHttpInfo (string status = null, decimal? pageSize = null, decimal? page = null, string orderBy = null)
+        /// <returns>ApiResponse of GetEmailDefinitionsResponse</returns>
+        public ApiResponse< GetEmailDefinitionsResponse > GetEmailDefinitionsWithHttpInfo (string status = null, decimal? pageSize = null, decimal? page = null, string orderBy = null)
         {
 
             var localVarPath = "/messaging/v1/email/definitions/";
@@ -2132,9 +2132,9 @@ namespace Salesforce.MarketingCloud.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<ResponseGetEmailDefinitions>(localVarStatusCode,
+            return new ApiResponse<GetEmailDefinitionsResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (ResponseGetEmailDefinitions) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ResponseGetEmailDefinitions)));
+                (GetEmailDefinitionsResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetEmailDefinitionsResponse)));
         }
 
         /// <summary>
@@ -2145,10 +2145,10 @@ namespace Salesforce.MarketingCloud.Api
         /// <param name="pageSize">Number of definitions, which are array elements, to return per paged response. (optional)</param>
         /// <param name="page">Page number to return. (optional)</param>
         /// <param name="orderBy">Sort by a dimension. You can sort by only one dimension. Accepted values are definitionKey, name, createdDate, modifiedDate, and status. (optional)</param>
-        /// <returns>Task of ResponseGetEmailDefinitions</returns>
-        public async System.Threading.Tasks.Task<ResponseGetEmailDefinitions> GetEmailDefinitionsAsync (string status = null, decimal? pageSize = null, decimal? page = null, string orderBy = null)
+        /// <returns>Task of GetEmailDefinitionsResponse</returns>
+        public async System.Threading.Tasks.Task<GetEmailDefinitionsResponse> GetEmailDefinitionsAsync (string status = null, decimal? pageSize = null, decimal? page = null, string orderBy = null)
         {
-             ApiResponse<ResponseGetEmailDefinitions> localVarResponse = await GetEmailDefinitionsAsyncWithHttpInfo(status, pageSize, page, orderBy);
+             ApiResponse<GetEmailDefinitionsResponse> localVarResponse = await GetEmailDefinitionsAsyncWithHttpInfo(status, pageSize, page, orderBy);
              return localVarResponse.Data;
 
         }
@@ -2161,8 +2161,8 @@ namespace Salesforce.MarketingCloud.Api
         /// <param name="pageSize">Number of definitions, which are array elements, to return per paged response. (optional)</param>
         /// <param name="page">Page number to return. (optional)</param>
         /// <param name="orderBy">Sort by a dimension. You can sort by only one dimension. Accepted values are definitionKey, name, createdDate, modifiedDate, and status. (optional)</param>
-        /// <returns>Task of ApiResponse (ResponseGetEmailDefinitions)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ResponseGetEmailDefinitions>> GetEmailDefinitionsAsyncWithHttpInfo (string status = null, decimal? pageSize = null, decimal? page = null, string orderBy = null)
+        /// <returns>Task of ApiResponse (GetEmailDefinitionsResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<GetEmailDefinitionsResponse>> GetEmailDefinitionsAsyncWithHttpInfo (string status = null, decimal? pageSize = null, decimal? page = null, string orderBy = null)
         {
 
             var localVarPath = "/messaging/v1/email/definitions/";
@@ -2204,9 +2204,9 @@ namespace Salesforce.MarketingCloud.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<ResponseGetEmailDefinitions>(localVarStatusCode,
+            return new ApiResponse<GetEmailDefinitionsResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (ResponseGetEmailDefinitions) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ResponseGetEmailDefinitions)));
+                (GetEmailDefinitionsResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetEmailDefinitionsResponse)));
         }
 
         /// <summary>
@@ -2214,10 +2214,10 @@ namespace Salesforce.MarketingCloud.Api
         /// </summary>
         /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="messageKey">Unique identifier to track message send status. You must provide it in singleton requests using the recipient attribute. To provide it in batch requests, use the recipients array attribute. If you don’t provide the message key for recipients, it’s generated in the response.</param>
-        /// <returns>ResponseGetDefinitionSendStatusForRecipient</returns>
-        public ResponseGetDefinitionSendStatusForRecipient GetEmailSendStatusForRecipient (string messageKey)
+        /// <returns>GetDefinitionSendStatusForRecipientResponse</returns>
+        public GetDefinitionSendStatusForRecipientResponse GetEmailSendStatusForRecipient (string messageKey)
         {
-             ApiResponse<ResponseGetDefinitionSendStatusForRecipient> localVarResponse = GetEmailSendStatusForRecipientWithHttpInfo(messageKey);
+             ApiResponse<GetDefinitionSendStatusForRecipientResponse> localVarResponse = GetEmailSendStatusForRecipientWithHttpInfo(messageKey);
              return localVarResponse.Data;
         }
 
@@ -2226,8 +2226,8 @@ namespace Salesforce.MarketingCloud.Api
         /// </summary>
         /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="messageKey">Unique identifier to track message send status. You must provide it in singleton requests using the recipient attribute. To provide it in batch requests, use the recipients array attribute. If you don’t provide the message key for recipients, it’s generated in the response.</param>
-        /// <returns>ApiResponse of ResponseGetDefinitionSendStatusForRecipient</returns>
-        public ApiResponse< ResponseGetDefinitionSendStatusForRecipient > GetEmailSendStatusForRecipientWithHttpInfo (string messageKey)
+        /// <returns>ApiResponse of GetDefinitionSendStatusForRecipientResponse</returns>
+        public ApiResponse< GetDefinitionSendStatusForRecipientResponse > GetEmailSendStatusForRecipientWithHttpInfo (string messageKey)
         {
             // verify the required parameter 'messageKey' is set
             if (messageKey == null)
@@ -2269,9 +2269,9 @@ namespace Salesforce.MarketingCloud.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<ResponseGetDefinitionSendStatusForRecipient>(localVarStatusCode,
+            return new ApiResponse<GetDefinitionSendStatusForRecipientResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (ResponseGetDefinitionSendStatusForRecipient) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ResponseGetDefinitionSendStatusForRecipient)));
+                (GetDefinitionSendStatusForRecipientResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetDefinitionSendStatusForRecipientResponse)));
         }
 
         /// <summary>
@@ -2279,10 +2279,10 @@ namespace Salesforce.MarketingCloud.Api
         /// </summary>
         /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="messageKey">Unique identifier to track message send status. You must provide it in singleton requests using the recipient attribute. To provide it in batch requests, use the recipients array attribute. If you don’t provide the message key for recipients, it’s generated in the response.</param>
-        /// <returns>Task of ResponseGetDefinitionSendStatusForRecipient</returns>
-        public async System.Threading.Tasks.Task<ResponseGetDefinitionSendStatusForRecipient> GetEmailSendStatusForRecipientAsync (string messageKey)
+        /// <returns>Task of GetDefinitionSendStatusForRecipientResponse</returns>
+        public async System.Threading.Tasks.Task<GetDefinitionSendStatusForRecipientResponse> GetEmailSendStatusForRecipientAsync (string messageKey)
         {
-             ApiResponse<ResponseGetDefinitionSendStatusForRecipient> localVarResponse = await GetEmailSendStatusForRecipientAsyncWithHttpInfo(messageKey);
+             ApiResponse<GetDefinitionSendStatusForRecipientResponse> localVarResponse = await GetEmailSendStatusForRecipientAsyncWithHttpInfo(messageKey);
              return localVarResponse.Data;
 
         }
@@ -2292,8 +2292,8 @@ namespace Salesforce.MarketingCloud.Api
         /// </summary>
         /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="messageKey">Unique identifier to track message send status. You must provide it in singleton requests using the recipient attribute. To provide it in batch requests, use the recipients array attribute. If you don’t provide the message key for recipients, it’s generated in the response.</param>
-        /// <returns>Task of ApiResponse (ResponseGetDefinitionSendStatusForRecipient)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ResponseGetDefinitionSendStatusForRecipient>> GetEmailSendStatusForRecipientAsyncWithHttpInfo (string messageKey)
+        /// <returns>Task of ApiResponse (GetDefinitionSendStatusForRecipientResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<GetDefinitionSendStatusForRecipientResponse>> GetEmailSendStatusForRecipientAsyncWithHttpInfo (string messageKey)
         {
             // verify the required parameter 'messageKey' is set
             if (messageKey == null)
@@ -2335,9 +2335,9 @@ namespace Salesforce.MarketingCloud.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<ResponseGetDefinitionSendStatusForRecipient>(localVarStatusCode,
+            return new ApiResponse<GetDefinitionSendStatusForRecipientResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (ResponseGetDefinitionSendStatusForRecipient) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ResponseGetDefinitionSendStatusForRecipient)));
+                (GetDefinitionSendStatusForRecipientResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetDefinitionSendStatusForRecipientResponse)));
         }
 
         /// <summary>
@@ -2347,10 +2347,10 @@ namespace Salesforce.MarketingCloud.Api
         /// <param name="type">Only notSent is supported.</param>
         /// <param name="pageSize">Number of messageKeys (array elements) to return per response page. (optional)</param>
         /// <param name="lastEventId">Event ID from which you want the response to start. To obtain the initial event ID, submit a request without a lastEventId. The events in the response are listed top to bottom from oldest to newest. (optional)</param>
-        /// <returns>ResponseGetDefinitionsNotSentToRecipients</returns>
-        public ResponseGetDefinitionsNotSentToRecipients GetEmailsNotSentToRecipients (string type, int? pageSize = null, int? lastEventId = null)
+        /// <returns>GetDefinitionsNotSentToRecipientsResponse</returns>
+        public GetDefinitionsNotSentToRecipientsResponse GetEmailsNotSentToRecipients (string type, int? pageSize = null, int? lastEventId = null)
         {
-             ApiResponse<ResponseGetDefinitionsNotSentToRecipients> localVarResponse = GetEmailsNotSentToRecipientsWithHttpInfo(type, pageSize, lastEventId);
+             ApiResponse<GetDefinitionsNotSentToRecipientsResponse> localVarResponse = GetEmailsNotSentToRecipientsWithHttpInfo(type, pageSize, lastEventId);
              return localVarResponse.Data;
         }
 
@@ -2361,8 +2361,8 @@ namespace Salesforce.MarketingCloud.Api
         /// <param name="type">Only notSent is supported.</param>
         /// <param name="pageSize">Number of messageKeys (array elements) to return per response page. (optional)</param>
         /// <param name="lastEventId">Event ID from which you want the response to start. To obtain the initial event ID, submit a request without a lastEventId. The events in the response are listed top to bottom from oldest to newest. (optional)</param>
-        /// <returns>ApiResponse of ResponseGetDefinitionsNotSentToRecipients</returns>
-        public ApiResponse< ResponseGetDefinitionsNotSentToRecipients > GetEmailsNotSentToRecipientsWithHttpInfo (string type, int? pageSize = null, int? lastEventId = null)
+        /// <returns>ApiResponse of GetDefinitionsNotSentToRecipientsResponse</returns>
+        public ApiResponse< GetDefinitionsNotSentToRecipientsResponse > GetEmailsNotSentToRecipientsWithHttpInfo (string type, int? pageSize = null, int? lastEventId = null)
         {
             // verify the required parameter 'type' is set
             if (type == null)
@@ -2406,9 +2406,9 @@ namespace Salesforce.MarketingCloud.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<ResponseGetDefinitionsNotSentToRecipients>(localVarStatusCode,
+            return new ApiResponse<GetDefinitionsNotSentToRecipientsResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (ResponseGetDefinitionsNotSentToRecipients) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ResponseGetDefinitionsNotSentToRecipients)));
+                (GetDefinitionsNotSentToRecipientsResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetDefinitionsNotSentToRecipientsResponse)));
         }
 
         /// <summary>
@@ -2418,10 +2418,10 @@ namespace Salesforce.MarketingCloud.Api
         /// <param name="type">Only notSent is supported.</param>
         /// <param name="pageSize">Number of messageKeys (array elements) to return per response page. (optional)</param>
         /// <param name="lastEventId">Event ID from which you want the response to start. To obtain the initial event ID, submit a request without a lastEventId. The events in the response are listed top to bottom from oldest to newest. (optional)</param>
-        /// <returns>Task of ResponseGetDefinitionsNotSentToRecipients</returns>
-        public async System.Threading.Tasks.Task<ResponseGetDefinitionsNotSentToRecipients> GetEmailsNotSentToRecipientsAsync (string type, int? pageSize = null, int? lastEventId = null)
+        /// <returns>Task of GetDefinitionsNotSentToRecipientsResponse</returns>
+        public async System.Threading.Tasks.Task<GetDefinitionsNotSentToRecipientsResponse> GetEmailsNotSentToRecipientsAsync (string type, int? pageSize = null, int? lastEventId = null)
         {
-             ApiResponse<ResponseGetDefinitionsNotSentToRecipients> localVarResponse = await GetEmailsNotSentToRecipientsAsyncWithHttpInfo(type, pageSize, lastEventId);
+             ApiResponse<GetDefinitionsNotSentToRecipientsResponse> localVarResponse = await GetEmailsNotSentToRecipientsAsyncWithHttpInfo(type, pageSize, lastEventId);
              return localVarResponse.Data;
 
         }
@@ -2433,8 +2433,8 @@ namespace Salesforce.MarketingCloud.Api
         /// <param name="type">Only notSent is supported.</param>
         /// <param name="pageSize">Number of messageKeys (array elements) to return per response page. (optional)</param>
         /// <param name="lastEventId">Event ID from which you want the response to start. To obtain the initial event ID, submit a request without a lastEventId. The events in the response are listed top to bottom from oldest to newest. (optional)</param>
-        /// <returns>Task of ApiResponse (ResponseGetDefinitionsNotSentToRecipients)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ResponseGetDefinitionsNotSentToRecipients>> GetEmailsNotSentToRecipientsAsyncWithHttpInfo (string type, int? pageSize = null, int? lastEventId = null)
+        /// <returns>Task of ApiResponse (GetDefinitionsNotSentToRecipientsResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<GetDefinitionsNotSentToRecipientsResponse>> GetEmailsNotSentToRecipientsAsyncWithHttpInfo (string type, int? pageSize = null, int? lastEventId = null)
         {
             // verify the required parameter 'type' is set
             if (type == null)
@@ -2478,9 +2478,9 @@ namespace Salesforce.MarketingCloud.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<ResponseGetDefinitionsNotSentToRecipients>(localVarStatusCode,
+            return new ApiResponse<GetDefinitionsNotSentToRecipientsResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (ResponseGetDefinitionsNotSentToRecipients) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ResponseGetDefinitionsNotSentToRecipients)));
+                (GetDefinitionsNotSentToRecipientsResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetDefinitionsNotSentToRecipientsResponse)));
         }
 
         /// <summary>
@@ -2488,10 +2488,10 @@ namespace Salesforce.MarketingCloud.Api
         /// </summary>
         /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="definitionKey">Unique identifier of the email definition</param>
-        /// <returns>ResponseGetQueueMetricsForSendDefinition</returns>
-        public ResponseGetQueueMetricsForSendDefinition GetQueueMetricsForEmailDefinition (string definitionKey)
+        /// <returns>GetQueueMetricsForSendDefinitionResponse</returns>
+        public GetQueueMetricsForSendDefinitionResponse GetQueueMetricsForEmailDefinition (string definitionKey)
         {
-             ApiResponse<ResponseGetQueueMetricsForSendDefinition> localVarResponse = GetQueueMetricsForEmailDefinitionWithHttpInfo(definitionKey);
+             ApiResponse<GetQueueMetricsForSendDefinitionResponse> localVarResponse = GetQueueMetricsForEmailDefinitionWithHttpInfo(definitionKey);
              return localVarResponse.Data;
         }
 
@@ -2500,8 +2500,8 @@ namespace Salesforce.MarketingCloud.Api
         /// </summary>
         /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="definitionKey">Unique identifier of the email definition</param>
-        /// <returns>ApiResponse of ResponseGetQueueMetricsForSendDefinition</returns>
-        public ApiResponse< ResponseGetQueueMetricsForSendDefinition > GetQueueMetricsForEmailDefinitionWithHttpInfo (string definitionKey)
+        /// <returns>ApiResponse of GetQueueMetricsForSendDefinitionResponse</returns>
+        public ApiResponse< GetQueueMetricsForSendDefinitionResponse > GetQueueMetricsForEmailDefinitionWithHttpInfo (string definitionKey)
         {
             // verify the required parameter 'definitionKey' is set
             if (definitionKey == null)
@@ -2543,9 +2543,9 @@ namespace Salesforce.MarketingCloud.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<ResponseGetQueueMetricsForSendDefinition>(localVarStatusCode,
+            return new ApiResponse<GetQueueMetricsForSendDefinitionResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (ResponseGetQueueMetricsForSendDefinition) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ResponseGetQueueMetricsForSendDefinition)));
+                (GetQueueMetricsForSendDefinitionResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetQueueMetricsForSendDefinitionResponse)));
         }
 
         /// <summary>
@@ -2553,10 +2553,10 @@ namespace Salesforce.MarketingCloud.Api
         /// </summary>
         /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="definitionKey">Unique identifier of the email definition</param>
-        /// <returns>Task of ResponseGetQueueMetricsForSendDefinition</returns>
-        public async System.Threading.Tasks.Task<ResponseGetQueueMetricsForSendDefinition> GetQueueMetricsForEmailDefinitionAsync (string definitionKey)
+        /// <returns>Task of GetQueueMetricsForSendDefinitionResponse</returns>
+        public async System.Threading.Tasks.Task<GetQueueMetricsForSendDefinitionResponse> GetQueueMetricsForEmailDefinitionAsync (string definitionKey)
         {
-             ApiResponse<ResponseGetQueueMetricsForSendDefinition> localVarResponse = await GetQueueMetricsForEmailDefinitionAsyncWithHttpInfo(definitionKey);
+             ApiResponse<GetQueueMetricsForSendDefinitionResponse> localVarResponse = await GetQueueMetricsForEmailDefinitionAsyncWithHttpInfo(definitionKey);
              return localVarResponse.Data;
 
         }
@@ -2566,8 +2566,8 @@ namespace Salesforce.MarketingCloud.Api
         /// </summary>
         /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="definitionKey">Unique identifier of the email definition</param>
-        /// <returns>Task of ApiResponse (ResponseGetQueueMetricsForSendDefinition)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ResponseGetQueueMetricsForSendDefinition>> GetQueueMetricsForEmailDefinitionAsyncWithHttpInfo (string definitionKey)
+        /// <returns>Task of ApiResponse (GetQueueMetricsForSendDefinitionResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<GetQueueMetricsForSendDefinitionResponse>> GetQueueMetricsForEmailDefinitionAsyncWithHttpInfo (string definitionKey)
         {
             // verify the required parameter 'definitionKey' is set
             if (definitionKey == null)
@@ -2609,9 +2609,9 @@ namespace Salesforce.MarketingCloud.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<ResponseGetQueueMetricsForSendDefinition>(localVarStatusCode,
+            return new ApiResponse<GetQueueMetricsForSendDefinitionResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (ResponseGetQueueMetricsForSendDefinition) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ResponseGetQueueMetricsForSendDefinition)));
+                (GetQueueMetricsForSendDefinitionResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetQueueMetricsForSendDefinitionResponse)));
         }
 
         /// <summary>
@@ -2619,10 +2619,10 @@ namespace Salesforce.MarketingCloud.Api
         /// </summary>
         /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="definitionKey">Unique identifier of the SMS definition</param>
-        /// <returns>ResponseGetQueueMetricsForSendDefinition</returns>
-        public ResponseGetQueueMetricsForSendDefinition GetQueueMetricsForSmsDefinition (string definitionKey)
+        /// <returns>GetQueueMetricsForSendDefinitionResponse</returns>
+        public GetQueueMetricsForSendDefinitionResponse GetQueueMetricsForSmsDefinition (string definitionKey)
         {
-             ApiResponse<ResponseGetQueueMetricsForSendDefinition> localVarResponse = GetQueueMetricsForSmsDefinitionWithHttpInfo(definitionKey);
+             ApiResponse<GetQueueMetricsForSendDefinitionResponse> localVarResponse = GetQueueMetricsForSmsDefinitionWithHttpInfo(definitionKey);
              return localVarResponse.Data;
         }
 
@@ -2631,8 +2631,8 @@ namespace Salesforce.MarketingCloud.Api
         /// </summary>
         /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="definitionKey">Unique identifier of the SMS definition</param>
-        /// <returns>ApiResponse of ResponseGetQueueMetricsForSendDefinition</returns>
-        public ApiResponse< ResponseGetQueueMetricsForSendDefinition > GetQueueMetricsForSmsDefinitionWithHttpInfo (string definitionKey)
+        /// <returns>ApiResponse of GetQueueMetricsForSendDefinitionResponse</returns>
+        public ApiResponse< GetQueueMetricsForSendDefinitionResponse > GetQueueMetricsForSmsDefinitionWithHttpInfo (string definitionKey)
         {
             // verify the required parameter 'definitionKey' is set
             if (definitionKey == null)
@@ -2674,9 +2674,9 @@ namespace Salesforce.MarketingCloud.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<ResponseGetQueueMetricsForSendDefinition>(localVarStatusCode,
+            return new ApiResponse<GetQueueMetricsForSendDefinitionResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (ResponseGetQueueMetricsForSendDefinition) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ResponseGetQueueMetricsForSendDefinition)));
+                (GetQueueMetricsForSendDefinitionResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetQueueMetricsForSendDefinitionResponse)));
         }
 
         /// <summary>
@@ -2684,10 +2684,10 @@ namespace Salesforce.MarketingCloud.Api
         /// </summary>
         /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="definitionKey">Unique identifier of the SMS definition</param>
-        /// <returns>Task of ResponseGetQueueMetricsForSendDefinition</returns>
-        public async System.Threading.Tasks.Task<ResponseGetQueueMetricsForSendDefinition> GetQueueMetricsForSmsDefinitionAsync (string definitionKey)
+        /// <returns>Task of GetQueueMetricsForSendDefinitionResponse</returns>
+        public async System.Threading.Tasks.Task<GetQueueMetricsForSendDefinitionResponse> GetQueueMetricsForSmsDefinitionAsync (string definitionKey)
         {
-             ApiResponse<ResponseGetQueueMetricsForSendDefinition> localVarResponse = await GetQueueMetricsForSmsDefinitionAsyncWithHttpInfo(definitionKey);
+             ApiResponse<GetQueueMetricsForSendDefinitionResponse> localVarResponse = await GetQueueMetricsForSmsDefinitionAsyncWithHttpInfo(definitionKey);
              return localVarResponse.Data;
 
         }
@@ -2697,8 +2697,8 @@ namespace Salesforce.MarketingCloud.Api
         /// </summary>
         /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="definitionKey">Unique identifier of the SMS definition</param>
-        /// <returns>Task of ApiResponse (ResponseGetQueueMetricsForSendDefinition)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ResponseGetQueueMetricsForSendDefinition>> GetQueueMetricsForSmsDefinitionAsyncWithHttpInfo (string definitionKey)
+        /// <returns>Task of ApiResponse (GetQueueMetricsForSendDefinitionResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<GetQueueMetricsForSendDefinitionResponse>> GetQueueMetricsForSmsDefinitionAsyncWithHttpInfo (string definitionKey)
         {
             // verify the required parameter 'definitionKey' is set
             if (definitionKey == null)
@@ -2740,9 +2740,9 @@ namespace Salesforce.MarketingCloud.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<ResponseGetQueueMetricsForSendDefinition>(localVarStatusCode,
+            return new ApiResponse<GetQueueMetricsForSendDefinitionResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (ResponseGetQueueMetricsForSendDefinition) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ResponseGetQueueMetricsForSendDefinition)));
+                (GetQueueMetricsForSendDefinitionResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetQueueMetricsForSendDefinitionResponse)));
         }
 
         /// <summary>
@@ -2752,10 +2752,10 @@ namespace Salesforce.MarketingCloud.Api
         /// <param name="type">Only notSent is supported.</param>
         /// <param name="pageSize">Number of messageKeys (array elements) to return per response page. (optional)</param>
         /// <param name="lastEventId">Event ID from which you want the response to start. To obtain the initial event ID, submit a request without a lastEventId. The events in the response are listed top to bottom from oldest to newest. (optional)</param>
-        /// <returns>ResponseGetDefinitionsNotSentToRecipients</returns>
-        public ResponseGetDefinitionsNotSentToRecipients GetSMSsNotSentToRecipients (string type, int? pageSize = null, int? lastEventId = null)
+        /// <returns>GetDefinitionsNotSentToRecipientsResponse</returns>
+        public GetDefinitionsNotSentToRecipientsResponse GetSMSsNotSentToRecipients (string type, int? pageSize = null, int? lastEventId = null)
         {
-             ApiResponse<ResponseGetDefinitionsNotSentToRecipients> localVarResponse = GetSMSsNotSentToRecipientsWithHttpInfo(type, pageSize, lastEventId);
+             ApiResponse<GetDefinitionsNotSentToRecipientsResponse> localVarResponse = GetSMSsNotSentToRecipientsWithHttpInfo(type, pageSize, lastEventId);
              return localVarResponse.Data;
         }
 
@@ -2766,8 +2766,8 @@ namespace Salesforce.MarketingCloud.Api
         /// <param name="type">Only notSent is supported.</param>
         /// <param name="pageSize">Number of messageKeys (array elements) to return per response page. (optional)</param>
         /// <param name="lastEventId">Event ID from which you want the response to start. To obtain the initial event ID, submit a request without a lastEventId. The events in the response are listed top to bottom from oldest to newest. (optional)</param>
-        /// <returns>ApiResponse of ResponseGetDefinitionsNotSentToRecipients</returns>
-        public ApiResponse< ResponseGetDefinitionsNotSentToRecipients > GetSMSsNotSentToRecipientsWithHttpInfo (string type, int? pageSize = null, int? lastEventId = null)
+        /// <returns>ApiResponse of GetDefinitionsNotSentToRecipientsResponse</returns>
+        public ApiResponse< GetDefinitionsNotSentToRecipientsResponse > GetSMSsNotSentToRecipientsWithHttpInfo (string type, int? pageSize = null, int? lastEventId = null)
         {
             // verify the required parameter 'type' is set
             if (type == null)
@@ -2811,9 +2811,9 @@ namespace Salesforce.MarketingCloud.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<ResponseGetDefinitionsNotSentToRecipients>(localVarStatusCode,
+            return new ApiResponse<GetDefinitionsNotSentToRecipientsResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (ResponseGetDefinitionsNotSentToRecipients) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ResponseGetDefinitionsNotSentToRecipients)));
+                (GetDefinitionsNotSentToRecipientsResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetDefinitionsNotSentToRecipientsResponse)));
         }
 
         /// <summary>
@@ -2823,10 +2823,10 @@ namespace Salesforce.MarketingCloud.Api
         /// <param name="type">Only notSent is supported.</param>
         /// <param name="pageSize">Number of messageKeys (array elements) to return per response page. (optional)</param>
         /// <param name="lastEventId">Event ID from which you want the response to start. To obtain the initial event ID, submit a request without a lastEventId. The events in the response are listed top to bottom from oldest to newest. (optional)</param>
-        /// <returns>Task of ResponseGetDefinitionsNotSentToRecipients</returns>
-        public async System.Threading.Tasks.Task<ResponseGetDefinitionsNotSentToRecipients> GetSMSsNotSentToRecipientsAsync (string type, int? pageSize = null, int? lastEventId = null)
+        /// <returns>Task of GetDefinitionsNotSentToRecipientsResponse</returns>
+        public async System.Threading.Tasks.Task<GetDefinitionsNotSentToRecipientsResponse> GetSMSsNotSentToRecipientsAsync (string type, int? pageSize = null, int? lastEventId = null)
         {
-             ApiResponse<ResponseGetDefinitionsNotSentToRecipients> localVarResponse = await GetSMSsNotSentToRecipientsAsyncWithHttpInfo(type, pageSize, lastEventId);
+             ApiResponse<GetDefinitionsNotSentToRecipientsResponse> localVarResponse = await GetSMSsNotSentToRecipientsAsyncWithHttpInfo(type, pageSize, lastEventId);
              return localVarResponse.Data;
 
         }
@@ -2838,8 +2838,8 @@ namespace Salesforce.MarketingCloud.Api
         /// <param name="type">Only notSent is supported.</param>
         /// <param name="pageSize">Number of messageKeys (array elements) to return per response page. (optional)</param>
         /// <param name="lastEventId">Event ID from which you want the response to start. To obtain the initial event ID, submit a request without a lastEventId. The events in the response are listed top to bottom from oldest to newest. (optional)</param>
-        /// <returns>Task of ApiResponse (ResponseGetDefinitionsNotSentToRecipients)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ResponseGetDefinitionsNotSentToRecipients>> GetSMSsNotSentToRecipientsAsyncWithHttpInfo (string type, int? pageSize = null, int? lastEventId = null)
+        /// <returns>Task of ApiResponse (GetDefinitionsNotSentToRecipientsResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<GetDefinitionsNotSentToRecipientsResponse>> GetSMSsNotSentToRecipientsAsyncWithHttpInfo (string type, int? pageSize = null, int? lastEventId = null)
         {
             // verify the required parameter 'type' is set
             if (type == null)
@@ -2883,9 +2883,9 @@ namespace Salesforce.MarketingCloud.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<ResponseGetDefinitionsNotSentToRecipients>(localVarStatusCode,
+            return new ApiResponse<GetDefinitionsNotSentToRecipientsResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (ResponseGetDefinitionsNotSentToRecipients) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ResponseGetDefinitionsNotSentToRecipients)));
+                (GetDefinitionsNotSentToRecipientsResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetDefinitionsNotSentToRecipientsResponse)));
         }
 
         /// <summary>
@@ -2893,10 +2893,10 @@ namespace Salesforce.MarketingCloud.Api
         /// </summary>
         /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="definitionKey">Unique identifier of the definition to get</param>
-        /// <returns>RequestCreateSmsDefinition</returns>
-        public RequestCreateSmsDefinition GetSmsDefinition (string definitionKey)
+        /// <returns>CreateSmsDefinitionRequest</returns>
+        public CreateSmsDefinitionRequest GetSmsDefinition (string definitionKey)
         {
-             ApiResponse<RequestCreateSmsDefinition> localVarResponse = GetSmsDefinitionWithHttpInfo(definitionKey);
+             ApiResponse<CreateSmsDefinitionRequest> localVarResponse = GetSmsDefinitionWithHttpInfo(definitionKey);
              return localVarResponse.Data;
         }
 
@@ -2905,8 +2905,8 @@ namespace Salesforce.MarketingCloud.Api
         /// </summary>
         /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="definitionKey">Unique identifier of the definition to get</param>
-        /// <returns>ApiResponse of RequestCreateSmsDefinition</returns>
-        public ApiResponse< RequestCreateSmsDefinition > GetSmsDefinitionWithHttpInfo (string definitionKey)
+        /// <returns>ApiResponse of CreateSmsDefinitionRequest</returns>
+        public ApiResponse< CreateSmsDefinitionRequest > GetSmsDefinitionWithHttpInfo (string definitionKey)
         {
             // verify the required parameter 'definitionKey' is set
             if (definitionKey == null)
@@ -2948,9 +2948,9 @@ namespace Salesforce.MarketingCloud.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<RequestCreateSmsDefinition>(localVarStatusCode,
+            return new ApiResponse<CreateSmsDefinitionRequest>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (RequestCreateSmsDefinition) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RequestCreateSmsDefinition)));
+                (CreateSmsDefinitionRequest) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(CreateSmsDefinitionRequest)));
         }
 
         /// <summary>
@@ -2958,10 +2958,10 @@ namespace Salesforce.MarketingCloud.Api
         /// </summary>
         /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="definitionKey">Unique identifier of the definition to get</param>
-        /// <returns>Task of RequestCreateSmsDefinition</returns>
-        public async System.Threading.Tasks.Task<RequestCreateSmsDefinition> GetSmsDefinitionAsync (string definitionKey)
+        /// <returns>Task of CreateSmsDefinitionRequest</returns>
+        public async System.Threading.Tasks.Task<CreateSmsDefinitionRequest> GetSmsDefinitionAsync (string definitionKey)
         {
-             ApiResponse<RequestCreateSmsDefinition> localVarResponse = await GetSmsDefinitionAsyncWithHttpInfo(definitionKey);
+             ApiResponse<CreateSmsDefinitionRequest> localVarResponse = await GetSmsDefinitionAsyncWithHttpInfo(definitionKey);
              return localVarResponse.Data;
 
         }
@@ -2971,8 +2971,8 @@ namespace Salesforce.MarketingCloud.Api
         /// </summary>
         /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="definitionKey">Unique identifier of the definition to get</param>
-        /// <returns>Task of ApiResponse (RequestCreateSmsDefinition)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<RequestCreateSmsDefinition>> GetSmsDefinitionAsyncWithHttpInfo (string definitionKey)
+        /// <returns>Task of ApiResponse (CreateSmsDefinitionRequest)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<CreateSmsDefinitionRequest>> GetSmsDefinitionAsyncWithHttpInfo (string definitionKey)
         {
             // verify the required parameter 'definitionKey' is set
             if (definitionKey == null)
@@ -3014,9 +3014,9 @@ namespace Salesforce.MarketingCloud.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<RequestCreateSmsDefinition>(localVarStatusCode,
+            return new ApiResponse<CreateSmsDefinitionRequest>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (RequestCreateSmsDefinition) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RequestCreateSmsDefinition)));
+                (CreateSmsDefinitionRequest) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(CreateSmsDefinitionRequest)));
         }
 
         /// <summary>
@@ -3027,10 +3027,10 @@ namespace Salesforce.MarketingCloud.Api
         /// <param name="pageSize">Number of definitions, which are array elements, to return per paged response. (optional)</param>
         /// <param name="page">Page number to return. (optional)</param>
         /// <param name="orderBy">Sort by a dimension. You can sort by only one dimension. Accepted values are definitionKey, name, createdDate, modifiedDate, and status. (optional)</param>
-        /// <returns>ResponseGetSmsDefinitions</returns>
-        public ResponseGetSmsDefinitions GetSmsDefinitions (string status = null, decimal? pageSize = null, decimal? page = null, string orderBy = null)
+        /// <returns>GetSmsDefinitionsResponse</returns>
+        public GetSmsDefinitionsResponse GetSmsDefinitions (string status = null, decimal? pageSize = null, decimal? page = null, string orderBy = null)
         {
-             ApiResponse<ResponseGetSmsDefinitions> localVarResponse = GetSmsDefinitionsWithHttpInfo(status, pageSize, page, orderBy);
+             ApiResponse<GetSmsDefinitionsResponse> localVarResponse = GetSmsDefinitionsWithHttpInfo(status, pageSize, page, orderBy);
              return localVarResponse.Data;
         }
 
@@ -3042,8 +3042,8 @@ namespace Salesforce.MarketingCloud.Api
         /// <param name="pageSize">Number of definitions, which are array elements, to return per paged response. (optional)</param>
         /// <param name="page">Page number to return. (optional)</param>
         /// <param name="orderBy">Sort by a dimension. You can sort by only one dimension. Accepted values are definitionKey, name, createdDate, modifiedDate, and status. (optional)</param>
-        /// <returns>ApiResponse of ResponseGetSmsDefinitions</returns>
-        public ApiResponse< ResponseGetSmsDefinitions > GetSmsDefinitionsWithHttpInfo (string status = null, decimal? pageSize = null, decimal? page = null, string orderBy = null)
+        /// <returns>ApiResponse of GetSmsDefinitionsResponse</returns>
+        public ApiResponse< GetSmsDefinitionsResponse > GetSmsDefinitionsWithHttpInfo (string status = null, decimal? pageSize = null, decimal? page = null, string orderBy = null)
         {
 
             var localVarPath = "/messaging/v1/sms/definitions";
@@ -3085,9 +3085,9 @@ namespace Salesforce.MarketingCloud.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<ResponseGetSmsDefinitions>(localVarStatusCode,
+            return new ApiResponse<GetSmsDefinitionsResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (ResponseGetSmsDefinitions) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ResponseGetSmsDefinitions)));
+                (GetSmsDefinitionsResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetSmsDefinitionsResponse)));
         }
 
         /// <summary>
@@ -3098,10 +3098,10 @@ namespace Salesforce.MarketingCloud.Api
         /// <param name="pageSize">Number of definitions, which are array elements, to return per paged response. (optional)</param>
         /// <param name="page">Page number to return. (optional)</param>
         /// <param name="orderBy">Sort by a dimension. You can sort by only one dimension. Accepted values are definitionKey, name, createdDate, modifiedDate, and status. (optional)</param>
-        /// <returns>Task of ResponseGetSmsDefinitions</returns>
-        public async System.Threading.Tasks.Task<ResponseGetSmsDefinitions> GetSmsDefinitionsAsync (string status = null, decimal? pageSize = null, decimal? page = null, string orderBy = null)
+        /// <returns>Task of GetSmsDefinitionsResponse</returns>
+        public async System.Threading.Tasks.Task<GetSmsDefinitionsResponse> GetSmsDefinitionsAsync (string status = null, decimal? pageSize = null, decimal? page = null, string orderBy = null)
         {
-             ApiResponse<ResponseGetSmsDefinitions> localVarResponse = await GetSmsDefinitionsAsyncWithHttpInfo(status, pageSize, page, orderBy);
+             ApiResponse<GetSmsDefinitionsResponse> localVarResponse = await GetSmsDefinitionsAsyncWithHttpInfo(status, pageSize, page, orderBy);
              return localVarResponse.Data;
 
         }
@@ -3114,8 +3114,8 @@ namespace Salesforce.MarketingCloud.Api
         /// <param name="pageSize">Number of definitions, which are array elements, to return per paged response. (optional)</param>
         /// <param name="page">Page number to return. (optional)</param>
         /// <param name="orderBy">Sort by a dimension. You can sort by only one dimension. Accepted values are definitionKey, name, createdDate, modifiedDate, and status. (optional)</param>
-        /// <returns>Task of ApiResponse (ResponseGetSmsDefinitions)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ResponseGetSmsDefinitions>> GetSmsDefinitionsAsyncWithHttpInfo (string status = null, decimal? pageSize = null, decimal? page = null, string orderBy = null)
+        /// <returns>Task of ApiResponse (GetSmsDefinitionsResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<GetSmsDefinitionsResponse>> GetSmsDefinitionsAsyncWithHttpInfo (string status = null, decimal? pageSize = null, decimal? page = null, string orderBy = null)
         {
 
             var localVarPath = "/messaging/v1/sms/definitions";
@@ -3157,9 +3157,9 @@ namespace Salesforce.MarketingCloud.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<ResponseGetSmsDefinitions>(localVarStatusCode,
+            return new ApiResponse<GetSmsDefinitionsResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (ResponseGetSmsDefinitions) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ResponseGetSmsDefinitions)));
+                (GetSmsDefinitionsResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetSmsDefinitionsResponse)));
         }
 
         /// <summary>
@@ -3167,10 +3167,10 @@ namespace Salesforce.MarketingCloud.Api
         /// </summary>
         /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="messageKey">Unique identifier to track message send status. You must provide it in singleton requests using the recipient attribute. To provide message key in batch requests, use the recipients array attribute. If you don’t provide the message key for recipients, it’s generated in the response.</param>
-        /// <returns>ResponseGetDefinitionSendStatusForRecipient</returns>
-        public ResponseGetDefinitionSendStatusForRecipient GetSmsSendStatusForRecipient (string messageKey)
+        /// <returns>GetDefinitionSendStatusForRecipientResponse</returns>
+        public GetDefinitionSendStatusForRecipientResponse GetSmsSendStatusForRecipient (string messageKey)
         {
-             ApiResponse<ResponseGetDefinitionSendStatusForRecipient> localVarResponse = GetSmsSendStatusForRecipientWithHttpInfo(messageKey);
+             ApiResponse<GetDefinitionSendStatusForRecipientResponse> localVarResponse = GetSmsSendStatusForRecipientWithHttpInfo(messageKey);
              return localVarResponse.Data;
         }
 
@@ -3179,8 +3179,8 @@ namespace Salesforce.MarketingCloud.Api
         /// </summary>
         /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="messageKey">Unique identifier to track message send status. You must provide it in singleton requests using the recipient attribute. To provide message key in batch requests, use the recipients array attribute. If you don’t provide the message key for recipients, it’s generated in the response.</param>
-        /// <returns>ApiResponse of ResponseGetDefinitionSendStatusForRecipient</returns>
-        public ApiResponse< ResponseGetDefinitionSendStatusForRecipient > GetSmsSendStatusForRecipientWithHttpInfo (string messageKey)
+        /// <returns>ApiResponse of GetDefinitionSendStatusForRecipientResponse</returns>
+        public ApiResponse< GetDefinitionSendStatusForRecipientResponse > GetSmsSendStatusForRecipientWithHttpInfo (string messageKey)
         {
             // verify the required parameter 'messageKey' is set
             if (messageKey == null)
@@ -3222,9 +3222,9 @@ namespace Salesforce.MarketingCloud.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<ResponseGetDefinitionSendStatusForRecipient>(localVarStatusCode,
+            return new ApiResponse<GetDefinitionSendStatusForRecipientResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (ResponseGetDefinitionSendStatusForRecipient) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ResponseGetDefinitionSendStatusForRecipient)));
+                (GetDefinitionSendStatusForRecipientResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetDefinitionSendStatusForRecipientResponse)));
         }
 
         /// <summary>
@@ -3232,10 +3232,10 @@ namespace Salesforce.MarketingCloud.Api
         /// </summary>
         /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="messageKey">Unique identifier to track message send status. You must provide it in singleton requests using the recipient attribute. To provide message key in batch requests, use the recipients array attribute. If you don’t provide the message key for recipients, it’s generated in the response.</param>
-        /// <returns>Task of ResponseGetDefinitionSendStatusForRecipient</returns>
-        public async System.Threading.Tasks.Task<ResponseGetDefinitionSendStatusForRecipient> GetSmsSendStatusForRecipientAsync (string messageKey)
+        /// <returns>Task of GetDefinitionSendStatusForRecipientResponse</returns>
+        public async System.Threading.Tasks.Task<GetDefinitionSendStatusForRecipientResponse> GetSmsSendStatusForRecipientAsync (string messageKey)
         {
-             ApiResponse<ResponseGetDefinitionSendStatusForRecipient> localVarResponse = await GetSmsSendStatusForRecipientAsyncWithHttpInfo(messageKey);
+             ApiResponse<GetDefinitionSendStatusForRecipientResponse> localVarResponse = await GetSmsSendStatusForRecipientAsyncWithHttpInfo(messageKey);
              return localVarResponse.Data;
 
         }
@@ -3245,8 +3245,8 @@ namespace Salesforce.MarketingCloud.Api
         /// </summary>
         /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="messageKey">Unique identifier to track message send status. You must provide it in singleton requests using the recipient attribute. To provide message key in batch requests, use the recipients array attribute. If you don’t provide the message key for recipients, it’s generated in the response.</param>
-        /// <returns>Task of ApiResponse (ResponseGetDefinitionSendStatusForRecipient)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ResponseGetDefinitionSendStatusForRecipient>> GetSmsSendStatusForRecipientAsyncWithHttpInfo (string messageKey)
+        /// <returns>Task of ApiResponse (GetDefinitionSendStatusForRecipientResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<GetDefinitionSendStatusForRecipientResponse>> GetSmsSendStatusForRecipientAsyncWithHttpInfo (string messageKey)
         {
             // verify the required parameter 'messageKey' is set
             if (messageKey == null)
@@ -3288,9 +3288,9 @@ namespace Salesforce.MarketingCloud.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<ResponseGetDefinitionSendStatusForRecipient>(localVarStatusCode,
+            return new ApiResponse<GetDefinitionSendStatusForRecipientResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (ResponseGetDefinitionSendStatusForRecipient) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ResponseGetDefinitionSendStatusForRecipient)));
+                (GetDefinitionSendStatusForRecipientResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetDefinitionSendStatusForRecipientResponse)));
         }
 
         /// <summary>
@@ -3299,10 +3299,10 @@ namespace Salesforce.MarketingCloud.Api
         /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="definitionKey">Unique identifier of the definition.</param>
         /// <param name="body">JSON Parameters (optional)</param>
-        /// <returns>RequestCreateEmailDefinition</returns>
-        public RequestCreateEmailDefinition PartiallyUpdateEmailDefinition (string definitionKey, RequestUpdateEmailDefinition body = null)
+        /// <returns>CreateEmailDefinitionRequest</returns>
+        public CreateEmailDefinitionRequest PartiallyUpdateEmailDefinition (string definitionKey, UpdateEmailDefinitionRequest body = null)
         {
-             ApiResponse<RequestCreateEmailDefinition> localVarResponse = PartiallyUpdateEmailDefinitionWithHttpInfo(definitionKey, body);
+             ApiResponse<CreateEmailDefinitionRequest> localVarResponse = PartiallyUpdateEmailDefinitionWithHttpInfo(definitionKey, body);
              return localVarResponse.Data;
         }
 
@@ -3312,8 +3312,8 @@ namespace Salesforce.MarketingCloud.Api
         /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="definitionKey">Unique identifier of the definition.</param>
         /// <param name="body">JSON Parameters (optional)</param>
-        /// <returns>ApiResponse of RequestCreateEmailDefinition</returns>
-        public ApiResponse< RequestCreateEmailDefinition > PartiallyUpdateEmailDefinitionWithHttpInfo (string definitionKey, RequestUpdateEmailDefinition body = null)
+        /// <returns>ApiResponse of CreateEmailDefinitionRequest</returns>
+        public ApiResponse< CreateEmailDefinitionRequest > PartiallyUpdateEmailDefinitionWithHttpInfo (string definitionKey, UpdateEmailDefinitionRequest body = null)
         {
             // verify the required parameter 'definitionKey' is set
             if (definitionKey == null)
@@ -3363,9 +3363,9 @@ namespace Salesforce.MarketingCloud.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<RequestCreateEmailDefinition>(localVarStatusCode,
+            return new ApiResponse<CreateEmailDefinitionRequest>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (RequestCreateEmailDefinition) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RequestCreateEmailDefinition)));
+                (CreateEmailDefinitionRequest) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(CreateEmailDefinitionRequest)));
         }
 
         /// <summary>
@@ -3374,10 +3374,10 @@ namespace Salesforce.MarketingCloud.Api
         /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="definitionKey">Unique identifier of the definition.</param>
         /// <param name="body">JSON Parameters (optional)</param>
-        /// <returns>Task of RequestCreateEmailDefinition</returns>
-        public async System.Threading.Tasks.Task<RequestCreateEmailDefinition> PartiallyUpdateEmailDefinitionAsync (string definitionKey, RequestUpdateEmailDefinition body = null)
+        /// <returns>Task of CreateEmailDefinitionRequest</returns>
+        public async System.Threading.Tasks.Task<CreateEmailDefinitionRequest> PartiallyUpdateEmailDefinitionAsync (string definitionKey, UpdateEmailDefinitionRequest body = null)
         {
-             ApiResponse<RequestCreateEmailDefinition> localVarResponse = await PartiallyUpdateEmailDefinitionAsyncWithHttpInfo(definitionKey, body);
+             ApiResponse<CreateEmailDefinitionRequest> localVarResponse = await PartiallyUpdateEmailDefinitionAsyncWithHttpInfo(definitionKey, body);
              return localVarResponse.Data;
 
         }
@@ -3388,8 +3388,8 @@ namespace Salesforce.MarketingCloud.Api
         /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="definitionKey">Unique identifier of the definition.</param>
         /// <param name="body">JSON Parameters (optional)</param>
-        /// <returns>Task of ApiResponse (RequestCreateEmailDefinition)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<RequestCreateEmailDefinition>> PartiallyUpdateEmailDefinitionAsyncWithHttpInfo (string definitionKey, RequestUpdateEmailDefinition body = null)
+        /// <returns>Task of ApiResponse (CreateEmailDefinitionRequest)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<CreateEmailDefinitionRequest>> PartiallyUpdateEmailDefinitionAsyncWithHttpInfo (string definitionKey, UpdateEmailDefinitionRequest body = null)
         {
             // verify the required parameter 'definitionKey' is set
             if (definitionKey == null)
@@ -3439,9 +3439,9 @@ namespace Salesforce.MarketingCloud.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<RequestCreateEmailDefinition>(localVarStatusCode,
+            return new ApiResponse<CreateEmailDefinitionRequest>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (RequestCreateEmailDefinition) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RequestCreateEmailDefinition)));
+                (CreateEmailDefinitionRequest) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(CreateEmailDefinitionRequest)));
         }
 
         /// <summary>
@@ -3450,10 +3450,10 @@ namespace Salesforce.MarketingCloud.Api
         /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="definitionKey">Unique identifier of the definition.</param>
         /// <param name="body">JSON Parameters (optional)</param>
-        /// <returns>RequestCreateSmsDefinition</returns>
-        public RequestCreateSmsDefinition PartiallyUpdateSmsDefinition (string definitionKey, RequestUpdateSmsDefinition body = null)
+        /// <returns>CreateSmsDefinitionRequest</returns>
+        public CreateSmsDefinitionRequest PartiallyUpdateSmsDefinition (string definitionKey, UpdateSmsDefinitionRequest body = null)
         {
-             ApiResponse<RequestCreateSmsDefinition> localVarResponse = PartiallyUpdateSmsDefinitionWithHttpInfo(definitionKey, body);
+             ApiResponse<CreateSmsDefinitionRequest> localVarResponse = PartiallyUpdateSmsDefinitionWithHttpInfo(definitionKey, body);
              return localVarResponse.Data;
         }
 
@@ -3463,8 +3463,8 @@ namespace Salesforce.MarketingCloud.Api
         /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="definitionKey">Unique identifier of the definition.</param>
         /// <param name="body">JSON Parameters (optional)</param>
-        /// <returns>ApiResponse of RequestCreateSmsDefinition</returns>
-        public ApiResponse< RequestCreateSmsDefinition > PartiallyUpdateSmsDefinitionWithHttpInfo (string definitionKey, RequestUpdateSmsDefinition body = null)
+        /// <returns>ApiResponse of CreateSmsDefinitionRequest</returns>
+        public ApiResponse< CreateSmsDefinitionRequest > PartiallyUpdateSmsDefinitionWithHttpInfo (string definitionKey, UpdateSmsDefinitionRequest body = null)
         {
             // verify the required parameter 'definitionKey' is set
             if (definitionKey == null)
@@ -3514,9 +3514,9 @@ namespace Salesforce.MarketingCloud.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<RequestCreateSmsDefinition>(localVarStatusCode,
+            return new ApiResponse<CreateSmsDefinitionRequest>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (RequestCreateSmsDefinition) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RequestCreateSmsDefinition)));
+                (CreateSmsDefinitionRequest) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(CreateSmsDefinitionRequest)));
         }
 
         /// <summary>
@@ -3525,10 +3525,10 @@ namespace Salesforce.MarketingCloud.Api
         /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="definitionKey">Unique identifier of the definition.</param>
         /// <param name="body">JSON Parameters (optional)</param>
-        /// <returns>Task of RequestCreateSmsDefinition</returns>
-        public async System.Threading.Tasks.Task<RequestCreateSmsDefinition> PartiallyUpdateSmsDefinitionAsync (string definitionKey, RequestUpdateSmsDefinition body = null)
+        /// <returns>Task of CreateSmsDefinitionRequest</returns>
+        public async System.Threading.Tasks.Task<CreateSmsDefinitionRequest> PartiallyUpdateSmsDefinitionAsync (string definitionKey, UpdateSmsDefinitionRequest body = null)
         {
-             ApiResponse<RequestCreateSmsDefinition> localVarResponse = await PartiallyUpdateSmsDefinitionAsyncWithHttpInfo(definitionKey, body);
+             ApiResponse<CreateSmsDefinitionRequest> localVarResponse = await PartiallyUpdateSmsDefinitionAsyncWithHttpInfo(definitionKey, body);
              return localVarResponse.Data;
 
         }
@@ -3539,8 +3539,8 @@ namespace Salesforce.MarketingCloud.Api
         /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="definitionKey">Unique identifier of the definition.</param>
         /// <param name="body">JSON Parameters (optional)</param>
-        /// <returns>Task of ApiResponse (RequestCreateSmsDefinition)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<RequestCreateSmsDefinition>> PartiallyUpdateSmsDefinitionAsyncWithHttpInfo (string definitionKey, RequestUpdateSmsDefinition body = null)
+        /// <returns>Task of ApiResponse (CreateSmsDefinitionRequest)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<CreateSmsDefinitionRequest>> PartiallyUpdateSmsDefinitionAsyncWithHttpInfo (string definitionKey, UpdateSmsDefinitionRequest body = null)
         {
             // verify the required parameter 'definitionKey' is set
             if (definitionKey == null)
@@ -3590,9 +3590,9 @@ namespace Salesforce.MarketingCloud.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<RequestCreateSmsDefinition>(localVarStatusCode,
+            return new ApiResponse<CreateSmsDefinitionRequest>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (RequestCreateSmsDefinition) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RequestCreateSmsDefinition)));
+                (CreateSmsDefinitionRequest) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(CreateSmsDefinitionRequest)));
         }
 
         /// <summary>
@@ -3600,10 +3600,10 @@ namespace Salesforce.MarketingCloud.Api
         /// </summary>
         /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">JSON Parameters (optional)</param>
-        /// <returns>ResponseSendDefinitionToMultipleRecipients</returns>
-        public ResponseSendDefinitionToMultipleRecipients SendEmailToMultipleRecipients (RequestSendEmailToMultipleRecipients body = null)
+        /// <returns>SendDefinitionToMultipleRecipientsResponse</returns>
+        public SendDefinitionToMultipleRecipientsResponse SendEmailToMultipleRecipients (SendEmailToMultipleRecipientsRequest body = null)
         {
-             ApiResponse<ResponseSendDefinitionToMultipleRecipients> localVarResponse = SendEmailToMultipleRecipientsWithHttpInfo(body);
+             ApiResponse<SendDefinitionToMultipleRecipientsResponse> localVarResponse = SendEmailToMultipleRecipientsWithHttpInfo(body);
              return localVarResponse.Data;
         }
 
@@ -3612,8 +3612,8 @@ namespace Salesforce.MarketingCloud.Api
         /// </summary>
         /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">JSON Parameters (optional)</param>
-        /// <returns>ApiResponse of ResponseSendDefinitionToMultipleRecipients</returns>
-        public ApiResponse< ResponseSendDefinitionToMultipleRecipients > SendEmailToMultipleRecipientsWithHttpInfo (RequestSendEmailToMultipleRecipients body = null)
+        /// <returns>ApiResponse of SendDefinitionToMultipleRecipientsResponse</returns>
+        public ApiResponse< SendDefinitionToMultipleRecipientsResponse > SendEmailToMultipleRecipientsWithHttpInfo (SendEmailToMultipleRecipientsRequest body = null)
         {
 
             var localVarPath = "/messaging/v1/email/messages/";
@@ -3659,9 +3659,9 @@ namespace Salesforce.MarketingCloud.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<ResponseSendDefinitionToMultipleRecipients>(localVarStatusCode,
+            return new ApiResponse<SendDefinitionToMultipleRecipientsResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (ResponseSendDefinitionToMultipleRecipients) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ResponseSendDefinitionToMultipleRecipients)));
+                (SendDefinitionToMultipleRecipientsResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(SendDefinitionToMultipleRecipientsResponse)));
         }
 
         /// <summary>
@@ -3669,10 +3669,10 @@ namespace Salesforce.MarketingCloud.Api
         /// </summary>
         /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">JSON Parameters (optional)</param>
-        /// <returns>Task of ResponseSendDefinitionToMultipleRecipients</returns>
-        public async System.Threading.Tasks.Task<ResponseSendDefinitionToMultipleRecipients> SendEmailToMultipleRecipientsAsync (RequestSendEmailToMultipleRecipients body = null)
+        /// <returns>Task of SendDefinitionToMultipleRecipientsResponse</returns>
+        public async System.Threading.Tasks.Task<SendDefinitionToMultipleRecipientsResponse> SendEmailToMultipleRecipientsAsync (SendEmailToMultipleRecipientsRequest body = null)
         {
-             ApiResponse<ResponseSendDefinitionToMultipleRecipients> localVarResponse = await SendEmailToMultipleRecipientsAsyncWithHttpInfo(body);
+             ApiResponse<SendDefinitionToMultipleRecipientsResponse> localVarResponse = await SendEmailToMultipleRecipientsAsyncWithHttpInfo(body);
              return localVarResponse.Data;
 
         }
@@ -3682,8 +3682,8 @@ namespace Salesforce.MarketingCloud.Api
         /// </summary>
         /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">JSON Parameters (optional)</param>
-        /// <returns>Task of ApiResponse (ResponseSendDefinitionToMultipleRecipients)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ResponseSendDefinitionToMultipleRecipients>> SendEmailToMultipleRecipientsAsyncWithHttpInfo (RequestSendEmailToMultipleRecipients body = null)
+        /// <returns>Task of ApiResponse (SendDefinitionToMultipleRecipientsResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<SendDefinitionToMultipleRecipientsResponse>> SendEmailToMultipleRecipientsAsyncWithHttpInfo (SendEmailToMultipleRecipientsRequest body = null)
         {
 
             var localVarPath = "/messaging/v1/email/messages/";
@@ -3729,9 +3729,9 @@ namespace Salesforce.MarketingCloud.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<ResponseSendDefinitionToMultipleRecipients>(localVarStatusCode,
+            return new ApiResponse<SendDefinitionToMultipleRecipientsResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (ResponseSendDefinitionToMultipleRecipients) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ResponseSendDefinitionToMultipleRecipients)));
+                (SendDefinitionToMultipleRecipientsResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(SendDefinitionToMultipleRecipientsResponse)));
         }
 
         /// <summary>
@@ -3740,10 +3740,10 @@ namespace Salesforce.MarketingCloud.Api
         /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="messageKey">Unique identifier used to track message status. Can be automatically created when you create a message or provided as part of the request. Each recipient in a request must have a unique messageKey. If you use a duplicate messageKey in the same send request, the message is rejected.</param>
         /// <param name="body">JSON Parameters (optional)</param>
-        /// <returns>ResponseSendDefinitionToSingleRecipient</returns>
-        public ResponseSendDefinitionToSingleRecipient SendEmailToSingleRecipient (string messageKey, RequestSendEmailToSingleRecipient body = null)
+        /// <returns>SendDefinitionToSingleRecipientResponse</returns>
+        public SendDefinitionToSingleRecipientResponse SendEmailToSingleRecipient (string messageKey, SendEmailToSingleRecipientRequest body = null)
         {
-             ApiResponse<ResponseSendDefinitionToSingleRecipient> localVarResponse = SendEmailToSingleRecipientWithHttpInfo(messageKey, body);
+             ApiResponse<SendDefinitionToSingleRecipientResponse> localVarResponse = SendEmailToSingleRecipientWithHttpInfo(messageKey, body);
              return localVarResponse.Data;
         }
 
@@ -3753,8 +3753,8 @@ namespace Salesforce.MarketingCloud.Api
         /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="messageKey">Unique identifier used to track message status. Can be automatically created when you create a message or provided as part of the request. Each recipient in a request must have a unique messageKey. If you use a duplicate messageKey in the same send request, the message is rejected.</param>
         /// <param name="body">JSON Parameters (optional)</param>
-        /// <returns>ApiResponse of ResponseSendDefinitionToSingleRecipient</returns>
-        public ApiResponse< ResponseSendDefinitionToSingleRecipient > SendEmailToSingleRecipientWithHttpInfo (string messageKey, RequestSendEmailToSingleRecipient body = null)
+        /// <returns>ApiResponse of SendDefinitionToSingleRecipientResponse</returns>
+        public ApiResponse< SendDefinitionToSingleRecipientResponse > SendEmailToSingleRecipientWithHttpInfo (string messageKey, SendEmailToSingleRecipientRequest body = null)
         {
             // verify the required parameter 'messageKey' is set
             if (messageKey == null)
@@ -3804,9 +3804,9 @@ namespace Salesforce.MarketingCloud.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<ResponseSendDefinitionToSingleRecipient>(localVarStatusCode,
+            return new ApiResponse<SendDefinitionToSingleRecipientResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (ResponseSendDefinitionToSingleRecipient) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ResponseSendDefinitionToSingleRecipient)));
+                (SendDefinitionToSingleRecipientResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(SendDefinitionToSingleRecipientResponse)));
         }
 
         /// <summary>
@@ -3815,10 +3815,10 @@ namespace Salesforce.MarketingCloud.Api
         /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="messageKey">Unique identifier used to track message status. Can be automatically created when you create a message or provided as part of the request. Each recipient in a request must have a unique messageKey. If you use a duplicate messageKey in the same send request, the message is rejected.</param>
         /// <param name="body">JSON Parameters (optional)</param>
-        /// <returns>Task of ResponseSendDefinitionToSingleRecipient</returns>
-        public async System.Threading.Tasks.Task<ResponseSendDefinitionToSingleRecipient> SendEmailToSingleRecipientAsync (string messageKey, RequestSendEmailToSingleRecipient body = null)
+        /// <returns>Task of SendDefinitionToSingleRecipientResponse</returns>
+        public async System.Threading.Tasks.Task<SendDefinitionToSingleRecipientResponse> SendEmailToSingleRecipientAsync (string messageKey, SendEmailToSingleRecipientRequest body = null)
         {
-             ApiResponse<ResponseSendDefinitionToSingleRecipient> localVarResponse = await SendEmailToSingleRecipientAsyncWithHttpInfo(messageKey, body);
+             ApiResponse<SendDefinitionToSingleRecipientResponse> localVarResponse = await SendEmailToSingleRecipientAsyncWithHttpInfo(messageKey, body);
              return localVarResponse.Data;
 
         }
@@ -3829,8 +3829,8 @@ namespace Salesforce.MarketingCloud.Api
         /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="messageKey">Unique identifier used to track message status. Can be automatically created when you create a message or provided as part of the request. Each recipient in a request must have a unique messageKey. If you use a duplicate messageKey in the same send request, the message is rejected.</param>
         /// <param name="body">JSON Parameters (optional)</param>
-        /// <returns>Task of ApiResponse (ResponseSendDefinitionToSingleRecipient)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ResponseSendDefinitionToSingleRecipient>> SendEmailToSingleRecipientAsyncWithHttpInfo (string messageKey, RequestSendEmailToSingleRecipient body = null)
+        /// <returns>Task of ApiResponse (SendDefinitionToSingleRecipientResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<SendDefinitionToSingleRecipientResponse>> SendEmailToSingleRecipientAsyncWithHttpInfo (string messageKey, SendEmailToSingleRecipientRequest body = null)
         {
             // verify the required parameter 'messageKey' is set
             if (messageKey == null)
@@ -3880,9 +3880,9 @@ namespace Salesforce.MarketingCloud.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<ResponseSendDefinitionToSingleRecipient>(localVarStatusCode,
+            return new ApiResponse<SendDefinitionToSingleRecipientResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (ResponseSendDefinitionToSingleRecipient) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ResponseSendDefinitionToSingleRecipient)));
+                (SendDefinitionToSingleRecipientResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(SendDefinitionToSingleRecipientResponse)));
         }
 
         /// <summary>
@@ -3890,10 +3890,10 @@ namespace Salesforce.MarketingCloud.Api
         /// </summary>
         /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">JSON Parameters (optional)</param>
-        /// <returns>ResponseSendDefinitionToMultipleRecipients</returns>
-        public ResponseSendDefinitionToMultipleRecipients SendSmsToMultipleRecipients (RequestSendSmsToMultipleRecipients body = null)
+        /// <returns>SendDefinitionToMultipleRecipientsResponse</returns>
+        public SendDefinitionToMultipleRecipientsResponse SendSmsToMultipleRecipients (SendSmsToMultipleRecipientsRequest body = null)
         {
-             ApiResponse<ResponseSendDefinitionToMultipleRecipients> localVarResponse = SendSmsToMultipleRecipientsWithHttpInfo(body);
+             ApiResponse<SendDefinitionToMultipleRecipientsResponse> localVarResponse = SendSmsToMultipleRecipientsWithHttpInfo(body);
              return localVarResponse.Data;
         }
 
@@ -3902,8 +3902,8 @@ namespace Salesforce.MarketingCloud.Api
         /// </summary>
         /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">JSON Parameters (optional)</param>
-        /// <returns>ApiResponse of ResponseSendDefinitionToMultipleRecipients</returns>
-        public ApiResponse< ResponseSendDefinitionToMultipleRecipients > SendSmsToMultipleRecipientsWithHttpInfo (RequestSendSmsToMultipleRecipients body = null)
+        /// <returns>ApiResponse of SendDefinitionToMultipleRecipientsResponse</returns>
+        public ApiResponse< SendDefinitionToMultipleRecipientsResponse > SendSmsToMultipleRecipientsWithHttpInfo (SendSmsToMultipleRecipientsRequest body = null)
         {
 
             var localVarPath = "/messaging/v1/sms/messages/";
@@ -3949,9 +3949,9 @@ namespace Salesforce.MarketingCloud.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<ResponseSendDefinitionToMultipleRecipients>(localVarStatusCode,
+            return new ApiResponse<SendDefinitionToMultipleRecipientsResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (ResponseSendDefinitionToMultipleRecipients) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ResponseSendDefinitionToMultipleRecipients)));
+                (SendDefinitionToMultipleRecipientsResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(SendDefinitionToMultipleRecipientsResponse)));
         }
 
         /// <summary>
@@ -3959,10 +3959,10 @@ namespace Salesforce.MarketingCloud.Api
         /// </summary>
         /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">JSON Parameters (optional)</param>
-        /// <returns>Task of ResponseSendDefinitionToMultipleRecipients</returns>
-        public async System.Threading.Tasks.Task<ResponseSendDefinitionToMultipleRecipients> SendSmsToMultipleRecipientsAsync (RequestSendSmsToMultipleRecipients body = null)
+        /// <returns>Task of SendDefinitionToMultipleRecipientsResponse</returns>
+        public async System.Threading.Tasks.Task<SendDefinitionToMultipleRecipientsResponse> SendSmsToMultipleRecipientsAsync (SendSmsToMultipleRecipientsRequest body = null)
         {
-             ApiResponse<ResponseSendDefinitionToMultipleRecipients> localVarResponse = await SendSmsToMultipleRecipientsAsyncWithHttpInfo(body);
+             ApiResponse<SendDefinitionToMultipleRecipientsResponse> localVarResponse = await SendSmsToMultipleRecipientsAsyncWithHttpInfo(body);
              return localVarResponse.Data;
 
         }
@@ -3972,8 +3972,8 @@ namespace Salesforce.MarketingCloud.Api
         /// </summary>
         /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">JSON Parameters (optional)</param>
-        /// <returns>Task of ApiResponse (ResponseSendDefinitionToMultipleRecipients)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ResponseSendDefinitionToMultipleRecipients>> SendSmsToMultipleRecipientsAsyncWithHttpInfo (RequestSendSmsToMultipleRecipients body = null)
+        /// <returns>Task of ApiResponse (SendDefinitionToMultipleRecipientsResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<SendDefinitionToMultipleRecipientsResponse>> SendSmsToMultipleRecipientsAsyncWithHttpInfo (SendSmsToMultipleRecipientsRequest body = null)
         {
 
             var localVarPath = "/messaging/v1/sms/messages/";
@@ -4019,9 +4019,9 @@ namespace Salesforce.MarketingCloud.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<ResponseSendDefinitionToMultipleRecipients>(localVarStatusCode,
+            return new ApiResponse<SendDefinitionToMultipleRecipientsResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (ResponseSendDefinitionToMultipleRecipients) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ResponseSendDefinitionToMultipleRecipients)));
+                (SendDefinitionToMultipleRecipientsResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(SendDefinitionToMultipleRecipientsResponse)));
         }
 
         /// <summary>
@@ -4030,10 +4030,10 @@ namespace Salesforce.MarketingCloud.Api
         /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="messageKey">Unique identifier of the definition used to track message status. The messageKey can be created automatically when you create a message, or you can provide it as part of the request. Each recipient in a request must have a unique messageKey. If you use a duplicate messageKey in the same send request, the message is rejected.</param>
         /// <param name="body">JSON Parameters (optional)</param>
-        /// <returns>ResponseSendDefinitionToSingleRecipient</returns>
-        public ResponseSendDefinitionToSingleRecipient SendSmsToSingleRecipient (string messageKey, RequestSendSmsToSingleRecipient body = null)
+        /// <returns>SendDefinitionToSingleRecipientResponse</returns>
+        public SendDefinitionToSingleRecipientResponse SendSmsToSingleRecipient (string messageKey, SendSmsToSingleRecipientRequest body = null)
         {
-             ApiResponse<ResponseSendDefinitionToSingleRecipient> localVarResponse = SendSmsToSingleRecipientWithHttpInfo(messageKey, body);
+             ApiResponse<SendDefinitionToSingleRecipientResponse> localVarResponse = SendSmsToSingleRecipientWithHttpInfo(messageKey, body);
              return localVarResponse.Data;
         }
 
@@ -4043,8 +4043,8 @@ namespace Salesforce.MarketingCloud.Api
         /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="messageKey">Unique identifier of the definition used to track message status. The messageKey can be created automatically when you create a message, or you can provide it as part of the request. Each recipient in a request must have a unique messageKey. If you use a duplicate messageKey in the same send request, the message is rejected.</param>
         /// <param name="body">JSON Parameters (optional)</param>
-        /// <returns>ApiResponse of ResponseSendDefinitionToSingleRecipient</returns>
-        public ApiResponse< ResponseSendDefinitionToSingleRecipient > SendSmsToSingleRecipientWithHttpInfo (string messageKey, RequestSendSmsToSingleRecipient body = null)
+        /// <returns>ApiResponse of SendDefinitionToSingleRecipientResponse</returns>
+        public ApiResponse< SendDefinitionToSingleRecipientResponse > SendSmsToSingleRecipientWithHttpInfo (string messageKey, SendSmsToSingleRecipientRequest body = null)
         {
             // verify the required parameter 'messageKey' is set
             if (messageKey == null)
@@ -4094,9 +4094,9 @@ namespace Salesforce.MarketingCloud.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<ResponseSendDefinitionToSingleRecipient>(localVarStatusCode,
+            return new ApiResponse<SendDefinitionToSingleRecipientResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (ResponseSendDefinitionToSingleRecipient) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ResponseSendDefinitionToSingleRecipient)));
+                (SendDefinitionToSingleRecipientResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(SendDefinitionToSingleRecipientResponse)));
         }
 
         /// <summary>
@@ -4105,10 +4105,10 @@ namespace Salesforce.MarketingCloud.Api
         /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="messageKey">Unique identifier of the definition used to track message status. The messageKey can be created automatically when you create a message, or you can provide it as part of the request. Each recipient in a request must have a unique messageKey. If you use a duplicate messageKey in the same send request, the message is rejected.</param>
         /// <param name="body">JSON Parameters (optional)</param>
-        /// <returns>Task of ResponseSendDefinitionToSingleRecipient</returns>
-        public async System.Threading.Tasks.Task<ResponseSendDefinitionToSingleRecipient> SendSmsToSingleRecipientAsync (string messageKey, RequestSendSmsToSingleRecipient body = null)
+        /// <returns>Task of SendDefinitionToSingleRecipientResponse</returns>
+        public async System.Threading.Tasks.Task<SendDefinitionToSingleRecipientResponse> SendSmsToSingleRecipientAsync (string messageKey, SendSmsToSingleRecipientRequest body = null)
         {
-             ApiResponse<ResponseSendDefinitionToSingleRecipient> localVarResponse = await SendSmsToSingleRecipientAsyncWithHttpInfo(messageKey, body);
+             ApiResponse<SendDefinitionToSingleRecipientResponse> localVarResponse = await SendSmsToSingleRecipientAsyncWithHttpInfo(messageKey, body);
              return localVarResponse.Data;
 
         }
@@ -4119,8 +4119,8 @@ namespace Salesforce.MarketingCloud.Api
         /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="messageKey">Unique identifier of the definition used to track message status. The messageKey can be created automatically when you create a message, or you can provide it as part of the request. Each recipient in a request must have a unique messageKey. If you use a duplicate messageKey in the same send request, the message is rejected.</param>
         /// <param name="body">JSON Parameters (optional)</param>
-        /// <returns>Task of ApiResponse (ResponseSendDefinitionToSingleRecipient)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ResponseSendDefinitionToSingleRecipient>> SendSmsToSingleRecipientAsyncWithHttpInfo (string messageKey, RequestSendSmsToSingleRecipient body = null)
+        /// <returns>Task of ApiResponse (SendDefinitionToSingleRecipientResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<SendDefinitionToSingleRecipientResponse>> SendSmsToSingleRecipientAsyncWithHttpInfo (string messageKey, SendSmsToSingleRecipientRequest body = null)
         {
             // verify the required parameter 'messageKey' is set
             if (messageKey == null)
@@ -4170,9 +4170,9 @@ namespace Salesforce.MarketingCloud.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<ResponseSendDefinitionToSingleRecipient>(localVarStatusCode,
+            return new ApiResponse<SendDefinitionToSingleRecipientResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (ResponseSendDefinitionToSingleRecipient) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ResponseSendDefinitionToSingleRecipient)));
+                (SendDefinitionToSingleRecipientResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(SendDefinitionToSingleRecipientResponse)));
         }
 
     }

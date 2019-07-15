@@ -42,7 +42,6 @@ namespace Salesforce.MarketingCloud.Test
         [OneTimeSetUp]
         public void Init()
         {
-            //instance = new CampaignApi(authBasePath, clientId, clientSecret, accountId);
             instance = ClientFactory.Create().CampaignApi;
         }
 

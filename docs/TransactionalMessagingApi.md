@@ -30,7 +30,7 @@ Method | HTTP request | Description
 
 <a name="createemaildefinition"></a>
 # **CreateEmailDefinition**
-> RequestCreateEmailDefinition CreateEmailDefinition (RequestCreateEmailDefinition body = null)
+> CreateEmailDefinitionRequest CreateEmailDefinition (CreateEmailDefinitionRequest body = null)
 
 createEmailDefinition
 
@@ -51,12 +51,12 @@ namespace Example
         public void main()
         {
             var apiInstance = new TransactionalMessagingApi();
-            var body = new RequestCreateEmailDefinition(); // RequestCreateEmailDefinition | JSON Parameters (optional) 
+            var body = new CreateEmailDefinitionRequest(); // CreateEmailDefinitionRequest | JSON Parameters (optional) 
 
             try
             {
                 // createEmailDefinition
-                RequestCreateEmailDefinition result = apiInstance.CreateEmailDefinition(body);
+                CreateEmailDefinitionRequest result = apiInstance.CreateEmailDefinition(body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -72,11 +72,11 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**RequestCreateEmailDefinition**](RequestCreateEmailDefinition.md)| JSON Parameters | [optional] 
+ **body** | [**CreateEmailDefinitionRequest**](CreateEmailDefinitionRequest.md)| JSON Parameters | [optional] 
 
 ### Return type
 
-[**RequestCreateEmailDefinition**](RequestCreateEmailDefinition.md)
+[**CreateEmailDefinitionRequest**](CreateEmailDefinitionRequest.md)
 
 ### Authorization
 
@@ -91,7 +91,7 @@ No authorization required
 
 <a name="createsmsdefinition"></a>
 # **CreateSmsDefinition**
-> RequestCreateSmsDefinition CreateSmsDefinition (RequestCreateSmsDefinition body = null)
+> CreateSmsDefinitionRequest CreateSmsDefinition (CreateSmsDefinitionRequest body = null)
 
 createSmsDefinition
 
@@ -112,12 +112,12 @@ namespace Example
         public void main()
         {
             var apiInstance = new TransactionalMessagingApi();
-            var body = new RequestCreateSmsDefinition(); // RequestCreateSmsDefinition | JSON Parameters (optional) 
+            var body = new CreateSmsDefinitionRequest(); // CreateSmsDefinitionRequest | JSON Parameters (optional) 
 
             try
             {
                 // createSmsDefinition
-                RequestCreateSmsDefinition result = apiInstance.CreateSmsDefinition(body);
+                CreateSmsDefinitionRequest result = apiInstance.CreateSmsDefinition(body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -133,11 +133,11 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**RequestCreateSmsDefinition**](RequestCreateSmsDefinition.md)| JSON Parameters | [optional] 
+ **body** | [**CreateSmsDefinitionRequest**](CreateSmsDefinitionRequest.md)| JSON Parameters | [optional] 
 
 ### Return type
 
-[**RequestCreateSmsDefinition**](RequestCreateSmsDefinition.md)
+[**CreateSmsDefinitionRequest**](CreateSmsDefinitionRequest.md)
 
 ### Authorization
 
@@ -152,7 +152,7 @@ No authorization required
 
 <a name="deleteemaildefinition"></a>
 # **DeleteEmailDefinition**
-> ResponseDeleteSendDefinition DeleteEmailDefinition (string definitionKey)
+> DeleteSendDefinitionResponse DeleteEmailDefinition (string definitionKey)
 
 deleteEmailDefinition
 
@@ -178,7 +178,7 @@ namespace Example
             try
             {
                 // deleteEmailDefinition
-                ResponseDeleteSendDefinition result = apiInstance.DeleteEmailDefinition(definitionKey);
+                DeleteSendDefinitionResponse result = apiInstance.DeleteEmailDefinition(definitionKey);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -198,7 +198,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ResponseDeleteSendDefinition**](ResponseDeleteSendDefinition.md)
+[**DeleteSendDefinitionResponse**](DeleteSendDefinitionResponse.md)
 
 ### Authorization
 
@@ -213,7 +213,7 @@ No authorization required
 
 <a name="deletequeuedmessagesforemaildefinition"></a>
 # **DeleteQueuedMessagesForEmailDefinition**
-> ResponseDeleteQueuedMessagesForSendDefinition DeleteQueuedMessagesForEmailDefinition (string definitionKey)
+> DeleteQueuedMessagesForSendDefinitionResponse DeleteQueuedMessagesForEmailDefinition (string definitionKey)
 
 deleteQueuedMessagesForEmailDefinition
 
@@ -239,7 +239,7 @@ namespace Example
             try
             {
                 // deleteQueuedMessagesForEmailDefinition
-                ResponseDeleteQueuedMessagesForSendDefinition result = apiInstance.DeleteQueuedMessagesForEmailDefinition(definitionKey);
+                DeleteQueuedMessagesForSendDefinitionResponse result = apiInstance.DeleteQueuedMessagesForEmailDefinition(definitionKey);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -259,7 +259,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ResponseDeleteQueuedMessagesForSendDefinition**](ResponseDeleteQueuedMessagesForSendDefinition.md)
+[**DeleteQueuedMessagesForSendDefinitionResponse**](DeleteQueuedMessagesForSendDefinitionResponse.md)
 
 ### Authorization
 
@@ -274,7 +274,7 @@ No authorization required
 
 <a name="deletequeuedmessagesforsmsdefinition"></a>
 # **DeleteQueuedMessagesForSmsDefinition**
-> ResponseDeleteQueuedMessagesForSendDefinition DeleteQueuedMessagesForSmsDefinition (string definitionKey)
+> DeleteQueuedMessagesForSendDefinitionResponse DeleteQueuedMessagesForSmsDefinition (string definitionKey)
 
 deleteQueuedMessagesForSmsDefinition
 
@@ -300,7 +300,7 @@ namespace Example
             try
             {
                 // deleteQueuedMessagesForSmsDefinition
-                ResponseDeleteQueuedMessagesForSendDefinition result = apiInstance.DeleteQueuedMessagesForSmsDefinition(definitionKey);
+                DeleteQueuedMessagesForSendDefinitionResponse result = apiInstance.DeleteQueuedMessagesForSmsDefinition(definitionKey);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -320,7 +320,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ResponseDeleteQueuedMessagesForSendDefinition**](ResponseDeleteQueuedMessagesForSendDefinition.md)
+[**DeleteQueuedMessagesForSendDefinitionResponse**](DeleteQueuedMessagesForSendDefinitionResponse.md)
 
 ### Authorization
 
@@ -335,7 +335,7 @@ No authorization required
 
 <a name="deletesmsdefinition"></a>
 # **DeleteSmsDefinition**
-> ResponseDeleteSendDefinition DeleteSmsDefinition (string definitionKey)
+> DeleteSendDefinitionResponse DeleteSmsDefinition (string definitionKey)
 
 deleteSmsDefinition
 
@@ -361,7 +361,7 @@ namespace Example
             try
             {
                 // deleteSmsDefinition
-                ResponseDeleteSendDefinition result = apiInstance.DeleteSmsDefinition(definitionKey);
+                DeleteSendDefinitionResponse result = apiInstance.DeleteSmsDefinition(definitionKey);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -381,7 +381,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ResponseDeleteSendDefinition**](ResponseDeleteSendDefinition.md)
+[**DeleteSendDefinitionResponse**](DeleteSendDefinitionResponse.md)
 
 ### Authorization
 
@@ -396,7 +396,7 @@ No authorization required
 
 <a name="getemaildefinition"></a>
 # **GetEmailDefinition**
-> RequestCreateEmailDefinition GetEmailDefinition (string definitionKey)
+> CreateEmailDefinitionRequest GetEmailDefinition (string definitionKey)
 
 getEmailDefinition
 
@@ -422,7 +422,7 @@ namespace Example
             try
             {
                 // getEmailDefinition
-                RequestCreateEmailDefinition result = apiInstance.GetEmailDefinition(definitionKey);
+                CreateEmailDefinitionRequest result = apiInstance.GetEmailDefinition(definitionKey);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -442,7 +442,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**RequestCreateEmailDefinition**](RequestCreateEmailDefinition.md)
+[**CreateEmailDefinitionRequest**](CreateEmailDefinitionRequest.md)
 
 ### Authorization
 
@@ -457,7 +457,7 @@ No authorization required
 
 <a name="getemaildefinitions"></a>
 # **GetEmailDefinitions**
-> ResponseGetEmailDefinitions GetEmailDefinitions (string status = null, decimal? pageSize = null, decimal? page = null, string orderBy = null)
+> GetEmailDefinitionsResponse GetEmailDefinitions (string status = null, decimal? pageSize = null, decimal? page = null, string orderBy = null)
 
 getEmailDefinitions
 
@@ -486,7 +486,7 @@ namespace Example
             try
             {
                 // getEmailDefinitions
-                ResponseGetEmailDefinitions result = apiInstance.GetEmailDefinitions(status, pageSize, page, orderBy);
+                GetEmailDefinitionsResponse result = apiInstance.GetEmailDefinitions(status, pageSize, page, orderBy);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -509,7 +509,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ResponseGetEmailDefinitions**](ResponseGetEmailDefinitions.md)
+[**GetEmailDefinitionsResponse**](GetEmailDefinitionsResponse.md)
 
 ### Authorization
 
@@ -524,7 +524,7 @@ No authorization required
 
 <a name="getemailsendstatusforrecipient"></a>
 # **GetEmailSendStatusForRecipient**
-> ResponseGetDefinitionSendStatusForRecipient GetEmailSendStatusForRecipient (string messageKey)
+> GetDefinitionSendStatusForRecipientResponse GetEmailSendStatusForRecipient (string messageKey)
 
 getEmailSendStatusForRecipient
 
@@ -550,7 +550,7 @@ namespace Example
             try
             {
                 // getEmailSendStatusForRecipient
-                ResponseGetDefinitionSendStatusForRecipient result = apiInstance.GetEmailSendStatusForRecipient(messageKey);
+                GetDefinitionSendStatusForRecipientResponse result = apiInstance.GetEmailSendStatusForRecipient(messageKey);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -570,7 +570,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ResponseGetDefinitionSendStatusForRecipient**](ResponseGetDefinitionSendStatusForRecipient.md)
+[**GetDefinitionSendStatusForRecipientResponse**](GetDefinitionSendStatusForRecipientResponse.md)
 
 ### Authorization
 
@@ -585,7 +585,7 @@ No authorization required
 
 <a name="getemailsnotsenttorecipients"></a>
 # **GetEmailsNotSentToRecipients**
-> ResponseGetDefinitionsNotSentToRecipients GetEmailsNotSentToRecipients (string type, int? pageSize = null, int? lastEventId = null)
+> GetDefinitionsNotSentToRecipientsResponse GetEmailsNotSentToRecipients (string type, int? pageSize = null, int? lastEventId = null)
 
 getEmailsNotSentToRecipients
 
@@ -613,7 +613,7 @@ namespace Example
             try
             {
                 // getEmailsNotSentToRecipients
-                ResponseGetDefinitionsNotSentToRecipients result = apiInstance.GetEmailsNotSentToRecipients(type, pageSize, lastEventId);
+                GetDefinitionsNotSentToRecipientsResponse result = apiInstance.GetEmailsNotSentToRecipients(type, pageSize, lastEventId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -635,7 +635,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ResponseGetDefinitionsNotSentToRecipients**](ResponseGetDefinitionsNotSentToRecipients.md)
+[**GetDefinitionsNotSentToRecipientsResponse**](GetDefinitionsNotSentToRecipientsResponse.md)
 
 ### Authorization
 
@@ -650,7 +650,7 @@ No authorization required
 
 <a name="getqueuemetricsforemaildefinition"></a>
 # **GetQueueMetricsForEmailDefinition**
-> ResponseGetQueueMetricsForSendDefinition GetQueueMetricsForEmailDefinition (string definitionKey)
+> GetQueueMetricsForSendDefinitionResponse GetQueueMetricsForEmailDefinition (string definitionKey)
 
 getQueueMetricsForEmailDefinition
 
@@ -676,7 +676,7 @@ namespace Example
             try
             {
                 // getQueueMetricsForEmailDefinition
-                ResponseGetQueueMetricsForSendDefinition result = apiInstance.GetQueueMetricsForEmailDefinition(definitionKey);
+                GetQueueMetricsForSendDefinitionResponse result = apiInstance.GetQueueMetricsForEmailDefinition(definitionKey);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -696,7 +696,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ResponseGetQueueMetricsForSendDefinition**](ResponseGetQueueMetricsForSendDefinition.md)
+[**GetQueueMetricsForSendDefinitionResponse**](GetQueueMetricsForSendDefinitionResponse.md)
 
 ### Authorization
 
@@ -711,7 +711,7 @@ No authorization required
 
 <a name="getqueuemetricsforsmsdefinition"></a>
 # **GetQueueMetricsForSmsDefinition**
-> ResponseGetQueueMetricsForSendDefinition GetQueueMetricsForSmsDefinition (string definitionKey)
+> GetQueueMetricsForSendDefinitionResponse GetQueueMetricsForSmsDefinition (string definitionKey)
 
 getQueueMetricsForSmsDefinition
 
@@ -737,7 +737,7 @@ namespace Example
             try
             {
                 // getQueueMetricsForSmsDefinition
-                ResponseGetQueueMetricsForSendDefinition result = apiInstance.GetQueueMetricsForSmsDefinition(definitionKey);
+                GetQueueMetricsForSendDefinitionResponse result = apiInstance.GetQueueMetricsForSmsDefinition(definitionKey);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -757,7 +757,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ResponseGetQueueMetricsForSendDefinition**](ResponseGetQueueMetricsForSendDefinition.md)
+[**GetQueueMetricsForSendDefinitionResponse**](GetQueueMetricsForSendDefinitionResponse.md)
 
 ### Authorization
 
@@ -772,7 +772,7 @@ No authorization required
 
 <a name="getsmssnotsenttorecipients"></a>
 # **GetSMSsNotSentToRecipients**
-> ResponseGetDefinitionsNotSentToRecipients GetSMSsNotSentToRecipients (string type, int? pageSize = null, int? lastEventId = null)
+> GetDefinitionsNotSentToRecipientsResponse GetSMSsNotSentToRecipients (string type, int? pageSize = null, int? lastEventId = null)
 
 getSMSsNotSentToRecipients
 
@@ -800,7 +800,7 @@ namespace Example
             try
             {
                 // getSMSsNotSentToRecipients
-                ResponseGetDefinitionsNotSentToRecipients result = apiInstance.GetSMSsNotSentToRecipients(type, pageSize, lastEventId);
+                GetDefinitionsNotSentToRecipientsResponse result = apiInstance.GetSMSsNotSentToRecipients(type, pageSize, lastEventId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -822,7 +822,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ResponseGetDefinitionsNotSentToRecipients**](ResponseGetDefinitionsNotSentToRecipients.md)
+[**GetDefinitionsNotSentToRecipientsResponse**](GetDefinitionsNotSentToRecipientsResponse.md)
 
 ### Authorization
 
@@ -837,7 +837,7 @@ No authorization required
 
 <a name="getsmsdefinition"></a>
 # **GetSmsDefinition**
-> RequestCreateSmsDefinition GetSmsDefinition (string definitionKey)
+> CreateSmsDefinitionRequest GetSmsDefinition (string definitionKey)
 
 getSmsDefinition
 
@@ -863,7 +863,7 @@ namespace Example
             try
             {
                 // getSmsDefinition
-                RequestCreateSmsDefinition result = apiInstance.GetSmsDefinition(definitionKey);
+                CreateSmsDefinitionRequest result = apiInstance.GetSmsDefinition(definitionKey);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -883,7 +883,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**RequestCreateSmsDefinition**](RequestCreateSmsDefinition.md)
+[**CreateSmsDefinitionRequest**](CreateSmsDefinitionRequest.md)
 
 ### Authorization
 
@@ -898,7 +898,7 @@ No authorization required
 
 <a name="getsmsdefinitions"></a>
 # **GetSmsDefinitions**
-> ResponseGetSmsDefinitions GetSmsDefinitions (string status = null, decimal? pageSize = null, decimal? page = null, string orderBy = null)
+> GetSmsDefinitionsResponse GetSmsDefinitions (string status = null, decimal? pageSize = null, decimal? page = null, string orderBy = null)
 
 getSmsDefinitions
 
@@ -927,7 +927,7 @@ namespace Example
             try
             {
                 // getSmsDefinitions
-                ResponseGetSmsDefinitions result = apiInstance.GetSmsDefinitions(status, pageSize, page, orderBy);
+                GetSmsDefinitionsResponse result = apiInstance.GetSmsDefinitions(status, pageSize, page, orderBy);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -950,7 +950,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ResponseGetSmsDefinitions**](ResponseGetSmsDefinitions.md)
+[**GetSmsDefinitionsResponse**](GetSmsDefinitionsResponse.md)
 
 ### Authorization
 
@@ -965,7 +965,7 @@ No authorization required
 
 <a name="getsmssendstatusforrecipient"></a>
 # **GetSmsSendStatusForRecipient**
-> ResponseGetDefinitionSendStatusForRecipient GetSmsSendStatusForRecipient (string messageKey)
+> GetDefinitionSendStatusForRecipientResponse GetSmsSendStatusForRecipient (string messageKey)
 
 getSmsSendStatusForRecipient
 
@@ -991,7 +991,7 @@ namespace Example
             try
             {
                 // getSmsSendStatusForRecipient
-                ResponseGetDefinitionSendStatusForRecipient result = apiInstance.GetSmsSendStatusForRecipient(messageKey);
+                GetDefinitionSendStatusForRecipientResponse result = apiInstance.GetSmsSendStatusForRecipient(messageKey);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -1011,7 +1011,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ResponseGetDefinitionSendStatusForRecipient**](ResponseGetDefinitionSendStatusForRecipient.md)
+[**GetDefinitionSendStatusForRecipientResponse**](GetDefinitionSendStatusForRecipientResponse.md)
 
 ### Authorization
 
@@ -1026,7 +1026,7 @@ No authorization required
 
 <a name="partiallyupdateemaildefinition"></a>
 # **PartiallyUpdateEmailDefinition**
-> RequestCreateEmailDefinition PartiallyUpdateEmailDefinition (string definitionKey, RequestUpdateEmailDefinition body = null)
+> CreateEmailDefinitionRequest PartiallyUpdateEmailDefinition (string definitionKey, UpdateEmailDefinitionRequest body = null)
 
 partiallyUpdateEmailDefinition
 
@@ -1048,12 +1048,12 @@ namespace Example
         {
             var apiInstance = new TransactionalMessagingApi();
             var definitionKey = definitionKey_example;  // string | Unique identifier of the definition.
-            var body = new RequestUpdateEmailDefinition(); // RequestUpdateEmailDefinition | JSON Parameters (optional) 
+            var body = new UpdateEmailDefinitionRequest(); // UpdateEmailDefinitionRequest | JSON Parameters (optional) 
 
             try
             {
                 // partiallyUpdateEmailDefinition
-                RequestCreateEmailDefinition result = apiInstance.PartiallyUpdateEmailDefinition(definitionKey, body);
+                CreateEmailDefinitionRequest result = apiInstance.PartiallyUpdateEmailDefinition(definitionKey, body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -1070,11 +1070,11 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **definitionKey** | **string**| Unique identifier of the definition. | 
- **body** | [**RequestUpdateEmailDefinition**](RequestUpdateEmailDefinition.md)| JSON Parameters | [optional] 
+ **body** | [**UpdateEmailDefinitionRequest**](UpdateEmailDefinitionRequest.md)| JSON Parameters | [optional] 
 
 ### Return type
 
-[**RequestCreateEmailDefinition**](RequestCreateEmailDefinition.md)
+[**CreateEmailDefinitionRequest**](CreateEmailDefinitionRequest.md)
 
 ### Authorization
 
@@ -1089,7 +1089,7 @@ No authorization required
 
 <a name="partiallyupdatesmsdefinition"></a>
 # **PartiallyUpdateSmsDefinition**
-> RequestCreateSmsDefinition PartiallyUpdateSmsDefinition (string definitionKey, RequestUpdateSmsDefinition body = null)
+> CreateSmsDefinitionRequest PartiallyUpdateSmsDefinition (string definitionKey, UpdateSmsDefinitionRequest body = null)
 
 partiallyUpdateSmsDefinition
 
@@ -1111,12 +1111,12 @@ namespace Example
         {
             var apiInstance = new TransactionalMessagingApi();
             var definitionKey = definitionKey_example;  // string | Unique identifier of the definition.
-            var body = new RequestUpdateSmsDefinition(); // RequestUpdateSmsDefinition | JSON Parameters (optional) 
+            var body = new UpdateSmsDefinitionRequest(); // UpdateSmsDefinitionRequest | JSON Parameters (optional) 
 
             try
             {
                 // partiallyUpdateSmsDefinition
-                RequestCreateSmsDefinition result = apiInstance.PartiallyUpdateSmsDefinition(definitionKey, body);
+                CreateSmsDefinitionRequest result = apiInstance.PartiallyUpdateSmsDefinition(definitionKey, body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -1133,11 +1133,11 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **definitionKey** | **string**| Unique identifier of the definition. | 
- **body** | [**RequestUpdateSmsDefinition**](RequestUpdateSmsDefinition.md)| JSON Parameters | [optional] 
+ **body** | [**UpdateSmsDefinitionRequest**](UpdateSmsDefinitionRequest.md)| JSON Parameters | [optional] 
 
 ### Return type
 
-[**RequestCreateSmsDefinition**](RequestCreateSmsDefinition.md)
+[**CreateSmsDefinitionRequest**](CreateSmsDefinitionRequest.md)
 
 ### Authorization
 
@@ -1152,7 +1152,7 @@ No authorization required
 
 <a name="sendemailtomultiplerecipients"></a>
 # **SendEmailToMultipleRecipients**
-> ResponseSendDefinitionToMultipleRecipients SendEmailToMultipleRecipients (RequestSendEmailToMultipleRecipients body = null)
+> SendDefinitionToMultipleRecipientsResponse SendEmailToMultipleRecipients (SendEmailToMultipleRecipientsRequest body = null)
 
 sendEmailToMultipleRecipients
 
@@ -1173,12 +1173,12 @@ namespace Example
         public void main()
         {
             var apiInstance = new TransactionalMessagingApi();
-            var body = new RequestSendEmailToMultipleRecipients(); // RequestSendEmailToMultipleRecipients | JSON Parameters (optional) 
+            var body = new SendEmailToMultipleRecipientsRequest(); // SendEmailToMultipleRecipientsRequest | JSON Parameters (optional) 
 
             try
             {
                 // sendEmailToMultipleRecipients
-                ResponseSendDefinitionToMultipleRecipients result = apiInstance.SendEmailToMultipleRecipients(body);
+                SendDefinitionToMultipleRecipientsResponse result = apiInstance.SendEmailToMultipleRecipients(body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -1194,11 +1194,11 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**RequestSendEmailToMultipleRecipients**](RequestSendEmailToMultipleRecipients.md)| JSON Parameters | [optional] 
+ **body** | [**SendEmailToMultipleRecipientsRequest**](SendEmailToMultipleRecipientsRequest.md)| JSON Parameters | [optional] 
 
 ### Return type
 
-[**ResponseSendDefinitionToMultipleRecipients**](ResponseSendDefinitionToMultipleRecipients.md)
+[**SendDefinitionToMultipleRecipientsResponse**](SendDefinitionToMultipleRecipientsResponse.md)
 
 ### Authorization
 
@@ -1213,7 +1213,7 @@ No authorization required
 
 <a name="sendemailtosinglerecipient"></a>
 # **SendEmailToSingleRecipient**
-> ResponseSendDefinitionToSingleRecipient SendEmailToSingleRecipient (string messageKey, RequestSendEmailToSingleRecipient body = null)
+> SendDefinitionToSingleRecipientResponse SendEmailToSingleRecipient (string messageKey, SendEmailToSingleRecipientRequest body = null)
 
 sendEmailToSingleRecipient
 
@@ -1235,12 +1235,12 @@ namespace Example
         {
             var apiInstance = new TransactionalMessagingApi();
             var messageKey = messageKey_example;  // string | Unique identifier used to track message status. Can be automatically created when you create a message or provided as part of the request. Each recipient in a request must have a unique messageKey. If you use a duplicate messageKey in the same send request, the message is rejected.
-            var body = new RequestSendEmailToSingleRecipient(); // RequestSendEmailToSingleRecipient | JSON Parameters (optional) 
+            var body = new SendEmailToSingleRecipientRequest(); // SendEmailToSingleRecipientRequest | JSON Parameters (optional) 
 
             try
             {
                 // sendEmailToSingleRecipient
-                ResponseSendDefinitionToSingleRecipient result = apiInstance.SendEmailToSingleRecipient(messageKey, body);
+                SendDefinitionToSingleRecipientResponse result = apiInstance.SendEmailToSingleRecipient(messageKey, body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -1257,11 +1257,11 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **messageKey** | **string**| Unique identifier used to track message status. Can be automatically created when you create a message or provided as part of the request. Each recipient in a request must have a unique messageKey. If you use a duplicate messageKey in the same send request, the message is rejected. | 
- **body** | [**RequestSendEmailToSingleRecipient**](RequestSendEmailToSingleRecipient.md)| JSON Parameters | [optional] 
+ **body** | [**SendEmailToSingleRecipientRequest**](SendEmailToSingleRecipientRequest.md)| JSON Parameters | [optional] 
 
 ### Return type
 
-[**ResponseSendDefinitionToSingleRecipient**](ResponseSendDefinitionToSingleRecipient.md)
+[**SendDefinitionToSingleRecipientResponse**](SendDefinitionToSingleRecipientResponse.md)
 
 ### Authorization
 
@@ -1276,7 +1276,7 @@ No authorization required
 
 <a name="sendsmstomultiplerecipients"></a>
 # **SendSmsToMultipleRecipients**
-> ResponseSendDefinitionToMultipleRecipients SendSmsToMultipleRecipients (RequestSendSmsToMultipleRecipients body = null)
+> SendDefinitionToMultipleRecipientsResponse SendSmsToMultipleRecipients (SendSmsToMultipleRecipientsRequest body = null)
 
 sendSmsToMultipleRecipients
 
@@ -1297,12 +1297,12 @@ namespace Example
         public void main()
         {
             var apiInstance = new TransactionalMessagingApi();
-            var body = new RequestSendSmsToMultipleRecipients(); // RequestSendSmsToMultipleRecipients | JSON Parameters (optional) 
+            var body = new SendSmsToMultipleRecipientsRequest(); // SendSmsToMultipleRecipientsRequest | JSON Parameters (optional) 
 
             try
             {
                 // sendSmsToMultipleRecipients
-                ResponseSendDefinitionToMultipleRecipients result = apiInstance.SendSmsToMultipleRecipients(body);
+                SendDefinitionToMultipleRecipientsResponse result = apiInstance.SendSmsToMultipleRecipients(body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -1318,11 +1318,11 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**RequestSendSmsToMultipleRecipients**](RequestSendSmsToMultipleRecipients.md)| JSON Parameters | [optional] 
+ **body** | [**SendSmsToMultipleRecipientsRequest**](SendSmsToMultipleRecipientsRequest.md)| JSON Parameters | [optional] 
 
 ### Return type
 
-[**ResponseSendDefinitionToMultipleRecipients**](ResponseSendDefinitionToMultipleRecipients.md)
+[**SendDefinitionToMultipleRecipientsResponse**](SendDefinitionToMultipleRecipientsResponse.md)
 
 ### Authorization
 
@@ -1337,7 +1337,7 @@ No authorization required
 
 <a name="sendsmstosinglerecipient"></a>
 # **SendSmsToSingleRecipient**
-> ResponseSendDefinitionToSingleRecipient SendSmsToSingleRecipient (string messageKey, RequestSendSmsToSingleRecipient body = null)
+> SendDefinitionToSingleRecipientResponse SendSmsToSingleRecipient (string messageKey, SendSmsToSingleRecipientRequest body = null)
 
 sendSmsToSingleRecipient
 
@@ -1359,12 +1359,12 @@ namespace Example
         {
             var apiInstance = new TransactionalMessagingApi();
             var messageKey = messageKey_example;  // string | Unique identifier of the definition used to track message status. The messageKey can be created automatically when you create a message, or you can provide it as part of the request. Each recipient in a request must have a unique messageKey. If you use a duplicate messageKey in the same send request, the message is rejected.
-            var body = new RequestSendSmsToSingleRecipient(); // RequestSendSmsToSingleRecipient | JSON Parameters (optional) 
+            var body = new SendSmsToSingleRecipientRequest(); // SendSmsToSingleRecipientRequest | JSON Parameters (optional) 
 
             try
             {
                 // sendSmsToSingleRecipient
-                ResponseSendDefinitionToSingleRecipient result = apiInstance.SendSmsToSingleRecipient(messageKey, body);
+                SendDefinitionToSingleRecipientResponse result = apiInstance.SendSmsToSingleRecipient(messageKey, body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -1381,11 +1381,11 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **messageKey** | **string**| Unique identifier of the definition used to track message status. The messageKey can be created automatically when you create a message, or you can provide it as part of the request. Each recipient in a request must have a unique messageKey. If you use a duplicate messageKey in the same send request, the message is rejected. | 
- **body** | [**RequestSendSmsToSingleRecipient**](RequestSendSmsToSingleRecipient.md)| JSON Parameters | [optional] 
+ **body** | [**SendSmsToSingleRecipientRequest**](SendSmsToSingleRecipientRequest.md)| JSON Parameters | [optional] 
 
 ### Return type
 
-[**ResponseSendDefinitionToSingleRecipient**](ResponseSendDefinitionToSingleRecipient.md)
+[**SendDefinitionToSingleRecipientResponse**](SendDefinitionToSingleRecipientResponse.md)
 
 ### Authorization
 

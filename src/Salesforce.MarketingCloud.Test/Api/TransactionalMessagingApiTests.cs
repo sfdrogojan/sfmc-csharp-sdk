@@ -98,7 +98,7 @@ namespace Salesforce.MarketingCloud.Test
             var createEmailDefinitionResult = transactionalMessagingApiClient.CreateEmailDefinition(emailDefinition);
             var emailDefinitionToPartiallyUpdateKey = createEmailDefinitionResult.DefinitionKey;
 
-            var updatedDefinitionDescription = new RequestUpdateEmailDefinition(description: "Updated email definition description");
+            var updatedDefinitionDescription = new UpdateEmailDefinitionRequest(description: "Updated email definition description");
 
             var partiallyUpdateEmailDefinitionResult = transactionalMessagingApiClient.PartiallyUpdateEmailDefinition(emailDefinitionToPartiallyUpdateKey, updatedDefinitionDescription);
 
@@ -199,7 +199,7 @@ namespace Salesforce.MarketingCloud.Test
                 new Recipient("johannaDoe@yahoo.com")
             };
 
-            var batchMessageRequestBody = new RequestSendEmailToMultipleRecipients(emailToSendToRecipientsKey, recipientsList);
+            var batchMessageRequestBody = new SendEmailToMultipleRecipientsRequest(emailToSendToRecipientsKey, recipientsList);
             var sendEmailToMultipleRecipientsResult =
                 transactionalMessagingApiClient.SendEmailToMultipleRecipients(batchMessageRequestBody);
 
@@ -225,7 +225,7 @@ namespace Salesforce.MarketingCloud.Test
             var recipient = new Recipient("johnDoe@gmail.com");
             var messageKey = Guid.NewGuid().ToString();
 
-            var messageRequestBody = new RequestSendEmailToSingleRecipient(emailToSendToRecipientKey, recipient);
+            var messageRequestBody = new SendEmailToSingleRecipientRequest(emailToSendToRecipientKey, recipient);
             var sendEmailToSingleRecipientResult =
                 transactionalMessagingApiClient.SendEmailToSingleRecipient(messageKey, messageRequestBody);
 
@@ -251,7 +251,7 @@ namespace Salesforce.MarketingCloud.Test
             var recipient = new Recipient("johnDoe@gmail.com");
             var messageKey = Guid.NewGuid().ToString();
 
-            var messageRequestBody = new RequestSendEmailToSingleRecipient(emailToSendToRecipientKey, recipient);
+            var messageRequestBody = new SendEmailToSingleRecipientRequest(emailToSendToRecipientKey, recipient);
             transactionalMessagingApiClient.SendEmailToSingleRecipient(messageKey, messageRequestBody);
 
             var getEmailSendStatusForRecipientResult =
@@ -340,7 +340,7 @@ namespace Salesforce.MarketingCloud.Test
             var smsDefinitionToPartiallyUpdateKey = createSmsDefinitionResult.DefinitionKey;
 
             var updatedDefinitionDescription =
-                new RequestUpdateSmsDefinition(description: "Updated SMS definition description");
+                new UpdateSmsDefinitionRequest(description: "Updated SMS definition description");
 
             var partiallyUpdateSmsDefinitionResult =
                 transactionalMessagingApiClient.PartiallyUpdateSmsDefinition(smsDefinitionToPartiallyUpdateKey,
@@ -431,7 +431,7 @@ namespace Salesforce.MarketingCloud.Test
                 new Recipient("johannaDoe@yahoo.com")
             };
 
-            var batchMessageRequestBody = new RequestSendSmsToMultipleRecipients(smsToSendToRecipientsKey, recipientsList);
+            var batchMessageRequestBody = new SendSmsToMultipleRecipientsRequest(smsToSendToRecipientsKey, recipientsList);
             var sendSmsToMultipleRecipientsResult =
                 transactionalMessagingApiClient.SendSmsToMultipleRecipients(batchMessageRequestBody);
 
@@ -457,7 +457,7 @@ namespace Salesforce.MarketingCloud.Test
             var recipient = new Recipient("johnDoe@gmail.com");
             var messageKey = Guid.NewGuid().ToString();
 
-            var messageRequestBody = new RequestSendSmsToSingleRecipient(smsToSendToRecipientKey, recipient);
+            var messageRequestBody = new SendSmsToSingleRecipientRequest(smsToSendToRecipientKey, recipient);
             var sendSmsToSingleRecipientResult =
                 transactionalMessagingApiClient.SendSmsToSingleRecipient(messageKey, messageRequestBody);
 
@@ -483,7 +483,7 @@ namespace Salesforce.MarketingCloud.Test
             var recipient = new Recipient("johnDoe@gmail.com");
             var messageKey = Guid.NewGuid().ToString();
 
-            var messageRequestBody = new RequestSendSmsToSingleRecipient(smsToSendToRecipientKey, recipient);
+            var messageRequestBody = new SendSmsToSingleRecipientRequest(smsToSendToRecipientKey, recipient);
             transactionalMessagingApiClient.SendSmsToSingleRecipient(messageKey, messageRequestBody);
 
             var getSmsSendStatusForRecipientResult =
@@ -521,7 +521,7 @@ namespace Salesforce.MarketingCloud.Test
             Assert.IsNotNull(getSMSsNotSentToRecipientsResponse.PageSize);
         }
 
-        private RequestCreateEmailDefinition CreateEmailDefinitionObject()
+        private CreateEmailDefinitionRequest CreateEmailDefinitionObject()
         {
             var emailDefinitionKey = $"{Guid.NewGuid()}";
             var emailDefinitionName = $"{Guid.NewGuid()}";
@@ -533,11 +533,11 @@ namespace Salesforce.MarketingCloud.Test
                 var createAssetResult = assetApiClient.CreateAsset(emailAsset);
                 var customerKey = createAssetResult.CustomerKey;
 
-                var content = new RequestCreateEmailDefinitionContent(customerKey);
+                var content = new CreateEmailDefinitionContent(customerKey);
 
                 const string subscribersListKey = "All Subscribers";
-                var subscriptions = new RequestCreateEmailDefinitionSubscriptions(subscribersListKey);
-                var emailDefinition = new RequestCreateEmailDefinition(emailDefinitionName, emailDefinitionKey, content: content, subscriptions: subscriptions);
+                var subscriptions = new CreateEmailDefinitionSubscriptions(subscribersListKey);
+                var emailDefinition = new CreateEmailDefinitionRequest(emailDefinitionName, emailDefinitionKey, content: content, subscriptions: subscriptions);
 
                 return emailDefinition;
             }
@@ -548,7 +548,7 @@ namespace Salesforce.MarketingCloud.Test
             }
         }
 
-        private RequestCreateSmsDefinition CreateSmsDefinitionObject()
+        private CreateSmsDefinitionRequest CreateSmsDefinitionObject()
         {
             var smsDefinitionKey = $"{Guid.NewGuid()}";
             var smsDefinitionName = $"{Guid.NewGuid()}";
@@ -557,10 +557,10 @@ namespace Salesforce.MarketingCloud.Test
             var keyword = configProvider.Keyword;
             var countryCode = "US";
 
-            var subscriptions = new RequestCreateSmsDefinitionSubscriptions(shortCode, countryCode, keyword);
-            var content = new RequestCreateSmsDefinitionContent("Content message");
+            var subscriptions = new CreateSmsDefinitionSubscriptions(shortCode, countryCode, keyword);
+            var content = new CreateSmsDefinitionContent("Content message");
 
-            var smsDefinition = new RequestCreateSmsDefinition(smsDefinitionKey, smsDefinitionName, content, subscriptions: subscriptions);
+            var smsDefinition = new CreateSmsDefinitionRequest(smsDefinitionKey, smsDefinitionName, content, subscriptions: subscriptions);
 
             return smsDefinition;
         }

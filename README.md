@@ -104,27 +104,27 @@ Class | Method | HTTP request | Description
 *CampaignApi* | [**DeleteCampaignById**](docs/CampaignApi.md#deletecampaignbyid) | **DELETE** /hub/v1/campaigns/{id} | deleteCampaignById
 *CampaignApi* | [**GetCampaignById**](docs/CampaignApi.md#getcampaignbyid) | **GET** /hub/v1/campaigns/{id} | getCampaignById
 *TransactionalMessagingApi* | [**CreateEmailDefinition**](docs/TransactionalMessagingApi.md#createemaildefinition) | **POST** /messaging/v1/email/definitions/ | createEmailDefinition
-*TransactionalMessagingApi* | [**CreateSMSDefinition**](docs/TransactionalMessagingApi.md#createsmsdefinition) | **POST** /messaging/v1/sms/definitions | createSMSDefinition
+*TransactionalMessagingApi* | [**CreateSmsDefinition**](docs/TransactionalMessagingApi.md#createsmsdefinition) | **POST** /messaging/v1/sms/definitions | createSmsDefinition
 *TransactionalMessagingApi* | [**DeleteEmailDefinition**](docs/TransactionalMessagingApi.md#deleteemaildefinition) | **DELETE** /messaging/v1/email/definitions/{definitionKey} | deleteEmailDefinition
 *TransactionalMessagingApi* | [**DeleteQueuedMessagesForEmailDefinition**](docs/TransactionalMessagingApi.md#deletequeuedmessagesforemaildefinition) | **DELETE** /messaging/v1/email/definitions/{definitionKey}/queue | deleteQueuedMessagesForEmailDefinition
-*TransactionalMessagingApi* | [**DeleteQueuedMessagesForSMSDefinition**](docs/TransactionalMessagingApi.md#deletequeuedmessagesforsmsdefinition) | **DELETE** /messaging/v1/sms/definitions/{definitionKey}/queue | deleteQueuedMessagesForSMSDefinition
-*TransactionalMessagingApi* | [**DeleteSMSDefinition**](docs/TransactionalMessagingApi.md#deletesmsdefinition) | **DELETE** /messaging/v1/sms/definitions/{definitionKey} | deleteSMSDefinition
+*TransactionalMessagingApi* | [**DeleteQueuedMessagesForSmsDefinition**](docs/TransactionalMessagingApi.md#deletequeuedmessagesforsmsdefinition) | **DELETE** /messaging/v1/sms/definitions/{definitionKey}/queue | deleteQueuedMessagesForSmsDefinition
+*TransactionalMessagingApi* | [**DeleteSmsDefinition**](docs/TransactionalMessagingApi.md#deletesmsdefinition) | **DELETE** /messaging/v1/sms/definitions/{definitionKey} | deleteSmsDefinition
 *TransactionalMessagingApi* | [**GetEmailDefinition**](docs/TransactionalMessagingApi.md#getemaildefinition) | **GET** /messaging/v1/email/definitions/{definitionKey} | getEmailDefinition
 *TransactionalMessagingApi* | [**GetEmailDefinitions**](docs/TransactionalMessagingApi.md#getemaildefinitions) | **GET** /messaging/v1/email/definitions/ | getEmailDefinitions
 *TransactionalMessagingApi* | [**GetEmailSendStatusForRecipient**](docs/TransactionalMessagingApi.md#getemailsendstatusforrecipient) | **GET** /messaging/v1/email/messages/{messageKey} | getEmailSendStatusForRecipient
 *TransactionalMessagingApi* | [**GetEmailsNotSentToRecipients**](docs/TransactionalMessagingApi.md#getemailsnotsenttorecipients) | **GET** /messaging/v1/email/messages/ | getEmailsNotSentToRecipients
 *TransactionalMessagingApi* | [**GetQueueMetricsForEmailDefinition**](docs/TransactionalMessagingApi.md#getqueuemetricsforemaildefinition) | **GET** /messaging/v1/email/definitions/{definitionKey}/queue | getQueueMetricsForEmailDefinition
-*TransactionalMessagingApi* | [**GetQueueMetricsForSMSDefinition**](docs/TransactionalMessagingApi.md#getqueuemetricsforsmsdefinition) | **GET** /messaging/v1/sms/definitions/{definitionKey}/queue | getQueueMetricsForSMSDefinition
-*TransactionalMessagingApi* | [**GetSMSDefinition**](docs/TransactionalMessagingApi.md#getsmsdefinition) | **GET** /messaging/v1/sms/definitions/{definitionKey} | getSMSDefinition
-*TransactionalMessagingApi* | [**GetSMSDefinitions**](docs/TransactionalMessagingApi.md#getsmsdefinitions) | **GET** /messaging/v1/sms/definitions | getSMSDefinitions
-*TransactionalMessagingApi* | [**GetSMSSendStatusForRecipient**](docs/TransactionalMessagingApi.md#getsmssendstatusforrecipient) | **GET** /messaging/v1/sms/messages/{messageKey} | getSMSSendStatusForRecipient
+*TransactionalMessagingApi* | [**GetQueueMetricsForSmsDefinition**](docs/TransactionalMessagingApi.md#getqueuemetricsforsmsdefinition) | **GET** /messaging/v1/sms/definitions/{definitionKey}/queue | getQueueMetricsForSmsDefinition
 *TransactionalMessagingApi* | [**GetSMSsNotSentToRecipients**](docs/TransactionalMessagingApi.md#getsmssnotsenttorecipients) | **GET** /messaging/v1/sms/messages/ | getSMSsNotSentToRecipients
+*TransactionalMessagingApi* | [**GetSmsDefinition**](docs/TransactionalMessagingApi.md#getsmsdefinition) | **GET** /messaging/v1/sms/definitions/{definitionKey} | getSmsDefinition
+*TransactionalMessagingApi* | [**GetSmsDefinitions**](docs/TransactionalMessagingApi.md#getsmsdefinitions) | **GET** /messaging/v1/sms/definitions | getSmsDefinitions
+*TransactionalMessagingApi* | [**GetSmsSendStatusForRecipient**](docs/TransactionalMessagingApi.md#getsmssendstatusforrecipient) | **GET** /messaging/v1/sms/messages/{messageKey} | getSmsSendStatusForRecipient
 *TransactionalMessagingApi* | [**PartiallyUpdateEmailDefinition**](docs/TransactionalMessagingApi.md#partiallyupdateemaildefinition) | **PATCH** /messaging/v1/email/definitions/{definitionKey} | partiallyUpdateEmailDefinition
-*TransactionalMessagingApi* | [**PartiallyUpdateSMSDefinition**](docs/TransactionalMessagingApi.md#partiallyupdatesmsdefinition) | **PATCH** /messaging/v1/sms/definitions/{definitionKey} | partiallyUpdateSMSDefinition
+*TransactionalMessagingApi* | [**PartiallyUpdateSmsDefinition**](docs/TransactionalMessagingApi.md#partiallyupdatesmsdefinition) | **PATCH** /messaging/v1/sms/definitions/{definitionKey} | partiallyUpdateSmsDefinition
 *TransactionalMessagingApi* | [**SendEmailToMultipleRecipients**](docs/TransactionalMessagingApi.md#sendemailtomultiplerecipients) | **POST** /messaging/v1/email/messages/ | sendEmailToMultipleRecipients
 *TransactionalMessagingApi* | [**SendEmailToSingleRecipient**](docs/TransactionalMessagingApi.md#sendemailtosinglerecipient) | **POST** /messaging/v1/email/messages/{messageKey} | sendEmailToSingleRecipient
-*TransactionalMessagingApi* | [**SendSMSToMultipleRecipients**](docs/TransactionalMessagingApi.md#sendsmstomultiplerecipients) | **POST** /messaging/v1/sms/messages/ | sendSMSToMultipleRecipients
-*TransactionalMessagingApi* | [**SendSMSToSingleRecipient**](docs/TransactionalMessagingApi.md#sendsmstosinglerecipient) | **POST** /messaging/v1/sms/messages/{messageKey} | sendSMSToSingleRecipient
+*TransactionalMessagingApi* | [**SendSmsToMultipleRecipients**](docs/TransactionalMessagingApi.md#sendsmstomultiplerecipients) | **POST** /messaging/v1/sms/messages/ | sendSmsToMultipleRecipients
+*TransactionalMessagingApi* | [**SendSmsToSingleRecipient**](docs/TransactionalMessagingApi.md#sendsmstosinglerecipient) | **POST** /messaging/v1/sms/messages/{messageKey} | sendSmsToSingleRecipient
 
 
 <a name="documentation-for-models"></a>
@@ -140,16 +140,17 @@ Class | Method | HTTP request | Description
  - [Model.RequestCreateEmailDefinitionContent](docs/RequestCreateEmailDefinitionContent.md)
  - [Model.RequestCreateEmailDefinitionOptions](docs/RequestCreateEmailDefinitionOptions.md)
  - [Model.RequestCreateEmailDefinitionSubscriptions](docs/RequestCreateEmailDefinitionSubscriptions.md)
- - [Model.RequestCreateSMSDefinition](docs/RequestCreateSMSDefinition.md)
- - [Model.RequestCreateSMSDefinitionContent](docs/RequestCreateSMSDefinitionContent.md)
- - [Model.RequestCreateSMSDefinitionSubscriptions](docs/RequestCreateSMSDefinitionSubscriptions.md)
+ - [Model.RequestCreateSmsDefinition](docs/RequestCreateSmsDefinition.md)
+ - [Model.RequestCreateSmsDefinitionContent](docs/RequestCreateSmsDefinitionContent.md)
+ - [Model.RequestCreateSmsDefinitionSubscriptions](docs/RequestCreateSmsDefinitionSubscriptions.md)
  - [Model.RequestSendEmailToMultipleRecipients](docs/RequestSendEmailToMultipleRecipients.md)
  - [Model.RequestSendEmailToSingleRecipient](docs/RequestSendEmailToSingleRecipient.md)
- - [Model.RequestSendSMSContent](docs/RequestSendSMSContent.md)
- - [Model.RequestSendSMSToMultipleRecipients](docs/RequestSendSMSToMultipleRecipients.md)
- - [Model.RequestSendSMSToMultipleRecipientsSubscriptions](docs/RequestSendSMSToMultipleRecipientsSubscriptions.md)
- - [Model.RequestSendSMSToSingleRecipient](docs/RequestSendSMSToSingleRecipient.md)
+ - [Model.RequestSendSmsContent](docs/RequestSendSmsContent.md)
+ - [Model.RequestSendSmsToMultipleRecipients](docs/RequestSendSmsToMultipleRecipients.md)
+ - [Model.RequestSendSmsToMultipleRecipientsSubscriptions](docs/RequestSendSmsToMultipleRecipientsSubscriptions.md)
+ - [Model.RequestSendSmsToSingleRecipient](docs/RequestSendSmsToSingleRecipient.md)
  - [Model.RequestUpdateEmailDefinition](docs/RequestUpdateEmailDefinition.md)
+ - [Model.RequestUpdateSmsDefinition](docs/RequestUpdateSmsDefinition.md)
  - [Model.ResponseDeleteQueuedMessagesForSendDefinition](docs/ResponseDeleteQueuedMessagesForSendDefinition.md)
  - [Model.ResponseDeleteSendDefinition](docs/ResponseDeleteSendDefinition.md)
  - [Model.ResponseGetDefinitionSendStatusForRecipient](docs/ResponseGetDefinitionSendStatusForRecipient.md)
@@ -159,7 +160,7 @@ Class | Method | HTTP request | Description
  - [Model.ResponseGetDefinitionsNotSentToRecipientsMessageInfo](docs/ResponseGetDefinitionsNotSentToRecipientsMessageInfo.md)
  - [Model.ResponseGetEmailDefinitions](docs/ResponseGetEmailDefinitions.md)
  - [Model.ResponseGetQueueMetricsForSendDefinition](docs/ResponseGetQueueMetricsForSendDefinition.md)
- - [Model.ResponseGetSMSDefinitions](docs/ResponseGetSMSDefinitions.md)
+ - [Model.ResponseGetSmsDefinitions](docs/ResponseGetSmsDefinitions.md)
  - [Model.ResponseSendDefinitionInnerResponse](docs/ResponseSendDefinitionInnerResponse.md)
  - [Model.ResponseSendDefinitionToMultipleRecipients](docs/ResponseSendDefinitionToMultipleRecipients.md)
  - [Model.ResponseSendDefinitionToSingleRecipient](docs/ResponseSendDefinitionToSingleRecipient.md)

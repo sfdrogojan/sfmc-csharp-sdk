@@ -1,4 +1,4 @@
-# Salesforce.MarketingCloud.Model.RequestSendSMSToMultipleRecipientsSubscriptions
+# Salesforce.MarketingCloud.Model.RequestSendSmsToMultipleRecipientsSubscriptions
 ## Properties
 
 Name | Type | Description | Notes

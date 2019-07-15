@@ -48,26 +48,26 @@ namespace Salesforce.MarketingCloud.Api
         /// <returns>ApiResponse of RequestCreateEmailDefinition</returns>
         ApiResponse<RequestCreateEmailDefinition> CreateEmailDefinitionWithHttpInfo (RequestCreateEmailDefinition body = null);
         /// <summary>
-        /// createSMSDefinition
+        /// createSmsDefinition
         /// </summary>
         /// <remarks>
         /// Creates the definition for an SMS.
         /// </remarks>
         /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">JSON Parameters (optional)</param>
-        /// <returns>RequestCreateSMSDefinition</returns>
-        RequestCreateSMSDefinition CreateSMSDefinition (RequestCreateSMSDefinition body = null);
+        /// <returns>RequestCreateSmsDefinition</returns>
+        RequestCreateSmsDefinition CreateSmsDefinition (RequestCreateSmsDefinition body = null);
 
         /// <summary>
-        /// createSMSDefinition
+        /// createSmsDefinition
         /// </summary>
         /// <remarks>
         /// Creates the definition for an SMS.
         /// </remarks>
         /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">JSON Parameters (optional)</param>
-        /// <returns>ApiResponse of RequestCreateSMSDefinition</returns>
-        ApiResponse<RequestCreateSMSDefinition> CreateSMSDefinitionWithHttpInfo (RequestCreateSMSDefinition body = null);
+        /// <returns>ApiResponse of RequestCreateSmsDefinition</returns>
+        ApiResponse<RequestCreateSmsDefinition> CreateSmsDefinitionWithHttpInfo (RequestCreateSmsDefinition body = null);
         /// <summary>
         /// deleteEmailDefinition
         /// </summary>
@@ -111,7 +111,7 @@ namespace Salesforce.MarketingCloud.Api
         /// <returns>ApiResponse of ResponseDeleteQueuedMessagesForSendDefinition</returns>
         ApiResponse<ResponseDeleteQueuedMessagesForSendDefinition> DeleteQueuedMessagesForEmailDefinitionWithHttpInfo (string definitionKey);
         /// <summary>
-        /// deleteQueuedMessagesForSMSDefinition
+        /// deleteQueuedMessagesForSmsDefinition
         /// </summary>
         /// <remarks>
         /// Deletes the queue for a SMS definition. The SMS definition must be in inactive status.
@@ -119,10 +119,10 @@ namespace Salesforce.MarketingCloud.Api
         /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="definitionKey">Unique identifier of the SMS definition</param>
         /// <returns>ResponseDeleteQueuedMessagesForSendDefinition</returns>
-        ResponseDeleteQueuedMessagesForSendDefinition DeleteQueuedMessagesForSMSDefinition (string definitionKey);
+        ResponseDeleteQueuedMessagesForSendDefinition DeleteQueuedMessagesForSmsDefinition (string definitionKey);
 
         /// <summary>
-        /// deleteQueuedMessagesForSMSDefinition
+        /// deleteQueuedMessagesForSmsDefinition
         /// </summary>
         /// <remarks>
         /// Deletes the queue for a SMS definition. The SMS definition must be in inactive status.
@@ -130,9 +130,9 @@ namespace Salesforce.MarketingCloud.Api
         /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="definitionKey">Unique identifier of the SMS definition</param>
         /// <returns>ApiResponse of ResponseDeleteQueuedMessagesForSendDefinition</returns>
-        ApiResponse<ResponseDeleteQueuedMessagesForSendDefinition> DeleteQueuedMessagesForSMSDefinitionWithHttpInfo (string definitionKey);
+        ApiResponse<ResponseDeleteQueuedMessagesForSendDefinition> DeleteQueuedMessagesForSmsDefinitionWithHttpInfo (string definitionKey);
         /// <summary>
-        /// deleteSMSDefinition
+        /// deleteSmsDefinition
         /// </summary>
         /// <remarks>
         /// Deletes an sms definition. You can&#39;t restore a deleted definition. The deleted definition is archived, and a delete location of the definition key is provided in the response for reference. You can reuse a deleted definition key because the information associated with it is copied to a new unique identifier.
@@ -140,10 +140,10 @@ namespace Salesforce.MarketingCloud.Api
         /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="definitionKey">Unique identifier of the definition to delete</param>
         /// <returns>ResponseDeleteSendDefinition</returns>
-        ResponseDeleteSendDefinition DeleteSMSDefinition (string definitionKey);
+        ResponseDeleteSendDefinition DeleteSmsDefinition (string definitionKey);
 
         /// <summary>
-        /// deleteSMSDefinition
+        /// deleteSmsDefinition
         /// </summary>
         /// <remarks>
         /// Deletes an sms definition. You can&#39;t restore a deleted definition. The deleted definition is archived, and a delete location of the definition key is provided in the response for reference. You can reuse a deleted definition key because the information associated with it is copied to a new unique identifier.
@@ -151,7 +151,7 @@ namespace Salesforce.MarketingCloud.Api
         /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="definitionKey">Unique identifier of the definition to delete</param>
         /// <returns>ApiResponse of ResponseDeleteSendDefinition</returns>
-        ApiResponse<ResponseDeleteSendDefinition> DeleteSMSDefinitionWithHttpInfo (string definitionKey);
+        ApiResponse<ResponseDeleteSendDefinition> DeleteSmsDefinitionWithHttpInfo (string definitionKey);
         /// <summary>
         /// getEmailDefinition
         /// </summary>
@@ -268,7 +268,7 @@ namespace Salesforce.MarketingCloud.Api
         /// <returns>ApiResponse of ResponseGetQueueMetricsForSendDefinition</returns>
         ApiResponse<ResponseGetQueueMetricsForSendDefinition> GetQueueMetricsForEmailDefinitionWithHttpInfo (string definitionKey);
         /// <summary>
-        /// getQueueMetricsForSMSDefinition
+        /// getQueueMetricsForSmsDefinition
         /// </summary>
         /// <remarks>
         /// Gets metrics for the messages of a SMS definition. Applies to messages that are accepted but not yet processed.
@@ -276,10 +276,10 @@ namespace Salesforce.MarketingCloud.Api
         /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="definitionKey">Unique identifier of the SMS definition</param>
         /// <returns>ResponseGetQueueMetricsForSendDefinition</returns>
-        ResponseGetQueueMetricsForSendDefinition GetQueueMetricsForSMSDefinition (string definitionKey);
+        ResponseGetQueueMetricsForSendDefinition GetQueueMetricsForSmsDefinition (string definitionKey);
 
         /// <summary>
-        /// getQueueMetricsForSMSDefinition
+        /// getQueueMetricsForSmsDefinition
         /// </summary>
         /// <remarks>
         /// Gets metrics for the messages of a SMS definition. Applies to messages that are accepted but not yet processed.
@@ -287,76 +287,7 @@ namespace Salesforce.MarketingCloud.Api
         /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="definitionKey">Unique identifier of the SMS definition</param>
         /// <returns>ApiResponse of ResponseGetQueueMetricsForSendDefinition</returns>
-        ApiResponse<ResponseGetQueueMetricsForSendDefinition> GetQueueMetricsForSMSDefinitionWithHttpInfo (string definitionKey);
-        /// <summary>
-        /// getSMSDefinition
-        /// </summary>
-        /// <remarks>
-        /// Gets SMS definition configuration details for a definition key.
-        /// </remarks>
-        /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="definitionKey">Unique identifier of the definition to get</param>
-        /// <returns>RequestCreateSMSDefinition</returns>
-        RequestCreateSMSDefinition GetSMSDefinition (string definitionKey);
-
-        /// <summary>
-        /// getSMSDefinition
-        /// </summary>
-        /// <remarks>
-        /// Gets SMS definition configuration details for a definition key.
-        /// </remarks>
-        /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="definitionKey">Unique identifier of the definition to get</param>
-        /// <returns>ApiResponse of RequestCreateSMSDefinition</returns>
-        ApiResponse<RequestCreateSMSDefinition> GetSMSDefinitionWithHttpInfo (string definitionKey);
-        /// <summary>
-        /// getSMSDefinitions
-        /// </summary>
-        /// <remarks>
-        /// Gets a list of SMS definitions.
-        /// </remarks>
-        /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="status">Filter by status type. Accepted values are active, inactive, or deleted. Valid operations are eq and neq. (optional)</param>
-        /// <param name="pageSize">Number of definitions, which are array elements, to return per paged response. (optional)</param>
-        /// <param name="page">Page number to return. (optional)</param>
-        /// <param name="orderBy">Sort by a dimension. You can sort by only one dimension. Accepted values are definitionKey, name, createdDate, modifiedDate, and status. (optional)</param>
-        /// <returns>ResponseGetSMSDefinitions</returns>
-        ResponseGetSMSDefinitions GetSMSDefinitions (string status = null, decimal? pageSize = null, decimal? page = null, string orderBy = null);
-
-        /// <summary>
-        /// getSMSDefinitions
-        /// </summary>
-        /// <remarks>
-        /// Gets a list of SMS definitions.
-        /// </remarks>
-        /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="status">Filter by status type. Accepted values are active, inactive, or deleted. Valid operations are eq and neq. (optional)</param>
-        /// <param name="pageSize">Number of definitions, which are array elements, to return per paged response. (optional)</param>
-        /// <param name="page">Page number to return. (optional)</param>
-        /// <param name="orderBy">Sort by a dimension. You can sort by only one dimension. Accepted values are definitionKey, name, createdDate, modifiedDate, and status. (optional)</param>
-        /// <returns>ApiResponse of ResponseGetSMSDefinitions</returns>
-        ApiResponse<ResponseGetSMSDefinitions> GetSMSDefinitionsWithHttpInfo (string status = null, decimal? pageSize = null, decimal? page = null, string orderBy = null);
-        /// <summary>
-        /// getSMSSendStatusForRecipient
-        /// </summary>
-        /// <remarks>
-        /// Gets the send status for a message. Because this route is rate-limited, use it for infrequent verification of a messageKey. To collect send status at scale, subscribe to transactional send events using the Event Notification Service.
-        /// </remarks>
-        /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="messageKey">Unique identifier to track message send status. You must provide it in singleton requests using the recipient attribute. To provide message key in batch requests, use the recipients array attribute. If you don’t provide the message key for recipients, it’s generated in the response.</param>
-        /// <returns>ResponseGetDefinitionSendStatusForRecipient</returns>
-        ResponseGetDefinitionSendStatusForRecipient GetSMSSendStatusForRecipient (string messageKey);
-
-        /// <summary>
-        /// getSMSSendStatusForRecipient
-        /// </summary>
-        /// <remarks>
-        /// Gets the send status for a message. Because this route is rate-limited, use it for infrequent verification of a messageKey. To collect send status at scale, subscribe to transactional send events using the Event Notification Service.
-        /// </remarks>
-        /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="messageKey">Unique identifier to track message send status. You must provide it in singleton requests using the recipient attribute. To provide message key in batch requests, use the recipients array attribute. If you don’t provide the message key for recipients, it’s generated in the response.</param>
-        /// <returns>ApiResponse of ResponseGetDefinitionSendStatusForRecipient</returns>
-        ApiResponse<ResponseGetDefinitionSendStatusForRecipient> GetSMSSendStatusForRecipientWithHttpInfo (string messageKey);
+        ApiResponse<ResponseGetQueueMetricsForSendDefinition> GetQueueMetricsForSmsDefinitionWithHttpInfo (string definitionKey);
         /// <summary>
         /// getSMSsNotSentToRecipients
         /// </summary>
@@ -383,6 +314,75 @@ namespace Salesforce.MarketingCloud.Api
         /// <returns>ApiResponse of ResponseGetDefinitionsNotSentToRecipients</returns>
         ApiResponse<ResponseGetDefinitionsNotSentToRecipients> GetSMSsNotSentToRecipientsWithHttpInfo (string type, int? pageSize = null, int? lastEventId = null);
         /// <summary>
+        /// getSmsDefinition
+        /// </summary>
+        /// <remarks>
+        /// Gets SMS definition configuration details for a definition key.
+        /// </remarks>
+        /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="definitionKey">Unique identifier of the definition to get</param>
+        /// <returns>RequestCreateSmsDefinition</returns>
+        RequestCreateSmsDefinition GetSmsDefinition (string definitionKey);
+
+        /// <summary>
+        /// getSmsDefinition
+        /// </summary>
+        /// <remarks>
+        /// Gets SMS definition configuration details for a definition key.
+        /// </remarks>
+        /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="definitionKey">Unique identifier of the definition to get</param>
+        /// <returns>ApiResponse of RequestCreateSmsDefinition</returns>
+        ApiResponse<RequestCreateSmsDefinition> GetSmsDefinitionWithHttpInfo (string definitionKey);
+        /// <summary>
+        /// getSmsDefinitions
+        /// </summary>
+        /// <remarks>
+        /// Gets a list of SMS definitions.
+        /// </remarks>
+        /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="status">Filter by status type. Accepted values are active, inactive, or deleted. Valid operations are eq and neq. (optional)</param>
+        /// <param name="pageSize">Number of definitions, which are array elements, to return per paged response. (optional)</param>
+        /// <param name="page">Page number to return. (optional)</param>
+        /// <param name="orderBy">Sort by a dimension. You can sort by only one dimension. Accepted values are definitionKey, name, createdDate, modifiedDate, and status. (optional)</param>
+        /// <returns>ResponseGetSmsDefinitions</returns>
+        ResponseGetSmsDefinitions GetSmsDefinitions (string status = null, decimal? pageSize = null, decimal? page = null, string orderBy = null);
+
+        /// <summary>
+        /// getSmsDefinitions
+        /// </summary>
+        /// <remarks>
+        /// Gets a list of SMS definitions.
+        /// </remarks>
+        /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="status">Filter by status type. Accepted values are active, inactive, or deleted. Valid operations are eq and neq. (optional)</param>
+        /// <param name="pageSize">Number of definitions, which are array elements, to return per paged response. (optional)</param>
+        /// <param name="page">Page number to return. (optional)</param>
+        /// <param name="orderBy">Sort by a dimension. You can sort by only one dimension. Accepted values are definitionKey, name, createdDate, modifiedDate, and status. (optional)</param>
+        /// <returns>ApiResponse of ResponseGetSmsDefinitions</returns>
+        ApiResponse<ResponseGetSmsDefinitions> GetSmsDefinitionsWithHttpInfo (string status = null, decimal? pageSize = null, decimal? page = null, string orderBy = null);
+        /// <summary>
+        /// getSmsSendStatusForRecipient
+        /// </summary>
+        /// <remarks>
+        /// Gets the send status for a message. Because this route is rate-limited, use it for infrequent verification of a messageKey. To collect send status at scale, subscribe to transactional send events using the Event Notification Service.
+        /// </remarks>
+        /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="messageKey">Unique identifier to track message send status. You must provide it in singleton requests using the recipient attribute. To provide message key in batch requests, use the recipients array attribute. If you don’t provide the message key for recipients, it’s generated in the response.</param>
+        /// <returns>ResponseGetDefinitionSendStatusForRecipient</returns>
+        ResponseGetDefinitionSendStatusForRecipient GetSmsSendStatusForRecipient (string messageKey);
+
+        /// <summary>
+        /// getSmsSendStatusForRecipient
+        /// </summary>
+        /// <remarks>
+        /// Gets the send status for a message. Because this route is rate-limited, use it for infrequent verification of a messageKey. To collect send status at scale, subscribe to transactional send events using the Event Notification Service.
+        /// </remarks>
+        /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="messageKey">Unique identifier to track message send status. You must provide it in singleton requests using the recipient attribute. To provide message key in batch requests, use the recipients array attribute. If you don’t provide the message key for recipients, it’s generated in the response.</param>
+        /// <returns>ApiResponse of ResponseGetDefinitionSendStatusForRecipient</returns>
+        ApiResponse<ResponseGetDefinitionSendStatusForRecipient> GetSmsSendStatusForRecipientWithHttpInfo (string messageKey);
+        /// <summary>
         /// partiallyUpdateEmailDefinition
         /// </summary>
         /// <remarks>
@@ -406,7 +406,7 @@ namespace Salesforce.MarketingCloud.Api
         /// <returns>ApiResponse of RequestCreateEmailDefinition</returns>
         ApiResponse<RequestCreateEmailDefinition> PartiallyUpdateEmailDefinitionWithHttpInfo (string definitionKey, RequestUpdateEmailDefinition body = null);
         /// <summary>
-        /// partiallyUpdateSMSDefinition
+        /// partiallyUpdateSmsDefinition
         /// </summary>
         /// <remarks>
         /// Updates a specific SMS definition.
@@ -414,11 +414,11 @@ namespace Salesforce.MarketingCloud.Api
         /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="definitionKey">Unique identifier of the definition.</param>
         /// <param name="body">JSON Parameters (optional)</param>
-        /// <returns>RequestCreateSMSDefinition</returns>
-        RequestCreateSMSDefinition PartiallyUpdateSMSDefinition (string definitionKey, RequestCreateSMSDefinition body = null);
+        /// <returns>RequestCreateSmsDefinition</returns>
+        RequestCreateSmsDefinition PartiallyUpdateSmsDefinition (string definitionKey, RequestUpdateSmsDefinition body = null);
 
         /// <summary>
-        /// partiallyUpdateSMSDefinition
+        /// partiallyUpdateSmsDefinition
         /// </summary>
         /// <remarks>
         /// Updates a specific SMS definition.
@@ -426,8 +426,8 @@ namespace Salesforce.MarketingCloud.Api
         /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="definitionKey">Unique identifier of the definition.</param>
         /// <param name="body">JSON Parameters (optional)</param>
-        /// <returns>ApiResponse of RequestCreateSMSDefinition</returns>
-        ApiResponse<RequestCreateSMSDefinition> PartiallyUpdateSMSDefinitionWithHttpInfo (string definitionKey, RequestCreateSMSDefinition body = null);
+        /// <returns>ApiResponse of RequestCreateSmsDefinition</returns>
+        ApiResponse<RequestCreateSmsDefinition> PartiallyUpdateSmsDefinitionWithHttpInfo (string definitionKey, RequestUpdateSmsDefinition body = null);
         /// <summary>
         /// sendEmailToMultipleRecipients
         /// </summary>
@@ -473,7 +473,7 @@ namespace Salesforce.MarketingCloud.Api
         /// <returns>ApiResponse of ResponseSendDefinitionToSingleRecipient</returns>
         ApiResponse<ResponseSendDefinitionToSingleRecipient> SendEmailToSingleRecipientWithHttpInfo (string messageKey, RequestSendEmailToSingleRecipient body = null);
         /// <summary>
-        /// sendSMSToMultipleRecipients
+        /// sendSmsToMultipleRecipients
         /// </summary>
         /// <remarks>
         /// Sends a message to multiple recipients using an email definition. You can provide a messageKey in the request; otherwise, the messageKey is automatically generated in the response.
@@ -481,10 +481,10 @@ namespace Salesforce.MarketingCloud.Api
         /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">JSON Parameters (optional)</param>
         /// <returns>ResponseSendDefinitionToMultipleRecipients</returns>
-        ResponseSendDefinitionToMultipleRecipients SendSMSToMultipleRecipients (RequestSendSMSToMultipleRecipients body = null);
+        ResponseSendDefinitionToMultipleRecipients SendSmsToMultipleRecipients (RequestSendSmsToMultipleRecipients body = null);
 
         /// <summary>
-        /// sendSMSToMultipleRecipients
+        /// sendSmsToMultipleRecipients
         /// </summary>
         /// <remarks>
         /// Sends a message to multiple recipients using an email definition. You can provide a messageKey in the request; otherwise, the messageKey is automatically generated in the response.
@@ -492,9 +492,9 @@ namespace Salesforce.MarketingCloud.Api
         /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">JSON Parameters (optional)</param>
         /// <returns>ApiResponse of ResponseSendDefinitionToMultipleRecipients</returns>
-        ApiResponse<ResponseSendDefinitionToMultipleRecipients> SendSMSToMultipleRecipientsWithHttpInfo (RequestSendSMSToMultipleRecipients body = null);
+        ApiResponse<ResponseSendDefinitionToMultipleRecipients> SendSmsToMultipleRecipientsWithHttpInfo (RequestSendSmsToMultipleRecipients body = null);
         /// <summary>
-        /// sendSMSToSingleRecipient
+        /// sendSmsToSingleRecipient
         /// </summary>
         /// <remarks>
         /// Sends a message to a single recipient via a SMS definition using a messageKey path parameter.
@@ -503,10 +503,10 @@ namespace Salesforce.MarketingCloud.Api
         /// <param name="messageKey">Unique identifier of the definition used to track message status. The messageKey can be created automatically when you create a message, or you can provide it as part of the request. Each recipient in a request must have a unique messageKey. If you use a duplicate messageKey in the same send request, the message is rejected.</param>
         /// <param name="body">JSON Parameters (optional)</param>
         /// <returns>ResponseSendDefinitionToSingleRecipient</returns>
-        ResponseSendDefinitionToSingleRecipient SendSMSToSingleRecipient (string messageKey, RequestSendSMSToSingleRecipient body = null);
+        ResponseSendDefinitionToSingleRecipient SendSmsToSingleRecipient (string messageKey, RequestSendSmsToSingleRecipient body = null);
 
         /// <summary>
-        /// sendSMSToSingleRecipient
+        /// sendSmsToSingleRecipient
         /// </summary>
         /// <remarks>
         /// Sends a message to a single recipient via a SMS definition using a messageKey path parameter.
@@ -515,7 +515,7 @@ namespace Salesforce.MarketingCloud.Api
         /// <param name="messageKey">Unique identifier of the definition used to track message status. The messageKey can be created automatically when you create a message, or you can provide it as part of the request. Each recipient in a request must have a unique messageKey. If you use a duplicate messageKey in the same send request, the message is rejected.</param>
         /// <param name="body">JSON Parameters (optional)</param>
         /// <returns>ApiResponse of ResponseSendDefinitionToSingleRecipient</returns>
-        ApiResponse<ResponseSendDefinitionToSingleRecipient> SendSMSToSingleRecipientWithHttpInfo (string messageKey, RequestSendSMSToSingleRecipient body = null);
+        ApiResponse<ResponseSendDefinitionToSingleRecipient> SendSmsToSingleRecipientWithHttpInfo (string messageKey, RequestSendSmsToSingleRecipient body = null);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -540,26 +540,26 @@ namespace Salesforce.MarketingCloud.Api
         /// <returns>Task of ApiResponse (RequestCreateEmailDefinition)</returns>
         System.Threading.Tasks.Task<ApiResponse<RequestCreateEmailDefinition>> CreateEmailDefinitionAsyncWithHttpInfo (RequestCreateEmailDefinition body = null);
         /// <summary>
-        /// createSMSDefinition
+        /// createSmsDefinition
         /// </summary>
         /// <remarks>
         /// Creates the definition for an SMS.
         /// </remarks>
         /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">JSON Parameters (optional)</param>
-        /// <returns>Task of RequestCreateSMSDefinition</returns>
-        System.Threading.Tasks.Task<RequestCreateSMSDefinition> CreateSMSDefinitionAsync (RequestCreateSMSDefinition body = null);
+        /// <returns>Task of RequestCreateSmsDefinition</returns>
+        System.Threading.Tasks.Task<RequestCreateSmsDefinition> CreateSmsDefinitionAsync (RequestCreateSmsDefinition body = null);
 
         /// <summary>
-        /// createSMSDefinition
+        /// createSmsDefinition
         /// </summary>
         /// <remarks>
         /// Creates the definition for an SMS.
         /// </remarks>
         /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">JSON Parameters (optional)</param>
-        /// <returns>Task of ApiResponse (RequestCreateSMSDefinition)</returns>
-        System.Threading.Tasks.Task<ApiResponse<RequestCreateSMSDefinition>> CreateSMSDefinitionAsyncWithHttpInfo (RequestCreateSMSDefinition body = null);
+        /// <returns>Task of ApiResponse (RequestCreateSmsDefinition)</returns>
+        System.Threading.Tasks.Task<ApiResponse<RequestCreateSmsDefinition>> CreateSmsDefinitionAsyncWithHttpInfo (RequestCreateSmsDefinition body = null);
         /// <summary>
         /// deleteEmailDefinition
         /// </summary>
@@ -603,7 +603,7 @@ namespace Salesforce.MarketingCloud.Api
         /// <returns>Task of ApiResponse (ResponseDeleteQueuedMessagesForSendDefinition)</returns>
         System.Threading.Tasks.Task<ApiResponse<ResponseDeleteQueuedMessagesForSendDefinition>> DeleteQueuedMessagesForEmailDefinitionAsyncWithHttpInfo (string definitionKey);
         /// <summary>
-        /// deleteQueuedMessagesForSMSDefinition
+        /// deleteQueuedMessagesForSmsDefinition
         /// </summary>
         /// <remarks>
         /// Deletes the queue for a SMS definition. The SMS definition must be in inactive status.
@@ -611,10 +611,10 @@ namespace Salesforce.MarketingCloud.Api
         /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="definitionKey">Unique identifier of the SMS definition</param>
         /// <returns>Task of ResponseDeleteQueuedMessagesForSendDefinition</returns>
-        System.Threading.Tasks.Task<ResponseDeleteQueuedMessagesForSendDefinition> DeleteQueuedMessagesForSMSDefinitionAsync (string definitionKey);
+        System.Threading.Tasks.Task<ResponseDeleteQueuedMessagesForSendDefinition> DeleteQueuedMessagesForSmsDefinitionAsync (string definitionKey);
 
         /// <summary>
-        /// deleteQueuedMessagesForSMSDefinition
+        /// deleteQueuedMessagesForSmsDefinition
         /// </summary>
         /// <remarks>
         /// Deletes the queue for a SMS definition. The SMS definition must be in inactive status.
@@ -622,9 +622,9 @@ namespace Salesforce.MarketingCloud.Api
         /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="definitionKey">Unique identifier of the SMS definition</param>
         /// <returns>Task of ApiResponse (ResponseDeleteQueuedMessagesForSendDefinition)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ResponseDeleteQueuedMessagesForSendDefinition>> DeleteQueuedMessagesForSMSDefinitionAsyncWithHttpInfo (string definitionKey);
+        System.Threading.Tasks.Task<ApiResponse<ResponseDeleteQueuedMessagesForSendDefinition>> DeleteQueuedMessagesForSmsDefinitionAsyncWithHttpInfo (string definitionKey);
         /// <summary>
-        /// deleteSMSDefinition
+        /// deleteSmsDefinition
         /// </summary>
         /// <remarks>
         /// Deletes an sms definition. You can&#39;t restore a deleted definition. The deleted definition is archived, and a delete location of the definition key is provided in the response for reference. You can reuse a deleted definition key because the information associated with it is copied to a new unique identifier.
@@ -632,10 +632,10 @@ namespace Salesforce.MarketingCloud.Api
         /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="definitionKey">Unique identifier of the definition to delete</param>
         /// <returns>Task of ResponseDeleteSendDefinition</returns>
-        System.Threading.Tasks.Task<ResponseDeleteSendDefinition> DeleteSMSDefinitionAsync (string definitionKey);
+        System.Threading.Tasks.Task<ResponseDeleteSendDefinition> DeleteSmsDefinitionAsync (string definitionKey);
 
         /// <summary>
-        /// deleteSMSDefinition
+        /// deleteSmsDefinition
         /// </summary>
         /// <remarks>
         /// Deletes an sms definition. You can&#39;t restore a deleted definition. The deleted definition is archived, and a delete location of the definition key is provided in the response for reference. You can reuse a deleted definition key because the information associated with it is copied to a new unique identifier.
@@ -643,7 +643,7 @@ namespace Salesforce.MarketingCloud.Api
         /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="definitionKey">Unique identifier of the definition to delete</param>
         /// <returns>Task of ApiResponse (ResponseDeleteSendDefinition)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ResponseDeleteSendDefinition>> DeleteSMSDefinitionAsyncWithHttpInfo (string definitionKey);
+        System.Threading.Tasks.Task<ApiResponse<ResponseDeleteSendDefinition>> DeleteSmsDefinitionAsyncWithHttpInfo (string definitionKey);
         /// <summary>
         /// getEmailDefinition
         /// </summary>
@@ -760,7 +760,7 @@ namespace Salesforce.MarketingCloud.Api
         /// <returns>Task of ApiResponse (ResponseGetQueueMetricsForSendDefinition)</returns>
         System.Threading.Tasks.Task<ApiResponse<ResponseGetQueueMetricsForSendDefinition>> GetQueueMetricsForEmailDefinitionAsyncWithHttpInfo (string definitionKey);
         /// <summary>
-        /// getQueueMetricsForSMSDefinition
+        /// getQueueMetricsForSmsDefinition
         /// </summary>
         /// <remarks>
         /// Gets metrics for the messages of a SMS definition. Applies to messages that are accepted but not yet processed.
@@ -768,10 +768,10 @@ namespace Salesforce.MarketingCloud.Api
         /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="definitionKey">Unique identifier of the SMS definition</param>
         /// <returns>Task of ResponseGetQueueMetricsForSendDefinition</returns>
-        System.Threading.Tasks.Task<ResponseGetQueueMetricsForSendDefinition> GetQueueMetricsForSMSDefinitionAsync (string definitionKey);
+        System.Threading.Tasks.Task<ResponseGetQueueMetricsForSendDefinition> GetQueueMetricsForSmsDefinitionAsync (string definitionKey);
 
         /// <summary>
-        /// getQueueMetricsForSMSDefinition
+        /// getQueueMetricsForSmsDefinition
         /// </summary>
         /// <remarks>
         /// Gets metrics for the messages of a SMS definition. Applies to messages that are accepted but not yet processed.
@@ -779,76 +779,7 @@ namespace Salesforce.MarketingCloud.Api
         /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="definitionKey">Unique identifier of the SMS definition</param>
         /// <returns>Task of ApiResponse (ResponseGetQueueMetricsForSendDefinition)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ResponseGetQueueMetricsForSendDefinition>> GetQueueMetricsForSMSDefinitionAsyncWithHttpInfo (string definitionKey);
-        /// <summary>
-        /// getSMSDefinition
-        /// </summary>
-        /// <remarks>
-        /// Gets SMS definition configuration details for a definition key.
-        /// </remarks>
-        /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="definitionKey">Unique identifier of the definition to get</param>
-        /// <returns>Task of RequestCreateSMSDefinition</returns>
-        System.Threading.Tasks.Task<RequestCreateSMSDefinition> GetSMSDefinitionAsync (string definitionKey);
-
-        /// <summary>
-        /// getSMSDefinition
-        /// </summary>
-        /// <remarks>
-        /// Gets SMS definition configuration details for a definition key.
-        /// </remarks>
-        /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="definitionKey">Unique identifier of the definition to get</param>
-        /// <returns>Task of ApiResponse (RequestCreateSMSDefinition)</returns>
-        System.Threading.Tasks.Task<ApiResponse<RequestCreateSMSDefinition>> GetSMSDefinitionAsyncWithHttpInfo (string definitionKey);
-        /// <summary>
-        /// getSMSDefinitions
-        /// </summary>
-        /// <remarks>
-        /// Gets a list of SMS definitions.
-        /// </remarks>
-        /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="status">Filter by status type. Accepted values are active, inactive, or deleted. Valid operations are eq and neq. (optional)</param>
-        /// <param name="pageSize">Number of definitions, which are array elements, to return per paged response. (optional)</param>
-        /// <param name="page">Page number to return. (optional)</param>
-        /// <param name="orderBy">Sort by a dimension. You can sort by only one dimension. Accepted values are definitionKey, name, createdDate, modifiedDate, and status. (optional)</param>
-        /// <returns>Task of ResponseGetSMSDefinitions</returns>
-        System.Threading.Tasks.Task<ResponseGetSMSDefinitions> GetSMSDefinitionsAsync (string status = null, decimal? pageSize = null, decimal? page = null, string orderBy = null);
-
-        /// <summary>
-        /// getSMSDefinitions
-        /// </summary>
-        /// <remarks>
-        /// Gets a list of SMS definitions.
-        /// </remarks>
-        /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="status">Filter by status type. Accepted values are active, inactive, or deleted. Valid operations are eq and neq. (optional)</param>
-        /// <param name="pageSize">Number of definitions, which are array elements, to return per paged response. (optional)</param>
-        /// <param name="page">Page number to return. (optional)</param>
-        /// <param name="orderBy">Sort by a dimension. You can sort by only one dimension. Accepted values are definitionKey, name, createdDate, modifiedDate, and status. (optional)</param>
-        /// <returns>Task of ApiResponse (ResponseGetSMSDefinitions)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ResponseGetSMSDefinitions>> GetSMSDefinitionsAsyncWithHttpInfo (string status = null, decimal? pageSize = null, decimal? page = null, string orderBy = null);
-        /// <summary>
-        /// getSMSSendStatusForRecipient
-        /// </summary>
-        /// <remarks>
-        /// Gets the send status for a message. Because this route is rate-limited, use it for infrequent verification of a messageKey. To collect send status at scale, subscribe to transactional send events using the Event Notification Service.
-        /// </remarks>
-        /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="messageKey">Unique identifier to track message send status. You must provide it in singleton requests using the recipient attribute. To provide message key in batch requests, use the recipients array attribute. If you don’t provide the message key for recipients, it’s generated in the response.</param>
-        /// <returns>Task of ResponseGetDefinitionSendStatusForRecipient</returns>
-        System.Threading.Tasks.Task<ResponseGetDefinitionSendStatusForRecipient> GetSMSSendStatusForRecipientAsync (string messageKey);
-
-        /// <summary>
-        /// getSMSSendStatusForRecipient
-        /// </summary>
-        /// <remarks>
-        /// Gets the send status for a message. Because this route is rate-limited, use it for infrequent verification of a messageKey. To collect send status at scale, subscribe to transactional send events using the Event Notification Service.
-        /// </remarks>
-        /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="messageKey">Unique identifier to track message send status. You must provide it in singleton requests using the recipient attribute. To provide message key in batch requests, use the recipients array attribute. If you don’t provide the message key for recipients, it’s generated in the response.</param>
-        /// <returns>Task of ApiResponse (ResponseGetDefinitionSendStatusForRecipient)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ResponseGetDefinitionSendStatusForRecipient>> GetSMSSendStatusForRecipientAsyncWithHttpInfo (string messageKey);
+        System.Threading.Tasks.Task<ApiResponse<ResponseGetQueueMetricsForSendDefinition>> GetQueueMetricsForSmsDefinitionAsyncWithHttpInfo (string definitionKey);
         /// <summary>
         /// getSMSsNotSentToRecipients
         /// </summary>
@@ -875,6 +806,75 @@ namespace Salesforce.MarketingCloud.Api
         /// <returns>Task of ApiResponse (ResponseGetDefinitionsNotSentToRecipients)</returns>
         System.Threading.Tasks.Task<ApiResponse<ResponseGetDefinitionsNotSentToRecipients>> GetSMSsNotSentToRecipientsAsyncWithHttpInfo (string type, int? pageSize = null, int? lastEventId = null);
         /// <summary>
+        /// getSmsDefinition
+        /// </summary>
+        /// <remarks>
+        /// Gets SMS definition configuration details for a definition key.
+        /// </remarks>
+        /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="definitionKey">Unique identifier of the definition to get</param>
+        /// <returns>Task of RequestCreateSmsDefinition</returns>
+        System.Threading.Tasks.Task<RequestCreateSmsDefinition> GetSmsDefinitionAsync (string definitionKey);
+
+        /// <summary>
+        /// getSmsDefinition
+        /// </summary>
+        /// <remarks>
+        /// Gets SMS definition configuration details for a definition key.
+        /// </remarks>
+        /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="definitionKey">Unique identifier of the definition to get</param>
+        /// <returns>Task of ApiResponse (RequestCreateSmsDefinition)</returns>
+        System.Threading.Tasks.Task<ApiResponse<RequestCreateSmsDefinition>> GetSmsDefinitionAsyncWithHttpInfo (string definitionKey);
+        /// <summary>
+        /// getSmsDefinitions
+        /// </summary>
+        /// <remarks>
+        /// Gets a list of SMS definitions.
+        /// </remarks>
+        /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="status">Filter by status type. Accepted values are active, inactive, or deleted. Valid operations are eq and neq. (optional)</param>
+        /// <param name="pageSize">Number of definitions, which are array elements, to return per paged response. (optional)</param>
+        /// <param name="page">Page number to return. (optional)</param>
+        /// <param name="orderBy">Sort by a dimension. You can sort by only one dimension. Accepted values are definitionKey, name, createdDate, modifiedDate, and status. (optional)</param>
+        /// <returns>Task of ResponseGetSmsDefinitions</returns>
+        System.Threading.Tasks.Task<ResponseGetSmsDefinitions> GetSmsDefinitionsAsync (string status = null, decimal? pageSize = null, decimal? page = null, string orderBy = null);
+
+        /// <summary>
+        /// getSmsDefinitions
+        /// </summary>
+        /// <remarks>
+        /// Gets a list of SMS definitions.
+        /// </remarks>
+        /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="status">Filter by status type. Accepted values are active, inactive, or deleted. Valid operations are eq and neq. (optional)</param>
+        /// <param name="pageSize">Number of definitions, which are array elements, to return per paged response. (optional)</param>
+        /// <param name="page">Page number to return. (optional)</param>
+        /// <param name="orderBy">Sort by a dimension. You can sort by only one dimension. Accepted values are definitionKey, name, createdDate, modifiedDate, and status. (optional)</param>
+        /// <returns>Task of ApiResponse (ResponseGetSmsDefinitions)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ResponseGetSmsDefinitions>> GetSmsDefinitionsAsyncWithHttpInfo (string status = null, decimal? pageSize = null, decimal? page = null, string orderBy = null);
+        /// <summary>
+        /// getSmsSendStatusForRecipient
+        /// </summary>
+        /// <remarks>
+        /// Gets the send status for a message. Because this route is rate-limited, use it for infrequent verification of a messageKey. To collect send status at scale, subscribe to transactional send events using the Event Notification Service.
+        /// </remarks>
+        /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="messageKey">Unique identifier to track message send status. You must provide it in singleton requests using the recipient attribute. To provide message key in batch requests, use the recipients array attribute. If you don’t provide the message key for recipients, it’s generated in the response.</param>
+        /// <returns>Task of ResponseGetDefinitionSendStatusForRecipient</returns>
+        System.Threading.Tasks.Task<ResponseGetDefinitionSendStatusForRecipient> GetSmsSendStatusForRecipientAsync (string messageKey);
+
+        /// <summary>
+        /// getSmsSendStatusForRecipient
+        /// </summary>
+        /// <remarks>
+        /// Gets the send status for a message. Because this route is rate-limited, use it for infrequent verification of a messageKey. To collect send status at scale, subscribe to transactional send events using the Event Notification Service.
+        /// </remarks>
+        /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="messageKey">Unique identifier to track message send status. You must provide it in singleton requests using the recipient attribute. To provide message key in batch requests, use the recipients array attribute. If you don’t provide the message key for recipients, it’s generated in the response.</param>
+        /// <returns>Task of ApiResponse (ResponseGetDefinitionSendStatusForRecipient)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ResponseGetDefinitionSendStatusForRecipient>> GetSmsSendStatusForRecipientAsyncWithHttpInfo (string messageKey);
+        /// <summary>
         /// partiallyUpdateEmailDefinition
         /// </summary>
         /// <remarks>
@@ -898,7 +898,7 @@ namespace Salesforce.MarketingCloud.Api
         /// <returns>Task of ApiResponse (RequestCreateEmailDefinition)</returns>
         System.Threading.Tasks.Task<ApiResponse<RequestCreateEmailDefinition>> PartiallyUpdateEmailDefinitionAsyncWithHttpInfo (string definitionKey, RequestUpdateEmailDefinition body = null);
         /// <summary>
-        /// partiallyUpdateSMSDefinition
+        /// partiallyUpdateSmsDefinition
         /// </summary>
         /// <remarks>
         /// Updates a specific SMS definition.
@@ -906,11 +906,11 @@ namespace Salesforce.MarketingCloud.Api
         /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="definitionKey">Unique identifier of the definition.</param>
         /// <param name="body">JSON Parameters (optional)</param>
-        /// <returns>Task of RequestCreateSMSDefinition</returns>
-        System.Threading.Tasks.Task<RequestCreateSMSDefinition> PartiallyUpdateSMSDefinitionAsync (string definitionKey, RequestCreateSMSDefinition body = null);
+        /// <returns>Task of RequestCreateSmsDefinition</returns>
+        System.Threading.Tasks.Task<RequestCreateSmsDefinition> PartiallyUpdateSmsDefinitionAsync (string definitionKey, RequestUpdateSmsDefinition body = null);
 
         /// <summary>
-        /// partiallyUpdateSMSDefinition
+        /// partiallyUpdateSmsDefinition
         /// </summary>
         /// <remarks>
         /// Updates a specific SMS definition.
@@ -918,8 +918,8 @@ namespace Salesforce.MarketingCloud.Api
         /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="definitionKey">Unique identifier of the definition.</param>
         /// <param name="body">JSON Parameters (optional)</param>
-        /// <returns>Task of ApiResponse (RequestCreateSMSDefinition)</returns>
-        System.Threading.Tasks.Task<ApiResponse<RequestCreateSMSDefinition>> PartiallyUpdateSMSDefinitionAsyncWithHttpInfo (string definitionKey, RequestCreateSMSDefinition body = null);
+        /// <returns>Task of ApiResponse (RequestCreateSmsDefinition)</returns>
+        System.Threading.Tasks.Task<ApiResponse<RequestCreateSmsDefinition>> PartiallyUpdateSmsDefinitionAsyncWithHttpInfo (string definitionKey, RequestUpdateSmsDefinition body = null);
         /// <summary>
         /// sendEmailToMultipleRecipients
         /// </summary>
@@ -965,7 +965,7 @@ namespace Salesforce.MarketingCloud.Api
         /// <returns>Task of ApiResponse (ResponseSendDefinitionToSingleRecipient)</returns>
         System.Threading.Tasks.Task<ApiResponse<ResponseSendDefinitionToSingleRecipient>> SendEmailToSingleRecipientAsyncWithHttpInfo (string messageKey, RequestSendEmailToSingleRecipient body = null);
         /// <summary>
-        /// sendSMSToMultipleRecipients
+        /// sendSmsToMultipleRecipients
         /// </summary>
         /// <remarks>
         /// Sends a message to multiple recipients using an email definition. You can provide a messageKey in the request; otherwise, the messageKey is automatically generated in the response.
@@ -973,10 +973,10 @@ namespace Salesforce.MarketingCloud.Api
         /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">JSON Parameters (optional)</param>
         /// <returns>Task of ResponseSendDefinitionToMultipleRecipients</returns>
-        System.Threading.Tasks.Task<ResponseSendDefinitionToMultipleRecipients> SendSMSToMultipleRecipientsAsync (RequestSendSMSToMultipleRecipients body = null);
+        System.Threading.Tasks.Task<ResponseSendDefinitionToMultipleRecipients> SendSmsToMultipleRecipientsAsync (RequestSendSmsToMultipleRecipients body = null);
 
         /// <summary>
-        /// sendSMSToMultipleRecipients
+        /// sendSmsToMultipleRecipients
         /// </summary>
         /// <remarks>
         /// Sends a message to multiple recipients using an email definition. You can provide a messageKey in the request; otherwise, the messageKey is automatically generated in the response.
@@ -984,9 +984,9 @@ namespace Salesforce.MarketingCloud.Api
         /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">JSON Parameters (optional)</param>
         /// <returns>Task of ApiResponse (ResponseSendDefinitionToMultipleRecipients)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ResponseSendDefinitionToMultipleRecipients>> SendSMSToMultipleRecipientsAsyncWithHttpInfo (RequestSendSMSToMultipleRecipients body = null);
+        System.Threading.Tasks.Task<ApiResponse<ResponseSendDefinitionToMultipleRecipients>> SendSmsToMultipleRecipientsAsyncWithHttpInfo (RequestSendSmsToMultipleRecipients body = null);
         /// <summary>
-        /// sendSMSToSingleRecipient
+        /// sendSmsToSingleRecipient
         /// </summary>
         /// <remarks>
         /// Sends a message to a single recipient via a SMS definition using a messageKey path parameter.
@@ -995,10 +995,10 @@ namespace Salesforce.MarketingCloud.Api
         /// <param name="messageKey">Unique identifier of the definition used to track message status. The messageKey can be created automatically when you create a message, or you can provide it as part of the request. Each recipient in a request must have a unique messageKey. If you use a duplicate messageKey in the same send request, the message is rejected.</param>
         /// <param name="body">JSON Parameters (optional)</param>
         /// <returns>Task of ResponseSendDefinitionToSingleRecipient</returns>
-        System.Threading.Tasks.Task<ResponseSendDefinitionToSingleRecipient> SendSMSToSingleRecipientAsync (string messageKey, RequestSendSMSToSingleRecipient body = null);
+        System.Threading.Tasks.Task<ResponseSendDefinitionToSingleRecipient> SendSmsToSingleRecipientAsync (string messageKey, RequestSendSmsToSingleRecipient body = null);
 
         /// <summary>
-        /// sendSMSToSingleRecipient
+        /// sendSmsToSingleRecipient
         /// </summary>
         /// <remarks>
         /// Sends a message to a single recipient via a SMS definition using a messageKey path parameter.
@@ -1007,7 +1007,7 @@ namespace Salesforce.MarketingCloud.Api
         /// <param name="messageKey">Unique identifier of the definition used to track message status. The messageKey can be created automatically when you create a message, or you can provide it as part of the request. Each recipient in a request must have a unique messageKey. If you use a duplicate messageKey in the same send request, the message is rejected.</param>
         /// <param name="body">JSON Parameters (optional)</param>
         /// <returns>Task of ApiResponse (ResponseSendDefinitionToSingleRecipient)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ResponseSendDefinitionToSingleRecipient>> SendSMSToSingleRecipientAsyncWithHttpInfo (string messageKey, RequestSendSMSToSingleRecipient body = null);
+        System.Threading.Tasks.Task<ApiResponse<ResponseSendDefinitionToSingleRecipient>> SendSmsToSingleRecipientAsyncWithHttpInfo (string messageKey, RequestSendSmsToSingleRecipient body = null);
         #endregion Asynchronous Operations
     }
 
@@ -1273,24 +1273,24 @@ namespace Salesforce.MarketingCloud.Api
         }
 
         /// <summary>
-        /// createSMSDefinition Creates the definition for an SMS.
+        /// createSmsDefinition Creates the definition for an SMS.
         /// </summary>
         /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">JSON Parameters (optional)</param>
-        /// <returns>RequestCreateSMSDefinition</returns>
-        public RequestCreateSMSDefinition CreateSMSDefinition (RequestCreateSMSDefinition body = null)
+        /// <returns>RequestCreateSmsDefinition</returns>
+        public RequestCreateSmsDefinition CreateSmsDefinition (RequestCreateSmsDefinition body = null)
         {
-             ApiResponse<RequestCreateSMSDefinition> localVarResponse = CreateSMSDefinitionWithHttpInfo(body);
+             ApiResponse<RequestCreateSmsDefinition> localVarResponse = CreateSmsDefinitionWithHttpInfo(body);
              return localVarResponse.Data;
         }
 
         /// <summary>
-        /// createSMSDefinition Creates the definition for an SMS.
+        /// createSmsDefinition Creates the definition for an SMS.
         /// </summary>
         /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">JSON Parameters (optional)</param>
-        /// <returns>ApiResponse of RequestCreateSMSDefinition</returns>
-        public ApiResponse< RequestCreateSMSDefinition > CreateSMSDefinitionWithHttpInfo (RequestCreateSMSDefinition body = null)
+        /// <returns>ApiResponse of RequestCreateSmsDefinition</returns>
+        public ApiResponse< RequestCreateSmsDefinition > CreateSmsDefinitionWithHttpInfo (RequestCreateSmsDefinition body = null)
         {
 
             var localVarPath = "/messaging/v1/sms/definitions";
@@ -1332,35 +1332,35 @@ namespace Salesforce.MarketingCloud.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("CreateSMSDefinition", localVarResponse);
+                Exception exception = ExceptionFactory("CreateSmsDefinition", localVarResponse);
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<RequestCreateSMSDefinition>(localVarStatusCode,
+            return new ApiResponse<RequestCreateSmsDefinition>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (RequestCreateSMSDefinition) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RequestCreateSMSDefinition)));
+                (RequestCreateSmsDefinition) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RequestCreateSmsDefinition)));
         }
 
         /// <summary>
-        /// createSMSDefinition Creates the definition for an SMS.
+        /// createSmsDefinition Creates the definition for an SMS.
         /// </summary>
         /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">JSON Parameters (optional)</param>
-        /// <returns>Task of RequestCreateSMSDefinition</returns>
-        public async System.Threading.Tasks.Task<RequestCreateSMSDefinition> CreateSMSDefinitionAsync (RequestCreateSMSDefinition body = null)
+        /// <returns>Task of RequestCreateSmsDefinition</returns>
+        public async System.Threading.Tasks.Task<RequestCreateSmsDefinition> CreateSmsDefinitionAsync (RequestCreateSmsDefinition body = null)
         {
-             ApiResponse<RequestCreateSMSDefinition> localVarResponse = await CreateSMSDefinitionAsyncWithHttpInfo(body);
+             ApiResponse<RequestCreateSmsDefinition> localVarResponse = await CreateSmsDefinitionAsyncWithHttpInfo(body);
              return localVarResponse.Data;
 
         }
 
         /// <summary>
-        /// createSMSDefinition Creates the definition for an SMS.
+        /// createSmsDefinition Creates the definition for an SMS.
         /// </summary>
         /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">JSON Parameters (optional)</param>
-        /// <returns>Task of ApiResponse (RequestCreateSMSDefinition)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<RequestCreateSMSDefinition>> CreateSMSDefinitionAsyncWithHttpInfo (RequestCreateSMSDefinition body = null)
+        /// <returns>Task of ApiResponse (RequestCreateSmsDefinition)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<RequestCreateSmsDefinition>> CreateSmsDefinitionAsyncWithHttpInfo (RequestCreateSmsDefinition body = null)
         {
 
             var localVarPath = "/messaging/v1/sms/definitions";
@@ -1402,13 +1402,13 @@ namespace Salesforce.MarketingCloud.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("CreateSMSDefinition", localVarResponse);
+                Exception exception = ExceptionFactory("CreateSmsDefinition", localVarResponse);
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<RequestCreateSMSDefinition>(localVarStatusCode,
+            return new ApiResponse<RequestCreateSmsDefinition>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (RequestCreateSMSDefinition) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RequestCreateSMSDefinition)));
+                (RequestCreateSmsDefinition) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RequestCreateSmsDefinition)));
         }
 
         /// <summary>
@@ -1674,28 +1674,28 @@ namespace Salesforce.MarketingCloud.Api
         }
 
         /// <summary>
-        /// deleteQueuedMessagesForSMSDefinition Deletes the queue for a SMS definition. The SMS definition must be in inactive status.
+        /// deleteQueuedMessagesForSmsDefinition Deletes the queue for a SMS definition. The SMS definition must be in inactive status.
         /// </summary>
         /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="definitionKey">Unique identifier of the SMS definition</param>
         /// <returns>ResponseDeleteQueuedMessagesForSendDefinition</returns>
-        public ResponseDeleteQueuedMessagesForSendDefinition DeleteQueuedMessagesForSMSDefinition (string definitionKey)
+        public ResponseDeleteQueuedMessagesForSendDefinition DeleteQueuedMessagesForSmsDefinition (string definitionKey)
         {
-             ApiResponse<ResponseDeleteQueuedMessagesForSendDefinition> localVarResponse = DeleteQueuedMessagesForSMSDefinitionWithHttpInfo(definitionKey);
+             ApiResponse<ResponseDeleteQueuedMessagesForSendDefinition> localVarResponse = DeleteQueuedMessagesForSmsDefinitionWithHttpInfo(definitionKey);
              return localVarResponse.Data;
         }
 
         /// <summary>
-        /// deleteQueuedMessagesForSMSDefinition Deletes the queue for a SMS definition. The SMS definition must be in inactive status.
+        /// deleteQueuedMessagesForSmsDefinition Deletes the queue for a SMS definition. The SMS definition must be in inactive status.
         /// </summary>
         /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="definitionKey">Unique identifier of the SMS definition</param>
         /// <returns>ApiResponse of ResponseDeleteQueuedMessagesForSendDefinition</returns>
-        public ApiResponse< ResponseDeleteQueuedMessagesForSendDefinition > DeleteQueuedMessagesForSMSDefinitionWithHttpInfo (string definitionKey)
+        public ApiResponse< ResponseDeleteQueuedMessagesForSendDefinition > DeleteQueuedMessagesForSmsDefinitionWithHttpInfo (string definitionKey)
         {
             // verify the required parameter 'definitionKey' is set
             if (definitionKey == null)
-                throw new ApiException(400, "Missing required parameter 'definitionKey' when calling TransactionalMessagingApi->DeleteQueuedMessagesForSMSDefinition");
+                throw new ApiException(400, "Missing required parameter 'definitionKey' when calling TransactionalMessagingApi->DeleteQueuedMessagesForSmsDefinition");
 
             var localVarPath = "/messaging/v1/sms/definitions/{definitionKey}/queue";
             var localVarPathParams = new Dictionary<String, String>();
@@ -1729,7 +1729,7 @@ namespace Salesforce.MarketingCloud.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("DeleteQueuedMessagesForSMSDefinition", localVarResponse);
+                Exception exception = ExceptionFactory("DeleteQueuedMessagesForSmsDefinition", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -1739,29 +1739,29 @@ namespace Salesforce.MarketingCloud.Api
         }
 
         /// <summary>
-        /// deleteQueuedMessagesForSMSDefinition Deletes the queue for a SMS definition. The SMS definition must be in inactive status.
+        /// deleteQueuedMessagesForSmsDefinition Deletes the queue for a SMS definition. The SMS definition must be in inactive status.
         /// </summary>
         /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="definitionKey">Unique identifier of the SMS definition</param>
         /// <returns>Task of ResponseDeleteQueuedMessagesForSendDefinition</returns>
-        public async System.Threading.Tasks.Task<ResponseDeleteQueuedMessagesForSendDefinition> DeleteQueuedMessagesForSMSDefinitionAsync (string definitionKey)
+        public async System.Threading.Tasks.Task<ResponseDeleteQueuedMessagesForSendDefinition> DeleteQueuedMessagesForSmsDefinitionAsync (string definitionKey)
         {
-             ApiResponse<ResponseDeleteQueuedMessagesForSendDefinition> localVarResponse = await DeleteQueuedMessagesForSMSDefinitionAsyncWithHttpInfo(definitionKey);
+             ApiResponse<ResponseDeleteQueuedMessagesForSendDefinition> localVarResponse = await DeleteQueuedMessagesForSmsDefinitionAsyncWithHttpInfo(definitionKey);
              return localVarResponse.Data;
 
         }
 
         /// <summary>
-        /// deleteQueuedMessagesForSMSDefinition Deletes the queue for a SMS definition. The SMS definition must be in inactive status.
+        /// deleteQueuedMessagesForSmsDefinition Deletes the queue for a SMS definition. The SMS definition must be in inactive status.
         /// </summary>
         /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="definitionKey">Unique identifier of the SMS definition</param>
         /// <returns>Task of ApiResponse (ResponseDeleteQueuedMessagesForSendDefinition)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ResponseDeleteQueuedMessagesForSendDefinition>> DeleteQueuedMessagesForSMSDefinitionAsyncWithHttpInfo (string definitionKey)
+        public async System.Threading.Tasks.Task<ApiResponse<ResponseDeleteQueuedMessagesForSendDefinition>> DeleteQueuedMessagesForSmsDefinitionAsyncWithHttpInfo (string definitionKey)
         {
             // verify the required parameter 'definitionKey' is set
             if (definitionKey == null)
-                throw new ApiException(400, "Missing required parameter 'definitionKey' when calling TransactionalMessagingApi->DeleteQueuedMessagesForSMSDefinition");
+                throw new ApiException(400, "Missing required parameter 'definitionKey' when calling TransactionalMessagingApi->DeleteQueuedMessagesForSmsDefinition");
 
             var localVarPath = "/messaging/v1/sms/definitions/{definitionKey}/queue";
             var localVarPathParams = new Dictionary<String, String>();
@@ -1795,7 +1795,7 @@ namespace Salesforce.MarketingCloud.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("DeleteQueuedMessagesForSMSDefinition", localVarResponse);
+                Exception exception = ExceptionFactory("DeleteQueuedMessagesForSmsDefinition", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -1805,28 +1805,28 @@ namespace Salesforce.MarketingCloud.Api
         }
 
         /// <summary>
-        /// deleteSMSDefinition Deletes an sms definition. You can&#39;t restore a deleted definition. The deleted definition is archived, and a delete location of the definition key is provided in the response for reference. You can reuse a deleted definition key because the information associated with it is copied to a new unique identifier.
+        /// deleteSmsDefinition Deletes an sms definition. You can&#39;t restore a deleted definition. The deleted definition is archived, and a delete location of the definition key is provided in the response for reference. You can reuse a deleted definition key because the information associated with it is copied to a new unique identifier.
         /// </summary>
         /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="definitionKey">Unique identifier of the definition to delete</param>
         /// <returns>ResponseDeleteSendDefinition</returns>
-        public ResponseDeleteSendDefinition DeleteSMSDefinition (string definitionKey)
+        public ResponseDeleteSendDefinition DeleteSmsDefinition (string definitionKey)
         {
-             ApiResponse<ResponseDeleteSendDefinition> localVarResponse = DeleteSMSDefinitionWithHttpInfo(definitionKey);
+             ApiResponse<ResponseDeleteSendDefinition> localVarResponse = DeleteSmsDefinitionWithHttpInfo(definitionKey);
              return localVarResponse.Data;
         }
 
         /// <summary>
-        /// deleteSMSDefinition Deletes an sms definition. You can&#39;t restore a deleted definition. The deleted definition is archived, and a delete location of the definition key is provided in the response for reference. You can reuse a deleted definition key because the information associated with it is copied to a new unique identifier.
+        /// deleteSmsDefinition Deletes an sms definition. You can&#39;t restore a deleted definition. The deleted definition is archived, and a delete location of the definition key is provided in the response for reference. You can reuse a deleted definition key because the information associated with it is copied to a new unique identifier.
         /// </summary>
         /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="definitionKey">Unique identifier of the definition to delete</param>
         /// <returns>ApiResponse of ResponseDeleteSendDefinition</returns>
-        public ApiResponse< ResponseDeleteSendDefinition > DeleteSMSDefinitionWithHttpInfo (string definitionKey)
+        public ApiResponse< ResponseDeleteSendDefinition > DeleteSmsDefinitionWithHttpInfo (string definitionKey)
         {
             // verify the required parameter 'definitionKey' is set
             if (definitionKey == null)
-                throw new ApiException(400, "Missing required parameter 'definitionKey' when calling TransactionalMessagingApi->DeleteSMSDefinition");
+                throw new ApiException(400, "Missing required parameter 'definitionKey' when calling TransactionalMessagingApi->DeleteSmsDefinition");
 
             var localVarPath = "/messaging/v1/sms/definitions/{definitionKey}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -1860,7 +1860,7 @@ namespace Salesforce.MarketingCloud.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("DeleteSMSDefinition", localVarResponse);
+                Exception exception = ExceptionFactory("DeleteSmsDefinition", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -1870,29 +1870,29 @@ namespace Salesforce.MarketingCloud.Api
         }
 
         /// <summary>
-        /// deleteSMSDefinition Deletes an sms definition. You can&#39;t restore a deleted definition. The deleted definition is archived, and a delete location of the definition key is provided in the response for reference. You can reuse a deleted definition key because the information associated with it is copied to a new unique identifier.
+        /// deleteSmsDefinition Deletes an sms definition. You can&#39;t restore a deleted definition. The deleted definition is archived, and a delete location of the definition key is provided in the response for reference. You can reuse a deleted definition key because the information associated with it is copied to a new unique identifier.
         /// </summary>
         /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="definitionKey">Unique identifier of the definition to delete</param>
         /// <returns>Task of ResponseDeleteSendDefinition</returns>
-        public async System.Threading.Tasks.Task<ResponseDeleteSendDefinition> DeleteSMSDefinitionAsync (string definitionKey)
+        public async System.Threading.Tasks.Task<ResponseDeleteSendDefinition> DeleteSmsDefinitionAsync (string definitionKey)
         {
-             ApiResponse<ResponseDeleteSendDefinition> localVarResponse = await DeleteSMSDefinitionAsyncWithHttpInfo(definitionKey);
+             ApiResponse<ResponseDeleteSendDefinition> localVarResponse = await DeleteSmsDefinitionAsyncWithHttpInfo(definitionKey);
              return localVarResponse.Data;
 
         }
 
         /// <summary>
-        /// deleteSMSDefinition Deletes an sms definition. You can&#39;t restore a deleted definition. The deleted definition is archived, and a delete location of the definition key is provided in the response for reference. You can reuse a deleted definition key because the information associated with it is copied to a new unique identifier.
+        /// deleteSmsDefinition Deletes an sms definition. You can&#39;t restore a deleted definition. The deleted definition is archived, and a delete location of the definition key is provided in the response for reference. You can reuse a deleted definition key because the information associated with it is copied to a new unique identifier.
         /// </summary>
         /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="definitionKey">Unique identifier of the definition to delete</param>
         /// <returns>Task of ApiResponse (ResponseDeleteSendDefinition)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ResponseDeleteSendDefinition>> DeleteSMSDefinitionAsyncWithHttpInfo (string definitionKey)
+        public async System.Threading.Tasks.Task<ApiResponse<ResponseDeleteSendDefinition>> DeleteSmsDefinitionAsyncWithHttpInfo (string definitionKey)
         {
             // verify the required parameter 'definitionKey' is set
             if (definitionKey == null)
-                throw new ApiException(400, "Missing required parameter 'definitionKey' when calling TransactionalMessagingApi->DeleteSMSDefinition");
+                throw new ApiException(400, "Missing required parameter 'definitionKey' when calling TransactionalMessagingApi->DeleteSmsDefinition");
 
             var localVarPath = "/messaging/v1/sms/definitions/{definitionKey}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -1926,7 +1926,7 @@ namespace Salesforce.MarketingCloud.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("DeleteSMSDefinition", localVarResponse);
+                Exception exception = ExceptionFactory("DeleteSmsDefinition", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -2615,28 +2615,28 @@ namespace Salesforce.MarketingCloud.Api
         }
 
         /// <summary>
-        /// getQueueMetricsForSMSDefinition Gets metrics for the messages of a SMS definition. Applies to messages that are accepted but not yet processed.
+        /// getQueueMetricsForSmsDefinition Gets metrics for the messages of a SMS definition. Applies to messages that are accepted but not yet processed.
         /// </summary>
         /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="definitionKey">Unique identifier of the SMS definition</param>
         /// <returns>ResponseGetQueueMetricsForSendDefinition</returns>
-        public ResponseGetQueueMetricsForSendDefinition GetQueueMetricsForSMSDefinition (string definitionKey)
+        public ResponseGetQueueMetricsForSendDefinition GetQueueMetricsForSmsDefinition (string definitionKey)
         {
-             ApiResponse<ResponseGetQueueMetricsForSendDefinition> localVarResponse = GetQueueMetricsForSMSDefinitionWithHttpInfo(definitionKey);
+             ApiResponse<ResponseGetQueueMetricsForSendDefinition> localVarResponse = GetQueueMetricsForSmsDefinitionWithHttpInfo(definitionKey);
              return localVarResponse.Data;
         }
 
         /// <summary>
-        /// getQueueMetricsForSMSDefinition Gets metrics for the messages of a SMS definition. Applies to messages that are accepted but not yet processed.
+        /// getQueueMetricsForSmsDefinition Gets metrics for the messages of a SMS definition. Applies to messages that are accepted but not yet processed.
         /// </summary>
         /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="definitionKey">Unique identifier of the SMS definition</param>
         /// <returns>ApiResponse of ResponseGetQueueMetricsForSendDefinition</returns>
-        public ApiResponse< ResponseGetQueueMetricsForSendDefinition > GetQueueMetricsForSMSDefinitionWithHttpInfo (string definitionKey)
+        public ApiResponse< ResponseGetQueueMetricsForSendDefinition > GetQueueMetricsForSmsDefinitionWithHttpInfo (string definitionKey)
         {
             // verify the required parameter 'definitionKey' is set
             if (definitionKey == null)
-                throw new ApiException(400, "Missing required parameter 'definitionKey' when calling TransactionalMessagingApi->GetQueueMetricsForSMSDefinition");
+                throw new ApiException(400, "Missing required parameter 'definitionKey' when calling TransactionalMessagingApi->GetQueueMetricsForSmsDefinition");
 
             var localVarPath = "/messaging/v1/sms/definitions/{definitionKey}/queue";
             var localVarPathParams = new Dictionary<String, String>();
@@ -2670,7 +2670,7 @@ namespace Salesforce.MarketingCloud.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("GetQueueMetricsForSMSDefinition", localVarResponse);
+                Exception exception = ExceptionFactory("GetQueueMetricsForSmsDefinition", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -2680,29 +2680,29 @@ namespace Salesforce.MarketingCloud.Api
         }
 
         /// <summary>
-        /// getQueueMetricsForSMSDefinition Gets metrics for the messages of a SMS definition. Applies to messages that are accepted but not yet processed.
+        /// getQueueMetricsForSmsDefinition Gets metrics for the messages of a SMS definition. Applies to messages that are accepted but not yet processed.
         /// </summary>
         /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="definitionKey">Unique identifier of the SMS definition</param>
         /// <returns>Task of ResponseGetQueueMetricsForSendDefinition</returns>
-        public async System.Threading.Tasks.Task<ResponseGetQueueMetricsForSendDefinition> GetQueueMetricsForSMSDefinitionAsync (string definitionKey)
+        public async System.Threading.Tasks.Task<ResponseGetQueueMetricsForSendDefinition> GetQueueMetricsForSmsDefinitionAsync (string definitionKey)
         {
-             ApiResponse<ResponseGetQueueMetricsForSendDefinition> localVarResponse = await GetQueueMetricsForSMSDefinitionAsyncWithHttpInfo(definitionKey);
+             ApiResponse<ResponseGetQueueMetricsForSendDefinition> localVarResponse = await GetQueueMetricsForSmsDefinitionAsyncWithHttpInfo(definitionKey);
              return localVarResponse.Data;
 
         }
 
         /// <summary>
-        /// getQueueMetricsForSMSDefinition Gets metrics for the messages of a SMS definition. Applies to messages that are accepted but not yet processed.
+        /// getQueueMetricsForSmsDefinition Gets metrics for the messages of a SMS definition. Applies to messages that are accepted but not yet processed.
         /// </summary>
         /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="definitionKey">Unique identifier of the SMS definition</param>
         /// <returns>Task of ApiResponse (ResponseGetQueueMetricsForSendDefinition)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ResponseGetQueueMetricsForSendDefinition>> GetQueueMetricsForSMSDefinitionAsyncWithHttpInfo (string definitionKey)
+        public async System.Threading.Tasks.Task<ApiResponse<ResponseGetQueueMetricsForSendDefinition>> GetQueueMetricsForSmsDefinitionAsyncWithHttpInfo (string definitionKey)
         {
             // verify the required parameter 'definitionKey' is set
             if (definitionKey == null)
-                throw new ApiException(400, "Missing required parameter 'definitionKey' when calling TransactionalMessagingApi->GetQueueMetricsForSMSDefinition");
+                throw new ApiException(400, "Missing required parameter 'definitionKey' when calling TransactionalMessagingApi->GetQueueMetricsForSmsDefinition");
 
             var localVarPath = "/messaging/v1/sms/definitions/{definitionKey}/queue";
             var localVarPathParams = new Dictionary<String, String>();
@@ -2736,418 +2736,13 @@ namespace Salesforce.MarketingCloud.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("GetQueueMetricsForSMSDefinition", localVarResponse);
+                Exception exception = ExceptionFactory("GetQueueMetricsForSmsDefinition", localVarResponse);
                 if (exception != null) throw exception;
             }
 
             return new ApiResponse<ResponseGetQueueMetricsForSendDefinition>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (ResponseGetQueueMetricsForSendDefinition) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ResponseGetQueueMetricsForSendDefinition)));
-        }
-
-        /// <summary>
-        /// getSMSDefinition Gets SMS definition configuration details for a definition key.
-        /// </summary>
-        /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="definitionKey">Unique identifier of the definition to get</param>
-        /// <returns>RequestCreateSMSDefinition</returns>
-        public RequestCreateSMSDefinition GetSMSDefinition (string definitionKey)
-        {
-             ApiResponse<RequestCreateSMSDefinition> localVarResponse = GetSMSDefinitionWithHttpInfo(definitionKey);
-             return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// getSMSDefinition Gets SMS definition configuration details for a definition key.
-        /// </summary>
-        /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="definitionKey">Unique identifier of the definition to get</param>
-        /// <returns>ApiResponse of RequestCreateSMSDefinition</returns>
-        public ApiResponse< RequestCreateSMSDefinition > GetSMSDefinitionWithHttpInfo (string definitionKey)
-        {
-            // verify the required parameter 'definitionKey' is set
-            if (definitionKey == null)
-                throw new ApiException(400, "Missing required parameter 'definitionKey' when calling TransactionalMessagingApi->GetSMSDefinition");
-
-            var localVarPath = "/messaging/v1/sms/definitions/{definitionKey}";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-            };
-            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-            };
-            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            if (definitionKey != null) localVarPathParams.Add("definitionKey", this.Configuration.ApiClient.ParameterToString(definitionKey)); // path parameter
-
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (ExceptionFactory != null)
-            {
-                Exception exception = ExceptionFactory("GetSMSDefinition", localVarResponse);
-                if (exception != null) throw exception;
-            }
-
-            return new ApiResponse<RequestCreateSMSDefinition>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (RequestCreateSMSDefinition) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RequestCreateSMSDefinition)));
-        }
-
-        /// <summary>
-        /// getSMSDefinition Gets SMS definition configuration details for a definition key.
-        /// </summary>
-        /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="definitionKey">Unique identifier of the definition to get</param>
-        /// <returns>Task of RequestCreateSMSDefinition</returns>
-        public async System.Threading.Tasks.Task<RequestCreateSMSDefinition> GetSMSDefinitionAsync (string definitionKey)
-        {
-             ApiResponse<RequestCreateSMSDefinition> localVarResponse = await GetSMSDefinitionAsyncWithHttpInfo(definitionKey);
-             return localVarResponse.Data;
-
-        }
-
-        /// <summary>
-        /// getSMSDefinition Gets SMS definition configuration details for a definition key.
-        /// </summary>
-        /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="definitionKey">Unique identifier of the definition to get</param>
-        /// <returns>Task of ApiResponse (RequestCreateSMSDefinition)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<RequestCreateSMSDefinition>> GetSMSDefinitionAsyncWithHttpInfo (string definitionKey)
-        {
-            // verify the required parameter 'definitionKey' is set
-            if (definitionKey == null)
-                throw new ApiException(400, "Missing required parameter 'definitionKey' when calling TransactionalMessagingApi->GetSMSDefinition");
-
-            var localVarPath = "/messaging/v1/sms/definitions/{definitionKey}";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-            };
-            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-            };
-            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            if (definitionKey != null) localVarPathParams.Add("definitionKey", this.Configuration.ApiClient.ParameterToString(definitionKey)); // path parameter
-
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (ExceptionFactory != null)
-            {
-                Exception exception = ExceptionFactory("GetSMSDefinition", localVarResponse);
-                if (exception != null) throw exception;
-            }
-
-            return new ApiResponse<RequestCreateSMSDefinition>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (RequestCreateSMSDefinition) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RequestCreateSMSDefinition)));
-        }
-
-        /// <summary>
-        /// getSMSDefinitions Gets a list of SMS definitions.
-        /// </summary>
-        /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="status">Filter by status type. Accepted values are active, inactive, or deleted. Valid operations are eq and neq. (optional)</param>
-        /// <param name="pageSize">Number of definitions, which are array elements, to return per paged response. (optional)</param>
-        /// <param name="page">Page number to return. (optional)</param>
-        /// <param name="orderBy">Sort by a dimension. You can sort by only one dimension. Accepted values are definitionKey, name, createdDate, modifiedDate, and status. (optional)</param>
-        /// <returns>ResponseGetSMSDefinitions</returns>
-        public ResponseGetSMSDefinitions GetSMSDefinitions (string status = null, decimal? pageSize = null, decimal? page = null, string orderBy = null)
-        {
-             ApiResponse<ResponseGetSMSDefinitions> localVarResponse = GetSMSDefinitionsWithHttpInfo(status, pageSize, page, orderBy);
-             return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// getSMSDefinitions Gets a list of SMS definitions.
-        /// </summary>
-        /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="status">Filter by status type. Accepted values are active, inactive, or deleted. Valid operations are eq and neq. (optional)</param>
-        /// <param name="pageSize">Number of definitions, which are array elements, to return per paged response. (optional)</param>
-        /// <param name="page">Page number to return. (optional)</param>
-        /// <param name="orderBy">Sort by a dimension. You can sort by only one dimension. Accepted values are definitionKey, name, createdDate, modifiedDate, and status. (optional)</param>
-        /// <returns>ApiResponse of ResponseGetSMSDefinitions</returns>
-        public ApiResponse< ResponseGetSMSDefinitions > GetSMSDefinitionsWithHttpInfo (string status = null, decimal? pageSize = null, decimal? page = null, string orderBy = null)
-        {
-
-            var localVarPath = "/messaging/v1/sms/definitions";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-            };
-            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-            };
-            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            if (status != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "status", status)); // query parameter
-            if (pageSize != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "pageSize", pageSize)); // query parameter
-            if (page != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "page", page)); // query parameter
-            if (orderBy != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "orderBy", orderBy)); // query parameter
-
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (ExceptionFactory != null)
-            {
-                Exception exception = ExceptionFactory("GetSMSDefinitions", localVarResponse);
-                if (exception != null) throw exception;
-            }
-
-            return new ApiResponse<ResponseGetSMSDefinitions>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (ResponseGetSMSDefinitions) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ResponseGetSMSDefinitions)));
-        }
-
-        /// <summary>
-        /// getSMSDefinitions Gets a list of SMS definitions.
-        /// </summary>
-        /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="status">Filter by status type. Accepted values are active, inactive, or deleted. Valid operations are eq and neq. (optional)</param>
-        /// <param name="pageSize">Number of definitions, which are array elements, to return per paged response. (optional)</param>
-        /// <param name="page">Page number to return. (optional)</param>
-        /// <param name="orderBy">Sort by a dimension. You can sort by only one dimension. Accepted values are definitionKey, name, createdDate, modifiedDate, and status. (optional)</param>
-        /// <returns>Task of ResponseGetSMSDefinitions</returns>
-        public async System.Threading.Tasks.Task<ResponseGetSMSDefinitions> GetSMSDefinitionsAsync (string status = null, decimal? pageSize = null, decimal? page = null, string orderBy = null)
-        {
-             ApiResponse<ResponseGetSMSDefinitions> localVarResponse = await GetSMSDefinitionsAsyncWithHttpInfo(status, pageSize, page, orderBy);
-             return localVarResponse.Data;
-
-        }
-
-        /// <summary>
-        /// getSMSDefinitions Gets a list of SMS definitions.
-        /// </summary>
-        /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="status">Filter by status type. Accepted values are active, inactive, or deleted. Valid operations are eq and neq. (optional)</param>
-        /// <param name="pageSize">Number of definitions, which are array elements, to return per paged response. (optional)</param>
-        /// <param name="page">Page number to return. (optional)</param>
-        /// <param name="orderBy">Sort by a dimension. You can sort by only one dimension. Accepted values are definitionKey, name, createdDate, modifiedDate, and status. (optional)</param>
-        /// <returns>Task of ApiResponse (ResponseGetSMSDefinitions)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ResponseGetSMSDefinitions>> GetSMSDefinitionsAsyncWithHttpInfo (string status = null, decimal? pageSize = null, decimal? page = null, string orderBy = null)
-        {
-
-            var localVarPath = "/messaging/v1/sms/definitions";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-            };
-            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-            };
-            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            if (status != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "status", status)); // query parameter
-            if (pageSize != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "pageSize", pageSize)); // query parameter
-            if (page != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "page", page)); // query parameter
-            if (orderBy != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "orderBy", orderBy)); // query parameter
-
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (ExceptionFactory != null)
-            {
-                Exception exception = ExceptionFactory("GetSMSDefinitions", localVarResponse);
-                if (exception != null) throw exception;
-            }
-
-            return new ApiResponse<ResponseGetSMSDefinitions>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (ResponseGetSMSDefinitions) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ResponseGetSMSDefinitions)));
-        }
-
-        /// <summary>
-        /// getSMSSendStatusForRecipient Gets the send status for a message. Because this route is rate-limited, use it for infrequent verification of a messageKey. To collect send status at scale, subscribe to transactional send events using the Event Notification Service.
-        /// </summary>
-        /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="messageKey">Unique identifier to track message send status. You must provide it in singleton requests using the recipient attribute. To provide message key in batch requests, use the recipients array attribute. If you don’t provide the message key for recipients, it’s generated in the response.</param>
-        /// <returns>ResponseGetDefinitionSendStatusForRecipient</returns>
-        public ResponseGetDefinitionSendStatusForRecipient GetSMSSendStatusForRecipient (string messageKey)
-        {
-             ApiResponse<ResponseGetDefinitionSendStatusForRecipient> localVarResponse = GetSMSSendStatusForRecipientWithHttpInfo(messageKey);
-             return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// getSMSSendStatusForRecipient Gets the send status for a message. Because this route is rate-limited, use it for infrequent verification of a messageKey. To collect send status at scale, subscribe to transactional send events using the Event Notification Service.
-        /// </summary>
-        /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="messageKey">Unique identifier to track message send status. You must provide it in singleton requests using the recipient attribute. To provide message key in batch requests, use the recipients array attribute. If you don’t provide the message key for recipients, it’s generated in the response.</param>
-        /// <returns>ApiResponse of ResponseGetDefinitionSendStatusForRecipient</returns>
-        public ApiResponse< ResponseGetDefinitionSendStatusForRecipient > GetSMSSendStatusForRecipientWithHttpInfo (string messageKey)
-        {
-            // verify the required parameter 'messageKey' is set
-            if (messageKey == null)
-                throw new ApiException(400, "Missing required parameter 'messageKey' when calling TransactionalMessagingApi->GetSMSSendStatusForRecipient");
-
-            var localVarPath = "/messaging/v1/sms/messages/{messageKey}";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-            };
-            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-            };
-            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            if (messageKey != null) localVarPathParams.Add("messageKey", this.Configuration.ApiClient.ParameterToString(messageKey)); // path parameter
-
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (ExceptionFactory != null)
-            {
-                Exception exception = ExceptionFactory("GetSMSSendStatusForRecipient", localVarResponse);
-                if (exception != null) throw exception;
-            }
-
-            return new ApiResponse<ResponseGetDefinitionSendStatusForRecipient>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (ResponseGetDefinitionSendStatusForRecipient) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ResponseGetDefinitionSendStatusForRecipient)));
-        }
-
-        /// <summary>
-        /// getSMSSendStatusForRecipient Gets the send status for a message. Because this route is rate-limited, use it for infrequent verification of a messageKey. To collect send status at scale, subscribe to transactional send events using the Event Notification Service.
-        /// </summary>
-        /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="messageKey">Unique identifier to track message send status. You must provide it in singleton requests using the recipient attribute. To provide message key in batch requests, use the recipients array attribute. If you don’t provide the message key for recipients, it’s generated in the response.</param>
-        /// <returns>Task of ResponseGetDefinitionSendStatusForRecipient</returns>
-        public async System.Threading.Tasks.Task<ResponseGetDefinitionSendStatusForRecipient> GetSMSSendStatusForRecipientAsync (string messageKey)
-        {
-             ApiResponse<ResponseGetDefinitionSendStatusForRecipient> localVarResponse = await GetSMSSendStatusForRecipientAsyncWithHttpInfo(messageKey);
-             return localVarResponse.Data;
-
-        }
-
-        /// <summary>
-        /// getSMSSendStatusForRecipient Gets the send status for a message. Because this route is rate-limited, use it for infrequent verification of a messageKey. To collect send status at scale, subscribe to transactional send events using the Event Notification Service.
-        /// </summary>
-        /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="messageKey">Unique identifier to track message send status. You must provide it in singleton requests using the recipient attribute. To provide message key in batch requests, use the recipients array attribute. If you don’t provide the message key for recipients, it’s generated in the response.</param>
-        /// <returns>Task of ApiResponse (ResponseGetDefinitionSendStatusForRecipient)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ResponseGetDefinitionSendStatusForRecipient>> GetSMSSendStatusForRecipientAsyncWithHttpInfo (string messageKey)
-        {
-            // verify the required parameter 'messageKey' is set
-            if (messageKey == null)
-                throw new ApiException(400, "Missing required parameter 'messageKey' when calling TransactionalMessagingApi->GetSMSSendStatusForRecipient");
-
-            var localVarPath = "/messaging/v1/sms/messages/{messageKey}";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-            };
-            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-            };
-            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            if (messageKey != null) localVarPathParams.Add("messageKey", this.Configuration.ApiClient.ParameterToString(messageKey)); // path parameter
-
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (ExceptionFactory != null)
-            {
-                Exception exception = ExceptionFactory("GetSMSSendStatusForRecipient", localVarResponse);
-                if (exception != null) throw exception;
-            }
-
-            return new ApiResponse<ResponseGetDefinitionSendStatusForRecipient>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (ResponseGetDefinitionSendStatusForRecipient) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ResponseGetDefinitionSendStatusForRecipient)));
         }
 
         /// <summary>
@@ -3291,6 +2886,411 @@ namespace Salesforce.MarketingCloud.Api
             return new ApiResponse<ResponseGetDefinitionsNotSentToRecipients>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (ResponseGetDefinitionsNotSentToRecipients) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ResponseGetDefinitionsNotSentToRecipients)));
+        }
+
+        /// <summary>
+        /// getSmsDefinition Gets SMS definition configuration details for a definition key.
+        /// </summary>
+        /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="definitionKey">Unique identifier of the definition to get</param>
+        /// <returns>RequestCreateSmsDefinition</returns>
+        public RequestCreateSmsDefinition GetSmsDefinition (string definitionKey)
+        {
+             ApiResponse<RequestCreateSmsDefinition> localVarResponse = GetSmsDefinitionWithHttpInfo(definitionKey);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// getSmsDefinition Gets SMS definition configuration details for a definition key.
+        /// </summary>
+        /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="definitionKey">Unique identifier of the definition to get</param>
+        /// <returns>ApiResponse of RequestCreateSmsDefinition</returns>
+        public ApiResponse< RequestCreateSmsDefinition > GetSmsDefinitionWithHttpInfo (string definitionKey)
+        {
+            // verify the required parameter 'definitionKey' is set
+            if (definitionKey == null)
+                throw new ApiException(400, "Missing required parameter 'definitionKey' when calling TransactionalMessagingApi->GetSmsDefinition");
+
+            var localVarPath = "/messaging/v1/sms/definitions/{definitionKey}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (definitionKey != null) localVarPathParams.Add("definitionKey", this.Configuration.ApiClient.ParameterToString(definitionKey)); // path parameter
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetSmsDefinition", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<RequestCreateSmsDefinition>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (RequestCreateSmsDefinition) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RequestCreateSmsDefinition)));
+        }
+
+        /// <summary>
+        /// getSmsDefinition Gets SMS definition configuration details for a definition key.
+        /// </summary>
+        /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="definitionKey">Unique identifier of the definition to get</param>
+        /// <returns>Task of RequestCreateSmsDefinition</returns>
+        public async System.Threading.Tasks.Task<RequestCreateSmsDefinition> GetSmsDefinitionAsync (string definitionKey)
+        {
+             ApiResponse<RequestCreateSmsDefinition> localVarResponse = await GetSmsDefinitionAsyncWithHttpInfo(definitionKey);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// getSmsDefinition Gets SMS definition configuration details for a definition key.
+        /// </summary>
+        /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="definitionKey">Unique identifier of the definition to get</param>
+        /// <returns>Task of ApiResponse (RequestCreateSmsDefinition)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<RequestCreateSmsDefinition>> GetSmsDefinitionAsyncWithHttpInfo (string definitionKey)
+        {
+            // verify the required parameter 'definitionKey' is set
+            if (definitionKey == null)
+                throw new ApiException(400, "Missing required parameter 'definitionKey' when calling TransactionalMessagingApi->GetSmsDefinition");
+
+            var localVarPath = "/messaging/v1/sms/definitions/{definitionKey}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (definitionKey != null) localVarPathParams.Add("definitionKey", this.Configuration.ApiClient.ParameterToString(definitionKey)); // path parameter
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetSmsDefinition", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<RequestCreateSmsDefinition>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (RequestCreateSmsDefinition) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RequestCreateSmsDefinition)));
+        }
+
+        /// <summary>
+        /// getSmsDefinitions Gets a list of SMS definitions.
+        /// </summary>
+        /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="status">Filter by status type. Accepted values are active, inactive, or deleted. Valid operations are eq and neq. (optional)</param>
+        /// <param name="pageSize">Number of definitions, which are array elements, to return per paged response. (optional)</param>
+        /// <param name="page">Page number to return. (optional)</param>
+        /// <param name="orderBy">Sort by a dimension. You can sort by only one dimension. Accepted values are definitionKey, name, createdDate, modifiedDate, and status. (optional)</param>
+        /// <returns>ResponseGetSmsDefinitions</returns>
+        public ResponseGetSmsDefinitions GetSmsDefinitions (string status = null, decimal? pageSize = null, decimal? page = null, string orderBy = null)
+        {
+             ApiResponse<ResponseGetSmsDefinitions> localVarResponse = GetSmsDefinitionsWithHttpInfo(status, pageSize, page, orderBy);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// getSmsDefinitions Gets a list of SMS definitions.
+        /// </summary>
+        /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="status">Filter by status type. Accepted values are active, inactive, or deleted. Valid operations are eq and neq. (optional)</param>
+        /// <param name="pageSize">Number of definitions, which are array elements, to return per paged response. (optional)</param>
+        /// <param name="page">Page number to return. (optional)</param>
+        /// <param name="orderBy">Sort by a dimension. You can sort by only one dimension. Accepted values are definitionKey, name, createdDate, modifiedDate, and status. (optional)</param>
+        /// <returns>ApiResponse of ResponseGetSmsDefinitions</returns>
+        public ApiResponse< ResponseGetSmsDefinitions > GetSmsDefinitionsWithHttpInfo (string status = null, decimal? pageSize = null, decimal? page = null, string orderBy = null)
+        {
+
+            var localVarPath = "/messaging/v1/sms/definitions";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (status != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "status", status)); // query parameter
+            if (pageSize != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "pageSize", pageSize)); // query parameter
+            if (page != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "page", page)); // query parameter
+            if (orderBy != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "orderBy", orderBy)); // query parameter
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetSmsDefinitions", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ResponseGetSmsDefinitions>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ResponseGetSmsDefinitions) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ResponseGetSmsDefinitions)));
+        }
+
+        /// <summary>
+        /// getSmsDefinitions Gets a list of SMS definitions.
+        /// </summary>
+        /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="status">Filter by status type. Accepted values are active, inactive, or deleted. Valid operations are eq and neq. (optional)</param>
+        /// <param name="pageSize">Number of definitions, which are array elements, to return per paged response. (optional)</param>
+        /// <param name="page">Page number to return. (optional)</param>
+        /// <param name="orderBy">Sort by a dimension. You can sort by only one dimension. Accepted values are definitionKey, name, createdDate, modifiedDate, and status. (optional)</param>
+        /// <returns>Task of ResponseGetSmsDefinitions</returns>
+        public async System.Threading.Tasks.Task<ResponseGetSmsDefinitions> GetSmsDefinitionsAsync (string status = null, decimal? pageSize = null, decimal? page = null, string orderBy = null)
+        {
+             ApiResponse<ResponseGetSmsDefinitions> localVarResponse = await GetSmsDefinitionsAsyncWithHttpInfo(status, pageSize, page, orderBy);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// getSmsDefinitions Gets a list of SMS definitions.
+        /// </summary>
+        /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="status">Filter by status type. Accepted values are active, inactive, or deleted. Valid operations are eq and neq. (optional)</param>
+        /// <param name="pageSize">Number of definitions, which are array elements, to return per paged response. (optional)</param>
+        /// <param name="page">Page number to return. (optional)</param>
+        /// <param name="orderBy">Sort by a dimension. You can sort by only one dimension. Accepted values are definitionKey, name, createdDate, modifiedDate, and status. (optional)</param>
+        /// <returns>Task of ApiResponse (ResponseGetSmsDefinitions)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ResponseGetSmsDefinitions>> GetSmsDefinitionsAsyncWithHttpInfo (string status = null, decimal? pageSize = null, decimal? page = null, string orderBy = null)
+        {
+
+            var localVarPath = "/messaging/v1/sms/definitions";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (status != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "status", status)); // query parameter
+            if (pageSize != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "pageSize", pageSize)); // query parameter
+            if (page != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "page", page)); // query parameter
+            if (orderBy != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "orderBy", orderBy)); // query parameter
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetSmsDefinitions", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ResponseGetSmsDefinitions>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ResponseGetSmsDefinitions) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ResponseGetSmsDefinitions)));
+        }
+
+        /// <summary>
+        /// getSmsSendStatusForRecipient Gets the send status for a message. Because this route is rate-limited, use it for infrequent verification of a messageKey. To collect send status at scale, subscribe to transactional send events using the Event Notification Service.
+        /// </summary>
+        /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="messageKey">Unique identifier to track message send status. You must provide it in singleton requests using the recipient attribute. To provide message key in batch requests, use the recipients array attribute. If you don’t provide the message key for recipients, it’s generated in the response.</param>
+        /// <returns>ResponseGetDefinitionSendStatusForRecipient</returns>
+        public ResponseGetDefinitionSendStatusForRecipient GetSmsSendStatusForRecipient (string messageKey)
+        {
+             ApiResponse<ResponseGetDefinitionSendStatusForRecipient> localVarResponse = GetSmsSendStatusForRecipientWithHttpInfo(messageKey);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// getSmsSendStatusForRecipient Gets the send status for a message. Because this route is rate-limited, use it for infrequent verification of a messageKey. To collect send status at scale, subscribe to transactional send events using the Event Notification Service.
+        /// </summary>
+        /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="messageKey">Unique identifier to track message send status. You must provide it in singleton requests using the recipient attribute. To provide message key in batch requests, use the recipients array attribute. If you don’t provide the message key for recipients, it’s generated in the response.</param>
+        /// <returns>ApiResponse of ResponseGetDefinitionSendStatusForRecipient</returns>
+        public ApiResponse< ResponseGetDefinitionSendStatusForRecipient > GetSmsSendStatusForRecipientWithHttpInfo (string messageKey)
+        {
+            // verify the required parameter 'messageKey' is set
+            if (messageKey == null)
+                throw new ApiException(400, "Missing required parameter 'messageKey' when calling TransactionalMessagingApi->GetSmsSendStatusForRecipient");
+
+            var localVarPath = "/messaging/v1/sms/messages/{messageKey}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (messageKey != null) localVarPathParams.Add("messageKey", this.Configuration.ApiClient.ParameterToString(messageKey)); // path parameter
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetSmsSendStatusForRecipient", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ResponseGetDefinitionSendStatusForRecipient>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ResponseGetDefinitionSendStatusForRecipient) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ResponseGetDefinitionSendStatusForRecipient)));
+        }
+
+        /// <summary>
+        /// getSmsSendStatusForRecipient Gets the send status for a message. Because this route is rate-limited, use it for infrequent verification of a messageKey. To collect send status at scale, subscribe to transactional send events using the Event Notification Service.
+        /// </summary>
+        /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="messageKey">Unique identifier to track message send status. You must provide it in singleton requests using the recipient attribute. To provide message key in batch requests, use the recipients array attribute. If you don’t provide the message key for recipients, it’s generated in the response.</param>
+        /// <returns>Task of ResponseGetDefinitionSendStatusForRecipient</returns>
+        public async System.Threading.Tasks.Task<ResponseGetDefinitionSendStatusForRecipient> GetSmsSendStatusForRecipientAsync (string messageKey)
+        {
+             ApiResponse<ResponseGetDefinitionSendStatusForRecipient> localVarResponse = await GetSmsSendStatusForRecipientAsyncWithHttpInfo(messageKey);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// getSmsSendStatusForRecipient Gets the send status for a message. Because this route is rate-limited, use it for infrequent verification of a messageKey. To collect send status at scale, subscribe to transactional send events using the Event Notification Service.
+        /// </summary>
+        /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="messageKey">Unique identifier to track message send status. You must provide it in singleton requests using the recipient attribute. To provide message key in batch requests, use the recipients array attribute. If you don’t provide the message key for recipients, it’s generated in the response.</param>
+        /// <returns>Task of ApiResponse (ResponseGetDefinitionSendStatusForRecipient)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ResponseGetDefinitionSendStatusForRecipient>> GetSmsSendStatusForRecipientAsyncWithHttpInfo (string messageKey)
+        {
+            // verify the required parameter 'messageKey' is set
+            if (messageKey == null)
+                throw new ApiException(400, "Missing required parameter 'messageKey' when calling TransactionalMessagingApi->GetSmsSendStatusForRecipient");
+
+            var localVarPath = "/messaging/v1/sms/messages/{messageKey}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (messageKey != null) localVarPathParams.Add("messageKey", this.Configuration.ApiClient.ParameterToString(messageKey)); // path parameter
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetSmsSendStatusForRecipient", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ResponseGetDefinitionSendStatusForRecipient>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ResponseGetDefinitionSendStatusForRecipient) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ResponseGetDefinitionSendStatusForRecipient)));
         }
 
         /// <summary>
@@ -3445,30 +3445,30 @@ namespace Salesforce.MarketingCloud.Api
         }
 
         /// <summary>
-        /// partiallyUpdateSMSDefinition Updates a specific SMS definition.
+        /// partiallyUpdateSmsDefinition Updates a specific SMS definition.
         /// </summary>
         /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="definitionKey">Unique identifier of the definition.</param>
         /// <param name="body">JSON Parameters (optional)</param>
-        /// <returns>RequestCreateSMSDefinition</returns>
-        public RequestCreateSMSDefinition PartiallyUpdateSMSDefinition (string definitionKey, RequestCreateSMSDefinition body = null)
+        /// <returns>RequestCreateSmsDefinition</returns>
+        public RequestCreateSmsDefinition PartiallyUpdateSmsDefinition (string definitionKey, RequestUpdateSmsDefinition body = null)
         {
-             ApiResponse<RequestCreateSMSDefinition> localVarResponse = PartiallyUpdateSMSDefinitionWithHttpInfo(definitionKey, body);
+             ApiResponse<RequestCreateSmsDefinition> localVarResponse = PartiallyUpdateSmsDefinitionWithHttpInfo(definitionKey, body);
              return localVarResponse.Data;
         }
 
         /// <summary>
-        /// partiallyUpdateSMSDefinition Updates a specific SMS definition.
+        /// partiallyUpdateSmsDefinition Updates a specific SMS definition.
         /// </summary>
         /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="definitionKey">Unique identifier of the definition.</param>
         /// <param name="body">JSON Parameters (optional)</param>
-        /// <returns>ApiResponse of RequestCreateSMSDefinition</returns>
-        public ApiResponse< RequestCreateSMSDefinition > PartiallyUpdateSMSDefinitionWithHttpInfo (string definitionKey, RequestCreateSMSDefinition body = null)
+        /// <returns>ApiResponse of RequestCreateSmsDefinition</returns>
+        public ApiResponse< RequestCreateSmsDefinition > PartiallyUpdateSmsDefinitionWithHttpInfo (string definitionKey, RequestUpdateSmsDefinition body = null)
         {
             // verify the required parameter 'definitionKey' is set
             if (definitionKey == null)
-                throw new ApiException(400, "Missing required parameter 'definitionKey' when calling TransactionalMessagingApi->PartiallyUpdateSMSDefinition");
+                throw new ApiException(400, "Missing required parameter 'definitionKey' when calling TransactionalMessagingApi->PartiallyUpdateSmsDefinition");
 
             var localVarPath = "/messaging/v1/sms/definitions/{definitionKey}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -3510,41 +3510,41 @@ namespace Salesforce.MarketingCloud.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("PartiallyUpdateSMSDefinition", localVarResponse);
+                Exception exception = ExceptionFactory("PartiallyUpdateSmsDefinition", localVarResponse);
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<RequestCreateSMSDefinition>(localVarStatusCode,
+            return new ApiResponse<RequestCreateSmsDefinition>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (RequestCreateSMSDefinition) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RequestCreateSMSDefinition)));
+                (RequestCreateSmsDefinition) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RequestCreateSmsDefinition)));
         }
 
         /// <summary>
-        /// partiallyUpdateSMSDefinition Updates a specific SMS definition.
+        /// partiallyUpdateSmsDefinition Updates a specific SMS definition.
         /// </summary>
         /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="definitionKey">Unique identifier of the definition.</param>
         /// <param name="body">JSON Parameters (optional)</param>
-        /// <returns>Task of RequestCreateSMSDefinition</returns>
-        public async System.Threading.Tasks.Task<RequestCreateSMSDefinition> PartiallyUpdateSMSDefinitionAsync (string definitionKey, RequestCreateSMSDefinition body = null)
+        /// <returns>Task of RequestCreateSmsDefinition</returns>
+        public async System.Threading.Tasks.Task<RequestCreateSmsDefinition> PartiallyUpdateSmsDefinitionAsync (string definitionKey, RequestUpdateSmsDefinition body = null)
         {
-             ApiResponse<RequestCreateSMSDefinition> localVarResponse = await PartiallyUpdateSMSDefinitionAsyncWithHttpInfo(definitionKey, body);
+             ApiResponse<RequestCreateSmsDefinition> localVarResponse = await PartiallyUpdateSmsDefinitionAsyncWithHttpInfo(definitionKey, body);
              return localVarResponse.Data;
 
         }
 
         /// <summary>
-        /// partiallyUpdateSMSDefinition Updates a specific SMS definition.
+        /// partiallyUpdateSmsDefinition Updates a specific SMS definition.
         /// </summary>
         /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="definitionKey">Unique identifier of the definition.</param>
         /// <param name="body">JSON Parameters (optional)</param>
-        /// <returns>Task of ApiResponse (RequestCreateSMSDefinition)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<RequestCreateSMSDefinition>> PartiallyUpdateSMSDefinitionAsyncWithHttpInfo (string definitionKey, RequestCreateSMSDefinition body = null)
+        /// <returns>Task of ApiResponse (RequestCreateSmsDefinition)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<RequestCreateSmsDefinition>> PartiallyUpdateSmsDefinitionAsyncWithHttpInfo (string definitionKey, RequestUpdateSmsDefinition body = null)
         {
             // verify the required parameter 'definitionKey' is set
             if (definitionKey == null)
-                throw new ApiException(400, "Missing required parameter 'definitionKey' when calling TransactionalMessagingApi->PartiallyUpdateSMSDefinition");
+                throw new ApiException(400, "Missing required parameter 'definitionKey' when calling TransactionalMessagingApi->PartiallyUpdateSmsDefinition");
 
             var localVarPath = "/messaging/v1/sms/definitions/{definitionKey}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -3586,13 +3586,13 @@ namespace Salesforce.MarketingCloud.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("PartiallyUpdateSMSDefinition", localVarResponse);
+                Exception exception = ExceptionFactory("PartiallyUpdateSmsDefinition", localVarResponse);
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<RequestCreateSMSDefinition>(localVarStatusCode,
+            return new ApiResponse<RequestCreateSmsDefinition>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (RequestCreateSMSDefinition) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RequestCreateSMSDefinition)));
+                (RequestCreateSmsDefinition) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RequestCreateSmsDefinition)));
         }
 
         /// <summary>
@@ -3886,24 +3886,24 @@ namespace Salesforce.MarketingCloud.Api
         }
 
         /// <summary>
-        /// sendSMSToMultipleRecipients Sends a message to multiple recipients using an email definition. You can provide a messageKey in the request; otherwise, the messageKey is automatically generated in the response.
+        /// sendSmsToMultipleRecipients Sends a message to multiple recipients using an email definition. You can provide a messageKey in the request; otherwise, the messageKey is automatically generated in the response.
         /// </summary>
         /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">JSON Parameters (optional)</param>
         /// <returns>ResponseSendDefinitionToMultipleRecipients</returns>
-        public ResponseSendDefinitionToMultipleRecipients SendSMSToMultipleRecipients (RequestSendSMSToMultipleRecipients body = null)
+        public ResponseSendDefinitionToMultipleRecipients SendSmsToMultipleRecipients (RequestSendSmsToMultipleRecipients body = null)
         {
-             ApiResponse<ResponseSendDefinitionToMultipleRecipients> localVarResponse = SendSMSToMultipleRecipientsWithHttpInfo(body);
+             ApiResponse<ResponseSendDefinitionToMultipleRecipients> localVarResponse = SendSmsToMultipleRecipientsWithHttpInfo(body);
              return localVarResponse.Data;
         }
 
         /// <summary>
-        /// sendSMSToMultipleRecipients Sends a message to multiple recipients using an email definition. You can provide a messageKey in the request; otherwise, the messageKey is automatically generated in the response.
+        /// sendSmsToMultipleRecipients Sends a message to multiple recipients using an email definition. You can provide a messageKey in the request; otherwise, the messageKey is automatically generated in the response.
         /// </summary>
         /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">JSON Parameters (optional)</param>
         /// <returns>ApiResponse of ResponseSendDefinitionToMultipleRecipients</returns>
-        public ApiResponse< ResponseSendDefinitionToMultipleRecipients > SendSMSToMultipleRecipientsWithHttpInfo (RequestSendSMSToMultipleRecipients body = null)
+        public ApiResponse< ResponseSendDefinitionToMultipleRecipients > SendSmsToMultipleRecipientsWithHttpInfo (RequestSendSmsToMultipleRecipients body = null)
         {
 
             var localVarPath = "/messaging/v1/sms/messages/";
@@ -3945,7 +3945,7 @@ namespace Salesforce.MarketingCloud.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("SendSMSToMultipleRecipients", localVarResponse);
+                Exception exception = ExceptionFactory("SendSmsToMultipleRecipients", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -3955,25 +3955,25 @@ namespace Salesforce.MarketingCloud.Api
         }
 
         /// <summary>
-        /// sendSMSToMultipleRecipients Sends a message to multiple recipients using an email definition. You can provide a messageKey in the request; otherwise, the messageKey is automatically generated in the response.
+        /// sendSmsToMultipleRecipients Sends a message to multiple recipients using an email definition. You can provide a messageKey in the request; otherwise, the messageKey is automatically generated in the response.
         /// </summary>
         /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">JSON Parameters (optional)</param>
         /// <returns>Task of ResponseSendDefinitionToMultipleRecipients</returns>
-        public async System.Threading.Tasks.Task<ResponseSendDefinitionToMultipleRecipients> SendSMSToMultipleRecipientsAsync (RequestSendSMSToMultipleRecipients body = null)
+        public async System.Threading.Tasks.Task<ResponseSendDefinitionToMultipleRecipients> SendSmsToMultipleRecipientsAsync (RequestSendSmsToMultipleRecipients body = null)
         {
-             ApiResponse<ResponseSendDefinitionToMultipleRecipients> localVarResponse = await SendSMSToMultipleRecipientsAsyncWithHttpInfo(body);
+             ApiResponse<ResponseSendDefinitionToMultipleRecipients> localVarResponse = await SendSmsToMultipleRecipientsAsyncWithHttpInfo(body);
              return localVarResponse.Data;
 
         }
 
         /// <summary>
-        /// sendSMSToMultipleRecipients Sends a message to multiple recipients using an email definition. You can provide a messageKey in the request; otherwise, the messageKey is automatically generated in the response.
+        /// sendSmsToMultipleRecipients Sends a message to multiple recipients using an email definition. You can provide a messageKey in the request; otherwise, the messageKey is automatically generated in the response.
         /// </summary>
         /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">JSON Parameters (optional)</param>
         /// <returns>Task of ApiResponse (ResponseSendDefinitionToMultipleRecipients)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ResponseSendDefinitionToMultipleRecipients>> SendSMSToMultipleRecipientsAsyncWithHttpInfo (RequestSendSMSToMultipleRecipients body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<ResponseSendDefinitionToMultipleRecipients>> SendSmsToMultipleRecipientsAsyncWithHttpInfo (RequestSendSmsToMultipleRecipients body = null)
         {
 
             var localVarPath = "/messaging/v1/sms/messages/";
@@ -4015,7 +4015,7 @@ namespace Salesforce.MarketingCloud.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("SendSMSToMultipleRecipients", localVarResponse);
+                Exception exception = ExceptionFactory("SendSmsToMultipleRecipients", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -4025,30 +4025,30 @@ namespace Salesforce.MarketingCloud.Api
         }
 
         /// <summary>
-        /// sendSMSToSingleRecipient Sends a message to a single recipient via a SMS definition using a messageKey path parameter.
+        /// sendSmsToSingleRecipient Sends a message to a single recipient via a SMS definition using a messageKey path parameter.
         /// </summary>
         /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="messageKey">Unique identifier of the definition used to track message status. The messageKey can be created automatically when you create a message, or you can provide it as part of the request. Each recipient in a request must have a unique messageKey. If you use a duplicate messageKey in the same send request, the message is rejected.</param>
         /// <param name="body">JSON Parameters (optional)</param>
         /// <returns>ResponseSendDefinitionToSingleRecipient</returns>
-        public ResponseSendDefinitionToSingleRecipient SendSMSToSingleRecipient (string messageKey, RequestSendSMSToSingleRecipient body = null)
+        public ResponseSendDefinitionToSingleRecipient SendSmsToSingleRecipient (string messageKey, RequestSendSmsToSingleRecipient body = null)
         {
-             ApiResponse<ResponseSendDefinitionToSingleRecipient> localVarResponse = SendSMSToSingleRecipientWithHttpInfo(messageKey, body);
+             ApiResponse<ResponseSendDefinitionToSingleRecipient> localVarResponse = SendSmsToSingleRecipientWithHttpInfo(messageKey, body);
              return localVarResponse.Data;
         }
 
         /// <summary>
-        /// sendSMSToSingleRecipient Sends a message to a single recipient via a SMS definition using a messageKey path parameter.
+        /// sendSmsToSingleRecipient Sends a message to a single recipient via a SMS definition using a messageKey path parameter.
         /// </summary>
         /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="messageKey">Unique identifier of the definition used to track message status. The messageKey can be created automatically when you create a message, or you can provide it as part of the request. Each recipient in a request must have a unique messageKey. If you use a duplicate messageKey in the same send request, the message is rejected.</param>
         /// <param name="body">JSON Parameters (optional)</param>
         /// <returns>ApiResponse of ResponseSendDefinitionToSingleRecipient</returns>
-        public ApiResponse< ResponseSendDefinitionToSingleRecipient > SendSMSToSingleRecipientWithHttpInfo (string messageKey, RequestSendSMSToSingleRecipient body = null)
+        public ApiResponse< ResponseSendDefinitionToSingleRecipient > SendSmsToSingleRecipientWithHttpInfo (string messageKey, RequestSendSmsToSingleRecipient body = null)
         {
             // verify the required parameter 'messageKey' is set
             if (messageKey == null)
-                throw new ApiException(400, "Missing required parameter 'messageKey' when calling TransactionalMessagingApi->SendSMSToSingleRecipient");
+                throw new ApiException(400, "Missing required parameter 'messageKey' when calling TransactionalMessagingApi->SendSmsToSingleRecipient");
 
             var localVarPath = "/messaging/v1/sms/messages/{messageKey}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -4090,7 +4090,7 @@ namespace Salesforce.MarketingCloud.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("SendSMSToSingleRecipient", localVarResponse);
+                Exception exception = ExceptionFactory("SendSmsToSingleRecipient", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -4100,31 +4100,31 @@ namespace Salesforce.MarketingCloud.Api
         }
 
         /// <summary>
-        /// sendSMSToSingleRecipient Sends a message to a single recipient via a SMS definition using a messageKey path parameter.
+        /// sendSmsToSingleRecipient Sends a message to a single recipient via a SMS definition using a messageKey path parameter.
         /// </summary>
         /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="messageKey">Unique identifier of the definition used to track message status. The messageKey can be created automatically when you create a message, or you can provide it as part of the request. Each recipient in a request must have a unique messageKey. If you use a duplicate messageKey in the same send request, the message is rejected.</param>
         /// <param name="body">JSON Parameters (optional)</param>
         /// <returns>Task of ResponseSendDefinitionToSingleRecipient</returns>
-        public async System.Threading.Tasks.Task<ResponseSendDefinitionToSingleRecipient> SendSMSToSingleRecipientAsync (string messageKey, RequestSendSMSToSingleRecipient body = null)
+        public async System.Threading.Tasks.Task<ResponseSendDefinitionToSingleRecipient> SendSmsToSingleRecipientAsync (string messageKey, RequestSendSmsToSingleRecipient body = null)
         {
-             ApiResponse<ResponseSendDefinitionToSingleRecipient> localVarResponse = await SendSMSToSingleRecipientAsyncWithHttpInfo(messageKey, body);
+             ApiResponse<ResponseSendDefinitionToSingleRecipient> localVarResponse = await SendSmsToSingleRecipientAsyncWithHttpInfo(messageKey, body);
              return localVarResponse.Data;
 
         }
 
         /// <summary>
-        /// sendSMSToSingleRecipient Sends a message to a single recipient via a SMS definition using a messageKey path parameter.
+        /// sendSmsToSingleRecipient Sends a message to a single recipient via a SMS definition using a messageKey path parameter.
         /// </summary>
         /// <exception cref="Salesforce.MarketingCloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="messageKey">Unique identifier of the definition used to track message status. The messageKey can be created automatically when you create a message, or you can provide it as part of the request. Each recipient in a request must have a unique messageKey. If you use a duplicate messageKey in the same send request, the message is rejected.</param>
         /// <param name="body">JSON Parameters (optional)</param>
         /// <returns>Task of ApiResponse (ResponseSendDefinitionToSingleRecipient)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ResponseSendDefinitionToSingleRecipient>> SendSMSToSingleRecipientAsyncWithHttpInfo (string messageKey, RequestSendSMSToSingleRecipient body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<ResponseSendDefinitionToSingleRecipient>> SendSmsToSingleRecipientAsyncWithHttpInfo (string messageKey, RequestSendSmsToSingleRecipient body = null)
         {
             // verify the required parameter 'messageKey' is set
             if (messageKey == null)
-                throw new ApiException(400, "Missing required parameter 'messageKey' when calling TransactionalMessagingApi->SendSMSToSingleRecipient");
+                throw new ApiException(400, "Missing required parameter 'messageKey' when calling TransactionalMessagingApi->SendSmsToSingleRecipient");
 
             var localVarPath = "/messaging/v1/sms/messages/{messageKey}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -4166,7 +4166,7 @@ namespace Salesforce.MarketingCloud.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("SendSMSToSingleRecipient", localVarResponse);
+                Exception exception = ExceptionFactory("SendSmsToSingleRecipient", localVarResponse);
                 if (exception != null) throw exception;
             }
 

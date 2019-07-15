@@ -1,10 +1,10 @@
-# Salesforce.MarketingCloud.Model.ResponseGetSMSDefinitions
+# Salesforce.MarketingCloud.Model.ResponseGetSmsDefinitions
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **RequestId** | **string** | The ID of the request | [optional] 
-**Definitions** | [**List&lt;RequestCreateSMSDefinition&gt;**](RequestCreateSMSDefinition.md) |  | [optional] 
+**Definitions** | [**List&lt;RequestCreateSmsDefinition&gt;**](RequestCreateSmsDefinition.md) |  | [optional] 
 **Count** | **int?** | Number of pages | [optional] 
 **Page** | **int?** | Page number to return. | [optional] 
 **PageSize** | **int?** | Number of definitions, which are array elements, to return per paged response. | [optional] 

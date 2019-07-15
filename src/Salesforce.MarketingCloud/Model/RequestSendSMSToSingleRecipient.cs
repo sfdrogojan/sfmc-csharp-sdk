@@ -25,28 +25,28 @@ using SwaggerDateConverter = Salesforce.MarketingCloud.Client.SwaggerDateConvert
 namespace Salesforce.MarketingCloud.Model
 {
     /// <summary>
-    /// RequestSendSMSToSingleRecipient
+    /// RequestSendSmsToSingleRecipient
     /// </summary>
     [DataContract]
-    public partial class RequestSendSMSToSingleRecipient :  IEquatable<RequestSendSMSToSingleRecipient>, IValidatableObject
+    public partial class RequestSendSmsToSingleRecipient :  IEquatable<RequestSendSmsToSingleRecipient>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="RequestSendSMSToSingleRecipient" /> class.
+        /// Initializes a new instance of the <see cref="RequestSendSmsToSingleRecipient" /> class.
         /// </summary>
         [JsonConstructorAttribute]
-        protected RequestSendSMSToSingleRecipient() { }
+        protected RequestSendSmsToSingleRecipient() { }
         /// <summary>
-        /// Initializes a new instance of the <see cref="RequestSendSMSToSingleRecipient" /> class.
+        /// Initializes a new instance of the <see cref="RequestSendSmsToSingleRecipient" /> class.
         /// </summary>
         /// <param name="definitionKey">Unique identifier of the definition. (required).</param>
         /// <param name="recipient">recipient (required).</param>
         /// <param name="content">content.</param>
-        public RequestSendSMSToSingleRecipient(string definitionKey = default(string), Recipient recipient = default(Recipient), RequestSendSMSContent content = default(RequestSendSMSContent))
+        public RequestSendSmsToSingleRecipient(string definitionKey = default(string), Recipient recipient = default(Recipient), RequestSendSmsContent content = default(RequestSendSmsContent))
         {
             // to ensure "definitionKey" is required (not null)
             if (definitionKey == null)
             {
-                throw new InvalidDataException("definitionKey is a required property for RequestSendSMSToSingleRecipient and cannot be null");
+                throw new InvalidDataException("definitionKey is a required property for RequestSendSmsToSingleRecipient and cannot be null");
             }
             else
             {
@@ -55,7 +55,7 @@ namespace Salesforce.MarketingCloud.Model
             // to ensure "recipient" is required (not null)
             if (recipient == null)
             {
-                throw new InvalidDataException("recipient is a required property for RequestSendSMSToSingleRecipient and cannot be null");
+                throw new InvalidDataException("recipient is a required property for RequestSendSmsToSingleRecipient and cannot be null");
             }
             else
             {
@@ -81,7 +81,7 @@ namespace Salesforce.MarketingCloud.Model
         /// Gets or Sets Content
         /// </summary>
         [DataMember(Name="content", EmitDefaultValue=false)]
-        public RequestSendSMSContent Content { get; set; }
+        public RequestSendSmsContent Content { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -90,7 +90,7 @@ namespace Salesforce.MarketingCloud.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class RequestSendSMSToSingleRecipient {\n");
+            sb.Append("class RequestSendSmsToSingleRecipient {\n");
             sb.Append("  DefinitionKey: ").Append(DefinitionKey).Append("\n");
             sb.Append("  Recipient: ").Append(Recipient).Append("\n");
             sb.Append("  Content: ").Append(Content).Append("\n");
@@ -114,15 +114,15 @@ namespace Salesforce.MarketingCloud.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as RequestSendSMSToSingleRecipient);
+            return this.Equals(input as RequestSendSmsToSingleRecipient);
         }
 
         /// <summary>
-        /// Returns true if RequestSendSMSToSingleRecipient instances are equal
+        /// Returns true if RequestSendSmsToSingleRecipient instances are equal
         /// </summary>
-        /// <param name="input">Instance of RequestSendSMSToSingleRecipient to be compared</param>
+        /// <param name="input">Instance of RequestSendSmsToSingleRecipient to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(RequestSendSMSToSingleRecipient input)
+        public bool Equals(RequestSendSmsToSingleRecipient input)
         {
             if (input == null)
                 return false;

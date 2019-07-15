@@ -36,14 +36,13 @@ namespace Salesforce.MarketingCloud.Test
         [OneTimeSetUp]
         public void Init()
         {
-            //instance = new AssetApi(authBasePath, clientId, clientSecret, accountId);
             instance = ApiTestSutFactory<AssetApi>.Create();
         }
 
         [Test]
         public void GetAssetByIdTest()
         {
-            var asset = CreateAsset();
+            var asset = CreateAssetObject();
             var createAssetResult = instance.CreateAsset(asset);
             var assetToRetrieveId = createAssetResult.Id;
 
@@ -67,7 +66,7 @@ namespace Salesforce.MarketingCloud.Test
         [Test]
         public void CreateAssetTest()
         {
-            var asset = CreateAsset();
+            var asset = CreateAssetObject();
             var createAssetResult = instance.CreateAsset(asset);
 
             try
@@ -89,7 +88,7 @@ namespace Salesforce.MarketingCloud.Test
         [Test]
         public void DeleteAssetByIdTest()
         {
-            var asset = CreateAsset();
+            var asset = CreateAssetObject();
             var createAssetResult = instance.CreateAsset(asset);
 
             var assetToDeleteId = createAssetResult.Id;
@@ -110,7 +109,7 @@ namespace Salesforce.MarketingCloud.Test
         [Test]
         public void DeleteNonExistingAssetTest()
         {
-            var asset = CreateAsset();
+            var asset = CreateAssetObject();
             var createAssetResult = instance.CreateAsset(asset);
 
             var assetToDeleteId = createAssetResult.Id;
@@ -122,7 +121,7 @@ namespace Salesforce.MarketingCloud.Test
         [Test]
         public void PartiallyUpdateAssetByIdTest()
         {
-            var asset = CreateAsset();
+            var asset = CreateAssetObject();
             var createAssetResult = instance.CreateAsset(asset);
             var assetToPartiallyUpdateId = createAssetResult.Id;
 
@@ -145,7 +144,7 @@ namespace Salesforce.MarketingCloud.Test
             }
         }
 
-        private Asset CreateAsset()
+        private Asset CreateAssetObject()
         {
             var customerKey = Guid.NewGuid().ToString();
             var name = $"AssetName {Guid.NewGuid()}"; // Asset names within a category and asset type must be unique

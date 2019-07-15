@@ -38,6 +38,7 @@ namespace Salesforce.MarketingCloud.Test
     {
         private TransactionalMessagingApi transactionalMessagingApiClient;
         private AssetApi assetApiClient;
+        private ConfigProvider configProvider;
 
         /// <summary>
         /// Setup before each unit test
@@ -47,6 +48,7 @@ namespace Salesforce.MarketingCloud.Test
         {
             transactionalMessagingApiClient = ApiTestSutFactory<TransactionalMessagingApi>.Create();
             assetApiClient = ApiTestSutFactory<AssetApi>.Create();
+            configProvider = new ConfigProvider();
         }
 
         [Test]
@@ -94,13 +96,14 @@ namespace Salesforce.MarketingCloud.Test
             var emailDefinition = CreateEmailDefinitionObject();
             var createEmailDefinitionResult = transactionalMessagingApiClient.CreateEmailDefinition(emailDefinition);
             var emailDefinitionToPartiallyUpdateKey = createEmailDefinitionResult.DefinitionKey;
-            var newDescription = new RequestUpdateEmailDefinition("Updated email definition description");
 
-            var partiallyUpdateEmailDefinitionResult = transactionalMessagingApiClient.PartiallyUpdateEmailDefinition(emailDefinitionToPartiallyUpdateKey, newDescription);
+            var updatedDefinitionDescription = new RequestUpdateEmailDefinition(description: "Updated email definition description");
+
+            var partiallyUpdateEmailDefinitionResult = transactionalMessagingApiClient.PartiallyUpdateEmailDefinition(emailDefinitionToPartiallyUpdateKey, updatedDefinitionDescription);
 
             try
             {
-                Assert.AreEqual(newDescription.Description, partiallyUpdateEmailDefinitionResult.Description);
+                Assert.AreEqual(updatedDefinitionDescription.Description, partiallyUpdateEmailDefinitionResult.Description);
 
                 Assert.AreEqual(emailDefinition.DefinitionKey, partiallyUpdateEmailDefinitionResult.DefinitionKey);
                 Assert.AreEqual(emailDefinition.Name, partiallyUpdateEmailDefinitionResult.Name);
@@ -169,7 +172,7 @@ namespace Salesforce.MarketingCloud.Test
         }
 
         [Test]
-        public void DeleteEmailDefinitionQueueTest()
+        public void DeleteQueuedMessagesForEmailDefinitionTest()
         {
             var emailDefinition = CreateEmailDefinitionObject();
             emailDefinition.Status = "inactive"; // Definition status must be inactive to delete queue
@@ -244,7 +247,7 @@ namespace Salesforce.MarketingCloud.Test
             var createEmailDefinitionResult = transactionalMessagingApiClient.CreateEmailDefinition(emailDefinition);
             var emailToSendToRecipientKey = createEmailDefinitionResult.DefinitionKey;
 
-            var recipient = new Recipient("jonDoe@gmail.com");
+            var recipient = new Recipient("johnDoe@gmail.com");
             var messageKey = Guid.NewGuid().ToString();
 
             var messageRequestBody = new RequestSendEmailToSingleRecipient(emailToSendToRecipientKey, recipient);
@@ -276,21 +279,253 @@ namespace Salesforce.MarketingCloud.Test
         [Test]
         public void GetEmailsNotSentToRecipientsTest()
         {
-            var getMessagesNotSentToRecipientsResponse = transactionalMessagingApiClient.GetEmailsNotSentToRecipients("notSent");
+            var getEmailsNotSentToRecipientsResponse = transactionalMessagingApiClient.GetEmailsNotSentToRecipients("notSent");
 
-            Assert.IsNotNull(getMessagesNotSentToRecipientsResponse.RequestId);
-            Assert.IsNotNull(getMessagesNotSentToRecipientsResponse.LastEventID);
-            Assert.IsNotNull(getMessagesNotSentToRecipientsResponse.Messages);
-            Assert.IsNotNull(getMessagesNotSentToRecipientsResponse.Count);
-            Assert.IsNotNull(getMessagesNotSentToRecipientsResponse.PageSize);
+            Assert.IsNotNull(getEmailsNotSentToRecipientsResponse.RequestId);
+            Assert.IsNotNull(getEmailsNotSentToRecipientsResponse.LastEventID);
+            Assert.IsNotNull(getEmailsNotSentToRecipientsResponse.Messages);
+            Assert.IsNotNull(getEmailsNotSentToRecipientsResponse.Count);
+            Assert.IsNotNull(getEmailsNotSentToRecipientsResponse.PageSize);
+        }
+
+        [Test]
+        public void GetSmsDefinitionTest()
+        {
+            var smsDefinition = CreateSmsDefinitionObject();
+            var createSmsDefinitionResult = transactionalMessagingApiClient.CreateSmsDefinition(smsDefinition);
+            var smsDefinitionToRetrieveKey = createSmsDefinitionResult.DefinitionKey;
+
+            var getSmsDefinitionResult = transactionalMessagingApiClient.GetSmsDefinition(smsDefinitionToRetrieveKey);
+
+            try
+            {
+                Assert.AreEqual(smsDefinition.DefinitionKey, getSmsDefinitionResult.DefinitionKey);
+                Assert.AreEqual(smsDefinition.Name, getSmsDefinitionResult.Name);
+                Assert.AreEqual(smsDefinition.Subscriptions.ShortCode, getSmsDefinitionResult.Subscriptions.ShortCode);
+                Assert.AreEqual(smsDefinition.Subscriptions.CountryCode, getSmsDefinitionResult.Subscriptions.CountryCode);
+                Assert.AreEqual(smsDefinition.Content, getSmsDefinitionResult.Content);
+            }
+            finally
+            {
+                transactionalMessagingApiClient.DeleteSmsDefinition(smsDefinitionToRetrieveKey);
+            }
+        }
+
+        [Test]
+        public void CreateSmsDefinitionTest()
+        {
+            var smsDefinition = CreateSmsDefinitionObject();
+            var createSmsDefinitionResult = transactionalMessagingApiClient.CreateSmsDefinition(smsDefinition);
+
+            try
+            {
+                Assert.AreEqual(smsDefinition.DefinitionKey, createSmsDefinitionResult.DefinitionKey);
+                Assert.AreEqual(smsDefinition.Name, createSmsDefinitionResult.Name);
+                Assert.AreEqual(smsDefinition.Subscriptions.ShortCode, createSmsDefinitionResult.Subscriptions.ShortCode);
+                Assert.AreEqual(smsDefinition.Subscriptions.CountryCode, createSmsDefinitionResult.Subscriptions.CountryCode);
+                Assert.AreEqual(smsDefinition.Content, createSmsDefinitionResult.Content);
+            }
+            finally
+            {
+                transactionalMessagingApiClient.DeleteSmsDefinition(createSmsDefinitionResult.DefinitionKey);
+            }
+        }
+
+        [Test]
+        public void PartiallyUpdateSmsDefinitionTest()
+        {
+            var smsDefinition = CreateSmsDefinitionObject();
+            var createSmsDefinitionResult = transactionalMessagingApiClient.CreateSmsDefinition(smsDefinition);
+            var smsDefinitionToPartiallyUpdateKey = createSmsDefinitionResult.DefinitionKey;
+
+            var updatedDefinitionDescription =
+                new RequestUpdateSmsDefinition(description: "Updated SMS definition description");
+
+            var partiallyUpdateSmsDefinitionResult =
+                transactionalMessagingApiClient.PartiallyUpdateSmsDefinition(smsDefinitionToPartiallyUpdateKey,
+                    updatedDefinitionDescription);
+
+            try
+            {
+                Assert.AreEqual(updatedDefinitionDescription.Description, partiallyUpdateSmsDefinitionResult.Description);
+
+                Assert.AreEqual(smsDefinition.DefinitionKey, partiallyUpdateSmsDefinitionResult.DefinitionKey);
+                Assert.AreEqual(smsDefinition.Name, partiallyUpdateSmsDefinitionResult.Name);
+                Assert.AreEqual(smsDefinition.Content.Message, partiallyUpdateSmsDefinitionResult.Content.Message);
+                Assert.AreEqual(smsDefinition.Subscriptions.CountryCode, partiallyUpdateSmsDefinitionResult.Subscriptions.CountryCode);
+                Assert.AreEqual(smsDefinition.Subscriptions.ShortCode, partiallyUpdateSmsDefinitionResult.Subscriptions.ShortCode);
+            }
+            finally
+            {
+                transactionalMessagingApiClient.DeleteSmsDefinition(smsDefinitionToPartiallyUpdateKey);
+            }
+        }
+
+        [Test]
+        public void DeleteSmsDefinitionTest()
+        {
+            var smsDefinition = CreateSmsDefinitionObject();
+            var createSmsDefinitionResult = transactionalMessagingApiClient.CreateSmsDefinition(smsDefinition);
+            var smsDefinitionToDeleteKey = createSmsDefinitionResult.DefinitionKey;
+
+            try
+            {
+                var deleteSmsDefinitionResult = transactionalMessagingApiClient.DeleteSmsDefinition(smsDefinitionToDeleteKey);
+
+                Assert.NotNull(deleteSmsDefinitionResult.RequestId);
+                Assert.NotNull(deleteSmsDefinitionResult.DeletedDefinitionKey);
+                Assert.AreEqual("Success", deleteSmsDefinitionResult.Message);
+            }
+            catch (ApiException e)
+            {
+                var deserializedException = JsonConvert.DeserializeObject<ApiError>(e.ErrorContent);
+
+                Assert.AreEqual($"FuelRuntime_ObjectNotFound: Unable to find Definition {smsDefinitionToDeleteKey}", deserializedException.Message);
+            }
+        }
+
+        [Test]
+        public void GetSmsDefinitionsTest()
+        {
+            var getSmsDefinitionsResult = transactionalMessagingApiClient.GetSmsDefinitions();
+
+            Assert.IsNotNull(getSmsDefinitionsResult.RequestId);
+            Assert.IsNotNull(getSmsDefinitionsResult.Definitions);
+            Assert.IsNotNull(getSmsDefinitionsResult.Count);
+            Assert.IsNotNull(getSmsDefinitionsResult.Page);
+            Assert.IsNotNull(getSmsDefinitionsResult.PageSize);
+        }
+
+        [Test]
+        public void GetQueueMetricsForSmsDefinitionTest()
+        {
+            var smsDefinition = CreateSmsDefinitionObject();
+            var createSmsDefinitionResult = transactionalMessagingApiClient.CreateSmsDefinition(smsDefinition);
+            var smsDefinitionQueueMetricsToReceiveKey = createSmsDefinitionResult.DefinitionKey;
+
+            var getQueueMetricsForSmsDefinitionResult = transactionalMessagingApiClient.GetQueueMetricsForSmsDefinition(smsDefinitionQueueMetricsToReceiveKey);
+
+            try
+            {
+                Assert.IsNotNull(getQueueMetricsForSmsDefinitionResult.RequestId);
+                Assert.IsNotNull(getQueueMetricsForSmsDefinitionResult.Count);
+                Assert.IsNotNull(getQueueMetricsForSmsDefinitionResult.AgeSeconds);
+            }
+            finally
+            {
+                transactionalMessagingApiClient.DeleteSmsDefinition(smsDefinitionQueueMetricsToReceiveKey);
+            }
+        }
+
+        [Test]
+        public void SendSmsToMultipleRecipientsTest()
+        {
+            var smsDefinition = CreateSmsDefinitionObject();
+            var createSmsDefinitionResult = transactionalMessagingApiClient.CreateSmsDefinition(smsDefinition);
+            var smsToSendToRecipientsKey = createSmsDefinitionResult.DefinitionKey;
+
+            var recipientsList = new List<Recipient>()
+            {
+                new Recipient("johnDoe@gmail.com"),
+                new Recipient("johannaDoe@yahoo.com")
+            };
+
+            var batchMessageRequestBody = new RequestSendSmsToMultipleRecipients(smsToSendToRecipientsKey, recipientsList);
+            var sendSmsToMultipleRecipientsResult =
+                transactionalMessagingApiClient.SendSmsToMultipleRecipients(batchMessageRequestBody);
+
+            try
+            {
+                Assert.NotNull(sendSmsToMultipleRecipientsResult.RequestId);
+                Assert.NotNull(sendSmsToMultipleRecipientsResult.ErrorCode);
+                Assert.NotNull(sendSmsToMultipleRecipientsResult.Responses);
+            }
+            finally
+            {
+                transactionalMessagingApiClient.DeleteSmsDefinition(smsToSendToRecipientsKey);
+            }
+        }
+
+        [Test]
+        public void SendSmsToSingleRecipientTest()
+        {
+            var smsDefinition = CreateSmsDefinitionObject();
+            var createSmsDefinitionResult = transactionalMessagingApiClient.CreateSmsDefinition(smsDefinition);
+            var smsToSendToRecipientKey = createSmsDefinitionResult.DefinitionKey;
+
+            var recipient = new Recipient("johnDoe@gmail.com");
+            var messageKey = Guid.NewGuid().ToString();
+
+            var messageRequestBody = new RequestSendSmsToSingleRecipient(smsToSendToRecipientKey, recipient);
+            var sendSmsToSingleRecipientResult =
+                transactionalMessagingApiClient.SendSmsToSingleRecipient(messageKey, messageRequestBody);
+
+            try
+            {
+                Assert.NotNull(sendSmsToSingleRecipientResult.RequestId);
+                Assert.NotNull(sendSmsToSingleRecipientResult.ErrorCode);
+                Assert.NotNull(sendSmsToSingleRecipientResult.Responses);
+            }
+            finally
+            {
+                transactionalMessagingApiClient.DeleteSmsDefinition(smsToSendToRecipientKey);
+            }
+        }
+
+        [Test]
+        public void GetSmsSendStatusForRecipientTest()
+        {
+            var smsDefinition = CreateSmsDefinitionObject();
+            var createSmsDefinitionResult = transactionalMessagingApiClient.CreateSmsDefinition(smsDefinition);
+            var smsToSendToRecipientKey = createSmsDefinitionResult.DefinitionKey;
+
+            var recipient = new Recipient("johnDoe@gmail.com");
+            var messageKey = Guid.NewGuid().ToString();
+
+            var messageRequestBody = new RequestSendSmsToSingleRecipient(smsToSendToRecipientKey, recipient);
+            transactionalMessagingApiClient.SendSmsToSingleRecipient(messageKey, messageRequestBody);
+
+            var getSmsSendStatusForRecipientResult =
+                transactionalMessagingApiClient.GetSmsSendStatusForRecipient(messageKey);
+
+            try
+            {
+                Assert.NotNull(getSmsSendStatusForRecipientResult.RequestId);
+                Assert.NotNull(getSmsSendStatusForRecipientResult.Timestamp);
+
+                var eventCategoryTypes = new Collection<string>()
+                {
+                    "TransactionalSendEvents.SMSSent",
+                    "TransactionalSendEvents.SMSQueued",
+                    "TransactionalSendEvents.SMSNotSent"
+                };
+
+                CollectionAssert.Contains(eventCategoryTypes, getSmsSendStatusForRecipientResult.EventCategoryType);
+            }
+            finally
+            {
+                transactionalMessagingApiClient.DeleteSmsDefinition(smsToSendToRecipientKey);
+            }
+        }
+
+        [Test]
+        public void GetSMSsNotSentToRecipientsTest()
+        {
+            var getSMSsNotSentToRecipientsResponse = transactionalMessagingApiClient.GetSMSsNotSentToRecipients("notSent");
+
+            Assert.IsNotNull(getSMSsNotSentToRecipientsResponse.RequestId);
+            Assert.IsNotNull(getSMSsNotSentToRecipientsResponse.LastEventID);
+            Assert.IsNotNull(getSMSsNotSentToRecipientsResponse.Messages);
+            Assert.IsNotNull(getSMSsNotSentToRecipientsResponse.Count);
+            Assert.IsNotNull(getSMSsNotSentToRecipientsResponse.PageSize);
         }
 
         private RequestCreateEmailDefinition CreateEmailDefinitionObject()
         {
-            var definitionKey = $"{Guid.NewGuid()}";
-            var definitionName = $"{Guid.NewGuid()}";
+            var emailDefinitionKey = $"{Guid.NewGuid()}";
+            var emailDefinitionName = $"{Guid.NewGuid()}";
 
-            var emailAsset = CreateAsset();
+            var emailAsset = CreateAssetObject();
 
             try
             {
@@ -301,7 +536,7 @@ namespace Salesforce.MarketingCloud.Test
 
                 const string subscribersListKey = "All Subscribers";
                 var subscriptions = new RequestCreateEmailDefinitionSubscriptions(subscribersListKey);
-                var emailDefinition = new RequestCreateEmailDefinition(definitionName, definitionKey, content: content, subscriptions: subscriptions);
+                var emailDefinition = new RequestCreateEmailDefinition(emailDefinitionName, emailDefinitionKey, content: content, subscriptions: subscriptions);
 
                 return emailDefinition;
             }
@@ -312,7 +547,24 @@ namespace Salesforce.MarketingCloud.Test
             }
         }
 
-        private Asset CreateAsset()
+        private RequestCreateSmsDefinition CreateSmsDefinitionObject()
+        {
+            var smsDefinitionKey = $"{Guid.NewGuid()}";
+            var smsDefinitionName = $"{Guid.NewGuid()}";
+
+            var shortCode = configProvider.ShortCode;
+            var keyword = configProvider.Keyword;
+            var countryCode = "US";
+
+            var subscriptions = new RequestCreateSmsDefinitionSubscriptions(shortCode, countryCode, keyword);
+            var content = new RequestCreateSmsDefinitionContent("Content message");
+
+            var smsDefinition = new RequestCreateSmsDefinition(smsDefinitionKey, smsDefinitionName, content, subscriptions: subscriptions);
+
+            return smsDefinition;
+        }
+
+        private Asset CreateAssetObject()
         {
             var customerKey = $"{Guid.NewGuid()}";
 

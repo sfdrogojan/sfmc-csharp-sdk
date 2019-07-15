@@ -1,4 +1,4 @@
-# Salesforce.MarketingCloud.Model.RequestCreateSMSDefinitionContent
+# Salesforce.MarketingCloud.Model.RequestCreateSmsDefinitionContent
 ## Properties
 
 Name | Type | Description | Notes

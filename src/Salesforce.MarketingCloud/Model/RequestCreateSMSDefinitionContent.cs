@@ -25,26 +25,26 @@ using SwaggerDateConverter = Salesforce.MarketingCloud.Client.SwaggerDateConvert
 namespace Salesforce.MarketingCloud.Model
 {
     /// <summary>
-    /// RequestCreateSMSDefinitionContent
+    /// RequestCreateSmsDefinitionContent
     /// </summary>
     [DataContract]
-    public partial class RequestCreateSMSDefinitionContent :  IEquatable<RequestCreateSMSDefinitionContent>, IValidatableObject
+    public partial class RequestCreateSmsDefinitionContent :  IEquatable<RequestCreateSmsDefinitionContent>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="RequestCreateSMSDefinitionContent" /> class.
+        /// Initializes a new instance of the <see cref="RequestCreateSmsDefinitionContent" /> class.
         /// </summary>
         [JsonConstructorAttribute]
-        protected RequestCreateSMSDefinitionContent() { }
+        protected RequestCreateSmsDefinitionContent() { }
         /// <summary>
-        /// Initializes a new instance of the <see cref="RequestCreateSMSDefinitionContent" /> class.
+        /// Initializes a new instance of the <see cref="RequestCreateSmsDefinitionContent" /> class.
         /// </summary>
         /// <param name="message">The message content that you want sent with each message. Use substitution strings and AMPscript to personalize the message. (required).</param>
-        public RequestCreateSMSDefinitionContent(string message = default(string))
+        public RequestCreateSmsDefinitionContent(string message = default(string))
         {
             // to ensure "message" is required (not null)
             if (message == null)
             {
-                throw new InvalidDataException("message is a required property for RequestCreateSMSDefinitionContent and cannot be null");
+                throw new InvalidDataException("message is a required property for RequestCreateSmsDefinitionContent and cannot be null");
             }
             else
             {
@@ -66,7 +66,7 @@ namespace Salesforce.MarketingCloud.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class RequestCreateSMSDefinitionContent {\n");
+            sb.Append("class RequestCreateSmsDefinitionContent {\n");
             sb.Append("  Message: ").Append(Message).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -88,15 +88,15 @@ namespace Salesforce.MarketingCloud.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as RequestCreateSMSDefinitionContent);
+            return this.Equals(input as RequestCreateSmsDefinitionContent);
         }
 
         /// <summary>
-        /// Returns true if RequestCreateSMSDefinitionContent instances are equal
+        /// Returns true if RequestCreateSmsDefinitionContent instances are equal
         /// </summary>
-        /// <param name="input">Instance of RequestCreateSMSDefinitionContent to be compared</param>
+        /// <param name="input">Instance of RequestCreateSmsDefinitionContent to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(RequestCreateSMSDefinitionContent input)
+        public bool Equals(RequestCreateSmsDefinitionContent input)
         {
             if (input == null)
                 return false;

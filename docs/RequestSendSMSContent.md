@@ -1,4 +1,4 @@
-# Salesforce.MarketingCloud.Model.RequestSendSMSContent
+# Salesforce.MarketingCloud.Model.RequestSendSmsContent
 ## Properties
 
 Name | Type | Description | Notes

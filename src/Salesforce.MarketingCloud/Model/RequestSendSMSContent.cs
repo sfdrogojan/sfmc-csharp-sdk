@@ -25,16 +25,16 @@ using SwaggerDateConverter = Salesforce.MarketingCloud.Client.SwaggerDateConvert
 namespace Salesforce.MarketingCloud.Model
 {
     /// <summary>
-    /// RequestSendSMSContent
+    /// RequestSendSmsContent
     /// </summary>
     [DataContract]
-    public partial class RequestSendSMSContent :  IEquatable<RequestSendSMSContent>, IValidatableObject
+    public partial class RequestSendSmsContent :  IEquatable<RequestSendSmsContent>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="RequestSendSMSContent" /> class.
+        /// Initializes a new instance of the <see cref="RequestSendSmsContent" /> class.
         /// </summary>
         /// <param name="message">Override for message content in the definition that you want sent with each message. Use substitution strings to personalize the content..</param>
-        public RequestSendSMSContent(string message = default(string))
+        public RequestSendSmsContent(string message = default(string))
         {
             this.Message = message;
         }
@@ -53,7 +53,7 @@ namespace Salesforce.MarketingCloud.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class RequestSendSMSContent {\n");
+            sb.Append("class RequestSendSmsContent {\n");
             sb.Append("  Message: ").Append(Message).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -75,15 +75,15 @@ namespace Salesforce.MarketingCloud.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as RequestSendSMSContent);
+            return this.Equals(input as RequestSendSmsContent);
         }
 
         /// <summary>
-        /// Returns true if RequestSendSMSContent instances are equal
+        /// Returns true if RequestSendSmsContent instances are equal
         /// </summary>
-        /// <param name="input">Instance of RequestSendSMSContent to be compared</param>
+        /// <param name="input">Instance of RequestSendSmsContent to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(RequestSendSMSContent input)
+        public bool Equals(RequestSendSmsContent input)
         {
             if (input == null)
                 return false;

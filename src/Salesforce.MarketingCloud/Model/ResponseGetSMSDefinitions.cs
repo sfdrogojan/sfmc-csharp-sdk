@@ -25,20 +25,20 @@ using SwaggerDateConverter = Salesforce.MarketingCloud.Client.SwaggerDateConvert
 namespace Salesforce.MarketingCloud.Model
 {
     /// <summary>
-    /// ResponseGetSMSDefinitions
+    /// ResponseGetSmsDefinitions
     /// </summary>
     [DataContract]
-    public partial class ResponseGetSMSDefinitions :  IEquatable<ResponseGetSMSDefinitions>, IValidatableObject
+    public partial class ResponseGetSmsDefinitions :  IEquatable<ResponseGetSmsDefinitions>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="ResponseGetSMSDefinitions" /> class.
+        /// Initializes a new instance of the <see cref="ResponseGetSmsDefinitions" /> class.
         /// </summary>
         /// <param name="requestId">The ID of the request.</param>
         /// <param name="definitions">definitions.</param>
         /// <param name="count">Number of pages.</param>
         /// <param name="page">Page number to return..</param>
         /// <param name="pageSize">Number of definitions, which are array elements, to return per paged response..</param>
-        public ResponseGetSMSDefinitions(string requestId = default(string), List<RequestCreateSMSDefinition> definitions = default(List<RequestCreateSMSDefinition>), int? count = default(int?), int? page = default(int?), int? pageSize = default(int?))
+        public ResponseGetSmsDefinitions(string requestId = default(string), List<RequestCreateSmsDefinition> definitions = default(List<RequestCreateSmsDefinition>), int? count = default(int?), int? page = default(int?), int? pageSize = default(int?))
         {
             this.RequestId = requestId;
             this.Definitions = definitions;
@@ -58,7 +58,7 @@ namespace Salesforce.MarketingCloud.Model
         /// Gets or Sets Definitions
         /// </summary>
         [DataMember(Name="definitions", EmitDefaultValue=false)]
-        public List<RequestCreateSMSDefinition> Definitions { get; set; }
+        public List<RequestCreateSmsDefinition> Definitions { get; set; }
 
         /// <summary>
         /// Number of pages
@@ -88,7 +88,7 @@ namespace Salesforce.MarketingCloud.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class ResponseGetSMSDefinitions {\n");
+            sb.Append("class ResponseGetSmsDefinitions {\n");
             sb.Append("  RequestId: ").Append(RequestId).Append("\n");
             sb.Append("  Definitions: ").Append(Definitions).Append("\n");
             sb.Append("  Count: ").Append(Count).Append("\n");
@@ -114,15 +114,15 @@ namespace Salesforce.MarketingCloud.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as ResponseGetSMSDefinitions);
+            return this.Equals(input as ResponseGetSmsDefinitions);
         }
 
         /// <summary>
-        /// Returns true if ResponseGetSMSDefinitions instances are equal
+        /// Returns true if ResponseGetSmsDefinitions instances are equal
         /// </summary>
-        /// <param name="input">Instance of ResponseGetSMSDefinitions to be compared</param>
+        /// <param name="input">Instance of ResponseGetSmsDefinitions to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(ResponseGetSMSDefinitions input)
+        public bool Equals(ResponseGetSmsDefinitions input)
         {
             if (input == null)
                 return false;

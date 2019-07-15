@@ -25,16 +25,16 @@ using SwaggerDateConverter = Salesforce.MarketingCloud.Client.SwaggerDateConvert
 namespace Salesforce.MarketingCloud.Model
 {
     /// <summary>
-    /// RequestSendSMSToMultipleRecipientsSubscriptions
+    /// RequestSendSmsToMultipleRecipientsSubscriptions
     /// </summary>
     [DataContract]
-    public partial class RequestSendSMSToMultipleRecipientsSubscriptions :  IEquatable<RequestSendSMSToMultipleRecipientsSubscriptions>, IValidatableObject
+    public partial class RequestSendSmsToMultipleRecipientsSubscriptions :  IEquatable<RequestSendSmsToMultipleRecipientsSubscriptions>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="RequestSendSMSToMultipleRecipientsSubscriptions" /> class.
+        /// Initializes a new instance of the <see cref="RequestSendSmsToMultipleRecipientsSubscriptions" /> class.
         /// </summary>
         /// <param name="resubscribe">Forces the message send request to subscribe the mobile number back into a short code if a user may have requested STOP. Often used to ensure that critical transactional messages are delivered irrespective of a mobile number subscriber status..</param>
-        public RequestSendSMSToMultipleRecipientsSubscriptions(bool? resubscribe = default(bool?))
+        public RequestSendSmsToMultipleRecipientsSubscriptions(bool? resubscribe = default(bool?))
         {
             this.Resubscribe = resubscribe;
         }
@@ -53,7 +53,7 @@ namespace Salesforce.MarketingCloud.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class RequestSendSMSToMultipleRecipientsSubscriptions {\n");
+            sb.Append("class RequestSendSmsToMultipleRecipientsSubscriptions {\n");
             sb.Append("  Resubscribe: ").Append(Resubscribe).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -75,15 +75,15 @@ namespace Salesforce.MarketingCloud.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as RequestSendSMSToMultipleRecipientsSubscriptions);
+            return this.Equals(input as RequestSendSmsToMultipleRecipientsSubscriptions);
         }
 
         /// <summary>
-        /// Returns true if RequestSendSMSToMultipleRecipientsSubscriptions instances are equal
+        /// Returns true if RequestSendSmsToMultipleRecipientsSubscriptions instances are equal
         /// </summary>
-        /// <param name="input">Instance of RequestSendSMSToMultipleRecipientsSubscriptions to be compared</param>
+        /// <param name="input">Instance of RequestSendSmsToMultipleRecipientsSubscriptions to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(RequestSendSMSToMultipleRecipientsSubscriptions input)
+        public bool Equals(RequestSendSmsToMultipleRecipientsSubscriptions input)
         {
             if (input == null)
                 return false;

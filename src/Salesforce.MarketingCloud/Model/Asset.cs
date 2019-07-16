@@ -134,167 +134,167 @@ namespace Salesforce.MarketingCloud.Model
         /// The id of the asset
         /// </summary>
         /// <value>The id of the asset</value>
-        [DataMember(Name="Id", EmitDefaultValue=false)]
+        [DataMember(Name="id", EmitDefaultValue=false)]
         public decimal? Id { get; set; }
 
         /// <summary>
         /// Reference to customer&#39;s private ID/name for the asset
         /// </summary>
         /// <value>Reference to customer&#39;s private ID/name for the asset</value>
-        [DataMember(Name="CustomerKey", EmitDefaultValue=false)]
+        [DataMember(Name="customerKey", EmitDefaultValue=false)]
         public string CustomerKey { get; set; }
 
         /// <summary>
         /// The type that the content attribute will be in
         /// </summary>
         /// <value>The type that the content attribute will be in</value>
-        [DataMember(Name="ContentType", EmitDefaultValue=false)]
+        [DataMember(Name="contentType", EmitDefaultValue=false)]
         public string ContentType { get; set; }
 
         /// <summary>
         /// Property bag containing the asset data
         /// </summary>
         /// <value>Property bag containing the asset data</value>
-        [DataMember(Name="Data", EmitDefaultValue=false)]
+        [DataMember(Name="data", EmitDefaultValue=false)]
         public Object Data { get; set; }
 
         /// <summary>
         /// Gets or Sets AssetType
         /// </summary>
-        [DataMember(Name="AssetType", EmitDefaultValue=false)]
+        [DataMember(Name="assetType", EmitDefaultValue=false)]
         public AssetType AssetType { get; set; }
 
         /// <summary>
         /// The version of the asset
         /// </summary>
         /// <value>The version of the asset</value>
-        [DataMember(Name="Version", EmitDefaultValue=false)]
+        [DataMember(Name="version", EmitDefaultValue=false)]
         public decimal? Version { get; set; }
 
         /// <summary>
         /// Specifies if the asset can be modified or not
         /// </summary>
         /// <value>Specifies if the asset can be modified or not</value>
-        [DataMember(Name="Locked", EmitDefaultValue=false)]
+        [DataMember(Name="locked", EmitDefaultValue=false)]
         public bool? Locked { get; set; }
 
         /// <summary>
         /// Stores the different properties that this asset refers to if it is a file type
         /// </summary>
         /// <value>Stores the different properties that this asset refers to if it is a file type</value>
-        [DataMember(Name="FileProperties", EmitDefaultValue=false)]
+        [DataMember(Name="fileProperties", EmitDefaultValue=false)]
         public Object FileProperties { get; set; }
 
         /// <summary>
         /// Name of the asset, set by the client
         /// </summary>
         /// <value>Name of the asset, set by the client</value>
-        [DataMember(Name="Name", EmitDefaultValue=false)]
+        [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
 
         /// <summary>
         /// Description of the asset, set by the client
         /// </summary>
         /// <value>Description of the asset, set by the client</value>
-        [DataMember(Name="Description", EmitDefaultValue=false)]
+        [DataMember(Name="description", EmitDefaultValue=false)]
         public string Description { get; set; }
 
         /// <summary>
         /// ID of the category the asset belongs to
         /// </summary>
         /// <value>ID of the category the asset belongs to</value>
-        [DataMember(Name="Category", EmitDefaultValue=false)]
+        [DataMember(Name="category", EmitDefaultValue=false)]
         public Object Category { get; set; }
 
         /// <summary>
         /// List of tags associated with the asset
         /// </summary>
         /// <value>List of tags associated with the asset</value>
-        [DataMember(Name="Tags", EmitDefaultValue=false)]
+        [DataMember(Name="tags", EmitDefaultValue=false)]
         public List<string> Tags { get; set; }
 
         /// <summary>
         /// The actual content of the asset
         /// </summary>
         /// <value>The actual content of the asset</value>
-        [DataMember(Name="Content", EmitDefaultValue=false)]
+        [DataMember(Name="content", EmitDefaultValue=false)]
         public string Content { get; set; }
 
         /// <summary>
         /// Fallback for display when neither content nor supercontent are provided
         /// </summary>
         /// <value>Fallback for display when neither content nor supercontent are provided</value>
-        [DataMember(Name="Design", EmitDefaultValue=false)]
+        [DataMember(Name="design", EmitDefaultValue=false)]
         public string Design { get; set; }
 
         /// <summary>
         /// Content that supersedes content in terms of display
         /// </summary>
         /// <value>Content that supersedes content in terms of display</value>
-        [DataMember(Name="SuperContent", EmitDefaultValue=false)]
+        [DataMember(Name="superContent", EmitDefaultValue=false)]
         public string SuperContent { get; set; }
 
         /// <summary>
         /// Custom fields within an asset
         /// </summary>
         /// <value>Custom fields within an asset</value>
-        [DataMember(Name="CustomFields", EmitDefaultValue=false)]
+        [DataMember(Name="customFields", EmitDefaultValue=false)]
         public Object CustomFields { get; set; }
 
         /// <summary>
         /// Views within an asset
         /// </summary>
         /// <value>Views within an asset</value>
-        [DataMember(Name="Views", EmitDefaultValue=false)]
+        [DataMember(Name="views", EmitDefaultValue=false)]
         public Object Views { get; set; }
 
         /// <summary>
         /// Blocks within the asset
         /// </summary>
         /// <value>Blocks within the asset</value>
-        [DataMember(Name="Blocks", EmitDefaultValue=false)]
+        [DataMember(Name="blocks", EmitDefaultValue=false)]
         public Object Blocks { get; set; }
 
         /// <summary>
         /// Minimum number of blocks within an asset
         /// </summary>
         /// <value>Minimum number of blocks within an asset</value>
-        [DataMember(Name="MinBlocks", EmitDefaultValue=false)]
+        [DataMember(Name="minBlocks", EmitDefaultValue=false)]
         public decimal? MinBlocks { get; set; }
 
         /// <summary>
         /// Maximum number of blocks within an asset
         /// </summary>
         /// <value>Maximum number of blocks within an asset</value>
-        [DataMember(Name="MaxBlocks", EmitDefaultValue=false)]
+        [DataMember(Name="maxBlocks", EmitDefaultValue=false)]
         public decimal? MaxBlocks { get; set; }
 
         /// <summary>
         /// List of channels that are allowed to use this asset
         /// </summary>
         /// <value>List of channels that are allowed to use this asset</value>
-        [DataMember(Name="Channels", EmitDefaultValue=false)]
+        [DataMember(Name="channels", EmitDefaultValue=false)]
         public Object Channels { get; set; }
 
         /// <summary>
         /// List of blocks that are allowed in the asset
         /// </summary>
         /// <value>List of blocks that are allowed in the asset</value>
-        [DataMember(Name="AllowedBlocks", EmitDefaultValue=false)]
+        [DataMember(Name="allowedBlocks", EmitDefaultValue=false)]
         public List<string> AllowedBlocks { get; set; }
 
         /// <summary>
         /// Slots within the asset
         /// </summary>
         /// <value>Slots within the asset</value>
-        [DataMember(Name="Slots", EmitDefaultValue=false)]
+        [DataMember(Name="slots", EmitDefaultValue=false)]
         public Object Slots { get; set; }
 
         /// <summary>
         /// A dictionary of member IDs that have been granted access to the asset
         /// </summary>
         /// <value>A dictionary of member IDs that have been granted access to the asset</value>
-        [DataMember(Name="BusinessUnitAvailability", EmitDefaultValue=false)]
+        [DataMember(Name="businessUnitAvailability", EmitDefaultValue=false)]
         public Object BusinessUnitAvailability { get; set; }
 
         /// <summary>
@@ -307,21 +307,21 @@ namespace Salesforce.MarketingCloud.Model
         /// Template the asset follows
         /// </summary>
         /// <value>Template the asset follows</value>
-        [DataMember(Name="Template", EmitDefaultValue=false)]
+        [DataMember(Name="template", EmitDefaultValue=false)]
         public Object Template { get; set; }
 
         /// <summary>
         /// Base64-encoded string of a file associated with an asset
         /// </summary>
         /// <value>Base64-encoded string of a file associated with an asset</value>
-        [DataMember(Name="File", EmitDefaultValue=false)]
+        [DataMember(Name="file", EmitDefaultValue=false)]
         public string File { get; set; }
 
         /// <summary>
         /// Tells the sending compiler what view to use for generating this view&#39;s content
         /// </summary>
         /// <value>Tells the sending compiler what view to use for generating this view&#39;s content</value>
-        [DataMember(Name="GenerateFrom", EmitDefaultValue=false)]
+        [DataMember(Name="generateFrom", EmitDefaultValue=false)]
         public string GenerateFrom { get; set; }
 
         /// <summary>

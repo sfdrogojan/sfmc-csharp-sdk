@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 **CampaignCode** | **string** | Unique identifier for the campaign with a maximum length of 36 characters | 
 **Color** | **string** | Hex color value | 
 **Favorite** | **bool?** | Determines if the campaign will be flagged as a favorite | 
-**Id** | **decimal?** | The id of the campaign | [optional] 
+**Id** | **string** | The id of the campaign | [optional] 
 **CreatedDate** | **DateTime?** | The date the object was created. | [optional] 
 **ModifiedDate** | **DateTime?** | The date the object was modified. | [optional] 
 

@@ -42,7 +42,6 @@ namespace Salesforce.MarketingCloud.Test
         [OneTimeSetUp]
         public void Init()
         {
-            //instance = new CampaignApi(authBasePath, clientId, clientSecret, accountId);
             instance = ClientFactory.Create().CampaignApi;
         }
 
@@ -62,7 +61,7 @@ namespace Salesforce.MarketingCloud.Test
                 Assert.AreEqual(campaign.CampaignCode, getCampaignResult.CampaignCode);
                 Assert.AreEqual(campaign.Color, getCampaignResult.Color);
                 Assert.AreEqual(campaign.Favorite, getCampaignResult.Favorite);
-        }
+            }
             finally
             {
                 instance.DeleteCampaignById(campaignToRetrieveId);
@@ -77,12 +76,12 @@ namespace Salesforce.MarketingCloud.Test
 
             try
             {
-            Assert.AreEqual(campaign.Name, createCampaignResult.Name);
-            Assert.AreEqual(campaign.Description, createCampaignResult.Description);
-            Assert.AreEqual(campaign.CampaignCode, createCampaignResult.CampaignCode);
-            Assert.AreEqual(campaign.Color, createCampaignResult.Color);
-            Assert.AreEqual(campaign.Favorite, createCampaignResult.Favorite);
-        }
+                Assert.AreEqual(campaign.Name, createCampaignResult.Name);
+                Assert.AreEqual(campaign.Description, createCampaignResult.Description);
+                Assert.AreEqual(campaign.CampaignCode, createCampaignResult.CampaignCode);
+                Assert.AreEqual(campaign.Color, createCampaignResult.Color);
+                Assert.AreEqual(campaign.Favorite, createCampaignResult.Favorite);
+            }
             finally
             {
                 var createCampaignResultId = createCampaignResult.Id;
@@ -103,7 +102,7 @@ namespace Salesforce.MarketingCloud.Test
             {
                 instance.GetCampaignById(campaignToDeleteId);
                 Assert.Fail("No exception thrown");
-        }
+            }
             catch (ApiException e)
             {
                 var deserializedException = JsonConvert.DeserializeObject<ApiError>(e.ErrorContent);

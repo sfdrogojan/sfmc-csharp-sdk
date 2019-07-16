@@ -47,21 +47,21 @@ namespace Salesforce.MarketingCloud.Model
         /// The error message
         /// </summary>
         /// <value>The error message</value>
-        [DataMember(Name="Message", EmitDefaultValue=false)]
+        [DataMember(Name="message", EmitDefaultValue=false)]
         public string Message { get; set; }
 
         /// <summary>
         /// The specific error code
         /// </summary>
         /// <value>The specific error code</value>
-        [DataMember(Name="ErrorCode", EmitDefaultValue=false)]
+        [DataMember(Name="errorCode", EmitDefaultValue=false)]
         public decimal? ErrorCode { get; set; }
 
         /// <summary>
         /// Any specific documentation for the error
         /// </summary>
         /// <value>Any specific documentation for the error</value>
-        [DataMember(Name="Documentation", EmitDefaultValue=false)]
+        [DataMember(Name="documentation", EmitDefaultValue=false)]
         public string Documentation { get; set; }
 
         /// <summary>

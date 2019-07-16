@@ -43,8 +43,7 @@ namespace Salesforce.MarketingCloud.Model
         /// <param name="campaignCode">Unique identifier for the campaign with a maximum length of 36 characters (required).</param>
         /// <param name="color">Hex color value (required).</param>
         /// <param name="favorite">Determines if the campaign will be flagged as a favorite (required).</param>
-        /// <param name="id">The id of the campaign.</param>
-        public Campaign(string name = default(string), string description = default(string), string campaignCode = default(string), string color = default(string), bool? favorite = default(bool?), decimal? id = default(decimal?))
+        public Campaign(string name = default(string), string description = default(string), string campaignCode = default(string), string color = default(string), bool? favorite = default(bool?))
         {
             // to ensure "name" is required (not null)
             if (name == null)
@@ -91,7 +90,6 @@ namespace Salesforce.MarketingCloud.Model
             {
                 this.Favorite = favorite;
             }
-            this.Id = id;
         }
         
         /// <summary>
@@ -134,7 +132,7 @@ namespace Salesforce.MarketingCloud.Model
         /// </summary>
         /// <value>The id of the campaign</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
-        public decimal? Id { get; set; }
+        public string Id { get; private set; }
 
         /// <summary>
         /// The date the object was created.

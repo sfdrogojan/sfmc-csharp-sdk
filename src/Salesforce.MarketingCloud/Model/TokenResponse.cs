@@ -13,7 +13,7 @@ using System.Runtime.Serialization;
 namespace Salesforce.MarketingCloud.Model
 {
     [DataContract]
-    public class AccessTokenResponse
+    public class TokenResponse
     {
         [DataMember(Name = "access_token")]
         public string AccessToken { get; set; }

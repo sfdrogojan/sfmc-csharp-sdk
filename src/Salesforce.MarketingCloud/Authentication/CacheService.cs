@@ -6,13 +6,13 @@ namespace Salesforce.MarketingCloud.Authentication
 {
     internal class CacheService : ICacheService
     {
-        internal static ConcurrentDictionary<string, Tuple<AccessTokenResponse, DateTime>> cache;
+        internal static ConcurrentDictionary<string, Tuple<TokenResponse, DateTime>> cache;
         private readonly IDateTimeProvider dateTimeProvider;
         private readonly int invalidCacheWindowInSeconds = 5 * 60;
 
         static CacheService()
         {
-            cache = new ConcurrentDictionary<string, Tuple<AccessTokenResponse, DateTime>>();
+            cache = new ConcurrentDictionary<string, Tuple<TokenResponse, DateTime>>();
         }
 
         public CacheService(IDateTimeProvider dateTimeProvider)
@@ -20,9 +20,9 @@ namespace Salesforce.MarketingCloud.Authentication
             this.dateTimeProvider = dateTimeProvider;
         }
 
-        public AccessTokenResponse Get(string key)
+        public TokenResponse Get(string key)
         {
-            Tuple<AccessTokenResponse, DateTime> value;
+            Tuple<TokenResponse, DateTime> value;
             if (cache.TryGetValue(key, out value))
             {
                 if (value.Item2 > dateTimeProvider.Now)
@@ -31,11 +31,11 @@ namespace Salesforce.MarketingCloud.Authentication
             return null;
         }
 
-        public void AddOrUpdate(string key, AccessTokenResponse value)
+        public void AddOrUpdate(string key, TokenResponse value)
         {
 
             var expirationTime = dateTimeProvider.Now.AddSeconds(value.ExpiresIn).Subtract(TimeSpan.FromSeconds(invalidCacheWindowInSeconds));
-            var valueToAdd = new Tuple<AccessTokenResponse, DateTime>(value, expirationTime);
+            var valueToAdd = new Tuple<TokenResponse, DateTime>(value, expirationTime);
             cache.AddOrUpdate(key, (cacheKey) => valueToAdd, (cacheKey, existingCacheValue) => valueToAdd);
         }
     }

@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using Newtonsoft.Json.Linq;
 using Salesforce.MarketingCloud.Client;
 using Salesforce.MarketingCloud.Model;
 using RestSharp;
@@ -28,7 +27,7 @@ namespace Salesforce.MarketingCloud.Authentication
             {
                 apiClient.Configuration = configuration;
 
-                var response = GetAccessTokenResponse();
+                var response = GetTokenResponse();
 
                 SetConfigParameters(response);
                 cacheService.AddOrUpdate(cacheKey, response);
@@ -42,18 +41,16 @@ namespace Salesforce.MarketingCloud.Authentication
             }
         }
 
-        private AccessTokenResponse GetAccessTokenResponse()
+        private TokenResponse GetTokenResponse()
         {
-            var accessTokenRequest = new AccessTokenRequest(configuration.ClientId, configuration.ClientSecret, configuration.AccountId, configuration.Scope);
-            var authRequestBody = GetAuthRequestBody(accessTokenRequest);
+            var tokenRequest = new TokenRequest(configuration.ClientId, configuration.ClientSecret, configuration.AccountId, configuration.Scope);
 
-            var serializedAuthRequestBody =
-                apiClient.Serialize(authRequestBody);
+            var serializedTokenRequest = apiClient.Serialize(tokenRequest.ToJObject());
 
-            IRestResponse authRequestResponse = (IRestResponse) apiClient.CallApi("/v2/token",
+            IRestResponse tokenRestResponse = (IRestResponse) apiClient.CallApi("/v2/token",
                 Method.POST,
                 new List<KeyValuePair<string, string>>(),
-                serializedAuthRequestBody,
+                serializedTokenRequest,
                 RuntimeInformationProvider.ClientEnvironmentRuntimeInformation,
                 new Dictionary<string, string>(),
                 new Dictionary<string, FileParameter>(),
@@ -63,34 +60,17 @@ namespace Salesforce.MarketingCloud.Authentication
             var exceptionFactory = Configuration.DefaultExceptionFactory;
             if (exceptionFactory != null)
             {
-                Exception exception = exceptionFactory("GetAuthorizationToken", authRequestResponse);
+                Exception exception = exceptionFactory("GetAuthorizationToken", tokenRestResponse);
                 if (exception != null) throw exception;
             }
 
             var response =
-                (AccessTokenResponse) configuration.ApiClient.Deserialize(authRequestResponse,
-                    typeof(AccessTokenResponse));
+                (TokenResponse) configuration.ApiClient.Deserialize(tokenRestResponse,
+                    typeof(TokenResponse));
             return response;
         }
 
-        private JObject GetAuthRequestBody(AccessTokenRequest accessTokenRequest)
-        {
-            JObject authRequestBody = new JObject();
-
-            authRequestBody.Add("client_id", accessTokenRequest.ClientId);
-            authRequestBody.Add("client_secret", accessTokenRequest.ClientSecret);
-            authRequestBody.Add("grant_type", accessTokenRequest.GrantType);
-            authRequestBody.Add("account_id", accessTokenRequest.AccountId);
-
-            if (!string.IsNullOrEmpty(accessTokenRequest.Scope))
-            {
-                authRequestBody.Add("scope", accessTokenRequest.Scope);
-            }
-
-            return authRequestBody;
-        }
-
-        private void SetConfigParameters(AccessTokenResponse response)
+        private void SetConfigParameters(TokenResponse response)
         {
             configuration.RestInstanceUrl = response.RestInstanceUrl;
             configuration.SoapInstanceUrl = response.SoapInstanceUrl;

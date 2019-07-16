@@ -180,7 +180,7 @@ namespace Salesforce.MarketingCloud.UnitTests
 
             authService.GetAuthorizationToken();
 
-            cacheServiceMock.Received().AddOrUpdate(Arg.Any<string>(), Arg.Any<AccessTokenResponse>());
+            cacheServiceMock.Received().AddOrUpdate(Arg.Any<string>(), Arg.Any<TokenResponse>());
         }
 
         [Test]
@@ -231,14 +231,14 @@ namespace Salesforce.MarketingCloud.UnitTests
         [TearDown]
         public void CleanUp()
         {
-            CacheService.cache = new ConcurrentDictionary<string, Tuple<AccessTokenResponse, DateTime>>();
+            CacheService.cache = new ConcurrentDictionary<string, Tuple<TokenResponse, DateTime>>();
         }
 
         private ICacheService CreateCacheService()
         {
             ICacheService cacheService = Substitute.For<ICacheService>();
 
-            cacheService.Get(Arg.Any<string>()).Returns(new AccessTokenResponse()
+            cacheService.Get(Arg.Any<string>()).Returns(new TokenResponse()
             {
                 AccessToken = "access_token",
                 TokenType = "token_type",

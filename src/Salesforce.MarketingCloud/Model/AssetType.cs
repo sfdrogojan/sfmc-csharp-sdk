@@ -68,21 +68,21 @@ namespace Salesforce.MarketingCloud.Model
         /// The id of the asset type
         /// </summary>
         /// <value>The id of the asset type</value>
-        [DataMember(Name="Id", EmitDefaultValue=false)]
+        [DataMember(Name="id", EmitDefaultValue=false)]
         public decimal? Id { get; set; }
 
         /// <summary>
         /// The name of the asset type
         /// </summary>
         /// <value>The name of the asset type</value>
-        [DataMember(Name="Name", EmitDefaultValue=false)]
+        [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
 
         /// <summary>
         /// The description of the asset type
         /// </summary>
         /// <value>The description of the asset type</value>
-        [DataMember(Name="DisplayName", EmitDefaultValue=false)]
+        [DataMember(Name="displayName", EmitDefaultValue=false)]
         public string DisplayName { get; set; }
 
         /// <summary>

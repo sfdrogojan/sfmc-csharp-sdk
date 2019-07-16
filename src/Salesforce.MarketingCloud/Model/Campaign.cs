@@ -98,42 +98,42 @@ namespace Salesforce.MarketingCloud.Model
         /// Name of the campaign with a maximum length of 128 characters
         /// </summary>
         /// <value>Name of the campaign with a maximum length of 128 characters</value>
-        [DataMember(Name="Name", EmitDefaultValue=false)]
+        [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
 
         /// <summary>
         /// Description of the campaign with a maximum length of 512 characters
         /// </summary>
         /// <value>Description of the campaign with a maximum length of 512 characters</value>
-        [DataMember(Name="Description", EmitDefaultValue=false)]
+        [DataMember(Name="description", EmitDefaultValue=false)]
         public string Description { get; set; }
 
         /// <summary>
         /// Unique identifier for the campaign with a maximum length of 36 characters
         /// </summary>
         /// <value>Unique identifier for the campaign with a maximum length of 36 characters</value>
-        [DataMember(Name="CampaignCode", EmitDefaultValue=false)]
+        [DataMember(Name="campaignCode", EmitDefaultValue=false)]
         public string CampaignCode { get; set; }
 
         /// <summary>
         /// Hex color value
         /// </summary>
         /// <value>Hex color value</value>
-        [DataMember(Name="Color", EmitDefaultValue=false)]
+        [DataMember(Name="color", EmitDefaultValue=false)]
         public string Color { get; set; }
 
         /// <summary>
         /// Determines if the campaign will be flagged as a favorite
         /// </summary>
         /// <value>Determines if the campaign will be flagged as a favorite</value>
-        [DataMember(Name="Favorite", EmitDefaultValue=false)]
+        [DataMember(Name="favorite", EmitDefaultValue=false)]
         public bool? Favorite { get; set; }
 
         /// <summary>
         /// The id of the campaign
         /// </summary>
         /// <value>The id of the campaign</value>
-        [DataMember(Name="Id", EmitDefaultValue=false)]
+        [DataMember(Name="id", EmitDefaultValue=false)]
         public decimal? Id { get; set; }
 
         /// <summary>

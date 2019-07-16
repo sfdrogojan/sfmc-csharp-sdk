@@ -4,7 +4,7 @@ namespace Salesforce.MarketingCloud.Authentication
 {
     public interface ICacheService
     {
-        AccessTokenResponse Get(string key);
-        void AddOrUpdate(string key, AccessTokenResponse value);
+        TokenResponse Get(string key);
+        void AddOrUpdate(string key, TokenResponse value);
     }
 }

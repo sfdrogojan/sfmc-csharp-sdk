@@ -14,11 +14,11 @@ namespace Salesforce.MarketingCloud.UnitTests
         {
             var currentTime = new DateTime(2000, 1, 1);
             var datetimeProviderStub = new SettableDateTimeProvider(currentTime);
-            var accessTokenResponse = CreateAccessTokenResponse();
+            var tokenResponse = CreateTokenResponse();
 
             var cacheService = new CacheService(datetimeProviderStub);
             var cacheKey = "cacheKey";
-            cacheService.AddOrUpdate(cacheKey, accessTokenResponse);
+            cacheService.AddOrUpdate(cacheKey, tokenResponse);
 
             datetimeProviderStub.Now = currentTime.AddMinutes(10);
             var response = cacheService.Get(cacheKey);
@@ -36,10 +36,10 @@ namespace Salesforce.MarketingCloud.UnitTests
             var currentTime = new DateTime(2000, 1, 1);
             var dateTimeProvider = new SettableDateTimeProvider(currentTime);
             var cacheService = new CacheService(dateTimeProvider);
-            var accessTokenResponse = CreateAccessTokenResponse();
+            var tokenResponse = CreateTokenResponse();
 
             var cacheKey = "cacheKey";
-            cacheService.AddOrUpdate(cacheKey, accessTokenResponse);
+            cacheService.AddOrUpdate(cacheKey, tokenResponse);
 
             var newCurrentTime = currentTime.AddMinutes(20);
             dateTimeProvider.Now = newCurrentTime;
@@ -55,13 +55,13 @@ namespace Salesforce.MarketingCloud.UnitTests
             var currentTime = new DateTime(2000, 1, 1);
             var dateTimeProvider = new SettableDateTimeProvider(currentTime);
             var cacheService = new CacheService(dateTimeProvider);
-            var accessTokenResponse = CreateAccessTokenResponse();
+            var tokenResponse = CreateTokenResponse();
 
             var cacheKey = "cacheKey";
-            cacheService.AddOrUpdate(cacheKey, accessTokenResponse);
+            cacheService.AddOrUpdate(cacheKey, tokenResponse);
 
             var cachedValue = cacheService.Get(cacheKey);
-            Assert.AreSame(cachedValue, accessTokenResponse);
+            Assert.AreSame(cachedValue, tokenResponse);
         }
 
         [Test]
@@ -70,16 +70,16 @@ namespace Salesforce.MarketingCloud.UnitTests
             var currentTime = new DateTime(2000, 1, 1);
             var dateTimeProvider = new SettableDateTimeProvider(currentTime);
             var cacheService = new CacheService(dateTimeProvider);
-            var accessTokenResponse = CreateAccessTokenResponse();
+            var tokenResponse = CreateTokenResponse();
 
             var cacheKey = "cacheKey";
-            cacheService.AddOrUpdate(cacheKey, accessTokenResponse);
+            cacheService.AddOrUpdate(cacheKey, tokenResponse);
 
-            var newAccessTokenResponse = CreateAccessTokenResponse();
-            cacheService.AddOrUpdate(cacheKey, newAccessTokenResponse);
+            var newTokenResponse = CreateTokenResponse();
+            cacheService.AddOrUpdate(cacheKey, newTokenResponse);
 
             var cachedValue = cacheService.Get(cacheKey);
-            Assert.AreSame(cachedValue, newAccessTokenResponse);
+            Assert.AreSame(cachedValue, newTokenResponse);
         }
 
         [TestCase(299, false)]
@@ -90,12 +90,12 @@ namespace Salesforce.MarketingCloud.UnitTests
             var currentTime = new DateTime(2000, 1, 1);
             var dateTimeProvider = new SettableDateTimeProvider(currentTime);
             var cacheService = new CacheService(dateTimeProvider);
-            var accessTokenResponse = CreateAccessTokenResponse();
+            var tokenResponse = CreateTokenResponse();
 
             var cacheKey = "cacheKey";
-            cacheService.AddOrUpdate(cacheKey, accessTokenResponse);
+            cacheService.AddOrUpdate(cacheKey, tokenResponse);
 
-            dateTimeProvider.Now = currentTime.AddSeconds(accessTokenResponse.ExpiresIn).Subtract(TimeSpan.FromSeconds(windowInSeconds));
+            dateTimeProvider.Now = currentTime.AddSeconds(tokenResponse.ExpiresIn).Subtract(TimeSpan.FromSeconds(windowInSeconds));
             var cachedValue = cacheService.Get(cacheKey);
             var expectedIsValid = cachedValue != null;
             Assert.AreEqual(expectedIsValid, isValid);
@@ -104,12 +104,12 @@ namespace Salesforce.MarketingCloud.UnitTests
         [TearDown]
         public void CleanUp()
         {
-            CacheService.cache = new ConcurrentDictionary<string, Tuple<AccessTokenResponse, DateTime>>();
+            CacheService.cache = new ConcurrentDictionary<string, Tuple<TokenResponse, DateTime>>();
         }
 
-        private AccessTokenResponse CreateAccessTokenResponse()
+        private TokenResponse CreateTokenResponse()
         {
-            var accessTokenResponse = new AccessTokenResponse
+            var tokenResponse = new TokenResponse
             {
                 AccessToken = "access_token",
                 TokenType = "token_type",
@@ -117,7 +117,7 @@ namespace Salesforce.MarketingCloud.UnitTests
                 RestInstanceUrl = "https://rest.com",
                 SoapInstanceUrl = "https://soap.com"
             };
-            return accessTokenResponse;
+            return tokenResponse;
         }
     }
 }

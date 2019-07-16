@@ -9,11 +9,12 @@
  */
 
 using System.Runtime.Serialization;
+using Newtonsoft.Json.Linq;
 
 namespace Salesforce.MarketingCloud.Model
 {
     [DataContract]
-    public class AccessTokenRequest
+    public class TokenRequest
     {
         [DataMember(Name = "client_id")]
         public string ClientId { get; set; }
@@ -30,13 +31,30 @@ namespace Salesforce.MarketingCloud.Model
         [DataMember(Name = "scope")]
         public string Scope { get; set; }
 
-        public AccessTokenRequest(string clientId, string clientSecret, string accountId, string scope)
+        public TokenRequest(string clientId, string clientSecret, string accountId, string scope)
         {
             this.ClientId = clientId;
             this.ClientSecret = clientSecret;
             this.GrantType = "client_credentials";
             this.AccountId = accountId;
             this.Scope = scope;
+        }
+
+        public JObject ToJObject()
+        {
+            JObject jObject = new JObject();
+
+            jObject.Add("client_id", this.ClientId);
+            jObject.Add("client_secret", this.ClientSecret);
+            jObject.Add("grant_type", this.GrantType);
+            jObject.Add("account_id", this.AccountId);
+
+            if (!string.IsNullOrEmpty(this.Scope))
+            {
+                jObject.Add("scope", this.Scope);
+            }
+
+            return jObject;
         }
     }
 }

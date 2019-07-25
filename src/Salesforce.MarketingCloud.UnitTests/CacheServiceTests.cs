@@ -98,7 +98,7 @@ namespace Salesforce.MarketingCloud.UnitTests
             dateTimeProvider.Now = currentTime.AddSeconds(tokenResponse.ExpiresIn).Subtract(TimeSpan.FromSeconds(windowInSeconds));
             var cachedValue = cacheService.Get(cacheKey);
             var expectedIsValid = cachedValue != null;
-            //Assert.AreEqual(expectedIsValid, isValid);
+            Assert.AreEqual(expectedIsValid, isValid);
         }
 
         [TearDown]

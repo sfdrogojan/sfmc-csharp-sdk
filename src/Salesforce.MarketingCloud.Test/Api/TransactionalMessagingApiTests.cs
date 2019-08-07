@@ -123,18 +123,25 @@ namespace Salesforce.MarketingCloud.Test
             var createEmailDefinitionResult = transactionalMessagingApiClient.CreateEmailDefinition(emailDefinition);
             var emailDefinitionToDeleteKey = createEmailDefinitionResult.DefinitionKey;
 
+            var deleteEmailDefinitionResult = transactionalMessagingApiClient.DeleteEmailDefinition(emailDefinitionToDeleteKey);
+
+            Assert.NotNull(deleteEmailDefinitionResult.RequestId);
+            Assert.NotNull(deleteEmailDefinitionResult.DeletedDefinitionKey);
+            Assert.AreEqual("Success", deleteEmailDefinitionResult.Message);
+        }
+
+        [Test]
+        public void DeleteNonExistingEmailDefinitionTest()
+        {
+            var emailDefinitionToDeleteKey = "NonExistingEmailDefinitionKey";
+
             try
             {
-                var deleteEmailDefinitionResult = transactionalMessagingApiClient.DeleteEmailDefinition(emailDefinitionToDeleteKey);
-
-                Assert.NotNull(deleteEmailDefinitionResult.RequestId);
-                Assert.NotNull(deleteEmailDefinitionResult.DeletedDefinitionKey);
-                Assert.AreEqual("Success", deleteEmailDefinitionResult.Message);
+                transactionalMessagingApiClient.DeleteEmailDefinition(emailDefinitionToDeleteKey);
             }
             catch (ApiException e)
             {
                 var deserializedException = JsonConvert.DeserializeObject<ApiError>(e.ErrorContent);
-
                 Assert.AreEqual($"FuelRuntime_ObjectNotFound: Unable to find Definition {emailDefinitionToDeleteKey}", deserializedException.Message);
             }
         }
@@ -369,18 +376,25 @@ namespace Salesforce.MarketingCloud.Test
             var createSmsDefinitionResult = transactionalMessagingApiClient.CreateSmsDefinition(smsDefinition);
             var smsDefinitionToDeleteKey = createSmsDefinitionResult.DefinitionKey;
 
+            var deleteSmsDefinitionResult = transactionalMessagingApiClient.DeleteSmsDefinition(smsDefinitionToDeleteKey);
+
+            Assert.NotNull(deleteSmsDefinitionResult.RequestId);
+            Assert.NotNull(deleteSmsDefinitionResult.DeletedDefinitionKey);
+            Assert.AreEqual("Success", deleteSmsDefinitionResult.Message);
+        }
+
+        [Test]
+        public void DeleteNonExistingSmsDefinitionTest()
+        {
+            var smsDefinitionToDeleteKey = "NonExistingSmsDefinitionKey";
+
             try
             {
-                var deleteSmsDefinitionResult = transactionalMessagingApiClient.DeleteSmsDefinition(smsDefinitionToDeleteKey);
-
-                Assert.NotNull(deleteSmsDefinitionResult.RequestId);
-                Assert.NotNull(deleteSmsDefinitionResult.DeletedDefinitionKey);
-                Assert.AreEqual("Success", deleteSmsDefinitionResult.Message);
+                transactionalMessagingApiClient.DeleteSmsDefinition(smsDefinitionToDeleteKey);
             }
             catch (ApiException e)
             {
                 var deserializedException = JsonConvert.DeserializeObject<ApiError>(e.ErrorContent);
-
                 Assert.AreEqual($"FuelRuntime_ObjectNotFound: Unable to find Definition {smsDefinitionToDeleteKey}", deserializedException.Message);
             }
         }
@@ -541,7 +555,7 @@ namespace Salesforce.MarketingCloud.Test
 
                 return emailDefinition;
             }
-            catch (Exception e)
+            catch (ApiException e)
             {
                 Console.WriteLine(e);
                 throw;

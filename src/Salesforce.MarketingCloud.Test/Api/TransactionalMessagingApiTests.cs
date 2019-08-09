@@ -433,6 +433,20 @@ namespace Salesforce.MarketingCloud.Test
         }
 
         [Test]
+        public void DeleteQueuedMessagesForSmsDefinitionTest()
+        {
+            var smsDefinition = CreateSmsDefinitionObject();
+            smsDefinition.Status = "inactive"; // Definition status must be inactive to delete queue
+
+            var createSmsDefinitionResult = transactionalMessagingApiClient.CreateSmsDefinition(smsDefinition);
+
+            var smsDefinitionQueToDeleteKey = createSmsDefinitionResult.DefinitionKey;
+            var deleteQueuedMessagesForSmsDefinitionResult = transactionalMessagingApiClient.DeleteQueuedMessagesForSmsDefinition(smsDefinitionQueToDeleteKey);
+
+            Assert.NotNull(deleteQueuedMessagesForSmsDefinitionResult.RequestId);
+        }
+
+        [Test]
         public void SendSmsToMultipleRecipientsTest()
         {
             var smsDefinition = CreateSmsDefinitionObject();

@@ -34,12 +34,12 @@ namespace Salesforce.MarketingCloud.Model
         /// Initializes a new instance of the <see cref="SendDefinitionToSingleRecipientResponse" /> class.
         /// </summary>
         /// <param name="requestId">The ID of the request.</param>
-        /// <param name="errorCode">The specific error code.</param>
+        /// <param name="errorcode">The specific error code.</param>
         /// <param name="responses">responses.</param>
-        public SendDefinitionToSingleRecipientResponse(string requestId = default(string), decimal? errorCode = default(decimal?), List<SendDefinitionResponseItem> responses = default(List<SendDefinitionResponseItem>))
+        public SendDefinitionToSingleRecipientResponse(string requestId = default(string), decimal? errorcode = default(decimal?), List<SendDefinitionResponseItem> responses = default(List<SendDefinitionResponseItem>))
         {
             this.RequestId = requestId;
-            this.ErrorCode = errorCode;
+            this.Errorcode = errorcode;
             this.Responses = responses;
         }
         
@@ -54,8 +54,8 @@ namespace Salesforce.MarketingCloud.Model
         /// The specific error code
         /// </summary>
         /// <value>The specific error code</value>
-        [DataMember(Name="errorCode", EmitDefaultValue=false)]
-        public decimal? ErrorCode { get; set; }
+        [DataMember(Name="errorcode", EmitDefaultValue=false)]
+        public decimal? Errorcode { get; set; }
 
         /// <summary>
         /// Gets or Sets Responses
@@ -72,7 +72,7 @@ namespace Salesforce.MarketingCloud.Model
             var sb = new StringBuilder();
             sb.Append("class SendDefinitionToSingleRecipientResponse {\n");
             sb.Append("  RequestId: ").Append(RequestId).Append("\n");
-            sb.Append("  ErrorCode: ").Append(ErrorCode).Append("\n");
+            sb.Append("  Errorcode: ").Append(Errorcode).Append("\n");
             sb.Append("  Responses: ").Append(Responses).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -114,9 +114,9 @@ namespace Salesforce.MarketingCloud.Model
                     this.RequestId.Equals(input.RequestId))
                 ) && 
                 (
-                    this.ErrorCode == input.ErrorCode ||
-                    (this.ErrorCode != null &&
-                    this.ErrorCode.Equals(input.ErrorCode))
+                    this.Errorcode == input.Errorcode ||
+                    (this.Errorcode != null &&
+                    this.Errorcode.Equals(input.Errorcode))
                 ) && 
                 (
                     this.Responses == input.Responses ||
@@ -136,8 +136,8 @@ namespace Salesforce.MarketingCloud.Model
                 int hashCode = 41;
                 if (this.RequestId != null)
                     hashCode = hashCode * 59 + this.RequestId.GetHashCode();
-                if (this.ErrorCode != null)
-                    hashCode = hashCode * 59 + this.ErrorCode.GetHashCode();
+                if (this.Errorcode != null)
+                    hashCode = hashCode * 59 + this.Errorcode.GetHashCode();
                 if (this.Responses != null)
                     hashCode = hashCode * 59 + this.Responses.GetHashCode();
                 return hashCode;

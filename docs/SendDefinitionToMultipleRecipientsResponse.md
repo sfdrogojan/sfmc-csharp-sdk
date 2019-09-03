@@ -4,7 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **RequestId** | **string** | The ID of the request | [optional] 
-**ErrorCode** | **decimal?** | The specific error code | [optional] 
+**Errorcode** | **decimal?** | The specific error code | [optional] 
 **Message** | **string** |  | [optional] 
 **Responses** | [**List&lt;SendDefinitionResponseItem&gt;**](SendDefinitionResponseItem.md) |  | [optional] 
 

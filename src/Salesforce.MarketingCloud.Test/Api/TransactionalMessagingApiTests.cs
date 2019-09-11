@@ -213,7 +213,7 @@ namespace Salesforce.MarketingCloud.Test
             try
             {
                 Assert.NotNull(sendEmailToMultipleRecipientsResult.RequestId);
-                Assert.NotNull(sendEmailToMultipleRecipientsResult.ErrorCode);
+                Assert.NotNull(sendEmailToMultipleRecipientsResult.Errorcode);
                 Assert.NotNull(sendEmailToMultipleRecipientsResult.Responses);
             }
             finally
@@ -239,7 +239,7 @@ namespace Salesforce.MarketingCloud.Test
             try
             {
                 Assert.NotNull(sendEmailToSingleRecipientResult.RequestId);
-                Assert.NotNull(sendEmailToSingleRecipientResult.ErrorCode);
+                Assert.NotNull(sendEmailToSingleRecipientResult.Errorcode);
                 Assert.NotNull(sendEmailToSingleRecipientResult.Responses);
             }
             finally
@@ -466,7 +466,7 @@ namespace Salesforce.MarketingCloud.Test
             try
             {
                 Assert.NotNull(sendSmsToMultipleRecipientsResult.RequestId);
-                Assert.NotNull(sendSmsToMultipleRecipientsResult.ErrorCode);
+                Assert.NotNull(sendSmsToMultipleRecipientsResult.Errorcode);
                 Assert.NotNull(sendSmsToMultipleRecipientsResult.Responses);
             }
             finally
@@ -492,7 +492,7 @@ namespace Salesforce.MarketingCloud.Test
             try
             {
                 Assert.NotNull(sendSmsToSingleRecipientResult.RequestId);
-                Assert.NotNull(sendSmsToSingleRecipientResult.ErrorCode);
+                Assert.NotNull(sendSmsToSingleRecipientResult.Errorcode);
                 Assert.NotNull(sendSmsToSingleRecipientResult.Responses);
             }
             finally
